@@ -1,0 +1,120 @@
+{
+  "core_M": 327,
+  "extension_graph_vertices": 71,
+  "extension_graph_edges": 85,
+  "maximum_independent_sets_of_the_extension_graph": 8,
+  "codes_of_size_367_from_the_pipeline": 8,
+  "per_code": [
+    {
+      "index": 0,
+      "candidates": 6,
+      "t": 6,
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_00.txt",
+      "sha256": "208243cea1551fc5136679e5963219c553fdc43b861f0c3170fde9887f993195",
+      "verified_independent": true,
+      "verified_size": 367,
+      "maximal": true
+    },
+    {
+      "index": 1,
+      "candidates": 7,
+      "t": 7,
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_01.txt",
+      "sha256": "973074520160047adb53061ed7892056f4b0376ece9351d735ce902592890a21",
+      "verified_independent": true,
+      "verified_size": 367,
+      "maximal": true
+    },
+    {
+      "index": 2,
+      "candidates": 7,
+      "t": 7,
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_02.txt",
+      "sha256": "7c82f917f5991f11dfeb7e81cdbb2bfccbeb73bbc14df6d3ae08395238d60103",
+      "verified_independent": true,
+      "verified_size": 367,
+      "maximal": true
+    },
+    {
+      "index": 3,
+      "candidates": 8,
+      "t": 8,
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_03.txt",
+      "sha256": "2c325a3edd958d763464b678142ac40b8a10295cc4edbb81c6e864a84d85dbfd",
+      "verified_independent": true,
+      "verified_size": 367,
+      "maximal": true
+    },
+    {
+      "index": 4,
+      "candidates": 5,
+      "t": 5,
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_04.txt",
+      "sha256": "0e0046d0f81c4a8ed8fb9bbee2990c487bdb6a4d4576359eb397d5bc75e63bb9",
+      "verified_independent": true,
+      "verified_size": 367,
+      "maximal": true
+    },
+    {
+      "index": 5,
+      "candidates": 6,
+      "t": 6,
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_05.txt",
+      "sha256": "76e1dce9207446d6dbc839d3060d952858836daac1721f36a47907e1dbd18c11",
+      "verified_independent": true,
+      "verified_size": 367,
+      "maximal": true
+    },
+    {
+      "index": 6,
+      "candidates": 6,
+      "t": 6,
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_06.txt",
+      "sha256": "f5d9a41ad076f6b8d8ffd273312eab3febd869cdf7af65e2ae72a2be200f7136",
+      "verified_independent": true,
+      "verified_size": 367,
+      "maximal": true
+    },
+    {
+      "index": 7,
+      "candidates": 7,
+      "t": 7,
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_07.txt",
+      "sha256": "1b701dca0a11586482b0f5f7a5ba87aae726aebccff79e6aa26e274e91225dda",
+      "verified_independent": true,
+      "verified_size": 367,
+      "maximal": true
+    }
+  ],
+  "all_codes_verified": true,
+  "t_histogram": {
+    "5": 1,
+    "6": 3,
+    "7": 3,
+    "8": 1
+  },
+  "best_t": 8,
+  "best_index": 3,
+  "ninth_pair_found": false,
+  "best_code_file": "sets/C7_d5_367_best_t_from_pipeline.txt",
+  "best_code_sha256": "a1f78db7478de2d18f3e89c7dd4ba2d22e3ce9881d7e6881a16165b15131def1",
+  "best_code_verified": {
+    "file": "sets/C7_d5_367_best_t_from_pipeline.txt",
+    "sha256": "a1f78db7478de2d18f3e89c7dd4ba2d22e3ce9881d7e6881a16165b15131def1",
+    "n": 7,
+    "d": 5,
+    "size": 367,
+    "universe": 16807,
+    "independent": true,
+    "box_collisions": 0,
+    "box_cells": 11744,
+    "box_passes": 1,
+    "box_seconds": 1.5e-05,
+    "cells_per_second": 771261186,
+    "vertices_per_second": 24101912,
+    "quadratic_run": false,
+    "addable_vertices": 0,
+    "maximal": true,
+    "witness_pair": null
+  }
+}

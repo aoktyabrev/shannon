@@ -35,5 +35,27 @@ $PY scripts/bench.py > /dev/null
 # is the record still where we think it is?
 $PY scripts/litcheck.py
 
+# ---- Stage 1 ----------------------------------------------------------------
+# The gate first: the stack must find alpha(C_7^3) = 33 and alpha(C_7^4) >= 108
+# before it is pointed at the ninth private pair.  ~25 min.
+$PY scripts/s1_gate.py
+
+# S1.1 anchoring: our recursion must reproduce the published bound exactly, and
+# the framework gap against Tandon is computed here.
+$PY scripts/s1_anchor.py > /dev/null
+
+# S1.2 the search itself.
+$PY scripts/s1_pairs.py > /dev/null          # candidate private pairs, exact maximum t
+$PY scripts/s1_codes.py > /dev/null          # branch C: every 367-code the pipeline gives (~5 min)
+AUXSRC=""; for f in sets/pipeline_codes/*.txt; do AUXSRC="$AUXSRC --source $f"; done
+scripts/s1_aux sets/C7_d5_367_polak_schrijver.txt $AUXSRC \
+    --dump "${SHANNON_TMP:-/tmp/shannon-aux}/near_misses.txt" --dump-max 4 --json \
+    > results/json/s1_aux.json                # branch B: 8.3e9 group elements (~10 min, 8 threads)
+$PY scripts/s1_repair.py "${SHANNON_TMP:-/tmp/shannon-aux}/near_misses.txt" > /dev/null
+S1_AUX_SECONDS=${S1_AUX_SECONDS:-1500} $PY scripts/s1_auxrun.py > /dev/null   # ~25 min
+
+$PY scripts/litcheck.py stage1-end > /dev/null
+$PY scripts/s1_budget.py > /dev/null
+
 (cd sets && sha256sum *.txt > SHA256SUMS)
 $PY scripts/make_results.py

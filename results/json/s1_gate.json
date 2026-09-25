@@ -1,0 +1,227 @@
+{
+  "G1_exact_upper_bound": {
+    "n": 7,
+    "alpha_layer": 10,
+    "maximum_packings": 980,
+    "keys": 268128,
+    "successor_edges": 79309538,
+    "complement_entries": 1001560,
+    "pairs": 3,
+    "orbits_tested": 819,
+    "cycle_closed": true,
+    "closed_at_m0": 3,
+    "closed_at_sigma": 33,
+    "smallest_sigma_proved_impossible": 34,
+    "alpha_d3_upper_bound": 33,
+    "witness_size": 0,
+    "open_nbhd_defect": false,
+    "seconds": 41.36
+  },
+  "G1_witness_run": {
+    "n": 7,
+    "alpha_layer": 10,
+    "maximum_packings": 980,
+    "keys": 268128,
+    "successor_edges": 79309538,
+    "complement_entries": 1001560,
+    "pairs": 3,
+    "orbits_tested": 4,
+    "cycle_closed": true,
+    "closed_at_m0": 3,
+    "closed_at_sigma": 33,
+    "smallest_sigma_proved_impossible": -1,
+    "alpha_d3_upper_bound": -1,
+    "witness_size": 33,
+    "open_nbhd_defect": false,
+    "seconds": 28.73
+  },
+  "G1_witness_verified": {
+    "file": "sets/C7_d3_33_layer_search.txt",
+    "sha256": "3d6f2840260cbe468894d7e11880cb57443cf49e548e055c941e0a9a0fe1b871",
+    "n": 7,
+    "d": 3,
+    "size": 33,
+    "universe": 343,
+    "independent": true,
+    "box_collisions": 0,
+    "box_cells": 264,
+    "box_passes": 1,
+    "box_seconds": 1e-06,
+    "cells_per_second": 285708870,
+    "vertices_per_second": 35713609,
+    "quadratic_run": true,
+    "quadratic_independent": true,
+    "quadratic_seconds": 2e-06,
+    "agree": true,
+    "addable_vertices": 0,
+    "maximal": true,
+    "witness_pair": null
+  },
+  "G1_pass": true,
+  "G2_mutant": {
+    "run": {
+      "n": 7,
+      "alpha_layer": 10,
+      "maximum_packings": 980,
+      "keys": 268128,
+      "successor_edges": 79309538,
+      "complement_entries": 1001560,
+      "pairs": 3,
+      "orbits_tested": 1,
+      "cycle_closed": true,
+      "closed_at_m0": 5,
+      "closed_at_sigma": 35,
+      "smallest_sigma_proved_impossible": -1,
+      "alpha_d3_upper_bound": -1,
+      "witness_size": 0,
+      "open_nbhd_defect": true,
+      "seconds": 30.78
+    },
+    "claims_sigma_35_attainable": true,
+    "truth": "alpha(C_7^3) = 33, so 35 is false",
+    "pass": true
+  },
+  "G3_tabu_33": {
+    "n": 7,
+    "d": 3,
+    "mode": "anneal",
+    "k": 33,
+    "conflicts_left": 0,
+    "reached": true,
+    "seconds": 0.02,
+    "cooling_runs": 0,
+    "out": "/home/artem/shannon/sets/C7_d3_33_tabu.txt"
+  },
+  "G3_tabu_33_verified": {
+    "file": "sets/C7_d3_33_tabu.txt",
+    "sha256": "d14785adfb245141e14310342d54748ffc7532eff2238297126e8854dbe5d0cc",
+    "n": 7,
+    "d": 3,
+    "size": 33,
+    "universe": 343,
+    "independent": true,
+    "box_collisions": 0,
+    "box_cells": 264,
+    "box_passes": 1,
+    "box_seconds": 1e-06,
+    "cells_per_second": 318078790,
+    "vertices_per_second": 39759849,
+    "quadratic_run": true,
+    "quadratic_independent": true,
+    "quadratic_seconds": 3e-06,
+    "agree": true,
+    "witness_pair": null
+  },
+  "G3_lns_33": {
+    "n": 7,
+    "d": 3,
+    "start_size": 33,
+    "best": 33,
+    "target": 33,
+    "reached": true,
+    "seconds": 0.03,
+    "windows": 8386,
+    "exact_windows": 8144,
+    "improvements": 6,
+    "out": "/tmp/shannon_s1_lns33.txt"
+  },
+  "G3_lns_33_verified": {
+    "file": "../../../tmp/shannon_s1_lns33.txt",
+    "sha256": "5b6391923199a2344d2b8c43fac414e4639bec833198a2efb2a237ec91ab743b",
+    "n": 7,
+    "d": 3,
+    "size": 33,
+    "universe": 343,
+    "independent": true,
+    "box_collisions": 0,
+    "box_cells": 264,
+    "box_passes": 1,
+    "box_seconds": 1e-06,
+    "cells_per_second": 298308699,
+    "vertices_per_second": 37288587,
+    "quadratic_run": true,
+    "quadratic_independent": true,
+    "quadratic_seconds": 3e-06,
+    "agree": true,
+    "witness_pair": null
+  },
+  "G3_pass": true,
+  "G4_symmetry_controls": {
+    "identity_rejected": {
+      "generators_are_automorphisms": true,
+      "generators_nontrivial": false,
+      "generators_bijective": true,
+      "rejected": true
+    },
+    "non_automorphism_rejected": {
+      "generators_are_automorphisms": false,
+      "generators_nontrivial": true,
+      "generators_bijective": true,
+      "rejected": true
+    },
+    "real_symmetry_accepted": {
+      "n": 7,
+      "d": 4,
+      "vertices": 2401,
+      "generators": 1,
+      "generators_are_automorphisms": true,
+      "generators_nontrivial": true,
+      "generators_bijective": true,
+      "orbits": 343,
+      "orbits_usable": 343,
+      "vertices_in_usable_orbits": 2401,
+      "best": 105,
+      "orbits_chosen": 15,
+      "target": -1,
+      "reached": false,
+      "seconds": 10.0,
+      "restarts": 2380110,
+      "out": null
+    }
+  },
+  "G4_pass": true,
+  "G5_ladder": [
+    {
+      "engine": "E2 local search",
+      "best": 102,
+      "file": "/tmp/shannon_s1_e2.txt",
+      "verified": 102
+    },
+    {
+      "engine": "E3 prescribed symmetry (translation by (1,2,3,4), orbits of size 7)",
+      "best": 105,
+      "file": "sets/C7_d4_105_symmetric.txt",
+      "verified": 105
+    },
+    {
+      "engine": "E2 fixed-cardinality tabu",
+      "best": 106,
+      "file": "/tmp/shannon_s1_tabu106.txt",
+      "verified": 106
+    },
+    {
+      "engine": "E2 tabu + E4 exact window repair",
+      "best": 107,
+      "file": "sets/C7_d4_107_tabu_window.txt",
+      "verified": 107
+    },
+    {
+      "engine": "E2 tabu + E4, warm started from the 107",
+      "best": 108,
+      "conflicts_left": 0,
+      "seeds_tried": [
+        2
+      ],
+      "file": "sets/C7_d4_108_tabu_window.txt",
+      "verified": 108
+    }
+  ],
+  "G5_best_verified_alpha_C7_d4": 108,
+  "G5_target": 108,
+  "G5_pass": true,
+  "gate_blocking_condition": {
+    "requirement": "alpha(C_7^3) = 33 must be found, else Stage 1 does not begin",
+    "met": true
+  },
+  "all_pass": true
+}

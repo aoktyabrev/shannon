@@ -365,6 +365,27 @@ the lever. The lever is the base gadget.
 > enumerates all splits in \eqref{eq:DP} and reproduces the integer and
 > the lower bound in Theorem~\ref{thm:main}.
 
+
+### [T26-8] the same base gadget, a stronger recursion — arXiv:2608.30273, `main.tex` lines 1634–1656
+
+> \Shannon(C_7)
+> &\ge
+> a_{200}^{1/200}=
+> 3.2588236744275819433344360437765093813959865800495343
+> \ldots .
+> This improves upon both Gao's bound and the first BPZ refinement:
+> Our heterogeneous recursion uses the same five-dimensional base gadget
+> as the first BPZ refinement. The improvement comes from using the additional choices of Theorem~\ref{thm:heteroGao} to produce new intermediate gadgets and then reorganizing the recursion to exploit their different profiles.
+
+This is the quotation Stage 1 needs for S1.1: on **identical input** — the base gadget with
+profile (367,8,367,322,26,19) — Tandon's recursion extracts more than the homogeneous one.
+The difference between his record and what the homogeneous recursion yields from that same
+base is what `results/json/s1_anchor.json` calls the framework gap, 2.725·10⁻⁵.
+
+### [T26-9] the base gadget Tandon's record starts from — arXiv:2608.30273, `main.tex` lines 1330–1336 and 2236–2239
+
+> (367,8,367,322,26,19),
+
 ---
 
 ## Literature check for anything newer (2026-09-25)

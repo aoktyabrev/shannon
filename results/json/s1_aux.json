@@ -1,0 +1,1 @@
+{"code":"sets/C7_d5_367_polak_schrijver.txt","code_size":367,"candidate_private_pairs":8,"proper_2_colourings_up_to_swap":16,"sources":8,"group_elements_swept":8260976640,"best_o":-1,"best_s":367,"best_colouring":-1,"best_perm_index":-1,"best_sign_mask":-1,"best_shift_index":-1,"best_source":-1,"seconds":663.9,"translations_with_bad_eq":[0,4,33,101,209,358,965,6060]}

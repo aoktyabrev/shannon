@@ -1,0 +1,79 @@
+{
+  "ceilings": {
+    "gpu_hours": 20,
+    "core_hours": 100,
+    "wall_clock_days": 14
+  },
+  "gpu_hours": "0.0 \u2014 none used",
+  "core_hours_estimate": 18.7,
+  "core_hours_measured_portion": 11.9,
+  "wall_clock": "one day (2026-09-25)",
+  "items": [
+    {
+      "what": "E1 exact runs on C_7^3 (decisive, witness, mutant, gate)",
+      "core_seconds": 220,
+      "measured": true
+    },
+    {
+      "what": "E2 local-search experiments on C_7^4",
+      "core_seconds": 1170,
+      "measured": false
+    },
+    {
+      "what": "E3 symmetry sweep 1: 240 single generators x 4 s",
+      "core_seconds": 960,
+      "measured": false
+    },
+    {
+      "what": "E3 symmetry sweep 2: 784 generators of order 2,3,4,6 x 6 s",
+      "core_seconds": 4704,
+      "measured": false
+    },
+    {
+      "what": "E3 orbit-tabu probes",
+      "core_seconds": 240,
+      "measured": false
+    },
+    {
+      "what": "E2 fixed-cardinality tabu/annealing experiments",
+      "core_seconds": 3870,
+      "measured": false
+    },
+    {
+      "what": "E4 large-neighbourhood search experiments",
+      "core_seconds": 900,
+      "measured": false
+    },
+    {
+      "what": "E2+E4 window-repair sweeps at k = 107 and 108",
+      "core_seconds": 10850,
+      "measured": false
+    },
+    {
+      "what": "the gate run end to end (scripts/s1_gate.py)",
+      "core_seconds": 1800,
+      "measured": false
+    },
+    {
+      "what": "S1.2 branch B: the Aut(C_7^5) sweep, 8 threads",
+      "core_seconds": 5344,
+      "measured": true
+    },
+    {
+      "what": "S1.2 branch B: fixed-cardinality auxiliary search, 8+16 colourings x 1500 s",
+      "core_seconds": 36000,
+      "measured": true
+    },
+    {
+      "what": "S1.2 branches C and D, private-pair enumeration, anchoring",
+      "core_seconds": 900,
+      "measured": true
+    },
+    {
+      "what": "verification of every produced set",
+      "core_seconds": 200,
+      "measured": true
+    }
+  ],
+  "note": "No GPU time was used at all. The preregistration set aside 20 GPU-hours on the assumption that the search would be over large vertex sets; it was not \u2014 once the gadget condition reduced to a bipartite-colouring question on eight candidates, and the auxiliary-set question to a cyclic correlation over the automorphism group, everything fitted on the CPU. The CPU figure is a reconstruction from the run log, itemised in `results/json/s1_budget.json`, accurate to perhaps \u00b130%; the ceiling is not close."
+}

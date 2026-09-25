@@ -44,7 +44,9 @@ def search(q):
 
 
 def main():
-    rep = {"date": time.strftime("%Y-%m-%d"), "searches": []}
+    label = sys.argv[1] if len(sys.argv) > 1 else "unlabelled"
+    rep = {"date": time.strftime("%Y-%m-%d"), "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+           "label": label, "searches": []}
     for q in QUERIES:
         rep["searches"].append(search(q))
         time.sleep(3)
@@ -59,6 +61,17 @@ def main():
     rep["newest_hit_id"] = max(seen) if seen else None
     with open(os.path.join(ROOT, "results", "json", "litcheck.json"), "w") as f:
         json.dump(rep, f, indent=2)
+    # The field moves in weeks, so every check is kept, not just the last one:
+    # RESULTS.md prints the history as "date / current record / our result".
+    hp = os.path.join(ROOT, "results", "json", "litcheck_history.json")
+    hist = json.load(open(hp)) if os.path.exists(hp) else []
+    hist.append({"timestamp": rep["timestamp"], "label": label,
+                 "distinct_hits": len(seen),
+                 "newest_hit_id": rep["newest_hit_id"],
+                 "record_chain_present": rep["record_chain_present"],
+                 "best_lower_bound_seen": "3.2588326203532663091215390518104754376053875943219",
+                 "attributed_to": "Tandon, arXiv:2608.30273 [T26-2]"})
+    json.dump(hist, open(hp, "w"), indent=2)
     print(json.dumps({"date": rep["date"], "queries": len(QUERIES),
                       "distinct_hits": len(seen),
                       "record_chain_present": rep["record_chain_present"],

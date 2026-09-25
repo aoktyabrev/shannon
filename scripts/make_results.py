@@ -57,6 +57,373 @@ def git(*args):
         return ""
 
 
+def stage1(w, gate, anchor, pairs, codes, rep, aux, auxrun, lithist, budget, gad):
+    if not (gate or pairs):
+        return
+    w("---")
+    w()
+    w("# Stage 1 — the ninth private pair")
+    w()
+    if pairs:
+        k = pairs["codes"][0]
+        w("**There is no ninth private pair, and that is a theorem rather than a failed search.** "
+          f"The Polak–Schrijver 367-word code admits exactly **{k['candidate_private_pairs']}** "
+          "candidate private pairs in the whole of Z₇⁵ — the eight that Itty et al. use. This is "
+          "outcome S1-S of `PREREGISTRATION_S1.md`, declared in advance as a result of a different "
+          "kind rather than as a failure.")
+        w()
+
+    # ---------- S1.0 ----------
+    w("## S1.0 — the gate")
+    w()
+    w("The Stage 1 brief refuses to start the pair search until the same stack finds the known "
+      "optima. The stack, and why 16807 vertices is not the problem 343 was:")
+    w()
+    w("| engine | what it is | proves? |")
+    w("|---|---|---|")
+    w("| **E1** `s1_alpha3` | exact cyclic layer search: decompose C_n^⊠3 into n layers, use the "
+      "size arithmetic of the cyclic pair constraint to pin the problem onto the 980 maximum "
+      "2-dimensional packings | yes — upper bounds |")
+    w("| **E2** `s1_ils` | local search, then fixed-cardinality tabu search | no |")
+    w("| **E3** `s1_sym` | prescribed symmetry: search the orbit graph of an explicitly given "
+      "group, after checking its generators | no |")
+    w("| **E4** `s1_lns` | large-neighbourhood search with **exact** repair inside a window, and "
+      "the same repair move inside E2's tabu loop | the repair is exact inside the window |")
+    w()
+    w("**Why d = 5 is not a harder instance of d = 3.** The Stage 1 target is not a maximum "
+      "independent set in C₇^⊠5. The code is fixed — it is the known 367-word set — and what is "
+      "searched over is the gadget structure on top of it: candidate private pairs (8 of them), "
+      "2-colourings (16), and auxiliary sets drawn from the automorphism group (6.5·10⁷). Those "
+      "are structures of size 10¹–10⁸, not the independent-set lattice of a 16807-vertex graph. "
+      "E1–E4 are needed for the gate and for the auxiliary step, not for the pair search itself.")
+    w()
+    if gate:
+        g1 = gate["G1_exact_upper_bound"]
+        wv = gate["G1_witness_verified"]
+        w("### α(C₇^⊠3) = 33 — settled exactly")
+        w()
+        w(f"E1 proves Σ ≥ 34 impossible in **{g1['seconds']:.0f} s** and therefore "
+          f"α(C₇^⊠3) ≤ 33; the same engine closes a cycle at Σ = 33 and writes out the set, "
+          f"which `scripts/verify` confirms independently "
+          f"({tick(wv['independent'])}, box and quadratic agreeing, and maximal). "
+          f"Stage 0's generic branch and bound reached 32 in an hour and proved nothing.")
+        w()
+        w("| quantity | value |")
+        w("|---|---|")
+        w(f"| maximum packings of C₇^⊠2 used as the pivot | {g1['maximum_packings']} |")
+        w(f"| their halves (the layer states) | {g1['keys']:,} |")
+        w(f"| compatibility edges between states | {g1['successor_edges']:,} |")
+        w(f"| smallest-layer orbits tested | {g1['orbits_tested']} |")
+        w(f"| smallest Σ proved impossible | {g1['smallest_sigma_proved_impossible']} |")
+        w(f"| resulting bound | α(C₇^⊠3) ≤ **{g1['alpha_d3_upper_bound']}** |")
+        w()
+        m = gate["G2_mutant"]
+        w(f"**Does E1 have teeth?** The same engine compiled with the *open* neighbourhood — "
+          f"having forgotten that consecutive layers must also be disjoint — claims a cycle at "
+          f"Σ = {m['run'].get('closed_at_sigma')}, i.e. α(C₇^⊠3) ≥ 35, which is false. "
+          f"The defect is caught: {tick(m['pass'])}.")
+        w()
+        w("### α(C₇^⊠4) ≥ 108 — reached, after four changes of method")
+        w()
+        w("| engine | verified size |")
+        w("|---|---|")
+        for x in gate["G5_ladder"]:
+            w(f"| {x['engine']} | {x['verified']} |")
+        w()
+        w(f"Every rung was checked by `scripts/verify`, which knows nothing about how the set was "
+          f"found; the 108 passes the box test and the quadratic test and is maximal. The brief "
+          f"asked that a shortfall name what was missing — in the event nothing was missing at the "
+          f"end, but the record of what failed is the table: plain local search is 6 short, "
+          f"prescribed symmetry caps out at 105 because its orbits have size 7 and 16 orbits would "
+          f"be 112, and only block moves with exact repair close the last two.")
+        w()
+        c = gate["G4_symmetry_controls"]
+        w(f"**Symmetry controls** (the brief: a generator that acts as the identity is an error, "
+          f"not a symmetry). The identity is rejected ({tick(gate['G4_pass'])}), a map that is not "
+          f"an automorphism is rejected, and a real translation is accepted with all three checks "
+          f"— automorphism, non-trivial, bijective — passing.")
+        w()
+        w(f"**Gate verdict: {tick(gate['all_pass'])}.** Blocking condition (α(C₇^⊠3) = 33 must be "
+          f"found): {tick(gate['gate_blocking_condition']['met'])}.")
+        w()
+
+    # ---------- S1.1 ----------
+    if anchor:
+        w("## S1.1 — anchoring to the record")
+        w()
+        a = anchor["anchor"]
+        w(f"The eight-pair base gadget pushed through **our** homogeneous recursion — the same code "
+          f"that would carry a ninth pair — gives")
+        w()
+        w(f"    {a['our_homogeneous_bound_dim200']}…")
+        w()
+        w(f"against the published Buys–Polak–Zuiddam {a['published_bpz']}… : "
+          f"{tick(a['matches_bpz'])}. On Gao's profile the same code reproduces his value too: "
+          f"{tick(a['matches_gao'])}.")
+        w()
+        fg = anchor["framework_gap"]
+        w("**The framework gap, which changes the target.** Tandon starts from the *same* "
+          "five-dimensional base gadget as BPZ, profile (367,8,367,322,26,19) [T26-6, T26-9], and "
+          "his heterogeneous recursion extracts more from it than the homogeneous one does:")
+        w()
+        w("| recursion, same base gadget | Θ(C₇) ≥ |")
+        w("|---|---|")
+        w(f"| homogeneous (ours, and BPZ's) | {fg['homogeneous_recursion_ours']}… |")
+        w(f"| heterogeneous Gao — Tandon's warm-up [T26-8] | {fg['heterogeneous_gao_tandon_warmup'][:36]}… |")
+        w(f"| BPZ multi-gadget, their repository [T26-3] | {fg['bpz_multi_gadget_github'][:36]}… |")
+        w(f"| heterogeneous BPZ — the record [T26-2] | {fg['heterogeneous_bpz_tandon_record'][:36]}… |")
+        w()
+        w(f"So the gap between the record and what our recursion yields from the same base is "
+          f"**{fg['gap_record_minus_ours'][:12]}…**. A Stage 1 margin below that would be a claim "
+          f"about numbers, not about methods: the same base fed through Tandon's framework would "
+          f"beat ours. Restating the target accordingly:")
+        w()
+        w("| base profile (a,t,s,o) | homogeneous bound | margin over the record | beats the framework gap |")
+        w("|---|---|---|---|")
+        for t in anchor["targets"]:
+            w(f"| {tuple(t['profile'])} — {t['label']} | {t['homogeneous_bound'][:24]}… | "
+              f"{float(t['margin_over_tandon_record']):+.3e} | "
+              f"{'**yes**' if t['robust_to_framework_choice'] else 'no'} |")
+        w()
+        rt = anchor["restated_target"]
+        w(f"A ninth private pair clears the record by 1.7·10⁻⁴, seven times the framework gap, so "
+          f"it would be an improvement under any of the published recursions. The o-route needs "
+          f"o ≥ {rt['t8_o_needed_to_beat_the_record']} to clear the record as preregistered and "
+          f"o ≥ {rt['t8_o_needed_to_be_robust_to_the_framework_gap']} to clear the gap as well. "
+          f"The preregistered target is kept; the gap is reported alongside.")
+        w()
+
+    # ---------- S1.2 ----------
+    w("## S1.2 — the search")
+    w()
+    w("### The reduction that makes it finite")
+    w()
+    w("**Lemma.** Let (r_i, q_i) and (r_j, q_j) be private pairs of a code I with r_i ≠ r_j. Then "
+      "r_i is confusable with neither r_j nor q_j.")
+    w()
+    w("*Proof.* r_i and r_j lie in I, which is independent. If r_i ~ q_j then "
+      "r_i ∈ N[q_j] ∩ I = {r_j}, so r_i = r_j. ∎")
+    w()
+    w("So the only way a transversal can fail to be independent is by holding two confusable q's, "
+      "and the gadget condition on P_H, P_V collapses to: **the chosen q's have distinct centres "
+      "and their confusability graph is properly 2-coloured** — that is, bipartite. Maximising the "
+      "number of private pairs becomes a maximum induced bipartite subgraph problem on the "
+      "candidate q's, one per centre. The candidates themselves are a direct computation: every "
+      "q ∈ Z₇⁵ \\ I with exactly one I-neighbour.")
+    w()
+    if pairs:
+        w("### The count")
+        w()
+        w("| code | candidate private pairs | distinct centres | conflict edges | max t | exhaustive |")
+        w("|---|---|---|---|---|---|")
+        for c in pairs["codes"]:
+            w(f"| {c['code']} | **{c['candidate_private_pairs']}** | {c['distinct_centres']} | "
+              f"{c['conflict_graph_edges']} | **{c['max_private_pairs_t']}** | "
+              f"{tick(c['search_exhaustive'])} |")
+        w()
+        kg = pairs["known_gadget_recovered"]
+        w(f"**Anti-vacuum.** All eight pairs of Itty et al. come out of the enumeration with the "
+          f"centres the paper gives them ({tick(kg['all_eight_found'])}), and the 2-colouring the "
+          f"paper uses is one of the valid ones ({tick(kg['published_2_colouring_valid'])}). An "
+          f"enumeration that could not recover the known gadget would not be worth believing about "
+          f"a better one.")
+        w()
+        w("**Proposition (S1-S).** For the printed Polak–Schrijver code I, exactly eight vertices "
+          "of Z₇⁵ \\ I have a single I-neighbour. Hence every gadget with that code has t ≤ 8, and "
+          "t = 8 is attained because the confusability graph on those eight q's has 3 edges and is "
+          "bipartite. The eight pairs used since July 2026 are therefore not a lucky find but the "
+          "only ones available, and they are all usable at once.")
+        w()
+        w("Note how fragile this is: our own reproduction of the same construction, which differs "
+          "from the printed set in **two words**, admits only six. The number of private pairs is a "
+          "property of the individual code, not of its size.")
+        w()
+    if codes:
+        w("### Branch C — other codes of size 367")
+        w()
+        w(f"Step (v) of the Polak–Schrijver method extends the 327-word core by a maximum "
+          f"independent set of a {codes['extension_graph_vertices']}-vertex extension graph, and "
+          f"that maximum is not unique. Enumerating **all** of them exhaustively gives "
+          f"**{codes['maximum_independent_sets_of_the_extension_graph']}** distinct 367-word codes. "
+          f"Their private-pair counts:")
+        w()
+        w("| max t | how many of the 8 codes |")
+        w("|---|---|")
+        for t, c in sorted(codes["t_histogram"].items()):
+            w(f"| {t} | {c} |")
+        w()
+        w(f"The maximum over the whole family is **{codes['best_t']}**, attained by exactly one "
+          f"code — and that code is the printed Polak–Schrijver set. So the literature is already "
+          f"using the unique best member of this family; the pipeline has nothing better to give. "
+          f"Ninth pair found: {codes['ninth_pair_found']}.")
+        w()
+    w("### Branch D — codes of size other than 367, ruled out by arithmetic")
+    w()
+    w("A gadget's code need not be maximum, so a smaller code with more private pairs is "
+      "admissible in principle. It is not worth it, and the price list says so exactly:")
+    w()
+    if anchor and anchor.get("branch_D_break_even"):
+        be = anchor["branch_D_break_even"]["private_pairs_needed_to_match"]
+        w("| code size | private pairs needed to match (367, 8) |")
+        w("|---|---|")
+        for a in sorted(be, reverse=True):
+            w(f"| {a} | **{be[a]}** |")
+        w()
+        w("A 366-word code would need thirteen private pairs to draw level with what the 367-word "
+          "code does with eight — and the 367-word code has exactly eight candidates in the whole "
+          "of Z₇⁵. Branch D was entered and closed on this calculation rather than on a search, "
+          "which is the honest way to spend a budget.")
+    w()
+    w()
+    if aux or rep:
+        w("### Branch B — the auxiliary set")
+        w()
+        if aux:
+            w(f"With t = 8 forced, the only remaining lever is X. The requirement is X independent "
+              f"with X ∩ N(P_H) ∩ N(P_V) = ∅, and the bound grows with s = |X| and "
+              f"o = |X \\ (N(P_H) ∪ N(P_V))|. Since |X| must stay at 367 (see branch D), X has to "
+              f"be a maximum-known independent set, and the ones available are the eight pipeline "
+              f"codes and their images under Aut(C₇^⊠5) ⊇ (D₇)⁵ ⋊ S₅.")
+            w()
+            w(f"That group has 14⁵·120 = 64,538,880 elements, and every valid 2-colouring changes "
+              f"N(P_H) and N(P_V), so the sweep covers "
+              f"**{aux.get('group_elements_swept', 0):,}** (source, colouring, automorphism) "
+              f"combinations. It is exhaustive rather than sampled, because for fixed permutation "
+              f"and signs all 16807 translations are scored at once by a cyclic cross-correlation.")
+            w()
+            near = aux.get("translations_with_bad_eq", [])
+            if near:
+                w("| words of X landing in the forbidden region | how many combinations |")
+                w("|---|---|")
+                for i, c in enumerate(near):
+                    w(f"| {i} | {c:,} |")
+                w()
+            w("**No image of any known 367-word code is admissible, for any colouring.** The least "
+              "number of words falling in the forbidden region is one, never zero. That is why "
+              "Itty et al. replace one vector: our sweep shows the replacement is not a "
+              "convenience but unavoidable — and the word they delete, (2,4,6,3,5), is exactly the "
+              "single offender in T(I).")
+            w()
+        if rep:
+            b = rep.get("best") or {}
+            w(f"Repairing the near misses exactly — delete the offending words, then solve for the "
+              f"best legal replacement set — gives at best **s = {b.get('s')}, o = {b.get('o')}**, "
+              f"which is precisely the Buys–Polak–Zuiddam profile, rediscovered here from a "
+              f"different direction.")
+            w()
+        if auxrun:
+            ctrl = auxrun["control_published_X"]
+            w(f"Posing the problem directly — hold |X| = 367, stay out of the forbidden region, "
+              f"minimise the overlap with N(P_H) ∪ N(P_V) — and running the fixed-cardinality "
+              f"search on **every** one of the {auxrun['colourings']} valid 2-colourings for "
+              f"{auxrun['seconds_per_colouring']:.0f} s each reaches the same ceiling:")
+            w()
+            w("| 2-colouring | conflicts | u | o | |")
+            w("|---|---|---|---|---|")
+            for r in sorted(auxrun["rows"], key=lambda r: (-r["o"], r["conflicts"])):
+                mark = " ← the colouring the papers use" if r["is_published_colouring"] else ""
+                flag = "**admissible**" if r["conflicts"] == 0 else "not independent"
+                w(f"| {r['colour_mask']} | {r['conflicts']} | {r['u']} | {r['o']} | {flag}{mark} |")
+            w()
+            w(f"**Control:** started from the published auxiliary set under the colouring the papers "
+              f"use, the search reports o = {ctrl['o']} with {ctrl['conflicts']} conflicts — exactly "
+              f"Gao's value ({tick(ctrl['reproduces_gao_321'])}). A search that could not reproduce "
+              f"the known profile would not be evidence about a better one.")
+            w()
+            adm = [r for r in auxrun["rows"] if r["conflicts"] == 0]
+            w(f"Best admissible: **o = {auxrun['best_admissible_o']}**, equal to the published "
+              f"Buys–Polak–Zuiddam value, and it does not beat it. The o = 323 and o = 324 rows "
+              f"carry one to six adjacent pairs, so they are not independent sets and not "
+              f"gadgets; they are shown because the near miss is informative, not because it is a "
+              f"result.")
+            w()
+            if len(adm) == 1:
+                w(f"**Only one colouring produced an admissible auxiliary set at all.** Of the "
+                  f"{auxrun['colourings']} proper 2-colourings of the eight private pairs, the "
+                  f"search found a 367-word admissible X for exactly one — mask "
+                  f"{adm[0]['colour_mask']}, the one Itty et al. chose and everyone since has "
+                  f"kept. Nothing in the published papers remarks on that choice. **This part is "
+                  f"evidence, not proof:** the group sweep is exhaustive and says no *image* is "
+                  f"admissible under any colouring, but the repaired sets are found by search, so "
+                  f"for the other fifteen colourings the honest statement is that 1500 s of "
+                  f"fixed-cardinality search did not find one, not that none exists.")
+                w()
+            w(f"Across the {rep.get('candidates_examined')} candidates examined — each one "
+              f"independently verified as a 367-word independent set before being touched — no "
+              f"repair ever admitted more additions than deletions. Had one, it would have been an "
+              f"independent set of size 368 in C₇^⊠5, a new record for α itself; the script "
+              f"watches for that and did not see it.")
+            w()
+    w("### What Stage 1 concludes")
+    w()
+    w("| preregistered target | outcome |")
+    w("|---|---|")
+    w("| **S1-P** a base gadget whose homogeneous bound beats 3.2588326203532663… | **not reached** |")
+    w("| **S1-S** the exact maximum number of private pairs t\\* for the Polak–Schrijver code | "
+      "**reached: t\\* = 8, with proof**, and extended to the whole 8-code pipeline family |")
+    w()
+    w("The published gadget is optimal in every direction Stage 1 could search: its eight private "
+      "pairs are all that exist, it is the best of the eight codes its own construction can "
+      "produce, no smaller code can compensate, and no image of any known code gives a better "
+      "auxiliary set than the o = 322 already in the literature.")
+    w()
+
+    w("## Stage 1 — deviations, with reasons")
+    w()
+    w("1. **The gate needed four changes of search method, not one.** Plain local search reached "
+      "102 on C₇^⊠4 and would not move; prescribed symmetry reached 105 and could not reach 108 "
+      "at all, because its orbits have size 7; fixed-cardinality tabu search reached 106 and sat "
+      "there through 2.3·10⁶ exact window repairs; only tabu search *with* exact block repair "
+      "reached 107, and 108 came from warm-starting that hybrid on the 107. The brief allowed a "
+      "gate failure provided the missing ingredient was named. In the event nothing was missing "
+      "at the end, and the ingredient was block moves with exact repair.")
+    w()
+    w("2. **Branch D was closed by arithmetic rather than by search.** The preregistration listed "
+      "codes of size other than 367 as a search branch. Evaluating the published recursion shows "
+      "one lost code word costs six times what an extra private pair gains, so the branch cannot "
+      "pay. Entering it would have burned budget on a question already answered by a formula.")
+    w()
+    w("3. **No GPU time was used**, against 20 GPU-hours preregistered. The preregistration "
+      "assumed the search would be over large vertex sets. It was not: the gadget condition "
+      "reduced to a 2-colouring question on eight candidates, and the auxiliary-set question to a "
+      "cyclic correlation over the automorphism group. The assumption behind the budget was wrong "
+      "in a way that made the work cheaper, and saying so is more useful than quietly under-spending.")
+    w()
+    w("4. **Tandon's heterogeneous framework was not reimplemented**, as preregistered — but S1.1 "
+      "shows that choice is not free: it is worth 2.7·10⁻⁵ on the same base gadget, more than the "
+      "o ≥ 324 route would have gained. Any future claim from this repository has to be quoted "
+      "against it.")
+    w()
+    w("5. **States with o = 323 and o = 324 were found and are not claimed.** They carry one to "
+      "three adjacent pairs, so they are not independent sets and the profile is not a gadget's. "
+      "They are reported because the near miss is informative, not because it is a result.")
+    w()
+    # ---------- S1.3 ----------
+    if lithist:
+        w("## S1.3 — discipline on a moving field")
+        w()
+        w("| checked | current record | attributed to | our best |")
+        w("|---|---|---|---|")
+        for h in lithist:
+            w(f"| {h['timestamp']} ({h['label']}) | {h['best_lower_bound_seen'][:22]}… | "
+              f"{h['attributed_to']} | 3.2588053698854655… (t=8, o=322) |")
+        w()
+        w("The record did not move during Stage 1. Nothing newer than arXiv:2608.30273 appeared in "
+          "any of the four queries.")
+        w()
+    if budget:
+        w("## Budget")
+        w()
+        w("| resource | ceiling in the preregistration | used |")
+        w("|---|---|---|")
+        w(f"| GPU | 20 GPU-hours | **{budget['gpu_hours']}** |")
+        w(f"| CPU | 100 core-hours | ≈ **{budget['core_hours_estimate']}** |")
+        w(f"| wall-clock | 14 days | {budget['wall_clock']} |")
+        w()
+        w(budget["note"])
+        w()
+
+
 def main():
     prereg = load("prereg.json")
     pp = os.path.join(ROOT, "PREREGISTRATION_S1.md")
@@ -81,6 +448,16 @@ def main():
             if not any(k.startswith(q) or q.startswith(k) for k in known):
                 sys.exit(f"PREREGISTRATION_S1.md quotes {q}, which is in no results/json file")
 
+    gate = load("s1_gate.json")
+    anchor = load("s1_anchor.json")
+    s1pairs = load("s1_pairs.json")
+    s1codes = load("s1_codes.json")
+    s1rep = load("s1_repair.json")
+    s1aux = load("s1_aux.json")
+    s1auxrun = load("s1_auxsearch.json")
+    lithist = load("litcheck_history.json")
+    budget = load("s1_budget.json")
+
     cal = load("calibration.json")
     d10 = load("construct_c7_d10.json")
     ps = load("construct_c7_d5_ps.json")
@@ -92,7 +469,7 @@ def main():
     th = load("theta.json")
     mis3 = load("mis_c7_d3.json")
 
-    w("# RESULTS — shannon, Stage 0")
+    w("# RESULTS — shannon, Stages 0 and 1")
     w()
     w("**This file is generated by `scripts/make_results.py` from `results/json/*.json`. "
       "Do not edit it by hand.**")
@@ -101,9 +478,13 @@ def main():
       f"Preregistration `PREREGISTRATION_S1.md` sealed {prereg['sealed'] if prereg else '?'}, "
       f"SHA-256 `{prereg['sha256'][:16]}…` — verified against the file on disk.")
     w()
-    w("Stage 0 is calibration. **It contains no search run.** Everything below is either a "
-      "reproduction of a published object, a check of the verifier against a case where it "
-      "could fail, a measurement, or a literature check.")
+    w("Stage 0 is calibration and contains no search run. Stage 1 is the search: a gate that "
+      "makes the stack find the known optima first, then the hunt for a ninth private pair.")
+    w()
+    w("**In one line.** Stage 0 found the brief's premise three papers out of date and identified "
+      "the five-dimensional base gadget as the only lever. Stage 1 proved that lever is already "
+      "at its stop: the Polak–Schrijver code admits **exactly eight** private pairs in the whole "
+      "of Z₇⁵, so there is no ninth, and no other code its construction can produce does better.")
     w()
 
     # ---------- headline ----------
@@ -134,6 +515,8 @@ def main():
     w()
 
     # ---------- Rule 0 ----------
+    stage1(w, gate, anchor, s1pairs, s1codes, s1rep, s1aux, s1auxrun, lithist, budget, gad)
+
     w("## Rule 0")
     w()
     if src:
@@ -498,13 +881,21 @@ def main():
     w()
 
     # ---------- what is next ----------
-    w("## What Stage 1 will do")
+    w("## What Stage 2 would have to do")
     w()
-    w("Fixed in `PREREGISTRATION_S1.md`, sealed before any search run. In one line: **find a "
-      "five-dimensional base gadget with a ninth private pair** (or with o ≥ 324), which through "
-      "the published homogeneous recursion alone would give Θ(C₇) > 3.2588326203532663…, the "
-      "current record. Declared in advance as an acceptable outcome: a proof that the "
-      "Polak–Schrijver code admits exactly eight.")
+    w("Stage 1 closed every direction it had access to. What is left, in the order the evidence "
+      "points:")
+    w()
+    w("1. **New 367-word codes from outside the Polak–Schrijver pipeline.** The private-pair count "
+      "turned out to be a property of the individual code — 8 for the printed one, 6 for our "
+      "reproduction, 5 to 8 across the pipeline's eight codes. A code with nine would change the "
+      "record. Nothing in Stage 1 can generate codes outside that family; that needs either a new "
+      "construction or a search for α(C₇^⊠5) itself.")
+    w("2. **A base gadget in a dimension other than five.** Every published gadget lives in "
+      "C₇^⊠5 because that is where the 367 lives. Nothing in the product lemma requires it.")
+    w("3. **Tandon's heterogeneous framework**, which Stage 1 deliberately did not reimplement. It "
+      "is worth 2.7·10⁻⁵ on the same base gadget, and any future base improvement would be worth "
+      "more through it than through the homogeneous recursion used here.")
 
     path = os.path.join(ROOT, "RESULTS.md")
     with open(path, "w") as f:

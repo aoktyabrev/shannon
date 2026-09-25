@@ -6,3 +6,9 @@ scripts/verify_mutant
 scripts/verify_gpu
 scripts/mis
 sources/*/src/.done
+scripts/s1_alpha3
+scripts/s1_ils
+scripts/s1_sym
+scripts/s1_lns
+scripts/s1_aux
+scripts/s1_auxsearch

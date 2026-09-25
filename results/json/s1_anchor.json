@@ -1,0 +1,255 @@
+{
+  "anchor": {
+    "base_profile": [
+      367,
+      8,
+      367,
+      322,
+      26,
+      19
+    ],
+    "our_homogeneous_bound_dim200": "3.2588053698854655725829750306238067",
+    "published_bpz": "3.258805369885",
+    "matches_bpz": true,
+    "split_tree": {
+      "2": [
+        1,
+        1
+      ],
+      "3": [
+        1,
+        2
+      ],
+      "5": [
+        2,
+        3
+      ],
+      "10": [
+        5,
+        5
+      ],
+      "20": [
+        10,
+        10
+      ],
+      "40": [
+        20,
+        20
+      ]
+    },
+    "M40_digits": 103,
+    "gao_profile_bound": "3.2587891539086910161967650155206769",
+    "matches_gao": true
+  },
+  "framework_gap": {
+    "same_base_profile": [
+      367,
+      8,
+      367,
+      322,
+      26,
+      19
+    ],
+    "homogeneous_recursion_ours": "3.2588053698854655725829750306238067",
+    "heterogeneous_gao_tandon_warmup": "3.2588236744275819433344360437765093813959865800495343",
+    "bpz_multi_gadget_github": "3.258827985920007034526478965794221",
+    "heterogeneous_bpz_tandon_record": "3.2588326203532663091215390518104754376053875943219",
+    "gap_record_minus_ours": "0.0000272504678007365385640211866687376053875943219",
+    "note": "Tandon's recursion is strictly stronger than ours on the same base gadget. A Stage 1 margin below this gap would be a claim about numbers, not about methods: the same base fed through his framework would beat ours."
+  },
+  "targets": [
+    {
+      "profile": [
+        367,
+        8,
+        367,
+        321
+      ],
+      "label": "Gao base",
+      "homogeneous_bound": "3.2587891539086910161967650155206769",
+      "margin_over_tandon_record": "-0.0000434664445752929247740362897985376053875943219",
+      "beats_record": false,
+      "robust_to_framework_choice": false
+    },
+    {
+      "profile": [
+        367,
+        8,
+        367,
+        322
+      ],
+      "label": "BPZ base (current)",
+      "homogeneous_bound": "3.2588053698854655725829750306238067",
+      "margin_over_tandon_record": "-0.0000272504678007365385640211866687376053875943219",
+      "beats_record": false,
+      "robust_to_framework_choice": false
+    },
+    {
+      "profile": [
+        367,
+        8,
+        367,
+        323
+      ],
+      "label": "one extra O word",
+      "homogeneous_bound": "3.2588221786031996021812110400831650",
+      "margin_over_tandon_record": "-0.0000104417500667069403280117273104376053875943219",
+      "beats_record": false,
+      "robust_to_framework_choice": false
+    },
+    {
+      "profile": [
+        367,
+        8,
+        367,
+        324
+      ],
+      "label": "two extra O words",
+      "homogeneous_bound": "3.2588396132727000187343610145840681",
+      "margin_over_tandon_record": "0.0000069929194337096128219627735926623946124056781",
+      "beats_record": true,
+      "robust_to_framework_choice": false
+    },
+    {
+      "profile": [
+        367,
+        8,
+        367,
+        325
+      ],
+      "label": "three extra O words",
+      "homogeneous_bound": "3.2588577096043614932876823351563519",
+      "margin_over_tandon_record": "0.0000250892510951841661432833458764623946124056781",
+      "beats_record": true,
+      "robust_to_framework_choice": false
+    },
+    {
+      "profile": [
+        367,
+        8,
+        367,
+        326
+      ],
+      "label": "four extra O words",
+      "homogeneous_bound": "3.2588765060415440752986776845475340",
+      "margin_over_tandon_record": "0.0000438856882777661771386327370585623946124056781",
+      "beats_record": true,
+      "robust_to_framework_choice": true
+    },
+    {
+      "profile": [
+        367,
+        9,
+        367,
+        321
+      ],
+      "label": "a ninth private pair",
+      "homogeneous_bound": "3.2590062007738521305802293881892807",
+      "margin_over_tandon_record": "0.0001735804205858214586903363788052623946124056781",
+      "beats_record": true,
+      "robust_to_framework_choice": true
+    },
+    {
+      "profile": [
+        367,
+        9,
+        367,
+        322
+      ],
+      "label": "ninth pair, BPZ auxiliary split",
+      "homogeneous_bound": "3.2590258897359546473978239154411470",
+      "margin_over_tandon_record": "0.0001932693826883382762848636306715623946124056781",
+      "beats_record": true,
+      "robust_to_framework_choice": true
+    },
+    {
+      "profile": [
+        367,
+        10,
+        367,
+        321
+      ],
+      "label": "a tenth private pair",
+      "homogeneous_bound": "3.2592395751775055018694623637580859",
+      "margin_over_tandon_record": "0.0004069548242391927479233119476104623946124056781",
+      "beats_record": true,
+      "robust_to_framework_choice": true
+    }
+  ],
+  "restated_target": {
+    "preregistered_S1P": "homogeneous bound > 3.2588326203532663091215390518104754376053875943219",
+    "t8_o_needed_to_beat_the_record": 324,
+    "t8_o_needed_to_be_robust_to_the_framework_gap": 326,
+    "t9_already_robust": true,
+    "conclusion": "A ninth private pair clears the record by 1.7e-4, far above the 2.7e-5 framework gap, so it would be an improvement under any of the published recursions. The o >= 324 route clears the record as preregistered but not the gap; o >= 326 would clear both. Stage 1 keeps the preregistered target and reports the gap alongside any claim."
+  },
+  "branch_D_break_even": {
+    "reference": "(367, 8, 367, 321) = 3.258789153908691016196765015520",
+    "private_pairs_needed_to_match": {
+      "366": 13,
+      "365": 16,
+      "360": 23
+    },
+    "note": "A code of size 366 would need 13 private pairs to match what the 367-word code achieves with 8, and 365 would need 16. The 367-word code has exactly 8 candidates in the whole of Z_7^5, so this is not a promising direction; the branch is closed on the calculation rather than on a search."
+  },
+  "auxiliary_size_sensitivity": {
+    "rows": [
+      {
+        "profile": [
+          367,
+          8,
+          367,
+          321
+        ],
+        "bound": "3.258789153908691016196765015520"
+      },
+      {
+        "profile": [
+          367,
+          8,
+          367,
+          322
+        ],
+        "bound": "3.258805369885465572582975030623"
+      },
+      {
+        "profile": [
+          367,
+          8,
+          366,
+          330
+        ],
+        "bound": "3.258424900683479789923685711916"
+      },
+      {
+        "profile": [
+          367,
+          8,
+          365,
+          333
+        ],
+        "bound": "3.257930754039647907633021547366"
+      },
+      {
+        "profile": [
+          367,
+          8,
+          360,
+          340
+        ],
+        "bound": "3.255156049224336470268606010702"
+      },
+      {
+        "profile": [
+          367,
+          8,
+          350,
+          340
+        ],
+        "bound": "3.249988396278979422526215180574"
+      }
+    ],
+    "note": "The exact repair of the best near miss yields (367, 8, 365, 333): two words short but twelve O-words richer than the published gadget. It scores below (367, 8, 367, 321) all the same. |X| = 367 is not negotiable."
+  },
+  "all_pass": true
+}
