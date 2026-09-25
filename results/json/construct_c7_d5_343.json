@@ -1,0 +1,54 @@
+{
+  "generator_rows": [
+    [
+      1,
+      0,
+      0,
+      1,
+      2
+    ],
+    [
+      0,
+      1,
+      0,
+      1,
+      4
+    ],
+    [
+      0,
+      0,
+      1,
+      3,
+      1
+    ]
+  ],
+  "size": 343,
+  "expected_size": 343,
+  "linear_argument_holds": true,
+  "min_coordinate_distance_over_nonzero_codewords": 2,
+  "out": "sets/C7_d5_343_linear.txt",
+  "sha256": "fc4dcf8e7e214c8fb5c9ad1f67cfee0e578af1fefc96f853eba9489304a27638",
+  "verify": {
+    "file": "/home/artem/shannon/sets/C7_d5_343_linear.txt",
+    "sha256": "fc4dcf8e7e214c8fb5c9ad1f67cfee0e578af1fefc96f853eba9489304a27638",
+    "n": 7,
+    "d": 5,
+    "size": 343,
+    "universe": 16807,
+    "independent": true,
+    "box_collisions": 0,
+    "box_cells": 10976,
+    "box_passes": 1,
+    "box_seconds": 1.3e-05,
+    "cells_per_second": 833663045,
+    "vertices_per_second": 26051970,
+    "quadratic_run": true,
+    "quadratic_independent": true,
+    "quadratic_seconds": 6.9e-05,
+    "agree": true,
+    "addable_vertices": 0,
+    "maximal": true,
+    "witness_pair": null
+  },
+  "two_proofs_agree": true
+}

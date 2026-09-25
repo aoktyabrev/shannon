@@ -1,0 +1,267 @@
+{
+  "A_corruption": [
+    {
+      "set": "sets/C7_d5_367_polak_schrijver.txt",
+      "n": 7,
+      "d": 5,
+      "size": 367,
+      "tested": 367,
+      "skipped_in_set": 0,
+      "broke_independence": 367,
+      "still_independent": 0,
+      "disagreements": [],
+      "pass": true
+    },
+    {
+      "set": "sets/C7_d5_367_reproduced.txt",
+      "n": 7,
+      "d": 5,
+      "size": 367,
+      "tested": 367,
+      "skipped_in_set": 0,
+      "broke_independence": 367,
+      "still_independent": 0,
+      "disagreements": [],
+      "pass": true
+    },
+    {
+      "set": "sets/C7_d5_343_linear.txt",
+      "n": 7,
+      "d": 5,
+      "size": 343,
+      "tested": 343,
+      "skipped_in_set": 0,
+      "broke_independence": 343,
+      "still_independent": 0,
+      "disagreements": [],
+      "pass": true
+    },
+    {
+      "set": "sets/C7_d10_134753_itty_et_al.txt",
+      "n": 7,
+      "d": 10,
+      "size": 134753,
+      "tested": 100,
+      "skipped_in_set": 0,
+      "broke_independence": 100,
+      "still_independent": 0,
+      "disagreements": [],
+      "pass": true
+    }
+  ],
+  "A_nonmaximal": [
+    {
+      "set": "subset300_d5",
+      "d": 5,
+      "size": 300,
+      "tested": 300,
+      "broke_independence": 294,
+      "still_independent": 6,
+      "disagreements": [],
+      "pass": true
+    },
+    {
+      "set": "product30_d3",
+      "d": 3,
+      "size": 30,
+      "tested": 30,
+      "broke_independence": 18,
+      "still_independent": 12,
+      "disagreements": [],
+      "pass": true
+    }
+  ],
+  "A_pass": true,
+  "B_maximality": [
+    {
+      "set": "sets/C7_d5_367_polak_schrijver.txt",
+      "addable_vertices": 0,
+      "maximal": true,
+      "independent": true
+    },
+    {
+      "set": "sets/C7_d5_367_reproduced.txt",
+      "addable_vertices": 0,
+      "maximal": true,
+      "independent": true
+    },
+    {
+      "set": "sets/C7_d5_343_linear.txt",
+      "addable_vertices": 0,
+      "maximal": true,
+      "independent": true
+    },
+    {
+      "set": "sets/C7_d10_134753_itty_et_al.txt",
+      "addable_vertices": 0,
+      "maximal": true,
+      "independent": true
+    }
+  ],
+  "B_pass": true,
+  "C_small_d": {
+    "cases": [
+      {
+        "d": 2,
+        "size": 10,
+        "independent": true,
+        "quadratic_independent": true,
+        "agree": true,
+        "case": "independent"
+      },
+      {
+        "d": 2,
+        "size": 11,
+        "independent": false,
+        "quadratic_independent": false,
+        "agree": true,
+        "case": "dependent"
+      },
+      {
+        "d": 3,
+        "size": 30,
+        "independent": true,
+        "quadratic_independent": true,
+        "agree": true,
+        "case": "independent"
+      },
+      {
+        "d": 3,
+        "size": 31,
+        "independent": false,
+        "quadratic_independent": false,
+        "agree": true,
+        "case": "dependent"
+      },
+      {
+        "d": 4,
+        "size": 100,
+        "independent": true,
+        "quadratic_independent": true,
+        "agree": true,
+        "case": "independent"
+      },
+      {
+        "d": 4,
+        "size": 101,
+        "independent": false,
+        "quadratic_independent": false,
+        "agree": true,
+        "case": "dependent"
+      }
+    ],
+    "pass": true
+  },
+  "D_chunked": {
+    "set": "sets/C7_d10_134753_itty_et_al.txt",
+    "single_pass": {
+      "passes": 1,
+      "independent": true
+    },
+    "chunked": {
+      "passes": 34,
+      "independent": true
+    },
+    "dependent_single_pass": {
+      "passes": 1,
+      "independent": false
+    },
+    "dependent_chunked": {
+      "passes": 34,
+      "independent": false
+    },
+    "pass": true
+  },
+  "E_negative": {
+    "cases": [
+      {
+        "d": 3,
+        "size": 40,
+        "verifier": false,
+        "truth": false,
+        "ok": true
+      },
+      {
+        "d": 5,
+        "size": 400,
+        "verifier": false,
+        "truth": false,
+        "ok": true
+      },
+      {
+        "d": 10,
+        "size": 2000,
+        "verifier": false,
+        "truth": false,
+        "ok": true
+      },
+      {
+        "case": "planted adjacent pair in the 367-set",
+        "verifier": false,
+        "truth": false,
+        "ok": true,
+        "agree": true
+      }
+    ],
+    "pass": true
+  },
+  "F_trivial": {
+    "cases": [
+      {
+        "d": 1,
+        "computed": 3,
+        "proved_optimal": true,
+        "literature": 3,
+        "match": true
+      },
+      {
+        "d": 2,
+        "computed": 10,
+        "proved_optimal": true,
+        "literature": 10,
+        "match": true
+      },
+      {
+        "n": 5,
+        "d": 2,
+        "computed": 5,
+        "proved_optimal": true,
+        "formula_floor_n2_minus_n_over_4": 5,
+        "match": true
+      },
+      {
+        "n": 9,
+        "d": 2,
+        "computed": 18,
+        "proved_optimal": true,
+        "formula_floor_n2_minus_n_over_4": 18,
+        "match": true
+      },
+      {
+        "n": 11,
+        "d": 2,
+        "computed": 27,
+        "proved_optimal": true,
+        "formula_floor_n2_minus_n_over_4": 27,
+        "match": true
+      },
+      {
+        "n": 13,
+        "d": 2,
+        "computed": 39,
+        "proved_optimal": true,
+        "formula_floor_n2_minus_n_over_4": 39,
+        "match": true
+      }
+    ],
+    "pass": true
+  },
+  "G_mutant": {
+    "case": "the 367-set plus one adjacent vertex",
+    "honest_verifier_says_independent": false,
+    "mutant_says_independent": true,
+    "mutant_is_rejected": true,
+    "pass": true
+  },
+  "all_pass": true
+}

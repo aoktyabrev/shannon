@@ -1,0 +1,38 @@
+{
+  "out": "sets/C7_d10_134753_itty_et_al.txt",
+  "sha256": "947cc24241a3adc8a38fae258fb2b5bd59ff35bc56b603c3ad7235fe77afefd3",
+  "sizes": {
+    "R": 367,
+    "B": 359,
+    "X": 367,
+    "A": 20,
+    "D": 26,
+    "I": 134753
+  },
+  "paper_sizes": {
+    "R": 367,
+    "B": 359,
+    "X": 367,
+    "A": 20,
+    "D": 26,
+    "I": 134753
+  },
+  "sizes_match_paper": true,
+  "verify": {
+    "file": "/home/artem/shannon/sets/C7_d10_134753_itty_et_al.txt",
+    "sha256": "947cc24241a3adc8a38fae258fb2b5bd59ff35bc56b603c3ad7235fe77afefd3",
+    "n": 7,
+    "d": 10,
+    "size": 134753,
+    "universe": 282475249,
+    "independent": true,
+    "box_collisions": 0,
+    "box_cells": 137987072,
+    "box_passes": 1,
+    "box_seconds": 0.401485,
+    "cells_per_second": 343692120,
+    "vertices_per_second": 335637,
+    "quadratic_run": false,
+    "witness_pair": null
+  }
+}

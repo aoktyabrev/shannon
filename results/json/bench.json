@@ -1,0 +1,133 @@
+{
+  "cases": [
+    {
+      "case": "d5",
+      "n": 7,
+      "d": 5,
+      "size": 367,
+      "universe": 16807,
+      "set_bytes_on_disk": 3978,
+      "set_bytes_in_core": 1835,
+      "bitmap_bytes": 2101,
+      "cpu": {
+        "independent": true,
+        "seconds": 4e-06,
+        "vertices_per_second": 85901492,
+        "cells_per_second": 2748847728,
+        "passes": 1,
+        "peak_rss_bytes": 1703936,
+        "wall_seconds_3_repeats": 0.001010951993521303
+      },
+      "gpu": {
+        "device": "NVIDIA GeForce RTX 4070 Ti",
+        "independent": true,
+        "kernel_seconds": 2.1e-05,
+        "vertices_per_second": 17156752,
+        "cells_per_second": 549016063,
+        "bitmap_bytes": 2104
+      },
+      "gpu_speedup_cells_per_second": 0.2,
+      "gpu_agrees_with_cpu": true
+    },
+    {
+      "case": "d10",
+      "n": 7,
+      "d": 10,
+      "size": 134753,
+      "universe": 282475249,
+      "set_bytes_on_disk": 2695458,
+      "set_bytes_in_core": 1347530,
+      "bitmap_bytes": 35309407,
+      "cpu": {
+        "independent": true,
+        "seconds": 0.123021,
+        "vertices_per_second": 1095364,
+        "cells_per_second": 1121652718,
+        "passes": 1,
+        "peak_rss_bytes": 38158336,
+        "wall_seconds_3_repeats": 1.1754516960063484
+      },
+      "gpu": {
+        "device": "NVIDIA GeForce RTX 4070 Ti",
+        "independent": true,
+        "kernel_seconds": 0.004233,
+        "vertices_per_second": 31834954,
+        "cells_per_second": 32598993215,
+        "bitmap_bytes": 35309408
+      },
+      "gpu_speedup_cells_per_second": 29.1,
+      "gpu_agrees_with_cpu": true
+    },
+    {
+      "case": "d11",
+      "n": 7,
+      "d": 11,
+      "size": 404259,
+      "universe": 1977326743,
+      "set_bytes_on_disk": 8893761,
+      "set_bytes_in_core": 4446849,
+      "bitmap_bytes": 247165843,
+      "cpu": {
+        "independent": true,
+        "seconds": 1.350908,
+        "vertices_per_second": 299250,
+        "cells_per_second": 612863539,
+        "passes": 1,
+        "peak_rss_bytes": 216793088,
+        "wall_seconds_3_repeats": 12.104950540990103
+      },
+      "gpu": {
+        "device": "NVIDIA GeForce RTX 4070 Ti",
+        "independent": true,
+        "kernel_seconds": 0.057798,
+        "vertices_per_second": 6994387,
+        "cells_per_second": 14324504373,
+        "bitmap_bytes": 247165844
+      },
+      "gpu_speedup_cells_per_second": 23.4,
+      "gpu_agrees_with_cpu": true
+    },
+    {
+      "case": "d12",
+      "n": 7,
+      "d": 12,
+      "size": 1347530,
+      "universe": 13841287201,
+      "set_bytes_on_disk": 32340787,
+      "set_bytes_in_core": 16170360,
+      "bitmap_bytes": 1730160901,
+      "cpu": {
+        "independent": true,
+        "seconds": 11.00085,
+        "vertices_per_second": 122493,
+        "cells_per_second": 501732392,
+        "passes": 2,
+        "peak_rss_bytes": 882905088,
+        "wall_seconds_3_repeats": 98.47679152598721
+      },
+      "gpu": {
+        "device": "NVIDIA GeForce RTX 4070 Ti",
+        "independent": true,
+        "kernel_seconds": 0.527801,
+        "vertices_per_second": 2553104,
+        "cells_per_second": 10457513653,
+        "bitmap_bytes": 1730160904
+      },
+      "gpu_speedup_cells_per_second": 20.8,
+      "gpu_agrees_with_cpu": true
+    }
+  ],
+  "host": {
+    "cpu": "8|13th Gen Intel(R) Core(TM) i7-13700F",
+    "ram_bytes": 25201696768
+  },
+  "maximality_sweep_d10": {
+    "wall_seconds": 29.820767936005723,
+    "independence_sweep_seconds": 0.390958,
+    "addable": 0,
+    "peak_rss_bytes": 38416384,
+    "neighbourhood_cells": 7957029897,
+    "note": "the maximality pass walks 3^d cells per vertex and dominates the wall clock"
+  },
+  "gpu_agreement": true
+}

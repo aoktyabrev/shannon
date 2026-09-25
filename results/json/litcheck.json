@@ -1,0 +1,663 @@
+{
+  "date": "2026-09-25",
+  "searches": [
+    {
+      "query": "Shannon capacity",
+      "url": "https://arxiv.org/search/?searchtype=all&query=Shannon+capacity&start=0&sortBy=submitted_date&sortOrder=descending",
+      "hits": [
+        {
+          "id": "2609.28363",
+          "title": "Curvature-Domain Wireless Communications: Gauge-Fixed Signal Spaces, Fredholm Capacity, and Differentiation-Limited Scaling for Continuous Apertures",
+          "submitted": "23 September, 2026"
+        },
+        {
+          "id": "2609.27767",
+          "title": "Benign Projective Landscapes for Measured Quantum Divergences",
+          "submitted": "16 August, 2026"
+        },
+        {
+          "id": "2609.22314",
+          "title": "Integrated Sensing and Communications: A Tutorial on Mathematical Foundations, Signal Processing and System Design for 6G",
+          "submitted": "15 September, 2026"
+        },
+        {
+          "id": "2609.18352",
+          "title": "Information Spectrum Methods for $\\varepsilon$-Capacity Problems in the Theory of Mixed Multiple-Access Channels with Cost Constraint",
+          "submitted": "16 September, 2026"
+        },
+        {
+          "id": "2609.18200",
+          "title": "Shannon entropy and complex network community detection to study electoral coalition behaviour at municipal scale",
+          "submitted": "16 September, 2026"
+        },
+        {
+          "id": "2609.14621",
+          "title": "A pretty-tight converse on the classical capacity of generalized amplitude-damping channels",
+          "submitted": "13 September, 2026"
+        },
+        {
+          "id": "2609.11368",
+          "title": "A Tight Second-Order Converse Bound for Variable-Length Feedback Codes",
+          "submitted": "10 September, 2026"
+        },
+        {
+          "id": "2609.10986",
+          "title": "A Mathematical Theory of Pragmatic Information",
+          "submitted": "16 September, 2026"
+        },
+        {
+          "id": "2609.10436",
+          "title": "Mobility Information Capacity in the Sky: A Gaussian Channel Perspective",
+          "submitted": "9 September, 2026"
+        },
+        {
+          "id": "2608.30273",
+          "title": "Strengthening Recursive Constructions for Zero-Error Shannon Capacity",
+          "submitted": "31 August, 2026"
+        },
+        {
+          "id": "2608.30035",
+          "title": "Beyond Uncertainty: Multi-Solver Disagreement Rewards for Self-Evolving Reasoning Curricula",
+          "submitted": "30 August, 2026"
+        },
+        {
+          "id": "2608.28939",
+          "title": "Authentication over Arbitrarily Varying Channels with Causal Adversaries",
+          "submitted": "28 August, 2026"
+        },
+        {
+          "id": "2608.27243",
+          "title": "Deterministic Identification over Additive Gaussian Channels",
+          "submitted": "27 August, 2026"
+        },
+        {
+          "id": "2608.06573",
+          "title": "Shannon Capacity and Related Graph Invariants for Lexicographic Products",
+          "submitted": "31 August, 2026"
+        },
+        {
+          "id": "2608.02938",
+          "title": "When Should Graph Attention Be Sparse? Learning a Per-Edge Tsallis Index",
+          "submitted": "3 August, 2026"
+        },
+        {
+          "id": "2608.01758",
+          "title": "Pseudo-Noise Superposition for Finite-Alphabet Physical Layer Security",
+          "submitted": "3 August, 2026"
+        },
+        {
+          "id": "2607.29681",
+          "title": "Lean-verified lower bounds for the Shannon capacity of odd cycles",
+          "submitted": "31 July, 2026"
+        },
+        {
+          "id": "2607.28961",
+          "title": "The Shape of Information: Global Information Geometric Limits in Multi-task Quantum Systems",
+          "submitted": "30 August, 2026"
+        },
+        {
+          "id": "2607.28281",
+          "title": "The Capacity of a Family of Sticky Channels",
+          "submitted": "30 July, 2026"
+        },
+        {
+          "id": "2607.27869",
+          "title": "A Recursive Construction Improving the Lower Bound on the Shannon Capacity of $C_7$",
+          "submitted": "30 July, 2026"
+        },
+        {
+          "id": "2607.22654",
+          "title": "MINT-V2X: A Mobility-Integrated Network Trajectory Dataset for Predictive Resource Management",
+          "submitted": "26 June, 2026"
+        },
+        {
+          "id": "2607.21517",
+          "title": "Improved lower bounds for the Shannon capacity of odd cycles",
+          "submitted": "30 July, 2026"
+        },
+        {
+          "id": "2607.20011",
+          "title": "Drift-Aware RL-based Wavelet Denoising for Network-Traffic Anomaly Detection",
+          "submitted": "22 July, 2026"
+        },
+        {
+          "id": "2607.14352",
+          "title": "Capacity of Uniform Noise Channels Under Average Input Power Constraints",
+          "submitted": "15 July, 2026"
+        },
+        {
+          "id": "2607.11441",
+          "title": "Power Reduction in Heterogeneous Wireless Sensor Networks via Source-Aware Allocation",
+          "submitted": "13 July, 2026"
+        },
+        {
+          "id": "2607.07207",
+          "title": "Memory Scarcity, Open Models, and the Restructuring of the AI Industry, 2026-2030 -- A quantitative scenario analysis of inference economics, training-cost divergence, and infrastructure solvency",
+          "submitted": "8 July, 2026"
+        },
+        {
+          "id": "2607.05979",
+          "title": "Cell-Level Channel Shaping for Rydberg Atomic Quantum Receivers in Satellite Uplinks With Doppler-Enabled Superheterodyne Reception",
+          "submitted": "7 July, 2026"
+        },
+        {
+          "id": "2606.16724",
+          "title": "End-to-end meta-imagers: Information-theoretic objectives and generalized focusing optima",
+          "submitted": "23 July, 2026"
+        },
+        {
+          "id": "2606.15789",
+          "title": "Approaching Shannon Bound with Lossless LLM Weight Compression",
+          "submitted": "14 June, 2026"
+        },
+        {
+          "id": "2606.13264",
+          "title": "Interference Queueing Networks: A Replica Mean-Field Approach in the Symmetric Setting",
+          "submitted": "11 September, 2026"
+        },
+        {
+          "id": "2606.12502",
+          "title": "A Mathematical Theory of Value: a synthesis on goal-directed agency under resource constraints",
+          "submitted": "2 July, 2026"
+        },
+        {
+          "id": "2606.05412",
+          "title": "Unlocking Exponential and Unbounded Robust Gains in Shannon Capacity of Classical Multiple Access Channels with Causal CSIT via Quantum Entanglement Assistance",
+          "submitted": "6 September, 2026"
+        },
+        {
+          "id": "2606.02510",
+          "title": "Not All Points Are Equal: Uncertainty-Aware 4D LiDAR Scene Synthesis",
+          "submitted": "1 June, 2026"
+        },
+        {
+          "id": "2605.26586",
+          "title": "Analytical Singular-Value Structure of Analytic-Continuation Kernels from Slepian Information Theory",
+          "submitted": "26 May, 2026"
+        },
+        {
+          "id": "2605.24738",
+          "title": "Fundamental limits in photonics and electromagnetics: a tutorial",
+          "submitted": "23 May, 2026"
+        },
+        {
+          "id": "2605.23901",
+          "title": "LLMs as Noisy Channels: A Shannon Perspective on Model Capacity and Scaling Laws",
+          "submitted": "22 May, 2026"
+        },
+        {
+          "id": "2605.18909",
+          "title": "Descriptive versus Regulatory Uncertainty in Bounded Predictive Systems",
+          "submitted": "13 June, 2026"
+        },
+        {
+          "id": "2605.18726",
+          "title": "Quantum Shannon theory made robust: a tale of three protocols for almost i.i.d. sources",
+          "submitted": "30 June, 2026"
+        },
+        {
+          "id": "2605.13271",
+          "title": "OAM-Induced Lattice Rotation Reveals a Fractional Optimum in Fault-Tolerant GKP Quantum Sensing",
+          "submitted": "14 May, 2026"
+        },
+        {
+          "id": "2605.12800",
+          "title": "Resolution Information: Limits of Ambiguity Resolution for Generative Communication",
+          "submitted": "12 May, 2026"
+        },
+        {
+          "id": "2605.11142",
+          "title": "Rank Is Not Capacity: Spectral Occupancy for Latent Graph Models",
+          "submitted": "11 May, 2026"
+        },
+        {
+          "id": "2604.26874",
+          "title": "Convex combinations of bosonic pure-loss channels",
+          "submitted": "29 April, 2026"
+        },
+        {
+          "id": "2604.20874",
+          "title": "The Root Theorem of Context Engineering",
+          "submitted": "29 March, 2026"
+        },
+        {
+          "id": "2604.20810",
+          "title": "DNA storage approaching the information-theoretic ceiling",
+          "submitted": "22 April, 2026"
+        },
+        {
+          "id": "2604.19983",
+          "title": "Algebraic Diversity: Principles of a Group-Theoretic Approach to Signal Processing",
+          "submitted": "19 August, 2026"
+        },
+        {
+          "id": "2604.18065",
+          "title": "Morita equivalence for quantum graphs",
+          "submitted": "20 April, 2026"
+        },
+        {
+          "id": "2604.11204",
+          "title": "Semantic Rate-Distortion Theory: Deductive Compression and Closure Fidelity",
+          "submitted": "13 April, 2026"
+        },
+        {
+          "id": "2604.07087",
+          "title": "Quantum coherent transceivers toward Holevo-limited communications",
+          "submitted": "8 April, 2026"
+        },
+        {
+          "id": "2604.04957",
+          "title": "FluxMC: Rapid and High-Fidelity Inference for Space-Based Gravitational-Wave Observations",
+          "submitted": "8 April, 2026"
+        },
+        {
+          "id": "2604.01624",
+          "title": "OSCAR: Orchestrated Self-verification and Cross-path Refinement",
+          "submitted": "2 April, 2026"
+        }
+      ]
+    },
+    {
+      "query": "\"C_7\" Shannon capacity",
+      "url": "https://arxiv.org/search/?searchtype=all&query=%22C_7%22+Shannon+capacity&start=0&sortBy=submitted_date&sortOrder=descending",
+      "hits": [
+        {
+          "id": "2608.30273",
+          "title": "Strengthening Recursive Constructions for Zero-Error Shannon Capacity",
+          "submitted": "31 August, 2026"
+        },
+        {
+          "id": "2607.29681",
+          "title": "Lean-verified lower bounds for the Shannon capacity of odd cycles",
+          "submitted": "31 July, 2026"
+        },
+        {
+          "id": "2607.27869",
+          "title": "A Recursive Construction Improving the Lower Bound on the Shannon Capacity of $C_7$",
+          "submitted": "30 July, 2026"
+        },
+        {
+          "id": "2607.21517",
+          "title": "Improved lower bounds for the Shannon capacity of odd cycles",
+          "submitted": "30 July, 2026"
+        },
+        {
+          "id": "1808.07438",
+          "title": "New lower bound on the Shannon capacity of C7 from circular graphs",
+          "submitted": "26 November, 2018"
+        },
+        {
+          "id": "1504.01472",
+          "title": "New Lower Bounds for the Shannon Capacity of Odd Cycles",
+          "submitted": "7 April, 2015"
+        }
+      ]
+    },
+    {
+      "query": "odd cycles independent set strong product",
+      "url": "https://arxiv.org/search/?searchtype=all&query=odd+cycles+independent+set+strong+product&start=0&sortBy=submitted_date&sortOrder=descending",
+      "hits": [
+        {
+          "id": "2608.30273",
+          "title": "Strengthening Recursive Constructions for Zero-Error Shannon Capacity",
+          "submitted": "31 August, 2026"
+        },
+        {
+          "id": "2607.21517",
+          "title": "Improved lower bounds for the Shannon capacity of odd cycles",
+          "submitted": "30 July, 2026"
+        }
+      ]
+    },
+    {
+      "query": "independence number strong product cycle",
+      "url": "https://arxiv.org/search/?searchtype=all&query=independence+number+strong+product+cycle&start=0&sortBy=submitted_date&sortOrder=descending",
+      "hits": [
+        {
+          "id": "2607.21517",
+          "title": "Improved lower bounds for the Shannon capacity of odd cycles",
+          "submitted": "30 July, 2026"
+        },
+        {
+          "id": "2604.20787",
+          "title": "Computing the Exchange Number in Graphs with respect to Cycle Convexity",
+          "submitted": "22 April, 2026"
+        },
+        {
+          "id": "2604.20097",
+          "title": "Carath\u00e9odory Number in Cycle Convexity",
+          "submitted": "21 April, 2026"
+        },
+        {
+          "id": "1912.04337",
+          "title": "Exact solution of stochastic gene expression models with bursting, cell cycle and replication dynamics",
+          "submitted": "13 February, 2020"
+        },
+        {
+          "id": "1910.03571",
+          "title": "A versatile combinatorial approach of studying products of long cycles in symmetric groups",
+          "submitted": "6 October, 2019"
+        },
+        {
+          "id": "1809.07946",
+          "title": "Estimating mesoscale linkage between land-surface conditions and marine productions in Japan: a study using a sparse high-dimensional model",
+          "submitted": "21 September, 2018"
+        },
+        {
+          "id": "1711.06261",
+          "title": "A study of variability induced by events dependency in microelectronic production",
+          "submitted": "16 November, 2017"
+        },
+        {
+          "id": "1703.10427",
+          "title": "Sources and fluxes of scale-energy in the overlap layer of wall turbulence",
+          "submitted": "30 March, 2017"
+        }
+      ]
+    }
+  ],
+  "union_sorted_by_id": [
+    {
+      "id": "2609.28363",
+      "title": "Curvature-Domain Wireless Communications: Gauge-Fixed Signal Spaces, Fredholm Capacity, and Differentiation-Limited Scaling for Continuous Apertures",
+      "submitted": "23 September, 2026"
+    },
+    {
+      "id": "2609.27767",
+      "title": "Benign Projective Landscapes for Measured Quantum Divergences",
+      "submitted": "16 August, 2026"
+    },
+    {
+      "id": "2609.22314",
+      "title": "Integrated Sensing and Communications: A Tutorial on Mathematical Foundations, Signal Processing and System Design for 6G",
+      "submitted": "15 September, 2026"
+    },
+    {
+      "id": "2609.18352",
+      "title": "Information Spectrum Methods for $\\varepsilon$-Capacity Problems in the Theory of Mixed Multiple-Access Channels with Cost Constraint",
+      "submitted": "16 September, 2026"
+    },
+    {
+      "id": "2609.18200",
+      "title": "Shannon entropy and complex network community detection to study electoral coalition behaviour at municipal scale",
+      "submitted": "16 September, 2026"
+    },
+    {
+      "id": "2609.14621",
+      "title": "A pretty-tight converse on the classical capacity of generalized amplitude-damping channels",
+      "submitted": "13 September, 2026"
+    },
+    {
+      "id": "2609.11368",
+      "title": "A Tight Second-Order Converse Bound for Variable-Length Feedback Codes",
+      "submitted": "10 September, 2026"
+    },
+    {
+      "id": "2609.10986",
+      "title": "A Mathematical Theory of Pragmatic Information",
+      "submitted": "16 September, 2026"
+    },
+    {
+      "id": "2609.10436",
+      "title": "Mobility Information Capacity in the Sky: A Gaussian Channel Perspective",
+      "submitted": "9 September, 2026"
+    },
+    {
+      "id": "2608.30273",
+      "title": "Strengthening Recursive Constructions for Zero-Error Shannon Capacity",
+      "submitted": "31 August, 2026"
+    },
+    {
+      "id": "2608.30035",
+      "title": "Beyond Uncertainty: Multi-Solver Disagreement Rewards for Self-Evolving Reasoning Curricula",
+      "submitted": "30 August, 2026"
+    },
+    {
+      "id": "2608.28939",
+      "title": "Authentication over Arbitrarily Varying Channels with Causal Adversaries",
+      "submitted": "28 August, 2026"
+    },
+    {
+      "id": "2608.27243",
+      "title": "Deterministic Identification over Additive Gaussian Channels",
+      "submitted": "27 August, 2026"
+    },
+    {
+      "id": "2608.06573",
+      "title": "Shannon Capacity and Related Graph Invariants for Lexicographic Products",
+      "submitted": "31 August, 2026"
+    },
+    {
+      "id": "2608.02938",
+      "title": "When Should Graph Attention Be Sparse? Learning a Per-Edge Tsallis Index",
+      "submitted": "3 August, 2026"
+    },
+    {
+      "id": "2608.01758",
+      "title": "Pseudo-Noise Superposition for Finite-Alphabet Physical Layer Security",
+      "submitted": "3 August, 2026"
+    },
+    {
+      "id": "2607.29681",
+      "title": "Lean-verified lower bounds for the Shannon capacity of odd cycles",
+      "submitted": "31 July, 2026"
+    },
+    {
+      "id": "2607.28961",
+      "title": "The Shape of Information: Global Information Geometric Limits in Multi-task Quantum Systems",
+      "submitted": "30 August, 2026"
+    },
+    {
+      "id": "2607.28281",
+      "title": "The Capacity of a Family of Sticky Channels",
+      "submitted": "30 July, 2026"
+    },
+    {
+      "id": "2607.27869",
+      "title": "A Recursive Construction Improving the Lower Bound on the Shannon Capacity of $C_7$",
+      "submitted": "30 July, 2026"
+    },
+    {
+      "id": "2607.22654",
+      "title": "MINT-V2X: A Mobility-Integrated Network Trajectory Dataset for Predictive Resource Management",
+      "submitted": "26 June, 2026"
+    },
+    {
+      "id": "2607.21517",
+      "title": "Improved lower bounds for the Shannon capacity of odd cycles",
+      "submitted": "30 July, 2026"
+    },
+    {
+      "id": "2607.20011",
+      "title": "Drift-Aware RL-based Wavelet Denoising for Network-Traffic Anomaly Detection",
+      "submitted": "22 July, 2026"
+    },
+    {
+      "id": "2607.14352",
+      "title": "Capacity of Uniform Noise Channels Under Average Input Power Constraints",
+      "submitted": "15 July, 2026"
+    },
+    {
+      "id": "2607.11441",
+      "title": "Power Reduction in Heterogeneous Wireless Sensor Networks via Source-Aware Allocation",
+      "submitted": "13 July, 2026"
+    },
+    {
+      "id": "2607.07207",
+      "title": "Memory Scarcity, Open Models, and the Restructuring of the AI Industry, 2026-2030 -- A quantitative scenario analysis of inference economics, training-cost divergence, and infrastructure solvency",
+      "submitted": "8 July, 2026"
+    },
+    {
+      "id": "2607.05979",
+      "title": "Cell-Level Channel Shaping for Rydberg Atomic Quantum Receivers in Satellite Uplinks With Doppler-Enabled Superheterodyne Reception",
+      "submitted": "7 July, 2026"
+    },
+    {
+      "id": "2606.16724",
+      "title": "End-to-end meta-imagers: Information-theoretic objectives and generalized focusing optima",
+      "submitted": "23 July, 2026"
+    },
+    {
+      "id": "2606.15789",
+      "title": "Approaching Shannon Bound with Lossless LLM Weight Compression",
+      "submitted": "14 June, 2026"
+    },
+    {
+      "id": "2606.13264",
+      "title": "Interference Queueing Networks: A Replica Mean-Field Approach in the Symmetric Setting",
+      "submitted": "11 September, 2026"
+    },
+    {
+      "id": "2606.12502",
+      "title": "A Mathematical Theory of Value: a synthesis on goal-directed agency under resource constraints",
+      "submitted": "2 July, 2026"
+    },
+    {
+      "id": "2606.05412",
+      "title": "Unlocking Exponential and Unbounded Robust Gains in Shannon Capacity of Classical Multiple Access Channels with Causal CSIT via Quantum Entanglement Assistance",
+      "submitted": "6 September, 2026"
+    },
+    {
+      "id": "2606.02510",
+      "title": "Not All Points Are Equal: Uncertainty-Aware 4D LiDAR Scene Synthesis",
+      "submitted": "1 June, 2026"
+    },
+    {
+      "id": "2605.26586",
+      "title": "Analytical Singular-Value Structure of Analytic-Continuation Kernels from Slepian Information Theory",
+      "submitted": "26 May, 2026"
+    },
+    {
+      "id": "2605.24738",
+      "title": "Fundamental limits in photonics and electromagnetics: a tutorial",
+      "submitted": "23 May, 2026"
+    },
+    {
+      "id": "2605.23901",
+      "title": "LLMs as Noisy Channels: A Shannon Perspective on Model Capacity and Scaling Laws",
+      "submitted": "22 May, 2026"
+    },
+    {
+      "id": "2605.18909",
+      "title": "Descriptive versus Regulatory Uncertainty in Bounded Predictive Systems",
+      "submitted": "13 June, 2026"
+    },
+    {
+      "id": "2605.18726",
+      "title": "Quantum Shannon theory made robust: a tale of three protocols for almost i.i.d. sources",
+      "submitted": "30 June, 2026"
+    },
+    {
+      "id": "2605.13271",
+      "title": "OAM-Induced Lattice Rotation Reveals a Fractional Optimum in Fault-Tolerant GKP Quantum Sensing",
+      "submitted": "14 May, 2026"
+    },
+    {
+      "id": "2605.12800",
+      "title": "Resolution Information: Limits of Ambiguity Resolution for Generative Communication",
+      "submitted": "12 May, 2026"
+    },
+    {
+      "id": "2605.11142",
+      "title": "Rank Is Not Capacity: Spectral Occupancy for Latent Graph Models",
+      "submitted": "11 May, 2026"
+    },
+    {
+      "id": "2604.26874",
+      "title": "Convex combinations of bosonic pure-loss channels",
+      "submitted": "29 April, 2026"
+    },
+    {
+      "id": "2604.20874",
+      "title": "The Root Theorem of Context Engineering",
+      "submitted": "29 March, 2026"
+    },
+    {
+      "id": "2604.20810",
+      "title": "DNA storage approaching the information-theoretic ceiling",
+      "submitted": "22 April, 2026"
+    },
+    {
+      "id": "2604.20787",
+      "title": "Computing the Exchange Number in Graphs with respect to Cycle Convexity",
+      "submitted": "22 April, 2026"
+    },
+    {
+      "id": "2604.20097",
+      "title": "Carath\u00e9odory Number in Cycle Convexity",
+      "submitted": "21 April, 2026"
+    },
+    {
+      "id": "2604.19983",
+      "title": "Algebraic Diversity: Principles of a Group-Theoretic Approach to Signal Processing",
+      "submitted": "19 August, 2026"
+    },
+    {
+      "id": "2604.18065",
+      "title": "Morita equivalence for quantum graphs",
+      "submitted": "20 April, 2026"
+    },
+    {
+      "id": "2604.11204",
+      "title": "Semantic Rate-Distortion Theory: Deductive Compression and Closure Fidelity",
+      "submitted": "13 April, 2026"
+    },
+    {
+      "id": "2604.07087",
+      "title": "Quantum coherent transceivers toward Holevo-limited communications",
+      "submitted": "8 April, 2026"
+    },
+    {
+      "id": "2604.04957",
+      "title": "FluxMC: Rapid and High-Fidelity Inference for Space-Based Gravitational-Wave Observations",
+      "submitted": "8 April, 2026"
+    },
+    {
+      "id": "2604.01624",
+      "title": "OSCAR: Orchestrated Self-verification and Cross-path Refinement",
+      "submitted": "2 April, 2026"
+    },
+    {
+      "id": "1912.04337",
+      "title": "Exact solution of stochastic gene expression models with bursting, cell cycle and replication dynamics",
+      "submitted": "13 February, 2020"
+    },
+    {
+      "id": "1910.03571",
+      "title": "A versatile combinatorial approach of studying products of long cycles in symmetric groups",
+      "submitted": "6 October, 2019"
+    },
+    {
+      "id": "1809.07946",
+      "title": "Estimating mesoscale linkage between land-surface conditions and marine productions in Japan: a study using a sparse high-dimensional model",
+      "submitted": "21 September, 2018"
+    },
+    {
+      "id": "1808.07438",
+      "title": "New lower bound on the Shannon capacity of C7 from circular graphs",
+      "submitted": "26 November, 2018"
+    },
+    {
+      "id": "1711.06261",
+      "title": "A study of variability induced by events dependency in microelectronic production",
+      "submitted": "16 November, 2017"
+    },
+    {
+      "id": "1703.10427",
+      "title": "Sources and fluxes of scale-energy in the overlap layer of wall turbulence",
+      "submitted": "30 March, 2017"
+    },
+    {
+      "id": "1504.01472",
+      "title": "New Lower Bounds for the Shannon Capacity of Odd Cycles",
+      "submitted": "7 April, 2015"
+    }
+  ],
+  "record_chain_present": {
+    "2607.21517": true,
+    "2607.27869": true,
+    "2607.29681": true,
+    "2608.30273": true
+  },
+  "newest_hit_id": "2609.28363"
+}

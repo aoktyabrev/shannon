@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+# compiled by scripts/build.sh; sources are in the repository, binaries are not
+scripts/verify
+scripts/verify_mutant
+scripts/verify_gpu
+scripts/mis
+sources/*/src/.done

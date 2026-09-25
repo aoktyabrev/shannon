@@ -1,0 +1,54 @@
+{
+  "circular": {
+    "n": 382,
+    "k": 108,
+    "d": 5,
+    "size": 382,
+    "min_distance": 108,
+    "independent_in_C_108_382": true
+  },
+  "folded": {
+    "divisor": "54.5 (exactly: floor(2i/109))",
+    "size_S_prime": 382
+  },
+  "M": {
+    "size": 327,
+    "paper": 327
+  },
+  "extension_graph": {
+    "vertices": 71,
+    "edges": 85,
+    "alpha": 40,
+    "paper": {
+      "vertices": 71,
+      "edges": 85,
+      "alpha": 40
+    }
+  },
+  "reproduced_size": 367,
+  "matches_paper_numbers": true,
+  "out": "sets/C7_d5_367_reproduced.txt",
+  "sha256": "23826340a496cb04ae4e3b1cd039abe30877228ffb392a58288cd29993a790ec",
+  "verify": {
+    "file": "/home/artem/shannon/sets/C7_d5_367_reproduced.txt",
+    "sha256": "23826340a496cb04ae4e3b1cd039abe30877228ffb392a58288cd29993a790ec",
+    "n": 7,
+    "d": 5,
+    "size": 367,
+    "universe": 16807,
+    "independent": true,
+    "box_collisions": 0,
+    "box_cells": 11744,
+    "box_passes": 1,
+    "box_seconds": 1.4e-05,
+    "cells_per_second": 839337566,
+    "vertices_per_second": 26229299,
+    "quadratic_run": false,
+    "addable_vertices": 0,
+    "maximal": true,
+    "witness_pair": null
+  },
+  "M_subset_of_printed_R": true,
+  "equals_printed_R": false,
+  "overlap_with_printed_R": 365
+}
