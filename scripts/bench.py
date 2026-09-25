@@ -61,9 +61,10 @@ def main():
     cases.append(("d12", p12))
 
     rep = {"cases": [], "host": {}}
-    rep["host"]["cpu"] = subprocess.run(
-        ["bash", "-lc", "lscpu | sed -n 's/^Model name: *//p;s/^CPU(s): *//p' | head -2 | paste -sd'|'"],
-        capture_output=True, text=True).stdout.strip()
+    model = subprocess.run(["bash", "-lc", "lscpu | sed -n 's/^Model name: *//p' | head -1"],
+                           capture_output=True, text=True).stdout.strip()
+    rep["host"]["cpu"] = model
+    rep["host"]["cpu_threads"] = os.cpu_count()
     rep["host"]["ram_bytes"] = os.sysconf("SC_PAGE_SIZE") * os.sysconf("SC_PHYS_PAGES")
 
     for name, path in cases:

@@ -35,6 +35,17 @@ def sha(path):
     return hashlib.sha256(open(path, "rb").read()).hexdigest()
 
 
+def yn(b):
+    return "yes" if b else "**no**"
+
+
+def human(n):
+    for u, k in (("GiB", 2**30), ("MiB", 2**20), ("KiB", 2**10)):
+        if n >= k:
+            return f"{n / k:.1f} {u}"
+    return f"{n} B"
+
+
 def tick(b):
     return "PASS" if b else "**FAIL**"
 
@@ -192,9 +203,11 @@ def main():
         w("|---|---|---|---|")
         for c in cal["F_trivial"]["cases"]:
             if "literature" in c:
-                w(f"| α(C₇^⊠{c['d']}) | {c['computed']} | {c['proved_optimal']} | {c['literature']} [PS19-4] |")
+                name = "α(C₇)" if c["d"] == 1 else f"α(C₇^⊠{c['d']})"
+                w(f"| {name} | {c['computed']} | {'yes' if c['proved_optimal'] else 'no'} | "
+                  f"{c['literature']} [PS19-4] |")
             else:
-                w(f"| α(C_{c['n']}^⊠2) | {c['computed']} | {c['proved_optimal']} | "
+                w(f"| α(C_{c['n']}^⊠2) | {c['computed']} | {'yes' if c['proved_optimal'] else 'no'} | "
                   f"{c['formula_floor_n2_minus_n_over_4']} = ⌊(n²−n)/4⌋ [PS19-4, MO17-3] |")
         w()
     if mis3:
@@ -250,7 +263,7 @@ def main():
         w(f"All five agree: {tick(ps['matches_paper_numbers'])}. The maximum independent set of the "
           f"extension graph is not unique, so the set obtained is not the printed one: it shares "
           f"{ps['overlap_with_printed_R']} of 367 words with it, and the 327-word core M is a subset "
-          f"of the printed set ({ps['M_subset_of_printed_R']}). That is the expected outcome, and it "
+          f"of the printed set ({yn(ps['M_subset_of_printed_R'])}). That is the expected outcome, and it "
           f"is reported rather than hidden by adopting the printed set.")
         w()
     if lin:
@@ -260,7 +273,7 @@ def main():
           f"with pivots in columns 0,1,2 that works, so no hidden search. Because the code is closed "
           f"under subtraction, independence reduces to a condition on single codewords, which gives a "
           f"second proof independent of the verifier: every nonzero codeword has a coordinate at "
-          f"circular distance ≥ 2 from 0 ({lin['linear_argument_holds']}), and the minimum over "
+          f"circular distance ≥ 2 from 0 ({yn(lin['linear_argument_holds'])}), and the minimum over "
           f"nonzero codewords of the largest coordinate distance is "
           f"{lin['min_coordinate_distance_over_nonzero_codewords']}. The two proofs agree: "
           f"{tick(lin['two_proofs_agree'])}.")
@@ -300,10 +313,10 @@ def main():
         w("**The five-dimensional base gadget.** Gao's Proposition 4 [G26-3] claims the "
           "Polak–Schrijver code with the eight pairs of Itty et al. is a gadget with parameter tuple "
           f"(a,t,s,o,h,v) = (367,8,367,321,26,20). Re-checked here clause by clause [G26-4]: "
-          f"I₀ and X independent and of size 367 ({bg['I0_independent']}, {bg['X_independent']}); "
-          f"N({{q_j}}) ∩ I₀ = {{r_j}} for all eight j ({bg['private_pairs_ok']}); both transversals "
-          f"independent ({bg['P_H_independent']}, {bg['P_V_independent']}); X disjoint from the "
-          f"sixteen endpoints ({bg['X_disjoint_from_endpoints']}); the split "
+          f"I₀ and X independent and of size 367 ({yn(bg['I0_independent'])}, {yn(bg['X_independent'])}); "
+          f"N({{q_j}}) ∩ I₀ = {{r_j}} for all eight j ({yn(bg['private_pairs_ok'])}); both transversals "
+          f"independent ({yn(bg['P_H_independent'])}, {yn(bg['P_V_independent'])}); X disjoint from the "
+          f"sixteen endpoints ({yn(bg['X_disjoint_from_endpoints'])}); the split "
           f"o/h/v = {bg['profile']['o']}/{bg['profile']['h']}/{bg['profile']['v']} with "
           f"{bg['confusable_with_both']} confusable with both. Profile matches: "
           f"{tick(bg['profile_matches'])}. All axioms: {tick(bg['all_gadget_axioms_hold'])}.")
@@ -380,7 +393,8 @@ def main():
     if ben:
         w("## S0.4 — budget and hardware")
         w()
-        w(f"Host: {ben['host']['cpu']}, {ben['host']['ram_bytes'] / 2**30:.0f} GiB RAM, "
+        w(f"Host: {ben['host']['cpu']} ({ben['host'].get('cpu_threads', '?')} threads), "
+          f"{ben['host']['ram_bytes'] / 2**30:.0f} GiB RAM, "
           f"{ben['cases'][1].get('gpu', {}).get('device', 'no GPU')}.")
         w()
         w("| set | d | vertices | universe 7^d | bitmap | CPU cells/s | GPU cells/s | speed-up | "
@@ -389,7 +403,7 @@ def main():
         for c in ben["cases"]:
             g = c.get("gpu", {})
             w(f"| {c['case']} | {c['d']} | {c['size']:,} | {c['universe']:,} | "
-              f"{c['bitmap_bytes'] / 2**20:.1f} MiB | {c['cpu']['cells_per_second']:.2e} | "
+              f"{human(c['bitmap_bytes'])} | {c['cpu']['cells_per_second']:.2e} | "
               f"{g.get('cells_per_second', 0):.2e} | "
               f"{c.get('gpu_speedup_cells_per_second', '—')}× | "
               f"{c['cpu']['peak_rss_bytes'] / 2**20:.0f} MiB | {c['cpu']['passes']} |")
@@ -405,6 +419,11 @@ def main():
               f"{mx['wall_seconds']:.0f} s wall-clock against {mx['independence_sweep_seconds']:.2f} s "
               f"for the independence sweep itself.")
             w()
+        w("Throughput varies by about 10% between runs on this host; `PREREGISTRATION_S1.md` "
+          "quotes the figures from the run at sealing time (9.1·10⁸ CPU cells/s at d = 10, "
+          "3.3·10¹⁰ on the GPU), and the table above is the latest run. Nothing in the "
+          "preregistration depends on the difference.")
+        w()
         w("**What this means for the Stage 1 budget.** Verification is not the bottleneck and will "
           "not be. A set of 1.3 million vertices in d = 12 is checked exactly in 11 s on one core "
           "and 0.5 s on the GPU, in under 1 GiB. The Stage 1 budget is for the combinatorial search "
@@ -445,7 +464,10 @@ def main():
       "object of 10¹⁰³ words that is never materialised, and a Stage 1 aimed at explicit sets in "
       "high dimension would be aiming at the wrong object.")
     w()
-    if mis3 and not mis3.get("proved_optimal"):
+    if mis3 is None:
+        w("3. **α(C₇^⊠3) = 33 is cited, not reproduced.** The exact attempt had not finished when "
+          "this report was generated; see `results/json/mis_c7_d3.json`.")
+    elif not mis3.get("proved_optimal"):
         w(f"3. **α(C₇^⊠3) = 33 is cited, not reproduced.** The exact solver was given "
           f"{mis3['time_limit']:.0f} s on the 343-vertex graph and reached {mis3['best_found']} "
           f"without proving optimality. The task asks for the trivial cases to be checked against "

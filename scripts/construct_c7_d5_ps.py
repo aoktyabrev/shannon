@@ -44,8 +44,9 @@ def min_distance(words, n):
 
 
 def max_independent_set(nv, adj):
-    """Exact maximum independent set by branch and bound on bitmasks.
-    nv <= 64 here (the extension graph has 71 vertices, so Python ints are used)."""
+    """Exact maximum independent set by branch and bound on bitmasks (Python ints,
+    so the 71 vertices of the extension graph are no problem).  Exact, not greedy:
+    the whole point of step (v) is that alpha of that graph is 40 and not 39."""
     best = [0, 0]   # size, mask
 
     def expand(cand, cur, cursize):

@@ -19,7 +19,7 @@
   },
   "sizes_match_paper": true,
   "verify": {
-    "file": "/home/artem/shannon/sets/C7_d10_134753_itty_et_al.txt",
+    "file": "sets/C7_d10_134753_itty_et_al.txt",
     "sha256": "947cc24241a3adc8a38fae258fb2b5bd59ff35bc56b603c3ad7235fe77afefd3",
     "n": 7,
     "d": 10,
@@ -29,10 +29,12 @@
     "box_collisions": 0,
     "box_cells": 137987072,
     "box_passes": 1,
-    "box_seconds": 0.401485,
-    "cells_per_second": 343692120,
-    "vertices_per_second": 335637,
+    "box_seconds": 0.470672,
+    "cells_per_second": 293170382,
+    "vertices_per_second": 286299,
     "quadratic_run": false,
+    "addable_vertices": 0,
+    "maximal": true,
     "witness_pair": null
   }
 }

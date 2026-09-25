@@ -34,4 +34,5 @@ $PY scripts/bench.py > /dev/null
 # is the record still where we think it is?
 $PY scripts/litcheck.py
 
+(cd sets && sha256sum *.txt > SHA256SUMS)
 $PY scripts/make_results.py

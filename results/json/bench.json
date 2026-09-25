@@ -12,18 +12,18 @@
       "cpu": {
         "independent": true,
         "seconds": 4e-06,
-        "vertices_per_second": 85901492,
-        "cells_per_second": 2748847728,
+        "vertices_per_second": 86305594,
+        "cells_per_second": 2761778996,
         "passes": 1,
         "peak_rss_bytes": 1703936,
-        "wall_seconds_3_repeats": 0.001010951993521303
+        "wall_seconds_3_repeats": 0.0009176390012726188
       },
       "gpu": {
         "device": "NVIDIA GeForce RTX 4070 Ti",
         "independent": true,
-        "kernel_seconds": 2.1e-05,
-        "vertices_per_second": 17156752,
-        "cells_per_second": 549016063,
+        "kernel_seconds": 2.2e-05,
+        "vertices_per_second": 16323444,
+        "cells_per_second": 522350219,
         "bitmap_bytes": 2104
       },
       "gpu_speedup_cells_per_second": 0.2,
@@ -40,22 +40,22 @@
       "bitmap_bytes": 35309407,
       "cpu": {
         "independent": true,
-        "seconds": 0.123021,
-        "vertices_per_second": 1095364,
-        "cells_per_second": 1121652718,
+        "seconds": 0.143261,
+        "vertices_per_second": 940614,
+        "cells_per_second": 963188705,
         "passes": 1,
-        "peak_rss_bytes": 38158336,
-        "wall_seconds_3_repeats": 1.1754516960063484
+        "peak_rss_bytes": 38141952,
+        "wall_seconds_3_repeats": 1.2828417910204735
       },
       "gpu": {
         "device": "NVIDIA GeForce RTX 4070 Ti",
         "independent": true,
-        "kernel_seconds": 0.004233,
-        "vertices_per_second": 31834954,
-        "cells_per_second": 32598993215,
+        "kernel_seconds": 0.004263,
+        "vertices_per_second": 31612124,
+        "cells_per_second": 32370814906,
         "bitmap_bytes": 35309408
       },
-      "gpu_speedup_cells_per_second": 29.1,
+      "gpu_speedup_cells_per_second": 33.6,
       "gpu_agrees_with_cpu": true
     },
     {
@@ -69,22 +69,22 @@
       "bitmap_bytes": 247165843,
       "cpu": {
         "independent": true,
-        "seconds": 1.350908,
-        "vertices_per_second": 299250,
-        "cells_per_second": 612863539,
+        "seconds": 1.430751,
+        "vertices_per_second": 282550,
+        "cells_per_second": 578662648,
         "passes": 1,
         "peak_rss_bytes": 216793088,
-        "wall_seconds_3_repeats": 12.104950540990103
+        "wall_seconds_3_repeats": 12.800661799003137
       },
       "gpu": {
         "device": "NVIDIA GeForce RTX 4070 Ti",
         "independent": true,
-        "kernel_seconds": 0.057798,
-        "vertices_per_second": 6994387,
-        "cells_per_second": 14324504373,
+        "kernel_seconds": 0.061367,
+        "vertices_per_second": 6587581,
+        "cells_per_second": 13491365130,
         "bitmap_bytes": 247165844
       },
-      "gpu_speedup_cells_per_second": 23.4,
+      "gpu_speedup_cells_per_second": 23.3,
       "gpu_agrees_with_cpu": true
     },
     {
@@ -98,34 +98,35 @@
       "bitmap_bytes": 1730160901,
       "cpu": {
         "independent": true,
-        "seconds": 11.00085,
-        "vertices_per_second": 122493,
-        "cells_per_second": 501732392,
+        "seconds": 11.683336,
+        "vertices_per_second": 115338,
+        "cells_per_second": 472423542,
         "passes": 2,
-        "peak_rss_bytes": 882905088,
-        "wall_seconds_3_repeats": 98.47679152598721
+        "peak_rss_bytes": 882774016,
+        "wall_seconds_3_repeats": 106.00725296599558
       },
       "gpu": {
         "device": "NVIDIA GeForce RTX 4070 Ti",
         "independent": true,
-        "kernel_seconds": 0.527801,
-        "vertices_per_second": 2553104,
-        "cells_per_second": 10457513653,
+        "kernel_seconds": 0.557359,
+        "vertices_per_second": 2417704,
+        "cells_per_second": 9902913754,
         "bitmap_bytes": 1730160904
       },
-      "gpu_speedup_cells_per_second": 20.8,
+      "gpu_speedup_cells_per_second": 21.0,
       "gpu_agrees_with_cpu": true
     }
   ],
   "host": {
-    "cpu": "8|13th Gen Intel(R) Core(TM) i7-13700F",
+    "cpu": "13th Gen Intel(R) Core(TM) i7-13700F",
+    "cpu_threads": 8,
     "ram_bytes": 25201696768
   },
   "maximality_sweep_d10": {
-    "wall_seconds": 29.820767936005723,
-    "independence_sweep_seconds": 0.390958,
+    "wall_seconds": 29.77719423599774,
+    "independence_sweep_seconds": 0.500241,
     "addable": 0,
-    "peak_rss_bytes": 38416384,
+    "peak_rss_bytes": 38420480,
     "neighbourhood_cells": 7957029897,
     "note": "the maximality pass walks 3^d cells per vertex and dominates the wall clock"
   },

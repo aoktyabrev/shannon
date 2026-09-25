@@ -60,7 +60,7 @@ result     : PASS
 ```
 
 (One run; the sweep is timed three times over in `results/json/bench.json`, where it comes out
-at 9.1·10⁸ cells/s warm.)
+at about 10⁹ cells/s warm; throughput varies ~10% between runs.)
 
 A verifier that answered INDEPENDENT unconditionally would pass every reproduction in this
 repository, so `scripts/calibrate.py` puts it through the cases where it can fail: 1177

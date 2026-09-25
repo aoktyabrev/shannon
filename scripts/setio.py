@@ -58,9 +58,12 @@ def confusable(x, y, n):
 
 
 def verify(path, extra=()):
-    """Run the C verifier and return its JSON report."""
+    """Run the C verifier and return its JSON report.  The path is made relative to the
+    repository root and the verifier is run from there, so the report does not depend on
+    where the checkout lives."""
     import json
-    out = subprocess.run([VERIFY, path, "--json", *extra], capture_output=True, text=True)
+    rel = os.path.relpath(os.path.abspath(path), ROOT)
+    out = subprocess.run([VERIFY, rel, "--json", *extra], capture_output=True, text=True, cwd=ROOT)
     if out.returncode not in (0, 1):
         raise RuntimeError(out.stderr or out.stdout)
     return json.loads(out.stdout)

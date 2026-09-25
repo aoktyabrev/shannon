@@ -96,7 +96,7 @@ def main():
     rep["sizes"] = {"R": len(R), "B": len(B), "X": len(X), "A": len(A), "D": len(D), "I": len(I)}
     rep["paper_sizes"] = {"R": 367, "B": 359, "X": 367, "A": 20, "D": 26, "I": 134753}
     rep["sizes_match_paper"] = rep["sizes"] == rep["paper_sizes"]
-    rep["verify"] = verify(out)
+    rep["verify"] = verify(out, ["--maximal"])   # ~30 s: 3^10 cells per vertex
     os.makedirs(os.path.join(ROOT, "results", "json"), exist_ok=True)
     with open(os.path.join(ROOT, "results", "json", "construct_c7_d10.json"), "w") as f:
         json.dump(rep, f, indent=2)
