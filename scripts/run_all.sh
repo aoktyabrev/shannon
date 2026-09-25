@@ -24,6 +24,7 @@ $PY scripts/calibrate.py
 
 # alpha(C_7^3): exact attempt with a one-hour ceiling; reports honestly if it does not close
 scripts/mis 7 3 3600 --json > results/json/mis_c7_d3.json || true
+$PY scripts/record_mis_set.py > /dev/null
 
 # S0.3 -- the upper-bound side, recomputed
 $PY scripts/theta.py > /dev/null

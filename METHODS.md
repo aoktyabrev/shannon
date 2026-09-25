@@ -23,8 +23,8 @@ The upper bound has not moved since Lovász 1979. Everything below is about the 
 α(C₇) = 3 and α(C₇^⊠2) = 10 in milliseconds, and reproduces the d = 2 row of [MO17-3] for
 n = 5, 9, 11, 13 (5, 18, 27, 39) in at most 1.3 s.
 
-**Where it stops.** At d = 3 for n = 7. Our own run on C₇^⊠3 (343 vertices) is reported in
-`RESULTS.md`; **α(C₇^⊠4) is not known at all**, only 108 ≤ α(C₇^⊠4) ≤ 115 [IRCR26-3, PS19-4,
+**Where it stops.** At d = 3 for n = 7, and short of it: given an hour on the 343-vertex graph
+our solver reached 32 and proved nothing, against the known 33 (`RESULTS.md`, S0.1). **α(C₇^⊠4) is not known at all**, only 108 ≤ α(C₇^⊠4) ≤ 115 [IRCR26-3, PS19-4,
 PS19-9]. Nothing in this line will produce a capacity bound: even the exact value 33 gives
 only 33^(1/3) ≈ 3.2075.
 

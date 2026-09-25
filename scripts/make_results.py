@@ -218,12 +218,21 @@ def main():
               f"**α(C₇^⊠3) = {mis3['best_found']}**, matching Baumert et al. as quoted in [PS19-4]. "
               f"{tick(mis3['best_found'] == 33)}")
         else:
-            w(f"**Not closed.** `scripts/mis` was given a {mis3['time_limit']:.0f} s budget on the "
-              f"343-vertex graph and found an independent set of size {mis3['best_found']} without "
-              f"proving optimality. The literature value 33 [PS19-4] is therefore *cited, not "
-              f"reproduced*. This is recorded as a gap, not papered over: the clique-cover bound in "
-              f"`scripts/mis` is too weak for this graph, and closing it is not on the Stage 1 path "
-              f"(an exact α at d = 3 would give only 33^(1/3) ≈ 3.2075, far below the record).")
+            v3 = mis3.get("verified", {})
+            w(f"**Not closed, and not even reached.** `scripts/mis` was given a "
+              f"{mis3['time_limit']:.0f} s budget on the 343-vertex graph. It came back with an "
+              f"independent set of size **{mis3['best_found']}** — verified independent by "
+              f"`scripts/verify` against both the box test and the quadratic test "
+              f"({tick(v3.get('agree', False))}, `{mis3.get('set_file', '')}`) — and with no proof "
+              f"of optimality. So it failed twice over: it did not prove the known value 33 "
+              f"[PS19-4], and it did not find a set of size 33 either. The clique-cover bound in "
+              f"`scripts/mis` is too weak for this graph.")
+            w()
+            w("This is left as it stands. Closing it is not on the Stage 1 path: even the exact "
+              "value would give only 33^(1/3) ≈ 3.2075, three decimal places below the record, and "
+              "the lever identified above lives in d = 5. The solver earns its place at d ≤ 2, "
+              "where it proves the optimum for five different cycles, and that is what it is used "
+              "for.")
         w()
 
     # ---------- S0.2 ----------
@@ -469,10 +478,10 @@ def main():
           "this report was generated; see `results/json/mis_c7_d3.json`.")
     elif not mis3.get("proved_optimal"):
         w(f"3. **α(C₇^⊠3) = 33 is cited, not reproduced.** The exact solver was given "
-          f"{mis3['time_limit']:.0f} s on the 343-vertex graph and reached {mis3['best_found']} "
-          f"without proving optimality. The task asks for the trivial cases to be checked against "
-          f"sources; α(C₇) = 3 and α(C₇^⊠2) = 10 are recomputed and proved optimal, 33 is not. "
-          f"Recorded as an open gap.")
+          f"{mis3['time_limit']:.0f} s on the 343-vertex graph, reached {mis3['best_found']} and "
+          f"proved nothing. The task asks for the trivial cases to be checked against sources: "
+          f"α(C₇) = 3 and α(C₇^⊠2) = 10 are recomputed and proved optimal, 33 is not — it stays a "
+          f"citation. Recorded as an open gap rather than quietly dropped.")
     elif mis3:
         w(f"3. α(C₇^⊠3) = 33 was proved exactly rather than merely cited "
           f"({mis3['seconds']:.0f} s), which the task did not require.")

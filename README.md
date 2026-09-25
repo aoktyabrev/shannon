@@ -73,6 +73,13 @@ controls; and α(C_n^⊠2) recomputed from scratch for n = 5, 7, 9, 11, 13 again
 Finally, the tests are shown to have teeth: a deliberately defective build of the same verifier
 (`verify_mutant`, which sees only repeated vertices) is run through them and is rejected.
 
+## What did not work
+
+One thing in Stage 0 failed and is reported as failing: the exact solver, given an hour on the
+343-vertex graph C₇^⊠3, reached an independent set of size 32 and proved no optimum, against
+the known α(C₇^⊠3) = 33. So that value stays a citation. The same solver proves the optimum
+for C₅^⊠2, C₇^⊠2, C₉^⊠2, C₁₁^⊠2 and C₁₃^⊠2 in at most 1.3 s, which is what it is used for.
+
 ## What is in here
 
 | | |
