@@ -310,6 +310,12 @@ in $C_7^{\boxt 10}$ verifies in $0.47$\,s, $137{,}987{,}072$ cells.) What needs 
 the group sweep ($663.9$\,s) and the sixteen auxiliary searches ($1500$\,s each); the whole
 study used about $18.7$ core-hours and no GPU time.
 
+\emph{How the computations were produced.} Through Claude Code (Claude Opus 5) under the author's
+direction, with the safeguards part of the process: predictions registered before each run, every
+estimator calibrated on a case where it could fail (the defective verifier above among them), and
+every number in this note reconciled by script against the computation behind it, an unsourced
+number counting as a failed build.
+
 \emph{Independence from the code.} Theorem~\ref{thm:main} does not rest on the software: its
 proof is Lemma~\ref{lem:nomix} plus two finite checks, each verifiable from the printed set in
 \cite{polak2019} in a few lines of any language. The programs reproduce those lists; they are
@@ -327,9 +333,9 @@ even $368$ is open.
 \item \emph{A base gadget in a dimension other than five.} Every published gadget lives in
 $C_7^{\boxt 5}$ because that is where the $367$ lives; nothing in the product lemma requires it.
 \item \emph{The recursion, not the base.} The heterogeneous framework of \cite{tandon2026}
-extracts $2.725\cdot10^{-5}$ more than the homogeneous one from the same base gadget, which is
-more than the entire $o$-route on this code could give. Any future base improvement is worth
-more through it.
+extracts $2.725\cdot10^{-5}$ more than the homogeneous one from the same base gadget --- more than
+the entire $o$-route on this code could give --- so any future base improvement is worth more
+through it.
 \end{enumerate}
 
 \paragraph{Data and code availability.}
@@ -341,18 +347,17 @@ those numbers against the stored results, and the literature check are archived 
 The author declares that he has no known competing financial interests or personal relationships
 that could have appeared to influence the work reported in this paper.
 
+\paragraph{Funding.}
+This research did not receive any specific grant from funding agencies in the public, commercial,
+or not-for-profit sectors.
+
+\paragraph{CRediT authorship contribution statement.}
+\textbf{Artem Oktiabrev:} conceptualization, methodology, software, validation, formal analysis,
+investigation, data curation, writing --- original draft and review.
+
 \paragraph{Declaration of generative AI and AI-assisted technologies in the manuscript
 preparation process.}
 During the preparation of this work the author used Claude and Claude Code (Anthropic) in order
 to draft and revise the text of this note. After using this tool/service the author reviewed
 and edited the content as needed and takes full responsibility for the content of the published
 article.
-
-\paragraph{AI in the research process.}
-The computations --- the enumeration of Proposition~\ref{prop:count}, the verifier and its
-calibration, the pipeline family, the group sweep and the auxiliary searches --- were implemented
-and run through Claude Code (Claude Opus 5) under the author's direction; Claude is a tool and not
-an author. The safeguards are part of the process: predictions registered before each run, every
-estimator calibrated on a case where it could fail (including a deliberately defective verifier
-that had to be rejected), and every number in this note reconciled by script against the
-computation behind it, an unsourced number counting as a failed build.

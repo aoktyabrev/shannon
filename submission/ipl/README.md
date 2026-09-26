@@ -21,31 +21,35 @@ Build: `pdflatex note_ipl && bibtex note_ipl && pdflatex note_ipl && pdflatex no
 
 ## The journal's rules, and where the package stands against each
 
-The live Guide for Authors cannot be read from this host — `sciencedirect.com` answers 403 with a
-captcha — so the rules below are quoted from the **Internet Archive snapshot of 2024-04-24**, the
-last readable copy, dumped by `scripts/fetch_venue.sh` and re-checked quotation by quotation by
-`scripts/w_venue.py` (23/23 found). **That snapshot is two years older than this note: confirm
-each line against the live page in a browser before sending.**
+The live Guide for Authors cannot be fetched from this host (`sciencedirect.com` answers 403 with
+a captcha, and the 403 is dumped as evidence), so **the author read it in a browser on 2026-09-26
+and pasted it in**; the passages the package is built against are kept in
+`sources/venue/ipl_guide_for_authors_live_2026-09-26.txt` and re-checked quotation by quotation by
+`scripts/w_venue.py` — 41/41 across all venue sources. The 2024-04-24 Internet Archive snapshot is
+kept too, and where the two differ the live text wins.
 
-| the rule | us |
+| the rule, from the live guide | us |
 |---|---|
-| nine printed pages, editors may allow more | five in the journal's print layout |
-| `elsarticle.cls` with BibTeX is recommended | exactly what is used |
-| the introduction must explain the merits and context in relatively accessible language | section 1 is written that way, and gives the numbers that make the question worth asking |
-| references numbered in square brackets, DOIs encouraged, journal names abbreviated | `elsarticle-num`; the Polak–Schrijver DOI is in `refs.bib`, verified against the dumped arXiv page |
-| data must be cited in the manuscript **and** in the reference list | the Zenodo archive is a `[dataset]` reference, cited from the data-availability paragraph |
-| a competing-interest statement is required even when there is nothing to declare, uploaded as its own file | the sentence is in the manuscript before the references, and the text for the separate file is in `competing_interest.txt` |
-| the generative-AI declaration goes in its own section at the end of the manuscript, before the references | it is there — see the caveat below |
-| referee suggestions with contact details | six names in `cover_letter.md`, each with the address printed in the paper of theirs that this note cites |
-| full postal address of the affiliation, e-mail of the corresponding author | e-mail yes; **the postal address is a placeholder in `ipl-body.tex` and only you can fill it** |
-| single blind review; **all rejections are final and resubmission is not allowed** | one attempt, so the checks above are worth the time they cost |
+| nine printed pages | five in the journal's print layout |
+| abstract at most 250 words | 162 |
+| 1–7 keywords, no phrases with "and"/"of" | six |
+| **highlights are required**: 3–5 bullets, ≤85 characters, separate editable file with "highlights" in the name | `highlights.txt`, four bullets, 74–80 characters |
+| editable source required; **"A PDF is not an acceptable source file"** | the self-contained `.tex`, `refs.bib` and `.bbl` ship beside the PDF |
+| their `elsarticle` LaTeX template | what the package uses |
+| full postal address of the affiliation, corresponding author's e-mail on the title page | e-mail yes; **the postal address is the one field only you can give** |
+| competing interests through the declarations tool, "I have nothing to declare", .docx uploaded at the attach-files step | `competing_interest.txt` says exactly that; the statement is also in the manuscript |
+| the funding sentence for unfunded work | in the manuscript, verbatim |
+| CRediT contribution statement | in the manuscript |
+| generative-AI declaration: new section at the end, before the references, with their section title and statement | **word for word** — this settles the discrepancy the 2024 snapshot had left open, and nothing needs swapping |
+| research data Option C: deposit, cite and link the dataset | the Zenodo archive is a `[dataset]` reference with repository and version, in their example's shape |
+| data statement at submission | answer with `10.5281/zenodo.22979509` |
+| references numbered in order, journal names abbreviated per LTWA, DOIs where available | `elsarticle-num` with `refs.bib`; the Polak–Schrijver DOI verified against the dumped arXiv page |
+| single anonymized review; one formal appeal per submission, its decision final | worth getting right first time, but not the one-shot-and-out that the 2024 snapshot suggested |
 
-**The one discrepancy, deliberately left visible.** The 2024 guide words the AI section heading
-"…in the writing process" and ends the sentence "…the content of the publication". The live
-Elsevier policy page, dumped today (HTTP 200), words the heading "…in the manuscript preparation
-process" and ends "…the content of the published article". The note follows the live policy page.
-If the live guide still prescribes the 2024 wording, swap the heading and that one clause — it is
-two edits in `../../note/note-content.tex`, and nothing else depends on them.
+A correction to what the 2024 snapshot said: it stated that resubmission of a rejected paper is
+not allowed. **That sentence is not in the live guide**, which instead describes a formal appeal
+procedure, one appeal per submission. The package is unchanged by this; only the note about how
+much a mistake would cost is.
 
 ## The upload set
 

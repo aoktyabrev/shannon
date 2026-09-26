@@ -172,9 +172,117 @@
       "what": "postal address and e-mail of the corresponding author",
       "quote": "Provide the full postal address of each affiliation, including the country name",
       "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "length",
+      "quote": "manuscripts are generally limited in length to nine pages when they appear in print",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "review and appeal",
+      "quote": "Only one appeal per submission will be considered and the appeal decision will be final.",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "a preprint is not prior publication",
+      "quote": "Sharing preprints, such as on a preprint server, will not count as prior publication.",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "competing interests via their tool",
+      "quote": "Authors with no competing interests to declare should select the option \"I have nothing to declare\".",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "the funding sentence to use when there is none",
+      "quote": "This research did not receive any specific grant from funding agencies in the public, commercial, or not-for-profit sectors.",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "AI declaration: placement",
+      "quote": "adding a statement at the end of the manuscript when the paper is first submitted",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "AI declaration: the section title, live wording",
+      "quote": "Title of new section: Declaration of generative AI and AI-assisted technologies in the manuscript preparation process.",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "AI declaration: the statement, live wording",
+      "quote": "During the preparation of this work the author(s) used [NAME OF TOOL / SERVICE] in order to [REASON]. After using this tool/service, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the published article.",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "source files, not a PDF",
+      "quote": "A PDF is not an acceptable source file.",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "postal address required",
+      "quote": "Ensure that you provide the full name and postal address of each affiliation, including the country name.",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "abstract limit",
+      "quote": "concise and factual abstract which does not exceed 250 words",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "highlights are required",
+      "quote": "You are required to provide article highlights at submission.",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "highlights: form and size",
+      "quote": "Highlights should consist of 3 to 5 bullet points, each a maximum of 85 characters, including spaces.",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "CRediT is required",
+      "quote": "Corresponding authors are required to acknowledge co-author contributions using CRediT",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "research data: option C",
+      "quote": "Deposit your research data in a relevant data repository.",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "data statement",
+      "quote": "you are required to state the availability of any data at submission",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "reference style",
+      "quote": "Abbreviate journal names according to the List of Title Word Abbreviations (LTWA).",
+      "found_in_dump": true
+    },
+    {
+      "page": "ipl_guide_for_authors_live_2026-09-26",
+      "what": "the [dataset] marker",
+      "quote": "Add [dataset] immediately before your reference.",
+      "found_in_dump": true
     }
   ],
-  "quotations_found": 23,
+  "quotations_found": 41,
   "requirements": {
     "length": {
       "limit": "nine printed pages",
@@ -195,20 +303,24 @@
       "source": "elsevier_pricing_policy"
     },
     "guide_for_authors": {
-      "live_page": "unreachable: sciencedirect.com answers 403 with a captcha here; the 403 is dumped as evidence",
-      "read_instead": "the Internet Archive snapshot of 2024-04-24, the last readable copy (the December 2024 snapshot is already a 403)",
-      "status": "dated evidence, two years older than this note -- every rule taken from it must be confirmed against the live page in a browser",
+      "live_page": "Read in a browser by the author on 2026-09-26 and pasted into sources/venue/ipl_guide_for_authors_live_2026-09-26.txt; this host cannot fetch it (403 with a captcha, dumped as evidence)",
+      "archive_snapshot": "The 2024-04-24 Internet Archive copy is kept as well; where the two differ the live text wins, and the differences are listed below",
       "what_it_says": {
-        "submission_system": "Editorial Manager, https://www.editorialmanager.com/ipl/default.aspx",
-        "review": "single blind; rejection decisions are final and resubmission of a rejected paper is not allowed -- there is one attempt",
-        "latex": "elsarticle.cls and BibTeX are what the journal recommends: what the package uses",
-        "length": "nine printed pages, editors may allow more; ours is five",
-        "intro": "the introduction must explain the merits and context in relatively accessible language: section 1 is written that way",
-        "generative_ai": "a statement at the end of the manuscript, before the references, in its own section. NOTE: the 2024 guide words the heading '... in the writing process' and ends '... of the publication', while the live Elsevier policy page dumped today words it '... in the manuscript preparation process' and '... of the published article'. The note follows the live policy page; if the live guide still says otherwise, the heading and one clause have to be swapped",
-        "competing_interest": "required even when there is nothing to declare, and uploaded as a separate file made with Elsevier's own tool at the Attach Files step",
-        "data": "a data statement is required, and the data has to be cited in the manuscript and in the reference list: the Zenodo archive is a [dataset] reference, cited from the data-availability paragraph",
-        "referees": "suggestions with contact details are on the submission checklist",
-        "title_page": "full postal address of the affiliation and the corresponding author's e-mail are required -- the postal address is the one thing in the package only the author can fill in"
+        "length": "nine printed pages; ours is five",
+        "review": "single anonymized; one formal appeal per submission is possible and its decision is final. The 2024 snapshot instead said resubmission of a rejected paper is not allowed -- that sentence is not in the live text, so it is not claimed here",
+        "source_files": "editable source is required and 'A PDF is not an acceptable source file': the package ships the self-contained .tex, refs.bib and .bbl next to the PDF",
+        "latex": "their elsarticle template is what the package uses",
+        "abstract": "at most 250 words; ours is 162",
+        "keywords": "1 to 7; ours is 6, none of them a phrase with 'and' or 'of'",
+        "highlights": "**required**, 3 to 5 bullets of at most 85 characters, as a separate editable file with 'highlights' in its name: highlights.txt, four bullets, 74-80 characters",
+        "competing_interest": "the declarations tool always, 'I have nothing to declare' when there is nothing, and the .docx it produces uploaded at the attach-files step; the manuscript also carries the statement",
+        "funding": "their recommended sentence for unfunded work is in the manuscript verbatim",
+        "credit": "a CRediT contribution statement is required; it is in the manuscript",
+        "generative_ai": "a new section at the end, before the references, with their section title and statement: the note matches the live wording word for word, which settles the discrepancy the 2024 snapshot had left open",
+        "research_data": "Option C: deposit in a repository, cite and link the dataset -- the Zenodo archive is a [dataset] reference with repository and version, as their example formats it",
+        "data_statement": "required at submission; answered with the Zenodo DOI",
+        "references": "numbered in order of appearance, journal names abbreviated per LTWA, DOIs where available: elsarticle-num with refs.bib",
+        "title_page": "full postal address of the affiliation and the corresponding author's e-mail -- the postal address is the only field the repository cannot fill"
       }
     }
   },

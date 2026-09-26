@@ -1,13 +1,21 @@
-The text for the competing-interest statement. The journal wants it as a separate file,
-made with Elsevier's own .docx tool and uploaded at the "Attach Files" step, and it is
-required even when there is nothing to declare (Guide for Authors, submission checklist).
-The same sentence is already in the manuscript, before the references.
+Competing interest — what the journal wants, and the text for it.
 
-----
-Declaration of competing interest
+The live Guide for Authors (read 2026-09-26) says: "The declarations tool should always be
+completed", "Authors with no competing interests to declare should select the option 'I have
+nothing to declare'", and "The resulting Word document containing your declaration should be
+uploaded at the 'attach/upload files' step in the submission process. It is important that the
+Word document is saved in the .doc/.docx file format. Author signatures are not required."
 
-The author declares that he has no known competing financial interests or personal
-relationships that could have appeared to influence the work reported in this paper.
-----
+So: open Elsevier's declarations tool from the submission, select "I have nothing to declare",
+save the .docx it produces, and upload it at the attach-files step. Nothing here is typed by
+hand; this file exists so the step is not forgotten.
 
-Funding: none. Single author, so no author-contribution statement is needed beyond this.
+For reference, the same statement is already in the manuscript, before the references:
+
+    The author declares that he has no known competing financial interests or personal
+    relationships that could have appeared to influence the work reported in this paper.
+
+Funding, also in the manuscript, in the journal's recommended wording:
+
+    This research did not receive any specific grant from funding agencies in the public,
+    commercial, or not-for-profit sectors.

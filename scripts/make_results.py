@@ -554,10 +554,9 @@ def stage2w(w, gate, thm, nums, venue):
         w()
         g = r["guide_for_authors"]
         w()
-        w("**The Guide for Authors itself could not be read live**: " + g["live_page"] + ". What "
-          "the package is checked against is " + g["read_instead"] + " — " + g["status"] + ".")
+        w("**The Guide for Authors.** " + g["live_page"] + ". " + g["archive_snapshot"] + ".")
         w()
-        w("| the journal's rule (2024 snapshot) | the package |")
+        w("| the rule, from the live guide | the package |")
         w("|---|---|")
         for k, v in g["what_it_says"].items():
             w(f"| {k.replace('_', ' ')} | {v} |")
