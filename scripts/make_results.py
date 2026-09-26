@@ -552,10 +552,20 @@ def stage2w(w, gate, thm, nums, venue):
           "declaration and describes the research-process use |")
         w(f"| fees | {r['fees']['subscription_route']} | nothing to pay on the subscription route |")
         w()
-        w("**Not verified from this host.** The " + "; ".join(r["unverified_from_this_host"]) +
-          f". The APC figure ({r['fees']['apc_for_IPL']}) comes from a search result quoting the "
-          "journal page rather than from a dump, and is marked as such in "
-          "`results/json/w_venue.json`; nothing in the plan depends on it.")
+        g = r["guide_for_authors"]
+        w()
+        w("**The Guide for Authors itself could not be read live**: " + g["live_page"] + ". What "
+          "the package is checked against is " + g["read_instead"] + " — " + g["status"] + ".")
+        w()
+        w("| the journal's rule (2024 snapshot) | the package |")
+        w("|---|---|")
+        for k, v in g["what_it_says"].items():
+            w(f"| {k.replace('_', ' ')} | {v} |")
+        w()
+        w(f"The APC figure ({r['fees']['apc_for_IPL']}) comes from a search result quoting the "
+          "journal page rather than from a dump, and is marked unverified in "
+          "`results/json/w_venue.json`; nothing depends on it, since the subscription route "
+          "carries no author charge.")
         w()
         w("Fallbacks, in order: " + "; ".join(venue["fallbacks"]) + ".")
         w()

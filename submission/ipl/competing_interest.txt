@@ -1,0 +1,13 @@
+The text for the competing-interest statement. The journal wants it as a separate file,
+made with Elsevier's own .docx tool and uploaded at the "Attach Files" step, and it is
+required even when there is nothing to declare (Guide for Authors, submission checklist).
+The same sentence is already in the manuscript, before the references.
+
+----
+Declaration of competing interest
+
+The author declares that he has no known competing financial interests or personal
+relationships that could have appeared to influence the work reported in this paper.
+----
+
+Funding: none. Single author, so no author-contribution statement is needed beyond this.

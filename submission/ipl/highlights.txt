@@ -1,0 +1,8 @@
+Highlights (optional per the submission checklist; Elsevier asks for three to five
+bullet points, each at most 85 characters including spaces). Character counts are given
+so the limit can be checked without a tool.
+
+- The Polak-Schrijver 367-word code has exactly eight private pairs, no ninth.   [76]
+- Their confusability graph is a 3-edge matching, so all eight are usable at once. [80]
+- All eight codes that construction can produce give counts 5,6,6,6,7,7,7,8.      [74]
+- A sweep of 8.26e9 group images shows why the published gadget must swap a word.  [80]

@@ -186,6 +186,7 @@ def body(tex):
     s = re.sub(r"SHA-256|SHA256SUMS", " ", s)            # the name of a hash, not a number
     s = re.sub(r"10\.5281/zenodo\.[A-Za-z0-9.]+", " ", s)   # the DOI of the archive
     s = re.sub(r"\b\d{4}-\d{4}-\d{4}-\d{4}\b", " ", s)      # the author's ORCID
+    s = re.sub(r"arXiv:\d{4}\.\d{4,5}", " ", s)               # an arXiv identifier is a name
     s = re.sub(r"\{,\}", "", s)                          # 8{,}260{,}976{,}640 -> one number
     return s
 

@@ -43,6 +43,44 @@ QUOTES = [
      "funding bodies, commonly known as Article Publishing Charges (APCs)"),
     ("elsevier_pricing_policy", "the APC range",
      "fees range between approximately $200 and $11,400 US Dollars, excluding tax"),
+    ("ipl_guide_for_authors_wayback2024", "length limit, with the editors' discretion",
+     "manuscripts are generally limited in length to nine pages when they appear in print. The "
+     "editors have the authority to make exceptions to this limit"),
+    ("ipl_guide_for_authors_wayback2024", "where submission happens",
+     "All contributions must be submitted through the Editorial Manager site at "
+     "https://www.editorialmanager.com/ipl/default.aspx"),
+    ("ipl_guide_for_authors_wayback2024", "one shot only",
+     "In IPL all rejection decisions are final, independently of the basis for the rejection, and "
+     "resubmissions of rejected papers is not allowed."),
+    ("ipl_guide_for_authors_wayback2024", "the expected LaTeX class",
+     "You are recommended to use the Elsevier article class elsarticle.cls to prepare your "
+     "manuscript and BibTeX to generate your bibliography."),
+    ("ipl_guide_for_authors_wayback2024", "the accessible introduction the journal asks for",
+     "the introductory part of the paper must contain a clear explanation, in relatively "
+     "accessible language, of the merits and context of its scientific contribution"),
+    ("ipl_guide_for_authors_wayback2024", "gen-AI section title, the journal's 2024 wording",
+     "The statement should be placed in a new section entitled"),
+    ("ipl_guide_for_authors_wayback2024", "gen-AI placement",
+     "adding a statement at the end of their manuscript in the core manuscript file, before the "
+     "References list"),
+    ("ipl_guide_for_authors_wayback2024", "a competing-interest statement is required either way",
+     "A competing interests statement is provided, even if the authors have no competing interests "
+     "to declare"),
+    ("ipl_guide_for_authors_wayback2024", "and it is uploaded as a separate file",
+     "Corresponding authors should then use this tool to create a shared statement and upload to "
+     "the submission system at the Attach Files step."),
+    ("ipl_guide_for_authors_wayback2024", "referee suggestions are part of the checklist",
+     "Referee suggestions and contact details provided, based on journal requirements"),
+    ("ipl_guide_for_authors_wayback2024", "a preprint is not prior publication",
+     "preprints can be shared anywhere at any time, in line with Elsevier"),
+    ("ipl_guide_for_authors_wayback2024", "the data statement",
+     "we require you to state the availability of your data in your submission"),
+    ("ipl_guide_for_authors_wayback2024", "data and software must be cited like literature",
+     "you are expected to cite the data in your manuscript and reference list"),
+    ("ipl_guide_for_authors_wayback2024", "reference style",
+     "Indicate references by number(s) in square brackets in line with the text."),
+    ("ipl_guide_for_authors_wayback2024", "postal address and e-mail of the corresponding author",
+     "Provide the full postal address of each affiliation, including the country name"),
 ]
 
 
@@ -92,7 +130,7 @@ def main():
         "quotations": rows,
         "quotations_found": len(rows) - bad,
         "requirements": {
-            "length": {"limit": "nine printed pages", "our_note": "6 pages in article class, 11pt",
+            "length": {"limit": "nine printed pages", "our_note": "six pages standalone; five in the journal's own print layout, measured",
                        "verdict": "within the limit, with room for the journal's own layout",
                        "source": "ipl_journal_page"},
             "generative_ai": {
@@ -114,10 +152,43 @@ def main():
                            "decision that depends on it. Nothing in the submission plan does: the "
                            "subscription route is free of charge."),
                 "source": "elsevier_pricing_policy"},
-            "unverified_from_this_host": [
-                "Guide for Authors itself (format, cover letter, LaTeX template, referee "
-                "suggestions): sciencedirect.com answers 403 to every non-browser client here",
-            ],
+            "guide_for_authors": {
+                "live_page": "unreachable: sciencedirect.com answers 403 with a captcha here; the "
+                             "403 is dumped as evidence",
+                "read_instead": "the Internet Archive snapshot of 2024-04-24, the last readable "
+                                "copy (the December 2024 snapshot is already a 403)",
+                "status": "dated evidence, two years older than this note -- every rule taken "
+                          "from it must be confirmed against the live page in a browser",
+                "what_it_says": {
+                    "submission_system": "Editorial Manager, "
+                                         "https://www.editorialmanager.com/ipl/default.aspx",
+                    "review": "single blind; rejection decisions are final and resubmission of a "
+                              "rejected paper is not allowed -- there is one attempt",
+                    "latex": "elsarticle.cls and BibTeX are what the journal recommends: what the "
+                             "package uses",
+                    "length": "nine printed pages, editors may allow more; ours is five",
+                    "intro": "the introduction must explain the merits and context in relatively "
+                             "accessible language: section 1 is written that way",
+                    "generative_ai": "a statement at the end of the manuscript, before the "
+                                     "references, in its own section. NOTE: the 2024 guide words "
+                                     "the heading '... in the writing process' and ends '... of "
+                                     "the publication', while the live Elsevier policy page dumped "
+                                     "today words it '... in the manuscript preparation process' "
+                                     "and '... of the published article'. The note follows the "
+                                     "live policy page; if the live guide still says otherwise, "
+                                     "the heading and one clause have to be swapped",
+                    "competing_interest": "required even when there is nothing to declare, and "
+                                          "uploaded as a separate file made with Elsevier's own "
+                                          "tool at the Attach Files step",
+                    "data": "a data statement is required, and the data has to be cited in the "
+                            "manuscript and in the reference list: the Zenodo archive is a "
+                            "[dataset] reference, cited from the data-availability paragraph",
+                    "referees": "suggestions with contact details are on the submission checklist",
+                    "title_page": "full postal address of the affiliation and the corresponding "
+                                  "author's e-mail are required -- the postal address is the one "
+                                  "thing in the package only the author can fill in",
+                },
+            },
         },
         "fallbacks": ["Discrete Applied Mathematics (Elsevier)",
                       "Experimental Mathematics (Taylor & Francis)"],

@@ -25,5 +25,10 @@ fetch ipl_journal_page                 "https://shop.elsevier.com/journals/infor
 fetch elsevier_generative_ai_policy    "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals"
 fetch elsevier_pricing_policy          "https://www.elsevier.com/about/policies-and-standards/pricing"
 fetch ipl_guide_for_authors_blocked    "https://www.sciencedirect.com/journal/information-processing-letters/publish/guide-for-authors"
+# The live guide is unreachable from here, so the last readable copy is taken from the Internet
+# Archive. It is a 2024-04-24 snapshot -- older than the note, and treated as dated evidence:
+# every rule quoted from it is marked as such in results/json/w_venue.json and has to be
+# confirmed against the live page in a browser before submission.
+fetch ipl_guide_for_authors_wayback2024 "http://web.archive.org/web/20240424192433/https://www.sciencedirect.com/journal/information-processing-letters/publish/guide-for-authors"
 
 (cd "$DIR" && sha256sum *.html > SHA256)

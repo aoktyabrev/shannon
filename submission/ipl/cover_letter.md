@@ -33,10 +33,12 @@ The journal is the natural home for the note in a second sense: the code the the
 was published here, in Polak and Schrijver, *Inform. Process. Lett.* **143** (2019) 37–40.
 
 **Prior dissemination and priority.** The note is deposited as a preprint on Zenodo,
-doi:10.5281/zenodo.22972847, dated 26 September 2026, together with the archive of the code and
+doi:10.5281/zenodo.22979509, dated 26 September 2026, together with the archive of the code and
 data. There is no arXiv version. The note has not been published elsewhere, has not been
 submitted to another journal, and is not under consideration anywhere else; the Zenodo record
-exists to timestamp the result in a fast-moving problem and is not a submission.
+exists to timestamp the result in a fast-moving problem — four improvements to this bound appeared
+between July and August 2026 — and, as your guide puts it, sharing a preprint does not count as
+prior publication.
 
 **Data and code.** Everything the note reports is in that archive: an exact verifier in C with
 no dependencies, its calibration on cases where it can fail, the sets with their SHA-256, and a
@@ -58,7 +60,18 @@ aoktyabrev@gmail.com
 
 ---
 
-*Optional, if the submission form asks for suggested referees — people who have worked directly
-on this construction and would need no introduction to it: Sven Polak (Amsterdam), Alexander
-Schrijver (Amsterdam), Yu Gao, Ravi Tandon (Arizona), Jeroen Zuiddam (Amsterdam), Patric
-Östergård (Aalto). Delete this paragraph before sending the letter itself.*
+*Suggested referees — the submission checklist asks for names with contact details. These are the
+people who have worked directly on this construction; each address below is the one printed in
+their own paper that this note cites, so check it is still current before entering it:*
+
+| referee | why | contact, as printed in |
+|---|---|---|
+| Sven C. Polak, Korteweg–de Vries Institute, University of Amsterdam | co-author of the code the theorem is about | `s.c.polak@uva.nl` — arXiv:1808.07438 |
+| Alexander Schrijver, Korteweg–de Vries Institute, University of Amsterdam | the same | `a.schrijver@uva.nl` — arXiv:1808.07438 |
+| Ravi Tandon, University of Arizona | holds the current record on the same gadget | `tandonr@arizona.edu` — arXiv:2608.30273 |
+| Patric R. J. Östergård, Aalto University | the previous generation of bounds for these powers | `patric.ostergard@aalto.fi` — arXiv:1504.01472 |
+| Yu Gao | defined the gadget whose parameter the theorem bounds | no address in arXiv:2607.27869 |
+| Jeroen Zuiddam, University of Amsterdam | the Lean-verified refinement of the same base gadget | no address in arXiv:2607.29681 |
+
+*Delete this section before sending the letter itself; it belongs in the submission form, not in
+the letter.*

@@ -256,15 +256,14 @@ auxiliary set was found for exactly one --- the assignment of \cite{itty2026}, k
 \cite{gao2026,bpz2026,tandon2026}. None of those papers remarks on the choice.
 \end{observation}
 
-The status of this observation is weaker than that of Theorem~\ref{thm:main} and is stated as
-such. The group sweep above is exhaustive and proves that no \emph{image} of a known code is
-admissible under any of the $16$ colourings. The admissible sets therefore have to be built
-by repair, and repair is a search: fixed-cardinality local search under each colouring for
-$1500$\,s reached $o=322$ under the published colouring and nothing admissible under the
-other fifteen. For those fifteen the honest statement is that $1500$\,s of search found
-nothing, not that nothing exists. The control that makes the negative reading meaningful:
-started from the published auxiliary set under the published colouring, the same search
-returns $o=321$, exactly the value of \cite{gao2026}.
+The status of this observation is weaker than the theorem's, and is stated as such. The group
+sweep is exhaustive and proves that no \emph{image} of a known code is admissible under any of the
+$16$ colourings, so admissible sets have to be built by repair --- and repair is a search:
+fixed-cardinality local search under each colouring for $1500$\,s reached $o=322$ under the
+published colouring and nothing admissible under the other fifteen. For those fifteen the honest
+statement is that $1500$\,s of search found nothing, not that nothing exists. The control that
+makes the negative reading meaningful: started from the published auxiliary set under the
+published colouring, the same search returns $o=321$, exactly the value of \cite{gao2026}.
 
 \begin{observation}[the count is a property of the code, not of its size]
 \label{obs:fragile}
@@ -336,7 +335,11 @@ more through it.
 \paragraph{Data and code availability.}
 The sets, the scripts that produce every number in this note, the machine reconciliation of
 those numbers against the stored results, and the literature check are archived at
-\href{https://doi.org/10.5281/zenodo.22979509}{doi:10.5281/zenodo.22979509}.
+\href{https://doi.org/10.5281/zenodo.22979509}{doi:10.5281/zenodo.22979509}~\cite{shannonarchive}.
+
+\paragraph{Declaration of competing interest.}
+The author declares that he has no known competing financial interests or personal relationships
+that could have appeared to influence the work reported in this paper.
 
 \paragraph{Declaration of generative AI and AI-assisted technologies in the manuscript
 preparation process.}
@@ -346,11 +349,10 @@ and edited the content as needed and takes full responsibility for the content o
 article.
 
 \paragraph{AI in the research process.}
-The computations reported here --- the enumeration of Proposition~\ref{prop:count}, the verifier
-and its calibration, the pipeline family, the group sweep and the auxiliary searches --- were
-implemented and run through Claude Code (Claude Opus 5) under the author's direction. Claude is
-a tool and not an author. The safeguards against the failure modes of working this way are part
-of the process: predictions registered before each run, every estimator calibrated on a case
-where it could fail (including a deliberately defective verifier that had to be rejected), the
-study's report generated from stored results, and every number in this note reconciled by script
-against the computation behind it, an unsourced number counting as a failed build.
+The computations --- the enumeration of Proposition~\ref{prop:count}, the verifier and its
+calibration, the pipeline family, the group sweep and the auxiliary searches --- were implemented
+and run through Claude Code (Claude Opus 5) under the author's direction; Claude is a tool and not
+an author. The safeguards are part of the process: predictions registered before each run, every
+estimator calibrated on a case where it could fail (including a deliberately defective verifier
+that had to be rejected), and every number in this note reconciled by script against the
+computation behind it, an unsourced number counting as a failed build.
