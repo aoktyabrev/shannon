@@ -15,6 +15,9 @@ The licence of each, as the dumped abstract page states it:
 | 2607.29681 Buys–Polak–Zuiddam | CC BY 4.0 (`licenses/by/4.0/`) | would be allowed, not done |
 | 2608.30273 Tandon | CC BY 4.0 (`licenses/by/4.0/`) | would be allowed, not done |
 
+The git history was rewritten on 2026-09-26 (`git filter-repo --invert-paths`) so that no
+commit of this repository contains the papers, not only the current one.
+
 What *is* committed: `sources/<id>/SHA256` — the checksums of the three files each dump consists
 of, so that a re-fetch can be compared byte for byte with what the quotations in `SOURCES.md`
 were checked against. `SOURCES.md` itself carries only short verbatim quotations with precise
