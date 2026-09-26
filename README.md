@@ -161,6 +161,33 @@ it claims 35, so the test has teeth. The ladder to α(C₇^⊠4) ≥ 108 records
 method: 102 (E2) → 105 (E3) → 106 (E2 tabu) → 107 (E2+E4) → 108. Every rung was checked by
 `scripts/verify`, which knows nothing about how the set was found.
 
+## The rewritten history, and what is authoritative
+
+On **2026-09-26** the public history of this repository was rewritten
+(`git filter-repo --invert-paths`) to remove the dumped arXiv e-prints from every commit, not
+only from the current tree. The reason is in `sources/LICENCES.md`: two of the six papers the
+quotations are checked against — Mathew–Östergård and, of all papers, Polak–Schrijver itself —
+are under arXiv's perpetual **non-exclusive** licence, which grants no right to redistribute
+them. Quoting them in `SOURCES.md` is quotation; shipping their PDFs in a public repository was
+redistribution.
+
+Every commit hash therefore changed. The correspondence is in **`COMMIT-MAP.txt`** (old hash,
+new hash, one pair per line), and the two tags now read:
+
+| tag | commit | Zenodo record | archive in the record | md5 of that archive |
+|---|---|---|---|---|
+| `v1.0.0` | `61776ec` | 10.5281/zenodo.22972847 | `shannon-1.0.0.tar.gz` | `17db1bc3d4cdcd9f295b1dfee0550f51` |
+| `v1.1.0` | `2be4cd7` | 10.5281/zenodo.22979509 | `shannon-1.1.0.tar.gz` | `7fdfc7e3f542f9381d40c895e77cf095` |
+
+**For the archived versions the tarball in the record is authoritative, not a commit hash.** The
+v1.0.0 archive was built from a commit that no longer exists in the public history, so a reader
+comparing the two should compare *contents*: `scripts/w_archive.py` downloads each record's
+tarball, unpacks it beside `git archive <tag>` and reports every difference. Its result is in
+`results/json/w_archive.json`, and today it is: v1.0.0 — the tarball holds 107 files, the tag
+113, and the six extra files in the tag are the `sources/<id>/SHA256` checksums that the v1.0.0
+archive's pruning removed by mistake (stated and fixed in v1.1.0); no file differs in content.
+v1.1.0 — 124 files on both sides, identical.
+
 ## Licences
 
 - **Code** (`scripts/`) — Apache-2.0, see `LICENSE`.

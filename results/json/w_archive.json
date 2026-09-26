@@ -1,0 +1,53 @@
+{
+  "repository": "aoktyabrev/shannon",
+  "commit_map": "COMMIT-MAP.txt",
+  "versions": [
+    {
+      "tag": "v1.0.0",
+      "tag_commit": "61776eca52fe66e3c24e2f488a35f43ed0e1db31",
+      "record": "10.5281/zenodo.22972847",
+      "file": "shannon-1.0.0.tar.gz",
+      "download_http": "cached",
+      "tarball_md5": "17db1bc3d4cdcd9f295b1dfee0550f51",
+      "files_in_record": 107,
+      "files_in_tag": 113,
+      "only_in_tag": [
+        "sources/1504.01472/SHA256",
+        "sources/1808.07438/SHA256",
+        "sources/2607.21517/SHA256",
+        "sources/2607.27869/SHA256",
+        "sources/2607.29681/SHA256",
+        "sources/2608.30273/SHA256"
+      ],
+      "only_in_record": [],
+      "content_differs": [],
+      "intentional": [
+        "sources/1504.01472/SHA256",
+        "sources/1808.07438/SHA256",
+        "sources/2607.21517/SHA256",
+        "sources/2607.27869/SHA256",
+        "sources/2607.29681/SHA256",
+        "sources/2608.30273/SHA256"
+      ],
+      "unexpected_differences": [],
+      "pass": true
+    },
+    {
+      "tag": "v1.1.0",
+      "tag_commit": "2be4cd77d672617e1a7dc731271ddf74498319c8",
+      "record": "10.5281/zenodo.22979509",
+      "file": "shannon-1.1.0.tar.gz",
+      "download_http": "cached",
+      "tarball_md5": "7fdfc7e3f542f9381d40c895e77cf095",
+      "files_in_record": 124,
+      "files_in_tag": 124,
+      "only_in_tag": [],
+      "only_in_record": [],
+      "content_differs": [],
+      "intentional": [],
+      "unexpected_differences": [],
+      "pass": true
+    }
+  ],
+  "all_pass": true
+}

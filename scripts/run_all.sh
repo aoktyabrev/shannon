@@ -72,6 +72,8 @@ else
     echo "pdflatex not found: note/note.pdf not rebuilt (nothing else depends on it)"
 fi
 $PY scripts/w_checknums.py
+# do the tarballs published on Zenodo still match the tags they name? (needs network)
+$PY scripts/w_archive.py || echo "archive check skipped or failed; see results/json/w_archive.json"
 
 (cd sets && sha256sum *.txt > SHA256SUMS)
 $PY scripts/make_results.py
