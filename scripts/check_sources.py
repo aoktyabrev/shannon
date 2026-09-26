@@ -20,6 +20,10 @@ def norm(s):
 
 def source_text(arxiv_id):
     d = os.path.join(ROOT, "sources", arxiv_id, "src")
+    if not os.path.isdir(d):
+        sys.exit(f"sources/{arxiv_id}/src is missing: run scripts/fetch_arxiv.sh {arxiv_id}. "
+                 f"The e-prints are not committed (sources/LICENCES.md); only their SHA256 is, "
+                 f"so a re-fetch can be compared byte for byte.")
     blob = []
     for root, _, files in os.walk(d):
         for fn in files:

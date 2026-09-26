@@ -228,8 +228,12 @@ def check(rule, spec, printed):
     if rule == "absdump":
         aid, line = spec
         import html as _html
-        raw = open(os.path.join(ROOT, "sources", aid, "abs.html"),
-                   encoding="utf-8", errors="replace").read()
+        ap = os.path.join(ROOT, "sources", aid, "abs.html")
+        if not os.path.exists(ap):
+            sys.exit(f"{os.path.relpath(ap, ROOT)} is missing: run "
+                     f"scripts/fetch_arxiv.sh {aid} (the e-prints are not committed, "
+                     f"see sources/LICENCES.md)")
+        raw = open(ap, encoding="utf-8", errors="replace").read()
         txt = _html.unescape(re.sub(r"<[^>]+>", " ", raw))
         txt = re.sub(r"\s+", " ", txt)
         return (line in txt) and (printed in line), line
