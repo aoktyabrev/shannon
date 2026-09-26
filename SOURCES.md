@@ -401,3 +401,54 @@ Three later papers improve on it, and the last of them, [T26], is the state of t
 dump date. The chain is
 3.258020 ([IRCR26]) → 3.2587891 ([G26]) → 3.2588053 ([BPZ26]) → 3.2588326 ([T26]),
 against the unchanged upper bound ϑ(C₇) = 3.3176672…
+
+---
+
+## Stage 2W — the literature gate before the note (2026-09-26)
+
+The note of Stage 2W claims a theorem: the printed Polak–Schrijver code admits exactly eight
+private pairs. Before writing it, the dumped sources were checked for the claim already being
+there, explicitly or implicitly, and for any remark on the choice of transversal assignment.
+`scripts/w_gate.py` lists mechanically every sentence of every dump that mentions private
+pairs, transversals, colourings, valid tuples or gadgets together with a word of maximality,
+uniqueness or exhaustion — 22 sentences in all, stored in `results/json/w_gate.json` and read
+in full. None states or implies maximality; none mentions the choice of assignment. The
+quotations below are the four that come closest, i.e. the places where such a claim would have
+had to appear.
+
+### [W26-1] the eight pairs are imported, not derived — arXiv:2607.27869, `paper.tex` line 375
+
+> As in~\cite{itty2026}, define the following eight pairs:
+
+Gao takes the pairs from [IRCR26] and verifies (quotation [G26-4]) that each is private. Where
+they come from, and whether more exist, is not asked.
+
+### [W26-2] the same, in Tandon's description of Gao — arXiv:2608.30273, `main.tex` line 899
+
+> Gao uses the same eight pairs $(r_j,q_j)$ that appear in the construction of Itty et al.~\cite{IttyEtAl2026}, and verifies that each is a private pair for $I_0$.
+
+### [W26-3] BPZ record the count as data, inside the definition — arXiv:2607.29681, `main3.tex` lines 63–66
+
+> such that \(I\) is independent, \(S\subseteq I\), and, for every \(s\in S\), exactly one of \(f_0(s)\) and \(f_1(s)\) equals \(s\), while \(N_G[f_i(s)]\cap I=\{s\}\) for \(i\in\{0,1\}\).
+
+Their profile for C₇ is (367,8,367,322) [BPZ26-2]: the eight appears as the size |S| of a
+given valid tuple. The functions f₀, f₁ are exactly the transversal assignment of [G26-1], and
+no property of the particular choice is claimed — which is the gap Observation 2 of the note
+sits in.
+
+### [W26-4] the only sentence in the record chain about *more* private pairs — arXiv:2608.30273, `main.tex` lines 2833–2835
+
+> The ordinary gadget has a smaller auxiliary set but a larger neutral part, trading some main-code words for more private pairs in the next product.
+
+This is about pairs *propagated by the product* in dimensions 75 and above, where t grows as
+t₁o₂ + o₁t₂ [G26-2], not about the candidate pairs of the five-dimensional code. It is the
+closest the literature comes to the question of the note, and it does not touch it.
+
+### Anything newer (re-checked 2026-09-26)
+
+`scripts/litcheck.py writeup-gate`, 4 queries, 59 distinct hits
+(`results/json/litcheck.json`, label `writeup-gate`). The record chain is present in full and
+nothing on C₇, on odd cycles or on strong products has appeared since arXiv:2608.30273
+(31 August 2026). The nine hits with a later identifier are unrelated information-theory
+papers; they are listed in `results/json/w_gate.json` under `litcheck`. The record to beat is
+therefore unchanged: Θ(C₇) ≥ 3.2588326203532663091215390518104754… [T26-2].

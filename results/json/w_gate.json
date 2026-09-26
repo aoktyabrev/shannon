@@ -1,0 +1,165 @@
+{
+  "date": "2026-09-26",
+  "papers": {
+    "1808.07438": {
+      "who": "Polak-Schrijver 2019",
+      "candidate_sentences": 0
+    },
+    "2607.21517": {
+      "who": "Itty-Rosin-Carstensen-Reichman 2026",
+      "candidate_sentences": 2
+    },
+    "2607.27869": {
+      "who": "Gao 2026",
+      "candidate_sentences": 3
+    },
+    "2607.29681": {
+      "who": "Buys-Polak-Zuiddam 2026",
+      "candidate_sentences": 1
+    },
+    "2608.30273": {
+      "who": "Tandon 2026",
+      "candidate_sentences": 16
+    }
+  },
+  "per_paper_hits": {
+    "1808.07438": [],
+    "2607.21517": [
+      {
+        "file": "main.tex",
+        "sentence": "Let: \\[P_H = \\{r_j: j \\in J_0\\} \\cup \\{q_j: j \\in J_1\\}\\] \\[P_V = \\{q_j: j \\in J_0\\} \\cup \\{r_j: j \\in J_1\\}\\] Let $x \\sim y$ indicate that the vertices corresponding to $x$ and $y$ have an edge; the vectors differ by at most 1 (taken modulo 7) in each coordinate."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "\\begin{table}[h] \\centering \\begin{tabular}{c c c} \\toprule $i$ & $D_i$ & $Q_i$ \\\\ \\midrule 0 & (1,0,14,9) & (1,1,14,9) \\\\ 1 & (4,0,8,9) & (3,0,8,9) \\\\ 2 & (11,14,1,10) & (11,0,1,10) \\\\ 3 & (14,1,0,14) & (14,2,0,14) \\\\ \\bottomrule \\end{tabular} \\caption{The vectors $D_i$ and $Q_i$.} \\label{tab:c15diqi} \\end{table} For vectors $x$ and $y$, as usual let $x \\sim y$ indicate that the vectors differ by at most 1 (taken mod 15) in each coordinate."
+      }
+    ],
+    "2607.27869": [
+      {
+        "file": "paper.tex",
+        "sentence": "The verification program described in Section~\\ref{sec:verification} checks the following directly from the $367$ vectors of $I_0$: \\begin{enumerate} \\item $I_0$ and $X$ are independent and each has size $367$; \\item for every $j$, \\[ N(\\{q_j\\})\\cap I_0=\\{r_j\\}; \\] \\item $\\PH$ and $\\PV$ are independent; \\item $X$ is disjoint from the sixteen pair endpoints; \\item among the points of $X$, exactly $321$ are confusable with neither $\\PH$ nor $\\PV$, exactly $26$ are confusable with $\\PH$ only, exactly $20$ are confusable with $\\PV$ only, and none is confusable with both."
+      },
+      {
+        "file": "paper.tex",
+        "sentence": "For gadgets constructed from $k$ copies of the base gadget, the values of $s,o,t$ depend only on $k$; we denote them by $s_k,o_k,t_k$."
+      },
+      {
+        "file": "paper.tex",
+        "sentence": "For $k\\geq2$, choose a split $i+j=k$ attaining the finite maximum in \\eqref{eq:DP}, and apply Lemma~\\ref{lem:product} to the inductively constructed gadgets of sizes $i$ and $j$."
+      }
+    ],
+    "2607.29681": [
+      {
+        "file": "main3.tex",
+        "sentence": "A \\emph{valid tuple} for \\(G\\) is \\(\\tau=(I,S,f_0,f_1,X)\\), where \\(I,S,X\\subseteq V(G)\\) and \\(f_0,f_1:S\\to V(G)\\), such that \\(I\\) is independent, \\(S\\subseteq I\\), and, for every \\(s\\in S\\), exactly one of \\(f_0(s)\\) and \\(f_1(s)\\) equals \\(s\\), while \\(N_G[f_i(s)]\\cap I=\\{s\\}\\) for \\(i\\in\\{0,1\\}\\)."
+      }
+    ],
+    "2608.30273": [
+      {
+        "file": "main.tex",
+        "sentence": "Thus each private pair contributes exactly one endpoint to each transversal."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "The Cartesian-product core $B_1\\times B_2$ is augmented by the routed families $A_H$ and $A_V$, producing an optimal $10$-word independent set in $C_7^{\\boxtimes 2}$.} \\label{fig:c7-gao-example} \\end{figure} \\noindent\\textit{Example $1$ (continued).} \\textit{We now apply Gao's product lemma to two copies of the gadget in our example, each with profile $\\pi(\\mathcal G)=(3,1,3,1,1,1)$."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "A finite computer verification establishes that $I_0$ and $X$ are independent sets of size $367$, that the eight pairs are private, that the two transversals are independent, and that the points of $X$ split into $321$ points confusable with neither transversal, $26$ confusable only with $P^{\\mathrm H}$, and $20$ confusable only with $P^{\\mathrm V}$."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "This suggests that, when constructing the output of Gao's product lemma, one should ask not only how large the new independent set is, but also whether the accompanying gadget structure can be chosen more effectively for subsequent products."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "Thus, regardless of the choice of its left coordinate, such a product point can be confusable with at most one of the two propagated transversals."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "Again, the right coordinate itself guarantees that the product point cannot be confusable with both propagated transversals."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "A product point $(u,x)$ can therefore be confusable with both propagated transversals only if $u$ is confusable with both $P_L^{\\mathrm H}$ and $P_L^{\\mathrm V}$."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "Hence this additional freedom affects only the auxiliary structure of the output gadget: Gao's product code $I_{LR}$, its propagated private pairs, and its transversals are left unchanged."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "Since these objects are unchanged, it remains only to verify that $X_{LR}^{\\mathrm{het}}$ is a valid auxiliary independent set and to determine its decomposition relative to the two propagated transversals."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "Therefore the $q_{\\mathrm H}$ vertices of $J_{\\mathrm H}\\setminus N_{G_L}(X_L^0)$ give points confusable with neither propagated transversal, while the remaining $j_{\\mathrm H}-q_{\\mathrm H}$ vertices give points confusable only with $P_{LR}^{\\mathrm V}$."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "The main product code, propagated private pairs, and propagated transversals are exactly those of the ordinary Gao product formed using $X_L$ and $X_R$; the sets $J_0,J_{\\mathrm H},J_{\\mathrm V}$ enter only in the choice of the output auxiliary set, and hence in the parameters $s,o,h,v$ of the resulting gadget."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "\\end{align} Since the resulting $100$-dimensional gadget will be used only in the final ordinary Gao product, no additional overlap count is required."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "The purpose of the present example is to show that heterogeneity can improve not only the gadgets propagated through Gao's binary framework, but also the recursion tree through which those gadgets are most effectively combined."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "Rather than combining gadgets only through Gao's fixed binary product, BPZ keep track of seven constituent sets and the separation relations among them."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "Since the neutral part depends only on the union of the two transversal neighborhoods, $X^0$ is unchanged, while the two one-sided parts are exchanged: $X^{\\mathrm H} \\longleftrightarrow X^{\\mathrm V}$."
+      },
+      {
+        "file": "main.tex",
+        "sentence": "\\end{align} The gadget $\\mathcal G_{15}^{\\mathrm{het}}$ is exactly the one constructed in Section~\\ref{sec:heterogeneousGaoforC7}; let $X_{15}$ denote its auxiliary set."
+      }
+    ]
+  },
+  "candidate_sentences_total": 22,
+  "litcheck": {
+    "date": "2026-09-26",
+    "label": "writeup-gate",
+    "distinct_hits": 59,
+    "record_chain_present": {
+      "2607.21517": true,
+      "2607.27869": true,
+      "2607.29681": true,
+      "2608.30273": true
+    },
+    "ids_newer_than_the_record": [
+      "2609.28363",
+      "2609.27767",
+      "2609.22314",
+      "2609.18352",
+      "2609.18200",
+      "2609.14621",
+      "2609.11368",
+      "2609.10986",
+      "2609.10436"
+    ],
+    "titles_newer_than_the_record": [
+      "Curvature-Domain Wireless Communications: Gauge-Fixed Signal Spaces, Fredholm Capacity, and Differentiation-Limited Scaling for Continuous Apertures",
+      "Benign Projective Landscapes for Measured Quantum Divergences",
+      "Integrated Sensing and Communications: A Tutorial on Mathematical Foundations, Signal Processing and System Design for 6G",
+      "Information Spectrum Methods for $\\varepsilon$-Capacity Problems in the Theory of Mixed Multiple-Access Channels with Cost Constraint",
+      "Shannon entropy and complex network community detection to study electoral coalition behaviour at municipal scale",
+      "A pretty-tight converse on the classical capacity of generalized amplitude-damping channels",
+      "A Tight Second-Order Converse Bound for Variable-Length Feedback Codes",
+      "A Mathematical Theory of Pragmatic Information",
+      "Mobility Information Capacity in the Sky: A Gaussian Channel Perspective"
+    ]
+  },
+  "verdict": {
+    "maximality_claimed_anywhere": false,
+    "unique_colouring_remarked_anywhere": false,
+    "new_record_since_stage_1": false,
+    "note_may_be_written": true,
+    "reading": "Gao imports the eight pairs from Itty et al. ('As in [itty2026], define the following eight pairs') and verifies that each is private; he does not ask whether a ninth exists. BPZ record only |S| = 8 inside a valid tuple. Tandon states the profiles (367,8,367,321,26,20) and (367,8,367,322,26,19) as data. Tandon's phrase 'trading some main-code words for more private pairs' is about propagated pairs of product gadgets, not about the candidate pairs of the five-dimensional code. No paper mentions the choice of transversal assignment at all, so none remarks that one of the sixteen is special. Nothing on C_7 has appeared since arXiv:2608.30273."
+  }
+}

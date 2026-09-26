@@ -1,0 +1,23 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+Copyright 2026 Artem Oktiabrev
+
+This licence covers the TEXTS AND DATA of this repository:
+README.md, RESULTS.md, SOURCES.md, METHODS.md, PREREGISTRATION*.md, the note in
+note/ (note.tex, refs.bib, note.pdf), the sets in sets/, and the contents of
+results/ (JSON files).
+The source code (directory scripts/) is licensed separately — see LICENSE (Apache-2.0).
+
+You are free to copy, redistribute and adapt these materials, including for
+commercial purposes, provided you give appropriate credit, link to the licence,
+and indicate if changes were made.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+Summary: https://creativecommons.org/licenses/by/4.0/
+
+The recommended citation is given in CITATION.cff.
+
+IMPORTANT: the quotations from third-party scientific works that appear in
+SOURCES.md remain under the copyright of their respective holders. They are
+reproduced as short fragments with precise references (arXiv id, line or
+equation number). This licence does not extend to them.

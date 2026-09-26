@@ -12,3 +12,12 @@ scripts/s1_sym
 scripts/s1_lns
 scripts/s1_aux
 scripts/s1_auxsearch
+
+# LaTeX build products of the note (note.pdf is kept)
+note/*.aux
+note/*.log
+note/*.out
+note/*.toc
+
+# dumped publisher pages: fetched by scripts/fetch_venue.sh, not ours to redistribute
+sources/venue/*.html

@@ -26,5 +26,19 @@
     },
     "best_lower_bound_seen": "3.2588326203532663091215390518104754376053875943219",
     "attributed_to": "Tandon, arXiv:2608.30273 [T26-2]"
+  },
+  {
+    "timestamp": "2026-09-26T06:10:05Z",
+    "label": "writeup-gate",
+    "distinct_hits": 59,
+    "newest_hit_id": "2609.28363",
+    "record_chain_present": {
+      "2607.21517": true,
+      "2607.27869": true,
+      "2607.29681": true,
+      "2608.30273": true
+    },
+    "best_lower_bound_seen": "3.2588326203532663091215390518104754376053875943219",
+    "attributed_to": "Tandon, arXiv:2608.30273 [T26-2]"
   }
 ]

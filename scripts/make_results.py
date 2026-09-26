@@ -424,6 +424,143 @@ def stage1(w, gate, anchor, pairs, codes, rep, aux, auxrun, lithist, budget, gad
         w()
 
 
+def stage2w(w, gate, thm, nums, venue):
+    """Stage 2W -- the note. Gate, the theorem's data, the number reconciliation, the venue."""
+    if not (gate or thm):
+        return
+    w("---")
+    w()
+    w("# Stage 2W — the note")
+    w()
+    w("Stage 2W writes up the Stage 1 theorem and does not extend the research: no new search "
+      "was run. The deliverable is `note/note.tex` (6 pages compiled), and everything below is "
+      "the gate it had to pass and the checks that hold it to the stored computations.")
+    w()
+
+    # ---------- W.0 ----------
+    if gate:
+        w("## W.0 — the literature gate")
+        w()
+        w("The note claims a maximality theorem, so the first question is whether anybody has "
+          "claimed it already, explicitly or implicitly. `scripts/w_gate.py` lists mechanically "
+          "every sentence of every dumped paper that mentions private pairs, transversals, "
+          "colourings, valid tuples or gadgets **together with** a word of maximality, uniqueness "
+          "or exhaustion, and the list is read in full rather than counted:")
+        w()
+        w("| paper | candidate sentences | any claim of maximality? |")
+        w("|---|---|---|")
+        for aid, rec in gate["papers"].items():
+            w(f"| {rec['who']} (arXiv:{aid}) | {rec['candidate_sentences']} | no |")
+        w()
+        w(f"{gate['candidate_sentences_total']} sentences in total, stored in "
+          "`results/json/w_gate.json`. The four that come closest are quoted in `SOURCES.md` "
+          "under Stage 2W [W26-1] to [W26-4]: Gao imports the eight pairs from Itty et al. and "
+          "verifies that each is private without asking whether a ninth exists; Buys–Polak–Zuiddam "
+          "record the eight as the size |S| of a given valid tuple; Tandon states the two profiles "
+          "as data. The one sentence in the chain about *more* private pairs is about pairs "
+          "propagated by the product in dimension ≥ 10, not about the candidates of the "
+          "five-dimensional code.")
+        w()
+        w(f"**Nothing on C₇ has appeared since arXiv:2608.30273.** The check was rerun on "
+          f"{gate['litcheck']['date']} (label `{gate['litcheck']['label']}`, "
+          f"{gate['litcheck']['distinct_hits']} distinct hits); the "
+          f"{len(gate['litcheck']['ids_newer_than_the_record'])} hits with a later identifier are "
+          "unrelated information-theory papers, listed in `results/json/w_gate.json`.")
+        w()
+        w(f"Gate verdict: **the note may be written** — maximality claimed anywhere: "
+          f"{yn(gate['verdict']['maximality_claimed_anywhere'])}; the unique admissible colouring "
+          f"remarked anywhere: {yn(gate['verdict']['unique_colouring_remarked_anywhere'])}; a new "
+          f"record since Stage 1: {yn(gate['verdict']['new_record_since_stage_1'])}.")
+        w()
+
+    # ---------- W.1 ----------
+    if thm:
+        h = thm["neighbour_histogram"]
+        cg = thm["conflict_graph"]
+        w("## W.1 — the data the theorem is printed from")
+        w()
+        w("`scripts/w_theorem.py` recomputes, from the set file, everything the written proof "
+          "displays, and cross-checks it against the Stage 1 record:")
+        w()
+        w("| | |")
+        w("|---|---|")
+        w(f"| vertices of Z₇⁵ | {h['universe']:,} |")
+        w(f"| outside the code | {h['words_outside_I']:,} |")
+        for k, v in h["by_number_of_I_neighbours"].items():
+            plural = "neighbour" if k == "1" else "neighbours"
+            w(f"| of those, with {k} {plural} in the code | **{v:,}** |")
+        w(f"| candidates that are the published eight pairs | "
+          f"{tick(thm['candidates_are_exactly_the_published_eight'])} |")
+        w(f"| edges of the conflict graph on the eight q's | {cg['edge_count']} "
+          f"({', '.join('q%d~q%d' % tuple(e) for e in cg['edges'])}) |")
+        w(f"| is that graph a matching? | {yn(cg['is_a_matching'])} |")
+        w(f"| components, hence proper 2-colourings up to swap | {cg['components']} → "
+          f"{cg['proper_2_colourings_up_to_swap']} |")
+        w(f"| t* | **{cg['t_max']}** |")
+        w(f"| the non-mixing lemma, checked on this instance | {tick(thm['lemma_check']['pass'])} |")
+        w(f"| the single word of T(I) confusable with both transversals | "
+          f"{thm['forbidden_region_of_T_image']['words_confusable_with_both_transversals']} |")
+        w(f"| agrees with `s1_pairs.json` and `s1_aux.json` | "
+          f"{tick(thm['cross_check_stage1']['agrees'])} |")
+        w()
+        w("The last row matters more than it looks: the note and Stage 1 compute the same things "
+          "by different routes, and a silent drift between them would fail the build. The "
+          "offender row is the word Itty et al. replace — the note says why the replacement is "
+          "unavoidable rather than cosmetic.")
+        w()
+
+    # ---------- W.2 ----------
+    if nums:
+        w("## W.2 — every number in the note, reconciled by machine")
+        w()
+        w(f"`scripts/w_checknums.py` holds a ledger of {nums['ledger_entries']} entries. Each is "
+          "checked in both directions: the value against `results/json` (or, for an external "
+          "number, against a verbatim quotation in `SOURCES.md`), and its presence in the note. "
+          "Then the note is swept backwards: of its "
+          f"{nums['distinct_numeric_tokens']} distinct numeric tokens, every one must be in the "
+          "ledger, in the list of years, or structural (a dimension, an index, a coordinate).")
+        w()
+        w(f"| ledger entries checking out | **{nums['ledger_entries'] - nums['failures']}/"
+          f"{nums['ledger_entries']}** |")
+        w("|---|---|")
+        w(f"| numbers in the note that no computation backs | **{len(nums['unaccounted_tokens'])}** |")
+        w(f"| verdict | {tick(nums['all_pass'])} |")
+        w()
+        w("Six of the ledger entries are not single numbers but lists — the private-pair counts of "
+          "the eight pipeline codes, the three conflict edges in Gao's numbering, the replaced "
+          "word, the published colouring — checked against the stored computation as sequences, so "
+          "that a reordered or half-copied list fails too.")
+        w()
+
+    # ---------- W.3 / W.4 ----------
+    if venue:
+        r = venue["requirements"]
+        w("## W.3 — venue and priority")
+        w()
+        w(f"**Order.** {venue['order']}")
+        w()
+        w(f"**First choice: {venue['target']}.** {venue['why']} Its requirements were read from "
+          "pages dumped into `sources/venue/` with their URL, HTTP status and SHA-256, and "
+          "`scripts/w_venue.py` re-checks each quotation against the dump "
+          f"({venue['quotations_found']}/{len(venue['quotations'])} found):")
+        w()
+        w("| requirement | what it says | us |")
+        w("|---|---|---|")
+        w(f"| length | {r['length']['limit']} | {r['length']['our_note']} — {r['length']['verdict']} |")
+        w("| generative AI | a declaration section in the publisher's own wording, and AI used in "
+          "the research process described in the methods | both, verbatim: the note carries the "
+          "declaration and describes the research-process use |")
+        w(f"| fees | {r['fees']['subscription_route']} | nothing to pay on the subscription route |")
+        w()
+        w("**Not verified from this host.** The " + "; ".join(r["unverified_from_this_host"]) +
+          f". The APC figure ({r['fees']['apc_for_IPL']}) comes from a search result quoting the "
+          "journal page rather than from a dump, and is marked as such in "
+          "`results/json/w_venue.json`; nothing in the plan depends on it.")
+        w()
+        w("Fallbacks, in order: " + "; ".join(venue["fallbacks"]) + ".")
+        w()
+
+
 def main():
     prereg = load("prereg.json")
     pp = os.path.join(ROOT, "PREREGISTRATION_S1.md")
@@ -469,7 +606,7 @@ def main():
     th = load("theta.json")
     mis3 = load("mis_c7_d3.json")
 
-    w("# RESULTS — shannon, Stages 0 and 1")
+    w("# RESULTS — shannon, Stages 0, 1 and 2W")
     w()
     w("**This file is generated by `scripts/make_results.py` from `results/json/*.json`. "
       "Do not edit it by hand.**")
@@ -479,7 +616,8 @@ def main():
       f"SHA-256 `{prereg['sha256'][:16]}…` — verified against the file on disk.")
     w()
     w("Stage 0 is calibration and contains no search run. Stage 1 is the search: a gate that "
-      "makes the stack find the known optima first, then the hunt for a ninth private pair.")
+      "makes the stack find the known optima first, then the hunt for a ninth private pair. "
+      "Stage 2W writes the result up and runs no search at all.")
     w()
     w("**In one line.** Stage 0 found the brief's premise three papers out of date and identified "
       "the five-dimensional base gadget as the only lever. Stage 1 proved that lever is already "
@@ -516,6 +654,8 @@ def main():
 
     # ---------- Rule 0 ----------
     stage1(w, gate, anchor, s1pairs, s1codes, s1rep, s1aux, s1auxrun, lithist, budget, gad)
+    stage2w(w, load("w_gate.json"), load("w_theorem.json"), load("w_checknums.json"),
+            load("w_venue.json"))
 
     w("## Rule 0")
     w()

@@ -1,0 +1,96 @@
+cff-version: 1.2.0
+title: >-
+  The Polak–Schrijver code has exactly eight private pairs (with the shannon
+  repository, Stages 0–2W)
+message: "If you use these materials, please cite the Zenodo record."
+type: software
+authors:
+  - given-names: Artem
+    family-names: Oktiabrev
+    email: aoktyabrev@gmail.com
+    orcid: "https://orcid.org/0009-0003-3626-2002"
+abstract: >-
+  Lower bounds on the Shannon capacity of C7. Every improvement since July 2026
+  is built on one five-dimensional gadget: the 367-word Polak–Schrijver code with
+  eight private pairs. Proved here: in the whole of Z_7^5 exactly eight vertices
+  have a single neighbour in that code, they are precisely the eight in use, and
+  their confusability graph is a matching with three edges, hence bipartite — so
+  t* = 8 and there is no ninth private pair. Reported alongside: all eight
+  367-word codes the Polak–Schrijver construction can produce, with private-pair
+  counts 5, 6, 6, 6, 7, 7, 7, 8; the arithmetic that closes smaller codes; and a
+  sweep of 8,260,976,640 images under Aut(C_7^5) in which the forbidden
+  intersection is never empty, which is why the published construction has to
+  replace one auxiliary vector. Two weaker observations are labelled as search
+  evidence rather than proof. An exact verifier calibrated on cases where it can
+  fail, a preregistration sealed before the first search run, a generated report,
+  171 machine-checked verbatim quotations, and a script that reconciles every
+  number in the note with the computation behind it.
+keywords:
+  - Shannon capacity
+  - zero-error capacity
+  - independent sets
+  - strong graph product
+  - odd cycles
+  - private pairs
+  - gadget product
+  - reproducible research
+license:
+  - Apache-2.0
+  - CC-BY-4.0
+version: 1.0.0
+date-released: "2026-09-26"
+references:
+  - type: article
+    title: "New lower bound on the Shannon capacity of C7 from circular graphs"
+    authors:
+      - family-names: Polak
+        given-names: Sven C.
+      - family-names: Schrijver
+        given-names: Alexander
+    journal: "Information Processing Letters"
+    volume: 143
+    start: 37
+    end: 40
+    year: 2019
+    url: "https://arxiv.org/abs/1808.07438"
+  - type: article
+    title: "Improved lower bounds for the Shannon capacity of odd cycles"
+    authors:
+      - family-names: Itty
+        given-names: Nathaniel
+      - family-names: Rosin
+        given-names: Christopher D.
+      - family-names: Carstensen
+        given-names: Chase
+      - family-names: Reichman
+        given-names: Daniel
+    year: 2026
+    url: "https://arxiv.org/abs/2607.21517"
+  - type: article
+    title: >-
+      A recursive construction improving the lower bound on the Shannon capacity
+      of C7
+    authors:
+      - family-names: Gao
+        given-names: Yu
+    year: 2026
+    url: "https://arxiv.org/abs/2607.27869"
+  - type: article
+    title: "Lean-verified lower bounds for the Shannon capacity of odd cycles"
+    authors:
+      - family-names: Buys
+        given-names: Pjotr
+      - family-names: Polak
+        given-names: Sven
+      - family-names: Zuiddam
+        given-names: Jeroen
+    year: 2026
+    url: "https://arxiv.org/abs/2607.29681"
+  - type: article
+    title: >-
+      Strengthening recursive constructions for zero-error Shannon capacity
+    authors:
+      - family-names: Tandon
+        given-names: Ravi
+    year: 2026
+    url: "https://arxiv.org/abs/2608.30273"

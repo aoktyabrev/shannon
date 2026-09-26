@@ -1,0 +1,605 @@
+{
+  "note": "note/note.tex",
+  "ledger_entries": 66,
+  "failures": 0,
+  "numeric_tokens_in_body": 290,
+  "distinct_numeric_tokens": 70,
+  "unaccounted_tokens": [],
+  "rows": [
+    {
+      "printed": "367",
+      "rule": "json_int",
+      "what": "size of the Polak-Schrijver code",
+      "source": "w_theorem.json:code.size",
+      "computed": "367",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "16807",
+      "rule": "json_int",
+      "what": "|Z_7^5|",
+      "source": "w_theorem.json:neighbour_histogram.universe",
+      "computed": "16807",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "16440",
+      "rule": "json_int",
+      "what": "words outside I",
+      "source": "w_theorem.json:neighbour_histogram.words_outside_I",
+      "computed": "16440",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "8",
+      "rule": "json_int",
+      "what": "words with exactly one I-neighbour",
+      "source": "w_theorem.json:neighbour_histogram.by_number_of_I_neighbours.1",
+      "computed": "8",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "254",
+      "rule": "json_int",
+      "what": "words with two I-neighbours",
+      "source": "w_theorem.json:neighbour_histogram.by_number_of_I_neighbours.2",
+      "computed": "254",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "16178",
+      "rule": "json_int",
+      "what": "words with three or more",
+      "source": "w_theorem.json:neighbour_histogram.by_number_of_I_neighbours.3+",
+      "computed": "16178",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "5",
+      "rule": "json_int",
+      "what": "components of the conflict graph",
+      "source": "w_theorem.json:conflict_graph.components",
+      "computed": "5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "3",
+      "rule": "json_int",
+      "what": "edges of the conflict graph",
+      "source": "w_theorem.json:conflict_graph.edge_count",
+      "computed": "3",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "16",
+      "rule": "derived",
+      "what": "proper 2-colourings up to swap",
+      "source": "('2**(comp-1)', {'comp': 'w_theorem.json:conflict_graph.components'})",
+      "computed": "16",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "3.2587891539086910161967650155206769",
+      "rule": "json_str",
+      "what": "Gao's bound, reproduced",
+      "source": "gadget.json:gao.bound_dim_200",
+      "computed": "3.2587891539086910161967650155206769",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "3.2588053698854655725829750306238067",
+      "rule": "json_str",
+      "what": "the BPZ profile through our homogeneous recursion",
+      "source": "s1_anchor.json:anchor.our_homogeneous_bound_dim200",
+      "computed": "3.2588053698854655725829750306238067",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "3.2588326203532663091215390518104754",
+      "rule": "json_prefix",
+      "what": "the current record [T26]",
+      "source": "s1_anchor.json:framework_gap.heterogeneous_bpz_tandon_record",
+      "computed": "3.2588326203532663091215390518104754376053875943219",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "3.2590062007738521305802",
+      "rule": "json_prefix",
+      "what": "what a ninth private pair would give",
+      "source": "s1_anchor.json:targets[6].homogeneous_bound",
+      "computed": "3.2590062007738521305802293881892807",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "3.3176672073940953927",
+      "rule": "json_prefix",
+      "what": "the Lovasz upper bound",
+      "source": "theta.json:values.7",
+      "computed": "3.31766720739409539273320829807238137146",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "1.736",
+      "rule": "sci",
+      "what": "margin of a ninth pair over the record",
+      "source": "('s1_anchor.json:targets[6].margin_over_tandon_record', -4)",
+      "computed": "1.735804205858214586903363788052623946124056781e-4",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "1.7",
+      "rule": "sci",
+      "what": "the same margin, to two digits",
+      "source": "('s1_anchor.json:targets[6].margin_over_tandon_record', -4)",
+      "computed": "1.735804205858214586903363788052623946124056781e-4",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "6.993",
+      "rule": "sci",
+      "what": "margin of (367,8,367,324)",
+      "source": "('s1_anchor.json:targets[3].margin_over_tandon_record', -6)",
+      "computed": "6.9929194337096128219627735926623946124056781e-6",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "2.725",
+      "rule": "sci",
+      "what": "the framework gap",
+      "source": "('s1_anchor.json:framework_gap.gap_record_minus_ours', -5)",
+      "computed": "2.72504678007365385640211866687376053875943219e-5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "3.2578659667835159504124",
+      "rule": "root",
+      "what": "367^(1/5)",
+      "source": "(367, 5)",
+      "computed": "367^(1/5)",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "3.2580207372932453595278",
+      "rule": "root",
+      "what": "134753^(1/10)",
+      "source": "(134753, 10)",
+      "computed": "134753^(1/10)",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "134753",
+      "rule": "json_int",
+      "what": "the Itty et al. set",
+      "source": "construct_c7_d10.json:sizes.I",
+      "computed": "134753",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "321",
+      "rule": "json_int",
+      "what": "Gao's o",
+      "source": "gadget.json:base_gadget.profile.o",
+      "computed": "321",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "26",
+      "rule": "json_int",
+      "what": "Gao's h",
+      "source": "gadget.json:base_gadget.profile.h",
+      "computed": "26",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "20",
+      "rule": "json_int",
+      "what": "Gao's v",
+      "source": "gadget.json:base_gadget.profile.v",
+      "computed": "20",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "322",
+      "rule": "json_int",
+      "what": "BPZ's o",
+      "source": "gadget.json:bpz.base_profile[3]",
+      "computed": "322",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "19",
+      "rule": "json_int",
+      "what": "BPZ's v",
+      "source": "gadget.json:bpz.base_profile[5]",
+      "computed": "19",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "327",
+      "rule": "json_int",
+      "what": "the core M",
+      "source": "s1_codes.json:core_M",
+      "computed": "327",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "71",
+      "rule": "json_int",
+      "what": "extension graph vertices",
+      "source": "s1_codes.json:extension_graph_vertices",
+      "computed": "71",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "85",
+      "rule": "json_int",
+      "what": "extension graph edges",
+      "source": "s1_codes.json:extension_graph_edges",
+      "computed": "85",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "40",
+      "rule": "json_int",
+      "what": "its independence number",
+      "source": "construct_c7_d5_ps.json:extension_graph.alpha",
+      "computed": "40",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "8",
+      "rule": "json_int",
+      "what": "codes of size 367",
+      "source": "s1_codes.json:codes_of_size_367_from_the_pipeline",
+      "computed": "8",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "13",
+      "rule": "json_int",
+      "what": "pairs needed at a = 366",
+      "source": "s1_anchor.json:branch_D_break_even.private_pairs_needed_to_match.366",
+      "computed": "13",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "16",
+      "rule": "json_int",
+      "what": "pairs needed at a = 365",
+      "source": "s1_anchor.json:branch_D_break_even.private_pairs_needed_to_match.365",
+      "computed": "16",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "23",
+      "rule": "json_int",
+      "what": "pairs needed at a = 360",
+      "source": "s1_anchor.json:branch_D_break_even.private_pairs_needed_to_match.360",
+      "computed": "23",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "366",
+      "rule": "literal",
+      "what": "code size in the break-even table",
+      "source": "366",
+      "computed": "366",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "365",
+      "rule": "json_int",
+      "what": "also: words shared by our rebuild and the printed set",
+      "source": "construct_c7_d5_ps.json:overlap_with_printed_R",
+      "computed": "365",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "360",
+      "rule": "literal",
+      "what": "code size in the break-even table",
+      "source": "360",
+      "computed": "360",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "120",
+      "rule": "literal",
+      "what": "|S_5|",
+      "source": "120",
+      "computed": "120",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "14",
+      "rule": "literal",
+      "what": "|D_7|",
+      "source": "14",
+      "computed": "14",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "64538880",
+      "rule": "derived",
+      "what": "|(D_7)^5 rtimes S_5|",
+      "source": "('14**5*120', {})",
+      "computed": "64538880",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "8260976640",
+      "rule": "json_int",
+      "what": "triples swept",
+      "source": "s1_aux.json:group_elements_swept",
+      "computed": "8260976640",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "4",
+      "rule": "json_int",
+      "what": "triples with 1 forbidden word",
+      "source": "s1_aux.json:translations_with_bad_eq[1]",
+      "computed": "4",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "33",
+      "rule": "json_int",
+      "what": "with 2",
+      "source": "s1_aux.json:translations_with_bad_eq[2]",
+      "computed": "33",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "101",
+      "rule": "json_int",
+      "what": "with 3",
+      "source": "s1_aux.json:translations_with_bad_eq[3]",
+      "computed": "101",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "209",
+      "rule": "json_int",
+      "what": "with 4",
+      "source": "s1_aux.json:translations_with_bad_eq[4]",
+      "computed": "209",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "358",
+      "rule": "json_int",
+      "what": "with 5",
+      "source": "s1_aux.json:translations_with_bad_eq[5]",
+      "computed": "358",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "965",
+      "rule": "json_int",
+      "what": "with 6",
+      "source": "s1_aux.json:translations_with_bad_eq[6]",
+      "computed": "965",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "6060",
+      "rule": "json_int",
+      "what": "with 7",
+      "source": "s1_aux.json:translations_with_bad_eq[7]",
+      "computed": "6060",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "663.9",
+      "rule": "json_round",
+      "what": "seconds of the sweep",
+      "source": "('s1_aux.json:seconds', 1)",
+      "computed": "663.9",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "60",
+      "rule": "json_int",
+      "what": "repaired candidates",
+      "source": "s1_repair.json:candidates_examined",
+      "computed": "60",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "368",
+      "rule": "derived",
+      "what": "the record for alpha that a bigger repair would have given",
+      "source": "('367+1', {})",
+      "computed": "368",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "324",
+      "rule": "json_int",
+      "what": "the o that would be needed to clear the record",
+      "source": "s1_anchor.json:targets[3].profile[3]",
+      "computed": "324",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "1500",
+      "rule": "json_round",
+      "what": "seconds per colouring",
+      "source": "('s1_auxsearch.json:seconds_per_colouring', 0)",
+      "computed": "1500.0",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "11744",
+      "rule": "json_int",
+      "what": "box cells of a 367-word set",
+      "source": "w_theorem.json:code.verifier.box_cells",
+      "computed": "11744",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "137987072",
+      "rule": "json_int",
+      "what": "box cells at d = 10",
+      "source": "construct_c7_d10.json:verify.box_cells",
+      "computed": "137987072",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "0.47",
+      "rule": "json_round",
+      "what": "seconds for that sweep",
+      "source": "('construct_c7_d10.json:verify.box_seconds', 2)",
+      "computed": "0.470672",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "1177",
+      "rule": "derived",
+      "what": "single-vertex corruptions tested",
+      "source": "(\"sum(c['tested'] for c in calib)\", {'calib': 'calibration.json:A_corruption'})",
+      "computed": "1177",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "18",
+      "rule": "derived",
+      "what": "corruptions that leave an independent set",
+      "source": "(\"sum(c['still_independent'] for c in nm)\", {'nm': 'calibration.json:A_nonmaximal'})",
+      "computed": "18",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "18.7",
+      "rule": "json_round",
+      "what": "core-hours used",
+      "source": "('s1_budget.json:core_hours_estimate', 1)",
+      "computed": "18.7",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "t-histogram",
+      "rule": "claim",
+      "what": "the private-pair counts of the eight pipeline codes",
+      "source": "(\"sorted(c['t'] for c in per)\", {'per': 's1_codes.json:per_code'}, '[5, 6, 6, 6, 7, 7, 7, 8]', '5,\\\\\\\\;6,\\\\\\\\;6,\\\\\\\\;6,\\\\\\\\;7,\\\\\\\\;7,\\\\\\\\;7,\\\\\\\\;8')",
+      "computed": "[5, 6, 6, 6, 7, 7, 7, 8]",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "conflict-edges",
+      "rule": "claim",
+      "what": "the three edges, in Gao's numbering",
+      "source": "('e', {'e': 'w_theorem.json:conflict_graph.edges'}, '[[0, 1], [2, 6], [3, 5]]', 'q_0\\\\\\\\sim q_1.*q_2\\\\\\\\sim q_6.*q_3\\\\\\\\sim q_5')",
+      "computed": "[[0, 1], [2, 6], [3, 5]]",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "offender",
+      "rule": "claim",
+      "what": "the single word of T(I) confusable with both transversals",
+      "source": "('w', {'w': 'w_theorem.json:forbidden_region_of_T_image.words_confusable_with_both_transversals'}, '[[2, 4, 6, 3, 5]]', '\\\\(2,4,6,3,5\\\\)')",
+      "computed": "[[2, 4, 6, 3, 5]]",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "published-colouring",
+      "rule": "claim",
+      "what": "the transversal assignment the literature uses",
+      "source": "('[j0, j1]', {'j0': 'w_theorem.json:published_colouring.J0', 'j1': 'w_theorem.json:published_colouring.J1'}, '[[0, 5, 6], [1, 2, 3, 4, 7]]', 'J_0=\\\\\\\\\\\\{0,5,6\\\\\\\\\\\\}')",
+      "computed": "[[0, 5, 6], [1, 2, 3, 4, 7]]",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "t-max",
+      "rule": "claim",
+      "what": "the theorem's value",
+      "source": "('t', {'t': 'w_theorem.json:conflict_graph.t_max'}, '8', 't\\\\^\\\\*\\\\(I_0\\\\)=8')",
+      "computed": "8",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "343",
+      "rule": "sources",
+      "what": "Baumert et al., quoted in SOURCES.md",
+      "source": "343",
+      "computed": "quoted in SOURCES.md",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "350",
+      "rule": "sources",
+      "what": "Mathew-Ostergard, quoted in SOURCES.md",
+      "source": "350",
+      "computed": "quoted in SOURCES.md",
+      "value_agrees": true,
+      "appears_in_note": true
+    }
+  ],
+  "all_pass": true
+}

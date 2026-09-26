@@ -1,0 +1,253 @@
+{
+  "code": {
+    "file": "sets/C7_d5_367_polak_schrijver.txt",
+    "sha256": "9bdb8b9d69d9451e6c23f88ac7d998e8f1c181b3381adfa5f611685cbb84cc12",
+    "size": 367,
+    "verifier": {
+      "file": "sets/C7_d5_367_polak_schrijver.txt",
+      "sha256": "9bdb8b9d69d9451e6c23f88ac7d998e8f1c181b3381adfa5f611685cbb84cc12",
+      "n": 7,
+      "d": 5,
+      "size": 367,
+      "universe": 16807,
+      "independent": true,
+      "box_collisions": 0,
+      "box_cells": 11744,
+      "box_passes": 1,
+      "box_seconds": 1.4e-05,
+      "cells_per_second": 819082041,
+      "vertices_per_second": 25596314,
+      "quadratic_run": false,
+      "witness_pair": null
+    }
+  },
+  "neighbour_histogram": {
+    "universe": 16807,
+    "words_outside_I": 16440,
+    "by_number_of_I_neighbours": {
+      "1": 8,
+      "2": 254,
+      "3+": 16178
+    },
+    "note": "the count stops at 3, so the last bucket is '3 or more'.",
+    "exactly_one": 8,
+    "zero": 0
+  },
+  "candidates": [
+    {
+      "j": 0,
+      "r": [
+        1,
+        3,
+        4,
+        4,
+        6
+      ],
+      "q": [
+        2,
+        3,
+        5,
+        4,
+        6
+      ]
+    },
+    {
+      "j": 1,
+      "r": [
+        3,
+        4,
+        0,
+        3,
+        5
+      ],
+      "q": [
+        2,
+        4,
+        6,
+        3,
+        5
+      ]
+    },
+    {
+      "j": 2,
+      "r": [
+        5,
+        3,
+        1,
+        3,
+        4
+      ],
+      "q": [
+        5,
+        3,
+        2,
+        3,
+        5
+      ]
+    },
+    {
+      "j": 3,
+      "r": [
+        4,
+        4,
+        6,
+        1,
+        6
+      ],
+      "q": [
+        5,
+        4,
+        6,
+        0,
+        6
+      ]
+    },
+    {
+      "j": 4,
+      "r": [
+        6,
+        0,
+        6,
+        4,
+        5
+      ],
+      "q": [
+        6,
+        1,
+        6,
+        5,
+        5
+      ]
+    },
+    {
+      "j": 5,
+      "r": [
+        0,
+        3,
+        5,
+        6,
+        5
+      ],
+      "q": [
+        6,
+        3,
+        5,
+        0,
+        5
+      ]
+    },
+    {
+      "j": 6,
+      "r": [
+        6,
+        4,
+        3,
+        4,
+        0
+      ],
+      "q": [
+        6,
+        4,
+        2,
+        4,
+        6
+      ]
+    },
+    {
+      "j": 7,
+      "r": [
+        6,
+        4,
+        5,
+        3,
+        2
+      ],
+      "q": [
+        6,
+        5,
+        5,
+        3,
+        1
+      ]
+    }
+  ],
+  "candidates_are_exactly_the_published_eight": true,
+  "conflict_graph": {
+    "vertices": 8,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "edge_count": 3,
+    "is_a_matching": true,
+    "components": 5,
+    "bipartite": true,
+    "proper_2_colourings_up_to_swap": 16,
+    "t_max": 8
+  },
+  "published_colouring": {
+    "q_transversal": {
+      "0": "V",
+      "1": "H",
+      "2": "H",
+      "3": "H",
+      "4": "H",
+      "5": "V",
+      "6": "V",
+      "7": "H"
+    },
+    "J0": [
+      0,
+      5,
+      6
+    ],
+    "J1": [
+      1,
+      2,
+      3,
+      4,
+      7
+    ],
+    "monochromatic_conflict_edges": [],
+    "valid": true
+  },
+  "lemma_check": {
+    "checked": "for i != j: r_i confusable with neither r_j nor q_j",
+    "violations": [],
+    "pass": true
+  },
+  "forbidden_region_of_T_image": {
+    "automorphism": "T(w) = (2 - w_1, w_3, w_0, 2 - w_2, w_4)",
+    "image_size": 367,
+    "words_confusable_with_both_transversals": [
+      [
+        2,
+        4,
+        6,
+        3,
+        5
+      ]
+    ],
+    "count": 1,
+    "matches_the_word_itty_et_al_replace": true,
+    "note": "Gao's X is T(I) with this word replaced by (1,5,6,3,5); the sweep in s1_aux.json shows no image of any known code has an empty forbidden intersection, and here the single offender is exhibited."
+  },
+  "cross_check_stage1": {
+    "s1_pairs_candidates": 8,
+    "s1_pairs_edges": 3,
+    "s1_pairs_t": 8,
+    "s1_aux_colourings": 16,
+    "agrees": true
+  },
+  "all_pass": true
+}

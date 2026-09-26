@@ -57,5 +57,21 @@ S1_AUX_SECONDS=${S1_AUX_SECONDS:-1500} $PY scripts/s1_auxrun.py > /dev/null   # 
 $PY scripts/litcheck.py stage1-end > /dev/null
 $PY scripts/s1_budget.py > /dev/null
 
+# ---- Stage 2W: the note -----------------------------------------------------
+# No search here.  The gate, the data the note prints, the venue's rules, and the
+# reconciliation of every number in the note against results/json.
+$PY scripts/litcheck.py writeup-gate > /dev/null
+scripts/fetch_venue.sh > /dev/null
+$PY scripts/w_gate.py    > /dev/null
+$PY scripts/w_theorem.py > /dev/null
+$PY scripts/w_venue.py   > /dev/null
+if command -v pdflatex > /dev/null; then
+    (cd note && pdflatex -interaction=nonstopmode note.tex > /dev/null \
+             && pdflatex -interaction=nonstopmode note.tex > /dev/null)
+else
+    echo "pdflatex not found: note/note.pdf not rebuilt (nothing else depends on it)"
+fi
+$PY scripts/w_checknums.py
+
 (cd sets && sha256sum *.txt > SHA256SUMS)
 $PY scripts/make_results.py
