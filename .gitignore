@@ -36,3 +36,7 @@ sources/*/paper.pdf
 sources/*/paper.txt
 sources/*/eprint.tar.gz
 sources/*/src/
+
+# the Editorial Manager upload set: build product of scripts/w_package.py
+submission/ipl/package/
+submission/ipl/ipl-submission*.zip

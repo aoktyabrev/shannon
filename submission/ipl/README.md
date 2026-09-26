@@ -47,16 +47,31 @@ process" and ends "…the content of the published article". The note follows th
 If the live guide still prescribes the 2024 wording, swap the heading and that one clause — it is
 two edits in `../../note/note-content.tex`, and nothing else depends on them.
 
+## The upload set
+
+`scripts/w_package.py` assembles what the form asks for, from the same sources — a
+self-contained `elsarticle` manuscript with the two shared text files inlined, its PDF, `refs.bib`
+and `.bbl`, the letter as plain text with the referee table split out, the referee list, the
+competing-interest text, the highlights, and a `MANIFEST.txt` saying which file goes into which
+field. It refuses to pretend: it checks that the flattened manuscript contains the shared text
+verbatim and comes out the same length as the ordinary build, and while the address is a
+placeholder the zip is named `ipl-submission-DRAFT-fill-the-address.zip` and `MANIFEST.txt` says
+DRAFT. With the address given it writes `ipl-submission.zip` and says FINAL:
+
+```
+python3 scripts/w_package.py --addressline '...' --city '...' --postcode '...' --country '...'
+```
+
 ## What only you can do
 
-1. **Fill the postal address** in `ipl-body.tex` (`FILL IN:` markers) and rebuild `note_ipl.pdf`.
+1. **Run the line above with your postal address.** That is the only missing field; it produces
+   the final zip, and nothing else needs editing by hand.
 2. **Open the live Guide for Authors** and walk the table above; fix anything that has moved.
 3. **Submit through Editorial Manager**, `https://www.editorialmanager.com/ipl/default.aspx`
-   (the guide's own address — the other Elsevier system, ScholarOne, is a different journal's):
-   upload `note_ipl.pdf` (or the `.tex` plus `refs.bib` and `.bbl` if the system asks for source),
-   paste the cover letter, enter the referees, upload the competing-interest file, add the
-   highlights if the form offers them, and answer the data statement with the Zenodo DOI
-   `10.5281/zenodo.22979509`.
+   (the guide's own address — ScholarOne is a different journal's system), following
+   `MANIFEST.txt` in the zip: manuscript PDF, source files if the form wants them, cover letter
+   pasted, referees entered, competing-interest file attached, highlights if offered, and the data
+   statement answered with `10.5281/zenodo.22979509`.
 4. **Decide about SSRN.** The form offers to post the manuscript as a preprint on SSRN once it
    enters review. There is already a timestamped preprint on Zenodo, so this is optional; saying
    yes costs nothing and the guide states it has no effect on the editorial outcome.
