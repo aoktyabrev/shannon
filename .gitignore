@@ -28,3 +28,11 @@ submission/ipl/*.blg
 submission/ipl/*.bbl
 submission/ipl/*.spl
 submission/ipl/missfont.log
+
+# dumped arXiv e-prints: fetched by scripts/fetch_arxiv.sh, not ours to redistribute
+# (see sources/LICENCES.md); only each dump's SHA256 file is kept
+sources/*/abs.html
+sources/*/paper.pdf
+sources/*/paper.txt
+sources/*/eprint.tar.gz
+sources/*/src/

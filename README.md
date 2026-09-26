@@ -166,9 +166,12 @@ method: 102 (E2) → 105 (E3) → 106 (E2 tabu) → 107 (E2+E4) → 108. Every r
 - **Code** (`scripts/`) — Apache-2.0, see `LICENSE`.
 - **Texts, data and the note** (`README.md`, `RESULTS.md`, `SOURCES.md`, `METHODS.md`,
   `PREREGISTRATION_S1.md`, `note/`, `sets/`, `results/`) — CC BY 4.0, see `LICENSE-docs`.
-- Quotations from third-party works in `SOURCES.md` remain under their holders' copyright, and
-  the dumped e-prints in `sources/` are not ours to relicense. The publisher pages behind
-  `scripts/fetch_venue.sh` are not redistributed at all.
+- Quotations from third-party works in `SOURCES.md` remain under their holders' copyright. The
+  e-prints the quotations are checked against are **not** in this repository: `sources/` keeps
+  only each dump's SHA-256, and `scripts/fetch_arxiv.sh` re-fetches the papers themselves — two
+  of the six are under arXiv's non-exclusive licence, which grants no redistribution right
+  (`sources/LICENCES.md`). The publisher pages behind `scripts/fetch_venue.sh` are not
+  redistributed either.
 
 ## How to cite
 

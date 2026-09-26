@@ -9,8 +9,10 @@ scripts/fetch_arxiv.sh 1808.07438     # and 1504.01472, 2607.21517, 2607.27869, 
 ```
 
 **The third-party papers themselves are not redistributed.** They are present in a working
-checkout because the checks need them, but they are left out of the published archive of this
-repository: their copyright is their authors' and arXiv's, not ours. Run the fetch script and
+checkout because the checks need them, but they are not committed and not published with this
+repository — not in the git history, not in the Zenodo archive. Two of the six are under arXiv's
+perpetual non-exclusive licence, which grants us no right to redistribute them at all;
+`sources/LICENCES.md` lists the licence of each. Run the fetch script and
 the checks pass identically — the file checksums in each `sources/<id>/SHA256` say whether you
 got the same bytes we did.
 
