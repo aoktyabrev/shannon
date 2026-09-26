@@ -1,0 +1,56 @@
+% The Elsevier (elsarticle) body of the note, shared by the two wrappers:
+%   note_ipl.tex        -- [review,12pt]: double spaced with line numbers, for submission
+%   note_ipl_print.tex  -- [final,3p,times,twocolumn]: the journal's print layout, used only
+%                          to check the length against the nine-printed-page limit
+% The mathematics and the text are not duplicated: both wrappers include the same
+% ../../note/note-abstract.tex and ../../note/note-content.tex as the standalone note does,
+% so scripts/w_checknums.py still holds every number in one place.
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\PH}{P^{\mathrm H}}
+\newcommand{\PV}{P^{\mathrm V}}
+\newcommand{\Zs}{\mathbb{Z}_7^5}
+\newcommand{\boxt}{\boxtimes}
+
+\journal{Information Processing Letters}
+
+\begin{document}
+
+\begin{frontmatter}
+
+\title{The Polak--Schrijver code has exactly eight private pairs}
+
+\author{Artem Oktiabrev}
+\ead{aoktyabrev@gmail.com}
+\ead[url]{https://orcid.org/0009-0003-3626-2002}
+
+\begin{abstract}
+\input{../../note/note-abstract}
+\end{abstract}
+
+\begin{keyword}
+Shannon capacity \sep zero-error capacity \sep independent set \sep strong product \sep
+odd cycle \sep gadget product
+\MSC[2020] 05C69 \sep 05C76 \sep 94A24
+\end{keyword}
+
+\end{frontmatter}
+
+\input{../../note/note-content}
+
+\bibliographystyle{elsarticle-num}
+\bibliography{refs}
+
+\end{document}

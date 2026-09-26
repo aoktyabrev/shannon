@@ -21,3 +21,10 @@ note/*.toc
 
 # dumped publisher pages: fetched by scripts/fetch_venue.sh, not ours to redistribute
 sources/venue/*.html
+submission/ipl/*.aux
+submission/ipl/*.log
+submission/ipl/*.out
+submission/ipl/*.blg
+submission/ipl/*.bbl
+submission/ipl/*.spl
+submission/ipl/missfont.log

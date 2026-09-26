@@ -1,9 +1,17 @@
 {
-  "note": "note/note.tex",
-  "ledger_entries": 66,
+  "text_files": [
+    "note/note-abstract.tex",
+    "note/note-content.tex",
+    "submission/ipl/cover_letter.md"
+  ],
+  "wrappers": [
+    "note/note.tex",
+    "submission/ipl/ipl-body.tex"
+  ],
+  "ledger_entries": 68,
   "failures": 0,
-  "numeric_tokens_in_body": 290,
-  "distinct_numeric_tokens": 70,
+  "numeric_tokens_in_body": 308,
+  "distinct_numeric_tokens": 72,
   "unaccounted_tokens": [],
   "rows": [
     {
@@ -579,6 +587,24 @@
       "what": "the theorem's value",
       "source": "('t', {'t': 'w_theorem.json:conflict_graph.t_max'}, '8', 't\\\\^\\\\*\\\\(I_0\\\\)=8')",
       "computed": "8",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "143",
+      "rule": "absdump",
+      "what": "volume of Polak-Schrijver, quoted in the cover letter",
+      "source": "('1808.07438', 'Information Processing Letters, 143 (2019), 37-40')",
+      "computed": "Information Processing Letters, 143 (2019), 37-40",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "37",
+      "rule": "absdump",
+      "what": "its first page",
+      "source": "('1808.07438', 'Information Processing Letters, 143 (2019), 37-40')",
+      "computed": "Information Processing Letters, 143 (2019), 37-40",
       "value_agrees": true,
       "appears_in_note": true
     },

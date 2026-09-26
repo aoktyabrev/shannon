@@ -21,7 +21,14 @@ from decimal import Decimal, getcontext
 
 getcontext().prec = 80
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-NOTE = os.path.join(ROOT, "note", "note.tex")
+# The text lives in two shared files; note/note.tex (standalone, archived with the Zenodo
+# record) and submission/ipl/note_ipl.tex (elsarticle, for submission) both include them, so
+# there is one place where a number can be wrong.  The submission's cover letter is swept too.
+TEXT = [os.path.join(ROOT, "note", "note-abstract.tex"),
+        os.path.join(ROOT, "note", "note-content.tex"),
+        os.path.join(ROOT, "submission", "ipl", "cover_letter.md")]
+WRAPPERS = [os.path.join(ROOT, "note", "note.tex"),
+            os.path.join(ROOT, "submission", "ipl", "ipl-body.tex")]
 J = os.path.join(ROOT, "results", "json")
 
 _cache = {}
@@ -155,6 +162,11 @@ LEDGER = [
     ("t-max", "claim",
      ("t", {"t": "w_theorem.json:conflict_graph.t_max"}, "8", r"t\^\*\(I_0\)=8"),
      "the theorem's value"),
+    # --- the journal reference of the code's paper, from the dumped abstract page ---
+    ("143", "absdump", ("1808.07438", "Information Processing Letters, 143 (2019), 37-40"),
+     "volume of Polak-Schrijver, quoted in the cover letter"),
+    ("37", "absdump", ("1808.07438", "Information Processing Letters, 143 (2019), 37-40"),
+     "its first page"),
     # --- external numbers, Rule 0 ---
     ("343", "sources", "343", "Baumert et al., quoted in SOURCES.md"),
     ("350", "sources", "350", "Mathew-Ostergard, quoted in SOURCES.md"),
@@ -167,15 +179,13 @@ STRUCTURAL = {str(i) for i in range(0, 21)}
 
 
 def body(tex):
-    a = tex.index("\\begin{abstract}")
-    b = tex.index("\\begin{thebibliography}")
-    s = tex[a:b]
-    s = re.sub(r"%.*", "", s)
+    s = re.sub(r"(?<!\\)%.*", "", tex)
     s = re.sub(r"\\texttt\{[^}]*\}", " ", s)            # file names and checksums
     s = re.sub(r"\\(cite|ref|label)\{[^}]*\}", " ", s)
     s = re.sub(r"\\href\{[^}]*\}", " ", s)
     s = re.sub(r"SHA-256|SHA256SUMS", " ", s)            # the name of a hash, not a number
     s = re.sub(r"10\.5281/zenodo\.[A-Za-z0-9.]+", " ", s)   # the DOI of the archive
+    s = re.sub(r"\b\d{4}-\d{4}-\d{4}-\d{4}\b", " ", s)      # the author's ORCID
     s = re.sub(r"\{,\}", "", s)                          # 8{,}260{,}976{,}640 -> one number
     return s
 
@@ -215,6 +225,14 @@ def check(rule, spec, printed):
         env = {k: jget(v) for k, v in paths.items()}
         got = str(eval(expr, {"sum": sum, "sorted": sorted}, env))
         return got == expected, got
+    if rule == "absdump":
+        aid, line = spec
+        import html as _html
+        raw = open(os.path.join(ROOT, "sources", aid, "abs.html"),
+                   encoding="utf-8", errors="replace").read()
+        txt = _html.unescape(re.sub(r"<[^>]+>", " ", raw))
+        txt = re.sub(r"\s+", " ", txt)
+        return (line in txt) and (printed in line), line
     if rule == "sources":
         src = open(os.path.join(ROOT, "SOURCES.md"), encoding="utf-8").read()
         quotes = [ln for ln in src.splitlines() if ln.startswith("> ")]
@@ -223,8 +241,16 @@ def check(rule, spec, printed):
 
 
 def main():
-    tex = open(NOTE, encoding="utf-8").read()
-    txt = body(tex)
+    missing = [p for p in TEXT + WRAPPERS if not os.path.exists(p)]
+    if missing:
+        sys.exit("missing: " + ", ".join(missing))
+    txt = "\n".join(body(open(p, encoding="utf-8").read()) for p in TEXT)
+    # both wrappers must actually include the shared text, or the sweep proves nothing
+    for wp in WRAPPERS:
+        w = open(wp, encoding="utf-8").read()
+        for part in ("note-abstract", "note-content"):
+            if part not in w:
+                sys.exit(f"{os.path.relpath(wp, ROOT)} does not include {part}")
     tokens = re.findall(r"\d+(?:\.\d+)?", txt)
 
     rows, bad = [], 0
@@ -245,7 +271,8 @@ def main():
     unaccounted = sorted({t for t in tokens if t not in covered},
                          key=lambda t: (len(t), t))
     out = {
-        "note": "note/note.tex",
+        "text_files": [os.path.relpath(p, ROOT) for p in TEXT],
+        "wrappers": [os.path.relpath(p, ROOT) for p in WRAPPERS],
         "ledger_entries": len(LEDGER),
         "failures": bad,
         "numeric_tokens_in_body": len(tokens),
@@ -257,7 +284,7 @@ def main():
     with open(os.path.join(J, "w_checknums.json"), "w") as fh:
         json.dump(out, fh, indent=2)
     print(f"{len(LEDGER) - bad}/{len(LEDGER)} ledger entries check out; "
-          f"{len(set(tokens))} distinct numeric tokens in the note, "
+          f"{len(set(tokens))} distinct numeric tokens in the text, "
           f"{len(unaccounted)} unaccounted")
     for r in rows:
         if not (r["value_agrees"] and r["appears_in_note"]):
