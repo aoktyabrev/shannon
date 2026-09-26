@@ -46,11 +46,17 @@ def md5(p):
 
 
 def flatten(address):
+    """The front matter as it stands, with street-level address fields added if given.
+
+    The affiliation itself (organization and country) lives in ipl-body.tex, because it
+    is the author's own standing affiliation and not a per-submission decision."""
     body = open(os.path.join(IPL, "ipl-body.tex"), encoding="utf-8").read()
     wrapper = open(os.path.join(IPL, "note_ipl.tex"), encoding="utf-8").read()
     cls = [l for l in wrapper.splitlines() if l.startswith("\\documentclass")][0]
-    for key, val in address.items():
-        body = re.sub(r"(%s=\{)%s[^}]*(\})" % (key, PLACEHOLDER), r"\g<1>%s\g<2>" % val, body)
+    if address:
+        extra = ", ".join("%s={%s}" % (k, v) for k, v in address.items())
+        body = body.replace("\\affiliation{organization={Independent researcher}",
+                            "\\affiliation{organization={Independent researcher}, " + extra)
     for name in ("note-abstract", "note-content"):
         text = open(os.path.join(ROOT, "note", name + ".tex"), encoding="utf-8").read()
         body = body.replace("\\input{../../note/%s}" % name,
@@ -121,21 +127,35 @@ def main():
     final = not left and pages and not errors
     manifest = f"""Information Processing Letters -- upload set
 built by scripts/w_package.py; sources in note/ and submission/ipl/
+checked against the Guide for Authors as read on 2026-09-26
 
-  note-ipl-submission.pdf   the manuscript. Upload as 'Manuscript'.
+  note-ipl-submission.pdf   the manuscript, as the review PDF.
   note-ipl-submission.tex   the same, LaTeX source, self-contained (elsarticle).
-  refs.bib, *.bbl           the bibliography, if the form asks for source files.
+  refs.bib, *.bbl           its bibliography. REQUIRED, not optional: the guide says
+                            editable source is required and "A PDF is not an
+                            acceptable source file".
   cover_letter.txt          paste into the cover-letter box.
-  referees.txt              the suggested referees, for the referee step of the form.
-  competing_interest.txt    the text for the separate competing-interest file the
-                            journal wants at the 'Attach Files' step.
-  highlights.txt            optional, for the Highlights field.
+  referees.txt              the suggested referees, for the referee step.
+  highlights.txt            REQUIRED: upload as a separate file (the guide asks for
+                            3 to 5 bullets of at most 85 characters, in a file with
+                            'highlights' in its name). Four bullets, 74-80 characters.
+  competing_interest.txt    not a file to upload: it says what to do at the
+                            'attach/upload files' step, where the .docx has to come
+                            out of Elsevier's own declarations tool with "I have
+                            nothing to declare" selected. The same statement, and the
+                            funding sentence, are already in the manuscript.
 
 Data statement, when the form asks: the data and code are archived at
-10.5281/zenodo.22979509 (cited as a [dataset] reference in the manuscript).
+10.5281/zenodo.22979509, cited in the manuscript as a [dataset] reference, as this
+journal's research-data Option C requires.
 
 Manuscript: {pages} pages in the double-spaced review layout; five pages in the
-journal's print layout, against its limit of nine.
+journal's print layout, against its limit of nine. Abstract 162 words of 250,
+six keywords of seven.
+
+Affiliation on the title page: Independent researcher, Ukraine -- the author's own
+standing line. Pass --addressline/--city/--postcode to this script if the form wants
+street-level detail.
 
 {'FINAL: no placeholder left.' if final else 'DRAFT: ' + ('; '.join(left) if left else 'the manuscript did not build')}
 """

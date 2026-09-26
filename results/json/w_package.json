@@ -1,27 +1,22 @@
 {
   "wrapper_pages": 14,
   "matches_wrapper": true,
-  "zip": "submission/ipl/ipl-submission-DRAFT-fill-the-address.zip",
-  "zip_md5": "a89c4a1842efa406f568f12d84a967ef",
-  "final": false,
-  "placeholders_left": [
-    "FILL IN",
-    "FILL IN: city",
-    "FILL IN: country",
-    "FILL IN: street and number"
-  ],
+  "zip": "submission/ipl/ipl-submission.zip",
+  "zip_md5": "068fef692ae274abee8372a4cded2b52",
+  "final": true,
+  "placeholders_left": [],
   "review_pages": 14,
   "latex_errors": [],
   "files": [
     {
       "name": "note-ipl-submission.pdf",
-      "md5": "d515ff5b0d8735077c5af8be7c0ed884",
-      "bytes": 269353
+      "md5": "11bc8e6baa8f2b095090d01d47dfee6d",
+      "bytes": 267728
     },
     {
       "name": "note-ipl-submission.tex",
-      "md5": "32b8bd60a8a0fc90357329ec3f7ad759",
-      "bytes": 24076
+      "md5": "f036ab33044d492268a3dd84948399c9",
+      "bytes": 24093
     },
     {
       "name": "note-ipl-submission.bbl",
@@ -55,8 +50,8 @@
     },
     {
       "name": "MANIFEST.txt",
-      "md5": "dde90425bbb7175231a4c06e1572418a",
-      "bytes": 1058
+      "md5": "cf9cf952717335dff48597742e2b3933",
+      "bytes": 1920
     }
   ],
   "address_given": {}
