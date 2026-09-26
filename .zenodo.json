@@ -28,6 +28,11 @@
  ],
  "related_identifiers": [
   {
+   "identifier": "https://github.com/aoktyabrev/shannon/tree/v1.0.0",
+   "relation": "isSupplementTo",
+   "scheme": "url"
+  },
+  {
    "identifier": "10.48550/arXiv.1808.07438",
    "relation": "isDerivedFrom",
    "scheme": "doi"

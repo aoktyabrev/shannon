@@ -41,6 +41,7 @@ version: 1.0.0
 date-released: "2026-09-26"
 doi: "10.5281/zenodo.22972846"
 url: "https://doi.org/10.5281/zenodo.22972846"
+repository-code: "https://github.com/aoktyabrev/shannon"
 identifiers:
   - type: doi
     value: "10.5281/zenodo.22972846"
