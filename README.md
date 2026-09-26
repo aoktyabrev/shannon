@@ -172,4 +172,16 @@ method: 102 (E2) → 105 (E3) → 106 (E2 tabu) → 107 (E2+E4) → 108. Every r
 
 ## How to cite
 
-Cite the Zenodo record; `CITATION.cff` carries the machine-readable form.
+The archive of this repository and the note: **doi:10.5281/zenodo.22972846** (concept DOI, always the latest version;
+version 1.0.0 is doi:10.5281/zenodo.22972847). `CITATION.cff` carries the machine-readable form.
+
+```bibtex
+@misc{oktiabrev2026eightpairs,
+  author    = {Oktiabrev, Artem},
+  title     = {The Polak--Schrijver code has exactly eight private pairs
+               (with the shannon repository, Stages 0--2W)},
+  year      = {2026},
+  doi       = {10.5281/zenodo.22972846},
+  publisher = {Zenodo}
+}
+```
