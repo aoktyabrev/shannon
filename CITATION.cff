@@ -37,7 +37,7 @@ keywords:
 license:
   - Apache-2.0
   - CC-BY-4.0
-version: 1.0.0
+version: 1.1.0
 date-released: "2026-09-26"
 doi: "10.5281/zenodo.22972846"
 url: "https://doi.org/10.5281/zenodo.22972846"
@@ -46,6 +46,9 @@ identifiers:
   - type: doi
     value: "10.5281/zenodo.22972846"
     description: "Concept DOI — always resolves to the latest version"
+  - type: doi
+    value: "10.5281/zenodo.22979509"
+    description: "DOI of version 1.1.0"
   - type: doi
     value: "10.5281/zenodo.22972847"
     description: "DOI of version 1.0.0"
