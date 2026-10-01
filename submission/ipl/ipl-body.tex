@@ -5,6 +5,13 @@
 % The mathematics and the text are not duplicated: both wrappers include the same
 % ../../note/note-abstract.tex and ../../note/note-content.tex as the standalone note does,
 % so scripts/w_checknums.py still holds every number in one place.
+% cmap + T1 + Latin Modern so that the PDF's text layer survives extraction: without
+% them the Type 1 fonts carry no ToUnicode map, 'five-dimensional' comes out of a
+% copy-paste as 've-dimensional', 'finite' as 'nite' and the en dash as a control
+% character. Publisher screening tools read that text layer, so this is not cosmetic.
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{booktabs}
 \usepackage[hidelinks]{hyperref}

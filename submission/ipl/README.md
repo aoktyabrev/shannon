@@ -13,11 +13,23 @@ run if a wrapper stops including the shared text.
 | `ipl-body.tex` | shared preamble, front matter and the two `\input`s |
 | `refs.bib` | symlink to `../../note/refs.bib`, through `elsarticle-num`, journal names abbreviated as the guide asks |
 | `cover_letter.md` | the letter; the referee table at the end goes into the submission form, not into the letter |
-| `highlights.txt` | optional, four bullets with their character counts |
-| `competing_interest.txt` | the statement the journal wants as a separate uploaded file |
+| `highlights.txt` | required by the journal: four bullets, 74–80 characters of the 85 allowed |
+| `competing_interest.txt` | **a note to self, never uploaded.** In the form, Elsevier's declarations tool produces the .docx after "I have nothing to declare" is selected; the declaration itself is in the manuscript |
 
 Build: `pdflatex note_ipl && bibtex note_ipl && pdflatex note_ipl && pdflatex note_ipl`
 (and the same for `note_ipl_print`, which exists only to measure the printed length).
+
+**The preamble loads `cmap`, `fontenc` and `lmodern` on purpose.** Without them the Type 1 fonts
+carry no ToUnicode map and the PDF's text layer is mush: a copy-paste returns `ve-dimensional` for
+"five-dimensional", `nite` for "finite" and a control character for the en dash — which is what
+publisher screening tools read. `scripts/w_package.py` checks the finished PDF for exactly that
+damage; the check needs `pypdf`, which this repository does not depend on, so it runs when pypdf is
+importable and says plainly when it is not:
+
+```
+python3 -m venv /tmp/pdfvenv && /tmp/pdfvenv/bin/pip install pypdf
+/tmp/pdfvenv/bin/python scripts/w_package.py     # text layer: PASS
+```
 
 ## The journal's rules, and where the package stands against each
 
@@ -44,6 +56,7 @@ kept too, and where the two differ the live text wins.
 | research data Option C: deposit, cite and link the dataset | the Zenodo archive is a `[dataset]` reference with repository and version, in their example's shape |
 | data statement at submission | answer with `10.5281/zenodo.22979509` |
 | references numbered in order, journal names abbreviated per LTWA, DOIs where available | `elsarticle-num` with `refs.bib`; the Polak–Schrijver DOI verified against the dumped arXiv page |
+| preprint references must name the server **and** carry the preprint DOI | the four 2026 preprints read "arXiv preprint … doi:10.48550/arXiv.…", each DOI checked to resolve to the right abstract page |
 | single anonymized review; one formal appeal per submission, its decision final | worth getting right first time, but not the one-shot-and-out that the 2024 snapshot suggested |
 
 A correction to what the 2024 snapshot said: it stated that resubmission of a rejected paper is

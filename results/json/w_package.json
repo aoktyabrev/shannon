@@ -1,8 +1,15 @@
 {
+  "text_layer": {
+    "checked": true,
+    "chars": 19388,
+    "ligature_damage": [],
+    "words_missing": [],
+    "pass": true
+  },
   "wrapper_pages": 14,
   "matches_wrapper": true,
   "zip": "submission/ipl/ipl-submission.zip",
-  "zip_md5": "068fef692ae274abee8372a4cded2b52",
+  "zip_md5": "fecb0b7fa7ad717cba413924fe544a2e",
   "final": true,
   "placeholders_left": [],
   "review_pages": 14,
@@ -10,23 +17,23 @@
   "files": [
     {
       "name": "note-ipl-submission.pdf",
-      "md5": "11bc8e6baa8f2b095090d01d47dfee6d",
-      "bytes": 267728
+      "md5": "1dc43c3e1fa3bfbd4b5dcb81376cd5e3",
+      "bytes": 347482
     },
     {
       "name": "note-ipl-submission.tex",
-      "md5": "f036ab33044d492268a3dd84948399c9",
-      "bytes": 24093
+      "md5": "cd9fa74ac345977571d7b29a4c42931e",
+      "bytes": 24492
     },
     {
       "name": "note-ipl-submission.bbl",
-      "md5": "d052e6fe14efc2b684eecce283eae3c9",
-      "bytes": 2035
+      "md5": "4bbd15be96f91199f2ea761ee487a918",
+      "bytes": 2427
     },
     {
       "name": "refs.bib",
-      "md5": "ac51f6d9007652a9b1ae7babe60419d5",
-      "bytes": 2773
+      "md5": "8c42a16dcd21ced337a8256a5ac4e66d",
+      "bytes": 2925
     },
     {
       "name": "cover_letter.txt",
@@ -39,19 +46,14 @@
       "bytes": 1316
     },
     {
-      "name": "competing_interest.txt",
-      "md5": "5d49ac164a6ca541ace8cc0669a78e37",
-      "bytes": 1245
-    },
-    {
       "name": "highlights.txt",
       "md5": "458795b912b56f78de590e6fe0190c07",
       "bytes": 313
     },
     {
       "name": "MANIFEST.txt",
-      "md5": "cf9cf952717335dff48597742e2b3933",
-      "bytes": 1920
+      "md5": "275827653ccaf1b3fe2d635a246049a4",
+      "bytes": 1969
     }
   ],
   "address_given": {}

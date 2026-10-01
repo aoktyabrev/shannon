@@ -14,9 +14,9 @@
       "box_collisions": 0,
       "box_cells": 11744,
       "box_passes": 1,
-      "box_seconds": 2.6e-05,
-      "cells_per_second": 445000118,
-      "vertices_per_second": 13906254,
+      "box_seconds": 1.4e-05,
+      "cells_per_second": 836707848,
+      "vertices_per_second": 26147120,
       "quadratic_run": false,
       "witness_pair": null
     }

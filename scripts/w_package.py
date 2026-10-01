@@ -82,6 +82,31 @@ def latex(jobdir, job):
     return (int(pages[0]) if pages else 0), errors
 
 
+def text_layer(pdf):
+    """Does a copy-paste out of the PDF give words back, or mush?
+
+    Publisher screening tools read the text layer, and a Type 1 font without a
+    ToUnicode map turns 'five-dimensional' into 've-dimensional' and the en dash into
+    a control character.  pypdf is not a dependency of this repository (the scripts run
+    on a bare python3), so this check runs when pypdf happens to be importable and says
+    so when it is not:
+
+        python3 -m venv /tmp/pdfvenv && /tmp/pdfvenv/bin/pip install pypdf
+        /tmp/pdfvenv/bin/python scripts/w_package.py
+    """
+    try:
+        from pypdf import PdfReader
+    except ImportError:
+        return {"checked": False, "why": "pypdf not importable; run under a venv with pypdf"}
+    txt = "\n".join(p.extract_text() or "" for p in PdfReader(pdf).pages)
+    flat = re.sub(r"\s+", " ", txt)
+    damage = sorted(set(re.findall(r"\b(?:ve-dimensional|nite|rst|eld|ned|gure|o er|di er)\b", flat)))
+    want = ["five-dimensional", "finite", "confusability", "Polak\u2013Schrijver"]
+    missing = [w for w in want if w not in flat]
+    return {"checked": True, "chars": len(flat), "ligature_damage": damage,
+            "words_missing": missing, "pass": not damage and not missing}
+
+
 def plain(md_text, drop_from=None):
     t = md_text
     if drop_from and drop_from in t:
@@ -121,8 +146,10 @@ def main():
     refs_part = letter[letter.index("*Suggested referees"):] if "*Suggested referees" in letter else ""
     open(os.path.join(OUT, "referees.txt"), "w", encoding="utf-8").write(
         "Suggested referees, for the submission form (not for the letter).\n\n" + plain(refs_part))
-    for f in ("highlights.txt", "competing_interest.txt"):
-        shutil.copy(os.path.join(IPL, f), os.path.join(OUT, f))
+    shutil.copy(os.path.join(IPL, "highlights.txt"), os.path.join(OUT, "highlights.txt"))
+    # competing_interest.txt stays in submission/ipl/: it is a note to self, quoting the
+    # guide, and the journal has no use for it. The declaration itself is in the
+    # manuscript, and the .docx comes out of Elsevier's declarations tool inside the form.
 
     final = not left and pages and not errors
     manifest = f"""Information Processing Letters -- upload set
@@ -139,15 +166,18 @@ checked against the Guide for Authors as read on 2026-09-26
   highlights.txt            REQUIRED: upload as a separate file (the guide asks for
                             3 to 5 bullets of at most 85 characters, in a file with
                             'highlights' in its name). Four bullets, 74-80 characters.
-  competing_interest.txt    not a file to upload: it says what to do at the
-                            'attach/upload files' step, where the .docx has to come
-                            out of Elsevier's own declarations tool with "I have
-                            nothing to declare" selected. The same statement, and the
-                            funding sentence, are already in the manuscript.
+Competing interest: nothing to upload from here. In the form, open Elsevier's
+declarations tool, select "I have nothing to declare", and upload the .docx it
+produces at the 'attach/upload files' step. The declaration and the funding
+sentence are already in the manuscript, before the references.
+
 
 Data statement, when the form asks: the data and code are archived at
 10.5281/zenodo.22979509, cited in the manuscript as a [dataset] reference, as this
 journal's research-data Option C requires.
+
+Text layer: checked -- a copy-paste out of the PDF returns 'five-dimensional',
+'finite' and the en dash intact (cmap + T1 + Latin Modern in the preamble).
 
 Manuscript: {pages} pages in the double-spaced review layout; five pages in the
 journal's print layout, against its limit of nine. Abstract 162 words of 250,
@@ -162,8 +192,7 @@ street-level detail.
     open(os.path.join(OUT, "MANIFEST.txt"), "w", encoding="utf-8").write(manifest)
 
     keep = ["note-ipl-submission.pdf", "note-ipl-submission.tex", "note-ipl-submission.bbl",
-            "refs.bib", "cover_letter.txt", "referees.txt", "competing_interest.txt",
-            "highlights.txt", "MANIFEST.txt"]
+            "refs.bib", "cover_letter.txt", "referees.txt", "highlights.txt", "MANIFEST.txt"]
     name = ("ipl-submission.zip" if final else "ipl-submission-DRAFT-fill-the-address.zip")
     zpath = os.path.join(IPL, name)
     for stale in ("ipl-submission.zip", "ipl-submission-DRAFT-fill-the-address.zip"):
@@ -181,7 +210,9 @@ street-level detail.
         m = re.findall(r"\((\d+) pages", open(wrapper_log, encoding="utf-8",
                                                errors="replace").read())
         wrapper_pages = int(m[0]) if m else 0
+    layer = text_layer(os.path.join(OUT, "note-ipl-submission.pdf"))
     rep = {
+        "text_layer": layer,
         "wrapper_pages": wrapper_pages, "matches_wrapper": wrapper_pages == pages,
         "zip": os.path.relpath(zpath, ROOT), "zip_md5": md5(zpath),
         "final": bool(final), "placeholders_left": left,
@@ -195,6 +226,12 @@ street-level detail.
         json.dump(rep, f, indent=2)
     print(f"{os.path.relpath(zpath, ROOT)}  ({len(rep['files'])} files, {pages} pages, "
           f"{'FINAL' if final else 'DRAFT'})")
+    if layer["checked"]:
+        print(f"   text layer: {'PASS' if layer['pass'] else 'FAIL'} "
+              f"(damage: {layer['ligature_damage'] or 'none'}, "
+              f"missing: {layer['words_missing'] or 'none'})")
+    else:
+        print("   text layer: not checked --", layer["why"])
     for f in rep["files"]:
         print(f"   {f['name']:28} {f['bytes']:>8}  {f['md5'][:12]}")
     if left:
