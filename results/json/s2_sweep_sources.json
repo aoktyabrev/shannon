@@ -1,0 +1,17 @@
+{
+  "sources": [
+    "sets/C7_d5_367_polak_schrijver.txt",
+    "sets/C7_d5_367_reproduced.txt",
+    "sets/C7_d5_367_auxiliary_X.txt",
+    "sets/C7_d5_367_auxiliary_X_o322.txt",
+    "sets/pipeline_codes/C7_d5_367_pipeline_00.txt",
+    "sets/pipeline_codes/C7_d5_367_pipeline_01.txt",
+    "sets/pipeline_codes/C7_d5_367_pipeline_02.txt",
+    "sets/pipeline_codes/C7_d5_367_pipeline_03.txt",
+    "sets/pipeline_codes/C7_d5_367_pipeline_04.txt",
+    "sets/pipeline_codes/C7_d5_367_pipeline_05.txt",
+    "sets/pipeline_codes/C7_d5_367_pipeline_06.txt",
+    "sets/pipeline_codes/C7_d5_367_pipeline_07.txt"
+  ],
+  "note": "the --source order given to scripts/s1_aux for the Stage 2 sweep"
+}

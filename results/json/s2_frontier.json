@@ -1,0 +1,233 @@
+{
+  "rows": [
+    {
+      "file": "sets/C7_d5_343_linear.txt",
+      "size": 343,
+      "candidates": 0,
+      "t_star": 0
+    },
+    {
+      "file": "sets/C7_d5_350_mathew_ostergard.txt",
+      "size": 350,
+      "candidates": 7,
+      "t_star": 7,
+      "colourings": 64,
+      "forbidden_region": {
+        "min": 1022,
+        "max": 1118
+      },
+      "penalised_region": {
+        "min": 2044,
+        "max": 2044
+      },
+      "endpoints": 14,
+      "o_needed_at_s_367": 336
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_04.txt",
+      "size": 367,
+      "candidates": 5,
+      "t_star": 5,
+      "colourings": 16,
+      "forbidden_region": {
+        "min": 552,
+        "max": 568
+      },
+      "penalised_region": {
+        "min": 1826,
+        "max": 1826
+      },
+      "endpoints": 10,
+      "o_needed_at_s_367": 355
+    },
+    {
+      "file": "sets/C7_d5_367_reproduced.txt",
+      "size": 367,
+      "candidates": 6,
+      "t_star": 6,
+      "colourings": 16,
+      "forbidden_region": {
+        "min": 686,
+        "max": 708
+      },
+      "penalised_region": {
+        "min": 2122,
+        "max": 2122
+      },
+      "endpoints": 12,
+      "o_needed_at_s_367": 346
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_00.txt",
+      "size": 367,
+      "candidates": 6,
+      "t_star": 6,
+      "colourings": 16,
+      "forbidden_region": {
+        "min": 686,
+        "max": 708
+      },
+      "penalised_region": {
+        "min": 2122,
+        "max": 2122
+      },
+      "endpoints": 12,
+      "o_needed_at_s_367": 346
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_05.txt",
+      "size": 367,
+      "candidates": 6,
+      "t_star": 6,
+      "colourings": 16,
+      "forbidden_region": {
+        "min": 686,
+        "max": 708
+      },
+      "penalised_region": {
+        "min": 2122,
+        "max": 2122
+      },
+      "endpoints": 12,
+      "o_needed_at_s_367": 346
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_06.txt",
+      "size": 367,
+      "candidates": 6,
+      "t_star": 6,
+      "colourings": 16,
+      "forbidden_region": {
+        "min": 688,
+        "max": 708
+      },
+      "penalised_region": {
+        "min": 2094,
+        "max": 2094
+      },
+      "endpoints": 12,
+      "o_needed_at_s_367": 346
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_01.txt",
+      "size": 367,
+      "candidates": 7,
+      "t_star": 7,
+      "colourings": 16,
+      "forbidden_region": {
+        "min": 820,
+        "max": 844
+      },
+      "penalised_region": {
+        "min": 2416,
+        "max": 2416
+      },
+      "endpoints": 14,
+      "o_needed_at_s_367": 336
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_02.txt",
+      "size": 367,
+      "candidates": 7,
+      "t_star": 7,
+      "colourings": 16,
+      "forbidden_region": {
+        "min": 822,
+        "max": 848
+      },
+      "penalised_region": {
+        "min": 2390,
+        "max": 2390
+      },
+      "endpoints": 14,
+      "o_needed_at_s_367": 336
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_07.txt",
+      "size": 367,
+      "candidates": 7,
+      "t_star": 7,
+      "colourings": 16,
+      "forbidden_region": {
+        "min": 822,
+        "max": 848
+      },
+      "penalised_region": {
+        "min": 2390,
+        "max": 2390
+      },
+      "endpoints": 14,
+      "o_needed_at_s_367": 336
+    },
+    {
+      "file": "sets/C7_d5_367_polak_schrijver.txt",
+      "size": 367,
+      "candidates": 8,
+      "t_star": 8,
+      "colourings": 16,
+      "forbidden_region": {
+        "min": 956,
+        "max": 984
+      },
+      "penalised_region": {
+        "min": 2684,
+        "max": 2684
+      },
+      "endpoints": 16,
+      "o_needed_at_s_367": 324
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_03.txt",
+      "size": 367,
+      "candidates": 8,
+      "t_star": 8,
+      "colourings": 16,
+      "forbidden_region": {
+        "min": 956,
+        "max": 984
+      },
+      "penalised_region": {
+        "min": 2684,
+        "max": 2684
+      },
+      "endpoints": 16,
+      "o_needed_at_s_367": 324
+    },
+    {
+      "file": "sets/C7_d5_367_auxiliary_X.txt",
+      "size": 367,
+      "candidates": 9,
+      "t_star": 9,
+      "colourings": 16,
+      "forbidden_region": {
+        "min": 1098,
+        "max": 1128
+      },
+      "penalised_region": {
+        "min": 2952,
+        "max": 2952
+      },
+      "endpoints": 18,
+      "o_needed_at_s_367": 311
+    },
+    {
+      "file": "sets/C7_d5_367_auxiliary_X_best.txt",
+      "size": 367,
+      "candidates": 10,
+      "t_star": 10,
+      "colourings": 16,
+      "forbidden_region": {
+        "min": 1240,
+        "max": 1268
+      },
+      "penalised_region": {
+        "min": 3220,
+        "max": 3220
+      },
+      "endpoints": 20,
+      "o_needed_at_s_367": 296
+    }
+  ],
+  "record": "3.2588326203532663091215390518104754376053875943219",
+  "reading": "The forbidden region is what an auxiliary set may not touch, and it grows with the number of pairs: more candidates mean more endpoints and a larger N(P_H) cap N(P_V). So t and o trade against each other, and a ninth pair is not automatically worth its price."
+}

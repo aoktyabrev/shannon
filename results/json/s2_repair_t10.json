@@ -1,0 +1,51 @@
+{
+  "code": "sets/C7_d5_367_auxiliary_X_best.txt",
+  "code_sha256": "79eea8fc28a435a3fc695d7dd3ea2f78c38b7804028fec4a648e684e0d349774",
+  "candidates": 10,
+  "colourings": 16,
+  "rows_examined": 60,
+  "best": {
+    "row": 53,
+    "source": "sets/C7_d5_367_polak_schrijver.txt",
+    "colour_mask": 370,
+    "bad": 4,
+    "deleted": 4,
+    "added": 2,
+    "replacements_available": 2,
+    "s": 365,
+    "o": 312,
+    "profile": [
+      367,
+      10,
+      365,
+      312
+    ],
+    "bound": "3.2580264565254986589439100017851480",
+    "beats_record": false,
+    "alpha_368_found": false
+  },
+  "record": "3.2588326203532663091215390518104754376053875943219",
+  "best_file": "sets/C7_d5_365_aux_for_t10.txt",
+  "best_sha256": "af0df6277e28deae1d6ad6da6ad8ad88ca289418bce6f49c45b79898b1c7b124",
+  "best_verified": {
+    "file": "sets/C7_d5_365_aux_for_t10.txt",
+    "sha256": "af0df6277e28deae1d6ad6da6ad8ad88ca289418bce6f49c45b79898b1c7b124",
+    "n": 7,
+    "d": 5,
+    "size": 365,
+    "universe": 16807,
+    "independent": true,
+    "box_collisions": 0,
+    "box_cells": 11680,
+    "box_passes": 1,
+    "box_seconds": 1.4e-05,
+    "cells_per_second": 821316950,
+    "vertices_per_second": 25666155,
+    "quadratic_run": true,
+    "quadratic_independent": true,
+    "quadratic_seconds": 9.9e-05,
+    "agree": true,
+    "witness_pair": null
+  },
+  "best_beats_record": false
+}
