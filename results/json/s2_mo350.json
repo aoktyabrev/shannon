@@ -1,0 +1,158 @@
+{
+  "source": "arXiv:1504.01472, Appendix, G(5,7) >= 350",
+  "generator": [
+    0,
+    1,
+    1,
+    5,
+    1
+  ],
+  "group_order": 7,
+  "orbit_representatives": 50,
+  "orbit_sizes": [
+    7
+  ],
+  "size": 350,
+  "size_matches_the_paper": true,
+  "orbits_pairwise_disjoint": true,
+  "file": "sets/C7_d5_350_mathew_ostergard.txt",
+  "sha256": "a8ae1e0dca26da54cfba7b28b0e487ad86deb005ff2a85b60f199119edde704c",
+  "verify": {
+    "file": "sets/C7_d5_350_mathew_ostergard.txt",
+    "sha256": "a8ae1e0dca26da54cfba7b28b0e487ad86deb005ff2a85b60f199119edde704c",
+    "n": 7,
+    "d": 5,
+    "size": 350,
+    "universe": 16807,
+    "independent": true,
+    "quadratic_run": true,
+    "quadratic_independent": true,
+    "quadratic_seconds": 0.000177,
+    "agree": true,
+    "witness_pair": null
+  },
+  "candidates": {
+    "count": 7,
+    "distinct_centres": 7,
+    "conflict_edges": 0,
+    "t_star": 7,
+    "exhaustive": true,
+    "pairs": [
+      {
+        "r": [
+          1,
+          0,
+          5,
+          4,
+          0
+        ],
+        "q": [
+          2,
+          0,
+          5,
+          4,
+          0
+        ]
+      },
+      {
+        "r": [
+          1,
+          1,
+          6,
+          2,
+          1
+        ],
+        "q": [
+          2,
+          1,
+          6,
+          2,
+          1
+        ]
+      },
+      {
+        "r": [
+          1,
+          2,
+          0,
+          0,
+          2
+        ],
+        "q": [
+          2,
+          2,
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "r": [
+          1,
+          3,
+          1,
+          5,
+          3
+        ],
+        "q": [
+          2,
+          3,
+          1,
+          5,
+          3
+        ]
+      },
+      {
+        "r": [
+          1,
+          4,
+          2,
+          3,
+          4
+        ],
+        "q": [
+          2,
+          4,
+          2,
+          3,
+          4
+        ]
+      },
+      {
+        "r": [
+          1,
+          5,
+          3,
+          1,
+          5
+        ],
+        "q": [
+          2,
+          5,
+          3,
+          1,
+          5
+        ]
+      },
+      {
+        "r": [
+          1,
+          6,
+          4,
+          6,
+          6
+        ],
+        "q": [
+          2,
+          6,
+          4,
+          6,
+          6
+        ]
+      }
+    ]
+  },
+  "maximal": null,
+  "addable_vertices": null,
+  "all_pass": true
+}

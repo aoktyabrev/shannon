@@ -495,3 +495,18 @@ needs a ninth candidate pair at 367, which is a different question.
 FunSearch paper's repository was checked on 2026-10-02
 (`https://api.github.com/repos/google-deepmind/funsearch/git/trees/main?recursive=1`, 37 files):
 it carries no Shannon-capacity data, so no second explicit 367-code is available to measure.
+
+### [MO17-6] their 350-word set is published after all — arXiv:1504.01472, Appendix
+
+> Generator: (0, 1, 1, 5, 1)\\
+> Group order: 7\\
+
+> The permutation of coordinates is the identity
+> permutation in all generators of the groups, and $a=1$ for all value
+> permutations in
+
+The appendix prints the generator of the prescribed group and fifty orbit representatives for
+G(5,7) ≥ 350; `scripts/s2_reconstruct_mo.py` parses them out of the dump, generates the orbits
+under the translation x ↦ x + (0,1,1,5,1), and `scripts/verify` confirms the resulting 350 words
+are independent (box and quadratic paths agreeing). Stage 0 had recorded that this set was not
+available to us; that was wrong, and `RESULTS.md` says so at the point where the claim was made.

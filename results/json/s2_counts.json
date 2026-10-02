@@ -1,0 +1,233 @@
+{
+  "codes": [
+    {
+      "file": "sets/C7_d5_343_linear.txt",
+      "sha256": "fc4dcf8e7e214c8f",
+      "size": 343,
+      "independent": true,
+      "maximal": null,
+      "candidates": 0,
+      "distinct_centres": 0,
+      "conflict_edges": 0,
+      "t_star": 0,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/C7_d5_350_mathew_ostergard.txt",
+      "sha256": "a8ae1e0dca26da54",
+      "size": 350,
+      "independent": true,
+      "maximal": null,
+      "candidates": 7,
+      "distinct_centres": 7,
+      "conflict_edges": 0,
+      "t_star": 7,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_04.txt",
+      "sha256": "0e0046d0f81c4a8e",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 5,
+      "distinct_centres": 5,
+      "conflict_edges": 0,
+      "t_star": 5,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/C7_d5_367_reproduced.txt",
+      "sha256": "23826340a496cb04",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 6,
+      "distinct_centres": 6,
+      "conflict_edges": 1,
+      "t_star": 6,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_00.txt",
+      "sha256": "208243cea1551fc5",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 6,
+      "distinct_centres": 6,
+      "conflict_edges": 1,
+      "t_star": 6,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_05.txt",
+      "sha256": "76e1dce9207446d6",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 6,
+      "distinct_centres": 6,
+      "conflict_edges": 1,
+      "t_star": 6,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_06.txt",
+      "sha256": "f5d9a41ad076f6b8",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 6,
+      "distinct_centres": 6,
+      "conflict_edges": 1,
+      "t_star": 6,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_01.txt",
+      "sha256": "973074520160047a",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 7,
+      "distinct_centres": 7,
+      "conflict_edges": 2,
+      "t_star": 7,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_02.txt",
+      "sha256": "7c82f917f5991f11",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 7,
+      "distinct_centres": 7,
+      "conflict_edges": 2,
+      "t_star": 7,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_07.txt",
+      "sha256": "1b701dca0a115864",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 7,
+      "distinct_centres": 7,
+      "conflict_edges": 2,
+      "t_star": 7,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/C7_d5_367_best_t_from_pipeline.txt",
+      "sha256": "a1f78db7478de2d1",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 8,
+      "distinct_centres": 8,
+      "conflict_edges": 3,
+      "t_star": 8,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/C7_d5_367_polak_schrijver.txt",
+      "sha256": "9bdb8b9d69d9451e",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 8,
+      "distinct_centres": 8,
+      "conflict_edges": 3,
+      "t_star": 8,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_03.txt",
+      "sha256": "2c325a3edd958d76",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 8,
+      "distinct_centres": 8,
+      "conflict_edges": 3,
+      "t_star": 8,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/C7_d5_367_auxiliary_X.txt",
+      "sha256": "392260d103f11eee",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 9,
+      "distinct_centres": 9,
+      "conflict_edges": 4,
+      "t_star": 9,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/C7_d5_367_auxiliary_X_best.txt",
+      "sha256": "79eea8fc28a435a3",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 10,
+      "distinct_centres": 10,
+      "conflict_edges": 5,
+      "t_star": 10,
+      "exhaustive": true
+    },
+    {
+      "file": "sets/C7_d5_367_auxiliary_X_o322.txt",
+      "sha256": "a4009726c06beb61",
+      "size": 367,
+      "independent": true,
+      "maximal": null,
+      "candidates": 10,
+      "distinct_centres": 10,
+      "conflict_edges": 5,
+      "t_star": 10,
+      "exhaustive": true
+    }
+  ],
+  "count_histogram": {
+    "0": 1,
+    "5": 1,
+    "6": 4,
+    "7": 4,
+    "8": 3,
+    "9": 1,
+    "10": 2
+  },
+  "counts_by_size": {
+    "343": [
+      0
+    ],
+    "350": [
+      7
+    ],
+    "367": [
+      5,
+      6,
+      6,
+      6,
+      6,
+      7,
+      7,
+      7,
+      8,
+      8,
+      8,
+      9,
+      10,
+      10
+    ]
+  },
+  "best_t_star": 10,
+  "target_t_star_at_367": 9,
+  "target_met": true,
+  "all_independent": true
+}

@@ -1019,10 +1019,19 @@ def main():
           f"({mis3['seconds']:.0f} s), which the task did not require.")
     w()
     w("4. **The d = 4 and d = 5 record sets of Vesel–Žerovnik (108) and Mathew–Östergård (350) are "
-      "not in `sets/`.** Neither paper publishes the set in a form we obtained, and constructing a "
-      "108-vertex set in C₇^⊠4 ourselves would be a search run, which Stage 0 forbids. The numbers "
-      "are cited [PS19-3, MO17-1]; the small-d cross-check in test C uses product constructions "
-      "(10×3 at d = 3, 10×10 at d = 4) instead, which need no search.")
+      "not in `sets/`.** Constructing a 108-vertex set in C₇^⊠4 ourselves would be a search run, "
+      "which Stage 0 forbids. The numbers are cited [PS19-3, MO17-1]; the small-d cross-check in "
+      "test C uses product constructions (10×3 at d = 3, 10×10 at d = 4) instead, which need no "
+      "search.")
+    w()
+    w("   **Corrected in Stage 2 (2026-10-02).** The sentence this deviation used to carry — that "
+      "neither paper publishes its set in a form we obtained — was false for Mathew–Östergård. "
+      "Their appendix publishes the 350-word set in full: a generator of the prescribed group and "
+      "fifty orbit representatives [MO17-6]. `scripts/s2_reconstruct_mo.py` rebuilds it from the "
+      "dumped source and `scripts/verify` confirms it, so `sets/` now holds it. Vesel–Žerovnik is "
+      "a different case and the original statement stands there: that paper is not on arXiv and "
+      "was never obtained. The claim was wrong because nobody read the appendix of a paper that "
+      "was sitting in `sources/`, and it is corrected here rather than quietly dropped.")
     w()
     w("5. **The GPU verifier was written although the task only asked for a measurement.** It is "
       "the measurement: 'what does a GPU give over a CPU' has no answer without one. It is held to "

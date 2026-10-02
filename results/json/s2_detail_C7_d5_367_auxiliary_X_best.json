@@ -1,0 +1,240 @@
+{
+  "file": "sets/C7_d5_367_auxiliary_X_best.txt",
+  "sha256": "79eea8fc28a435a3fc695d7dd3ea2f78c38b7804028fec4a648e684e0d349774",
+  "size": 367,
+  "verifier": {
+    "file": "sets/C7_d5_367_auxiliary_X_best.txt",
+    "sha256": "79eea8fc28a435a3fc695d7dd3ea2f78c38b7804028fec4a648e684e0d349774",
+    "n": 7,
+    "d": 5,
+    "size": 367,
+    "universe": 16807,
+    "independent": true,
+    "quadratic_run": true,
+    "quadratic_independent": true,
+    "quadratic_seconds": 0.000105,
+    "agree": true,
+    "witness_pair": null
+  },
+  "route_A_box_sweep": {
+    "outside": 16440,
+    "with_one_neighbour": 10,
+    "neighbour_histogram": {
+      "1": 10,
+      "2": 260,
+      "3+": 16170
+    }
+  },
+  "route_B_stage1_enumerator": {
+    "candidates": 10
+  },
+  "routes_agree_on_the_candidate_set": true,
+  "conflict_graph": {
+    "vertices": 10,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        2,
+        6
+      ],
+      [
+        3,
+        8
+      ],
+      [
+        4,
+        9
+      ],
+      [
+        5,
+        7
+      ]
+    ],
+    "edge_count": 5,
+    "distinct_centres": 10
+  },
+  "t_star_branch_and_bound": 10,
+  "t_star_brute_force": 10,
+  "t_star_methods_agree": true,
+  "witness": [
+    {
+      "r": [
+        3,
+        2,
+        5,
+        4,
+        6
+      ],
+      "q": [
+        2,
+        3,
+        5,
+        4,
+        6
+      ],
+      "q_goes_to": "H"
+    },
+    {
+      "r": [
+        1,
+        5,
+        6,
+        3,
+        5
+      ],
+      "q": [
+        2,
+        4,
+        6,
+        3,
+        5
+      ],
+      "q_goes_to": "V"
+    },
+    {
+      "r": [
+        5,
+        1,
+        4,
+        3,
+        6
+      ],
+      "q": [
+        5,
+        0,
+        5,
+        3,
+        6
+      ],
+      "q_goes_to": "H"
+    },
+    {
+      "r": [
+        5,
+        3,
+        3,
+        2,
+        5
+      ],
+      "q": [
+        5,
+        3,
+        2,
+        3,
+        5
+      ],
+      "q_goes_to": "H"
+    },
+    {
+      "r": [
+        4,
+        3,
+        6,
+        4,
+        1
+      ],
+      "q": [
+        5,
+        3,
+        6,
+        4,
+        2
+      ],
+      "q_goes_to": "H"
+    },
+    {
+      "r": [
+        5,
+        4,
+        6,
+        6,
+        0
+      ],
+      "q": [
+        5,
+        4,
+        6,
+        0,
+        6
+      ],
+      "q_goes_to": "H"
+    },
+    {
+      "r": [
+        6,
+        6,
+        0,
+        4,
+        5
+      ],
+      "q": [
+        6,
+        0,
+        6,
+        4,
+        5
+      ],
+      "q_goes_to": "V"
+    },
+    {
+      "r": [
+        6,
+        3,
+        5,
+        1,
+        4
+      ],
+      "q": [
+        6,
+        3,
+        5,
+        0,
+        5
+      ],
+      "q_goes_to": "V"
+    },
+    {
+      "r": [
+        6,
+        4,
+        1,
+        5,
+        6
+      ],
+      "q": [
+        6,
+        4,
+        2,
+        4,
+        6
+      ],
+      "q_goes_to": "V"
+    },
+    {
+      "r": [
+        0,
+        4,
+        5,
+        3,
+        3
+      ],
+      "q": [
+        6,
+        4,
+        5,
+        3,
+        2
+      ],
+      "q_goes_to": "V"
+    }
+  ],
+  "transversals": {
+    "P_H_independent": true,
+    "P_V_independent": true,
+    "endpoints_disjoint": true
+  },
+  "all_pass": true
+}
