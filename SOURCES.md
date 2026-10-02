@@ -452,3 +452,46 @@ nothing on C₇, on odd cycles or on strong products has appeared since arXiv:26
 (31 August 2026). The nine hits with a later identifier are unrelated information-theory
 papers; they are listed in `results/json/w_gate.json` under `litcheck`. The record to beat is
 therefore unchanged: Θ(C₇) ≥ 3.2588326203532663091215390518104754… [T26-2].
+
+---
+
+## Stage 2 — what the literature already searched, and what it did not
+
+Stage 2 looks for a 367-word code outside the Polak–Schrijver construction. Three quotations
+decide whether that ground is already taken. They are checked by `scripts/s2_litcheck.py` as well
+as by `scripts/check_sources.py`.
+
+### [PS19-11] they swept their own parameters, for size — arXiv:1808.07438, `paper.tex` line 289
+
+> In steps (ii) and (iii), many possibilities for adding a constant word and for the division factor were tried, but no independent set of size~$368$ or larger was found.
+
+So direction 2 of Stage 2 (other circular graphs, other division factors) was traversed by the
+authors themselves — but with **size** as the objective. They report no count of candidate private
+pairs, for their code or for any other, so the statistic Stage 2 is after does not exist in the
+literature.
+
+### [PS19-12] their 3-opt result, also about size — arXiv:1808.07438, `paper.tex` line 289
+
+> A local search was performed, showing that there exists no triple of words from~$R$ such that if one removes these three words from~$R$, four words can be added to obtain an independent set of size~$368$ in~$C_7^5$.
+
+This is the closest published neighbour of Stage 2's cheapest direction, and it is not the same
+question: removing k words and adding k back (our k-opt at fixed size 367, maximising the
+candidate count) is admissible here and invisible to a search that only accepts 368.
+
+### [PS19-13] the upper bound that leaves 368 open — arXiv:1808.07438, Table 1 and its key
+
+> $\alpha(C_7^d)$ & 3 & $10^a$ & $33^d$ & $108^e$--$115^b$ & $367^f$--$401^c$
+> \\$^c$ $\alpha(G^d) \leq \vartheta(G)^d$ by Lov\'asz $\cite{lovasz}$
+
+Recomputed here at 60 digits: ϑ(C₇)⁵ = 401.9426585010706501209115…, so
+367 ≤ α(C₇^⊠5) ≤ 401 and every value from 368 up is open. Stage 2 does not need a 368th word; it
+needs a ninth candidate pair at 367, which is a different question.
+
+### [BPZ26-4] the one other recovery of the 367 bound — arXiv:2607.29681, `main3.tex` line 154
+
+> A size $367$ independent set in $C_7^{\boxtimes 5}$ which improved the lower bound was discovered by
+
+(the sentence continues: Polak and Schrijver, "which was later recovered by FunSearch"). The
+FunSearch paper's repository was checked on 2026-10-02
+(`https://api.github.com/repos/google-deepmind/funsearch/git/trees/main?recursive=1`, 37 files):
+it carries no Shannon-capacity data, so no second explicit 367-code is available to measure.

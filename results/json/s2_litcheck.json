@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-02",
+  "label": "stage2-start",
+  "record": {
+    "search_date": "2026-10-02",
+    "label": "stage2-start",
+    "distinct_hits": 59,
+    "record_chain_present": {
+      "2607.21517": true,
+      "2607.27869": true,
+      "2607.29681": true,
+      "2608.30273": true
+    },
+    "ids_after_the_record": [
+      "2609.40054",
+      "2609.34744",
+      "2609.34213",
+      "2609.28363",
+      "2609.27767",
+      "2609.22314",
+      "2609.18352",
+      "2609.18200",
+      "2609.14621",
+      "2609.11368",
+      "2609.10986",
+      "2609.10436"
+    ],
+    "of_those_on_our_subject": [],
+    "record_unchanged": true,
+    "current_record": "3.2588326203532663091215390518104754376053875943219... [T26-2]"
+  },
+  "other_367_codes": {
+    "polak_schrijver_searched_the_same_family": true,
+    "their_3_opt_result_is_about_size_not_pairs": true,
+    "they_say_R_is_not_easily_extendable": true,
+    "funsearch_recovered_the_bound": true,
+    "funsearch_set_published": false,
+    "funsearch_repository_checked": "https://api.github.com/repos/google-deepmind/funsearch/git/trees/main?recursive=1 -- 37 files, none on Shannon capacity or independent sets in cycle powers",
+    "verdict": "No 367-word code outside the Polak-Schrijver construction is available in the literature. PS themselves swept the parameters of their steps (ii)-(iii) and a 3-opt neighbourhood of R, but only for SIZE -- no paper reports the number of candidate private pairs of any code, so the statistic Stage 2 is after does not exist yet. The eight codes of our own pipeline enumeration (results/json/s1_codes.json) remain the only family whose counts are known."
+  },
+  "upper_bound": {
+    "theta_c7": "3.31766720739409539273320829807238137146",
+    "theta_c7_to_the_fifth": "401.942658501070650120911504065338965489720374820682056241299",
+    "floor": 401,
+    "published_table_row_found_in_dump": true,
+    "lovasz_key_found_in_dump": true,
+    "alpha_c7_5_known_interval": [
+      367,
+      401
+    ],
+    "368_still_open": true,
+    "note": "The only published upper bound on alpha(C_7^5) is theta^5 = 401.94..., so every value from 368 to 401 is open. Stage 2 does not need 368: at a = 367 it needs a ninth candidate pair, which is a different question from a 368th word."
+  },
+  "what_this_means_for_stage_2": "The target is intact and the ground is not taken: the record has not moved, no second 367-code is published, and no paper reports candidate-pair counts at all. Stage 2's cheapest direction (perturbing I_0) is not subsumed by the 3-opt result of [PS19], because that search was for a 368th word and ours is for a ninth private pair.",
+  "all_pass": true
+}

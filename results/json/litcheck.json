@@ -1,12 +1,27 @@
 {
-  "date": "2026-09-26",
-  "timestamp": "2026-09-26T06:10:05Z",
-  "label": "writeup-gate",
+  "date": "2026-10-02",
+  "timestamp": "2026-10-02T12:19:26Z",
+  "label": "stage2-start",
   "searches": [
     {
       "query": "Shannon capacity",
       "url": "https://arxiv.org/search/?searchtype=all&query=Shannon+capacity&start=0&sortBy=submitted_date&sortOrder=descending",
       "hits": [
+        {
+          "id": "2609.40054",
+          "title": "Transmitting algebras through quantum channels",
+          "submitted": "30 September, 2026"
+        },
+        {
+          "id": "2609.34744",
+          "title": "Optimizing and Securing the Modern Watermarking Channel for Images",
+          "submitted": "28 September, 2026"
+        },
+        {
+          "id": "2609.34213",
+          "title": "Monotonicity of the R\u00e9nyi channel capacity under non-signaling assisted channel simulation",
+          "submitted": "27 September, 2026"
+        },
         {
           "id": "2609.28363",
           "title": "Curvature-Domain Wireless Communications: Gauge-Fixed Signal Spaces, Fredholm Capacity, and Differentiation-Limited Scaling for Continuous Apertures",
@@ -20,12 +35,12 @@
         {
           "id": "2609.22314",
           "title": "Integrated Sensing and Communications: A Tutorial on Mathematical Foundations, Signal Processing and System Design for 6G",
-          "submitted": "15 September, 2026"
+          "submitted": "27 September, 2026"
         },
         {
           "id": "2609.18352",
           "title": "Information Spectrum Methods for $\\varepsilon$-Capacity Problems in the Theory of Mixed Multiple-Access Channels with Cost Constraint",
-          "submitted": "16 September, 2026"
+          "submitted": "28 September, 2026"
         },
         {
           "id": "2609.18200",
@@ -45,7 +60,7 @@
         {
           "id": "2609.10986",
           "title": "A Mathematical Theory of Pragmatic Information",
-          "submitted": "16 September, 2026"
+          "submitted": "29 September, 2026"
         },
         {
           "id": "2609.10436",
@@ -215,7 +230,7 @@
         {
           "id": "2604.26874",
           "title": "Convex combinations of bosonic pure-loss channels",
-          "submitted": "29 April, 2026"
+          "submitted": "30 September, 2026"
         },
         {
           "id": "2604.20874",
@@ -241,21 +256,6 @@
           "id": "2604.11204",
           "title": "Semantic Rate-Distortion Theory: Deductive Compression and Closure Fidelity",
           "submitted": "13 April, 2026"
-        },
-        {
-          "id": "2604.07087",
-          "title": "Quantum coherent transceivers toward Holevo-limited communications",
-          "submitted": "8 April, 2026"
-        },
-        {
-          "id": "2604.04957",
-          "title": "FluxMC: Rapid and High-Fidelity Inference for Space-Based Gravitational-Wave Observations",
-          "submitted": "8 April, 2026"
-        },
-        {
-          "id": "2604.01624",
-          "title": "OSCAR: Orchestrated Self-verification and Cross-path Refinement",
-          "submitted": "2 April, 2026"
         }
       ]
     },
@@ -360,6 +360,21 @@
   ],
   "union_sorted_by_id": [
     {
+      "id": "2609.40054",
+      "title": "Transmitting algebras through quantum channels",
+      "submitted": "30 September, 2026"
+    },
+    {
+      "id": "2609.34744",
+      "title": "Optimizing and Securing the Modern Watermarking Channel for Images",
+      "submitted": "28 September, 2026"
+    },
+    {
+      "id": "2609.34213",
+      "title": "Monotonicity of the R\u00e9nyi channel capacity under non-signaling assisted channel simulation",
+      "submitted": "27 September, 2026"
+    },
+    {
       "id": "2609.28363",
       "title": "Curvature-Domain Wireless Communications: Gauge-Fixed Signal Spaces, Fredholm Capacity, and Differentiation-Limited Scaling for Continuous Apertures",
       "submitted": "23 September, 2026"
@@ -372,12 +387,12 @@
     {
       "id": "2609.22314",
       "title": "Integrated Sensing and Communications: A Tutorial on Mathematical Foundations, Signal Processing and System Design for 6G",
-      "submitted": "15 September, 2026"
+      "submitted": "27 September, 2026"
     },
     {
       "id": "2609.18352",
       "title": "Information Spectrum Methods for $\\varepsilon$-Capacity Problems in the Theory of Mixed Multiple-Access Channels with Cost Constraint",
-      "submitted": "16 September, 2026"
+      "submitted": "28 September, 2026"
     },
     {
       "id": "2609.18200",
@@ -397,7 +412,7 @@
     {
       "id": "2609.10986",
       "title": "A Mathematical Theory of Pragmatic Information",
-      "submitted": "16 September, 2026"
+      "submitted": "29 September, 2026"
     },
     {
       "id": "2609.10436",
@@ -567,7 +582,7 @@
     {
       "id": "2604.26874",
       "title": "Convex combinations of bosonic pure-loss channels",
-      "submitted": "29 April, 2026"
+      "submitted": "30 September, 2026"
     },
     {
       "id": "2604.20874",
@@ -603,21 +618,6 @@
       "id": "2604.11204",
       "title": "Semantic Rate-Distortion Theory: Deductive Compression and Closure Fidelity",
       "submitted": "13 April, 2026"
-    },
-    {
-      "id": "2604.07087",
-      "title": "Quantum coherent transceivers toward Holevo-limited communications",
-      "submitted": "8 April, 2026"
-    },
-    {
-      "id": "2604.04957",
-      "title": "FluxMC: Rapid and High-Fidelity Inference for Space-Based Gravitational-Wave Observations",
-      "submitted": "8 April, 2026"
-    },
-    {
-      "id": "2604.01624",
-      "title": "OSCAR: Orchestrated Self-verification and Cross-path Refinement",
-      "submitted": "2 April, 2026"
     },
     {
       "id": "1912.04337",
@@ -661,5 +661,5 @@
     "2607.29681": true,
     "2608.30273": true
   },
-  "newest_hit_id": "2609.28363"
+  "newest_hit_id": "2609.40054"
 }
