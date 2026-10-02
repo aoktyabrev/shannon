@@ -50,11 +50,14 @@ def main():
     masks = proper_colourings(qs)
 
     regions = {}
+    full = (1 << t) - 1
     for m in masks:
         PH = [qs[i] if (m >> i & 1) else rs[i] for i in range(t)]
         PV = [rs[i] if (m >> i & 1) else qs[i] for i in range(t)]
         NH, NV = closed_nbhd(PH), closed_nbhd(PV)
-        regions[m] = (NH & NV, NH | NV)
+        # the sweep may name a colouring by either side of the global H<->V swap,
+        # which leaves both regions unchanged; accept both names
+        regions[m] = regions[m ^ full] = (NH & NV, NH | NV)
 
     rows, best = [], None
     seen = 0
@@ -67,39 +70,43 @@ def main():
         src_i, cmask, perm, sign_mask, shift, bad_n, u = (
             int(f[0]), int(f[1]), tuple(int(x) for x in f[2].split(",")),
             int(f[3]), int(f[4]), int(f[5]), int(f[6]))
-        if cmask not in regions:
-            continue
+        # The sweep numbers the colourings in its own order of the private pairs, so its
+        # mask cannot be matched to ours by value. The image itself is unambiguous, so
+        # every colouring of ours is tried on it and the best one kept -- which also
+        # recovers the sweep's own minimum rather than trusting it.
         seen += 1
         if seen > max_rows:
             break
-        src_files = sorted(os.listdir(os.path.join(ROOT, "sets", "pipeline_codes")))
-        # the dump's source index is the order the sweep was given its --source list;
-        # it is recorded in results/json/s2_sweep_sources.json by the caller
         srcs = json.load(open(os.path.join(ROOT, "results", "json",
                                            "s2_sweep_sources.json")))["sources"]
         _, _, S = read_set(os.path.join(ROOT, srcs[src_i]))
         X = image(S, perm, sign_mask, shift)
-        B, U = regions[cmask]
-        badw = [w for w in X if w in B]
-        if len(badw) != bad_n:
-            rows.append({"row": seen, "mismatch": True, "bad_in_dump": bad_n,
-                         "bad_recomputed": len(badw)})
-            continue
-        Xp, cand, add = best_repair(X, set(badw), B, U)
-        Xnew = sorted(set(Xp) | set(add))
-        s_new = len(Xnew)
-        o_new = sum(1 for w in Xnew if w not in U)
-        M = recursion(367, t, s_new, o_new, 40)[0]
-        b = bound_digits(M[40], 200, 34)
-        row = {"row": seen, "source": srcs[src_i], "colour_mask": cmask,
-               "bad": len(badw), "deleted": len(badw), "added": len(add),
-               "replacements_available": len(cand),
-               "s": s_new, "o": o_new, "profile": [367, t, s_new, o_new],
-               "bound": b, "beats_record": b > RECORD[:len(b)],
-               "alpha_368_found": len(add) > len(badw)}
-        rows.append(row)
-        if best is None or (row["s"], row["o"]) > (best["s"], best["o"]):
-            best = dict(row, words=Xnew)
+        per_mask = []
+        for m in masks:
+            B, U = regions[m]
+            badw = [w for w in X if w in B]
+            per_mask.append((len(badw), m, badw))
+        per_mask.sort()
+        min_bad = per_mask[0][0]
+        for nbad, m, badw in per_mask:
+            if nbad > min_bad:
+                break
+            B, U = regions[m]
+            Xp, cand, add = best_repair(X, set(badw), B, U)
+            Xnew = sorted(set(Xp) | set(add))
+            s_new = len(Xnew)
+            o_new = sum(1 for w in Xnew if w not in U)
+            M = recursion(367, t, s_new, o_new, 40)[0]
+            b = bound_digits(M[40], 200, 34)
+            row = {"row": seen, "source": srcs[src_i], "colour_mask_ours": m,
+                   "colour_mask_in_dump": cmask, "bad": nbad, "deleted": nbad,
+                   "added": len(add), "replacements_available": len(cand),
+                   "s": s_new, "o": o_new, "profile": [367, t, s_new, o_new],
+                   "bound": b, "beats_record": b > RECORD[:len(b)],
+                   "alpha_368_found": len(add) > nbad}
+            rows.append(row)
+            if best is None or (row["s"], row["o"]) > (best["s"], best["o"]):
+                best = dict(row, words=Xnew)
     out = {"code": os.path.relpath(os.path.abspath(code_file), ROOT),
            "code_sha256": sha256(code_file), "candidates": t,
            "colourings": len(masks), "rows_examined": len([r for r in rows if "s" in r]),

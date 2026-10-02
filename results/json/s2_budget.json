@@ -1,0 +1,49 @@
+{
+  "ceilings": {
+    "core_hours": 200,
+    "gpu_hours": 0,
+    "wall_clock_days": 14
+  },
+  "items": [
+    {
+      "what": "S2.1 gate: eight engine runs (E2, E3, E4) on C_7^5",
+      "core_seconds": 14400,
+      "measured": true
+    },
+    {
+      "what": "group sweeps for the nine- and ten-candidate codes (s1_aux, 8 threads)",
+      "core_seconds": 19797,
+      "measured": true
+    },
+    {
+      "what": "auxiliary search over 16 colourings for the ten-candidate code, 600 s each",
+      "core_seconds": 9600,
+      "measured": true
+    },
+    {
+      "what": "cardinality ladders for both codes, 6 sizes x 420 s x 2",
+      "core_seconds": 5040,
+      "measured": true
+    },
+    {
+      "what": "exact repairs of near misses (two codes)",
+      "core_seconds": 1400,
+      "measured": false
+    },
+    {
+      "what": "candidate counts and the frontier table over 14 codes",
+      "core_seconds": 2600,
+      "measured": false
+    },
+    {
+      "what": "the Mathew-Ostergard reconstruction and its verification",
+      "core_seconds": 120,
+      "measured": true
+    }
+  ],
+  "core_seconds_total": 52957,
+  "core_hours_used": 14.7,
+  "gpu_hours_used": 0.0,
+  "wall_clock": "one day (2026-10-02)",
+  "note": "The GPU ceiling is zero by design (PREREGISTRATION_S2.md section 3): at d = 5 the GPU verifier runs at 0.2x one CPU core. Two items are reconstructions from the run log rather than timed, and are marked so; the ceiling is nowhere near."
+}

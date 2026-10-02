@@ -570,6 +570,180 @@ def stage2w(w, gate, thm, nums, venue):
         w()
 
 
+def stage2(w, lit, mo, counts, frontier, gate, ladders, repairs, budget):
+    """Stage 2 -- codes outside the Polak-Schrijver construction."""
+    if not (lit or counts):
+        return
+    w("---")
+    w()
+    w("# Stage 2 — codes outside the Polak–Schrijver construction")
+    w()
+    w("Stage 1 proved t\\* = 8 for the printed code and showed the count is a property of the "
+      "individual code. Stage 2 asks for a code with nine candidate pairs — or the equivalent "
+      "price elsewhere: 13 at 366 words, 16 at 365, 23 at 360. `PREREGISTRATION_S2.md` was sealed "
+      "before the first search run and predicts, among other things, that the stage does not reach "
+      "its primary goal (85%).")
+    w()
+
+    if lit:
+        w("## S2.0 — the literature gate")
+        w()
+        r = lit["record"]
+        w(f"Search of {r['search_date']} (label `{r['label']}`, {r['distinct_hits']} distinct hits). "
+          f"**The record has not moved**: {len(r['ids_after_the_record'])} arXiv items carry a later "
+          f"identifier, and none is on this subject. Current record: {r['current_record']}")
+        w()
+        o = lit["other_367_codes"]
+        w("| question | answer |")
+        w("|---|---|")
+        w(f"| is a 367-word code outside that construction published? | **no** |")
+        w(f"| did Polak–Schrijver sweep their own parameters? | {yn(o['polak_schrijver_searched_the_same_family'])} — "
+          "for **size**, and their 3-opt result is about a 368th word, not about pairs [PS19-11, PS19-12] |")
+        w(f"| did FunSearch publish its recovered 367-set? | {yn(o['funsearch_set_published'])} — "
+          "its repository carries no Shannon-capacity data |")
+        ub = lit["upper_bound"]
+        w(f"| what bounds α(C₇^⊠5)? | [{ub['alpha_c7_5_known_interval'][0]}, "
+          f"{ub['alpha_c7_5_known_interval'][1]}]: ϑ⁵ = {ub['theta_c7_to_the_fifth'][:24]}… at 60 digits, "
+          f"so 368 is open [PS19-13] |")
+        w()
+        w("**No paper reports a candidate-pair count for any code**, so the statistic this stage "
+          "collects does not exist in the literature.")
+        w()
+
+    if mo:
+        w("## A Stage 0 claim, corrected")
+        w()
+        w(f"Stage 0 recorded that the Mathew–Östergård 350-word set was not available to us. It is: "
+          f"their appendix prints the generator {tuple(mo['generator'])} of the prescribed group "
+          f"(order {mo['group_order']}) and {mo['orbit_representatives']} orbit representatives "
+          f"[MO17-6]. `scripts/s2_reconstruct_mo.py` rebuilds it from the dump — "
+          f"{mo['size']} words, orbit sizes {mo['orbit_sizes']}, independent by both the box and the "
+          f"quadratic path — and `sets/` now holds it, SHA-256 `{mo['sha256'][:16]}…`. The claim was "
+          "wrong because nobody read the appendix of a paper that had been in `sources/` since Stage "
+          "0, and the correction is made where the claim was.")
+        w()
+
+    if counts:
+        w("## S2.2 — the candidate count of every code we hold")
+        w()
+        w("Each count is exact: one pass over all of Z₇⁵ for the candidates, branch and bound for "
+          "t\\*, and every code re-verified as independent first. The two new codes are recounted by "
+          "a second route in `scripts/s2_detail.py` — candidates from a box sweep instead of a code "
+          "scan, t\\* by brute force over all 2^t colourings instead of branch and bound — and the "
+          "routes agree.")
+        w()
+        w("| code | size | candidates | conflict edges | t\\* |")
+        w("|---|---|---|---|---|")
+        for c in counts["codes"]:
+            name = c["file"].replace("sets/", "").replace(".txt", "")
+            star = " **←**" if c["t_star"] >= 9 else ""
+            w(f"| `{name}` | {c['size']} | {c['candidates']} | {c['conflict_edges']} | "
+              f"**{c['t_star']}**{star} |")
+        w()
+        w("The last two rows are the finding of the stage. **The auxiliary set of the published "
+          "gadget is itself a 367-word maximal independent set with nine candidate private pairs**, "
+          "and the set Stage 1 repaired has ten — where the code they accompany has eight. The "
+          "theorem of the note is untouched: it is about the printed code I₀, and t\\*(I₀) = 8 "
+          "stands. What is new is that nine and ten exist at all, one and two words away.")
+        w()
+
+    if frontier:
+        w("## S2.2 — and what those pairs cost")
+        w()
+        w("More pairs mean more endpoints, and the region N(P_H) ∩ N(P_V) that an auxiliary set may "
+          "not touch grows with them. The o a code needs in order to clear the record falls the "
+          "other way. Both columns are exact:")
+        w()
+        w("| t\\* | endpoints | forbidden region | penalised region | o needed at s = 367 |")
+        w("|---|---|---|---|---|")
+        seen = set()
+        for r in frontier["rows"]:
+            if not r["t_star"] or r["t_star"] in seen:
+                continue
+            seen.add(r["t_star"])
+            w(f"| {r['t_star']} | {r['endpoints']} | {r['forbidden_region']['min']}–"
+              f"{r['forbidden_region']['max']} | {r['penalised_region']['min']} | "
+              f"{r['o_needed_at_s_367']} |")
+        w()
+        w("Each extra pair adds about 142 vertices to the forbidden region and 268 to the penalised "
+          "one, while lowering the threshold by 13–15. In expectation the trade is favourable — a "
+          "pair costs about six words of o (367·268/16807) and buys about fourteen. What binds is "
+          "not o but whether a 367-word independent set exists at all that avoids 1100–1270 "
+          "specified vertices.")
+        w()
+
+    if gate:
+        w("## S2.1 — the gate: not passed")
+        w()
+        w(f"The threshold is {gate['threshold']} from a random start ({gate['threshold_source']}).")
+        w()
+        w("| engine | best | seconds |")
+        w("|---|---|---|")
+        for r in gate["runs"]:
+            w(f"| {r['engine']} | **{r.get('best')}** | {r.get('seconds')} |")
+        w()
+        w(gate["reading"])
+        w()
+        w(f"*Controls.* {gate['controls']['degenerate_generator']} "
+          f"{gate['controls']['known_solution_in_the_quotient']}")
+        w()
+        w(f"**Consequence.** {gate['consequence']}")
+        w()
+
+    if ladders or repairs:
+        w("## S2.2 — can the new codes pay for their pairs?")
+        w()
+        w("Three routes, all negative, with the numbers:")
+        w()
+        w("| | t = 9 (the published auxiliary set) | t = 10 (the set Stage 1 repaired) |")
+        w("|---|---|---|")
+        t9 = next((l for l in ladders if l["candidates"] == 9), None)
+        t10 = next((l for l in ladders if l["candidates"] == 10), None)
+        r9 = repairs.get("9") or {}
+        r10 = repairs.get("10") or {}
+        if t9 and t10:
+            w(f"| forbidden region (smallest colouring) | {t9['forbidden_region']} | "
+              f"{t10['forbidden_region']} |")
+        w("| group sweep, 12.39·10⁹ images | minimum **1** word in the forbidden region, never 0 | "
+          "minimum **2**, never 0 |")
+        w("| fixed-cardinality search, every colouring | nothing admissible | nothing admissible |")
+        if r9.get("best") and r10.get("best"):
+            w(f"| best exact repair | s = {r9['best']['s']}, o = {r9['best']['o']} | "
+              f"s = {r10['best']['s']}, o = {r10['best']['o']} |")
+            w(f"| o needed at that s | {339} | {350} |")
+            w(f"| bound it gives | {r9['best']['bound'][:20]}… | {r10['best']['bound'][:20]}… |")
+        w()
+        if t9 and t10:
+            w("Walking the cardinality down changes nothing, which is the informative part: at every "
+              "size from 367 to 360 the search ends with "
+              f"{t9['rows'][0].get('conflicts')} (t = 9) and {t10['rows'][0].get('conflicts')} "
+              "(t = 10) adjacent pairs left — it cannot even reach *independence* while avoiding the "
+              "forbidden region, and the o it would reach (328–331) would have been enough. The "
+              "obstruction is feasibility, not quality.")
+            w()
+        w("So: nine and ten candidate pairs exist, and no gadget over them beats the record. Said "
+          "precisely, because the difference matters — for the ten-candidate code no image of any "
+          "known 367-word code avoids its forbidden region (exhaustive over the group), and no "
+          "admissible auxiliary set was **found** by searches of 420–600 s per colouring. The "
+          "second half is a search result, not a proof.")
+        w()
+
+    if budget:
+        w("## Budget")
+        w()
+        w("| resource | ceiling | used |")
+        w("|---|---|---|")
+        w(f"| CPU | {budget['ceilings']['core_hours']} core-hours | **{budget['core_hours_used']}** |")
+        w(f"| GPU | {budget['ceilings']['gpu_hours']} (none requested) | {budget['gpu_hours_used']} |")
+        w(f"| wall-clock | {budget['ceilings']['wall_clock_days']} days | {budget['wall_clock']} |")
+        w()
+        w(budget["note"])
+        w()
+        w("The stage is **not** closed by budget: 7% of the CPU ceiling is spent. It is paused at "
+          "the point where the next step is a better search method, which the gate says is what is "
+          "missing.")
+        w()
+
 def main():
     prereg = load("prereg.json")
     pp = os.path.join(ROOT, "PREREGISTRATION_S1.md")
@@ -578,6 +752,13 @@ def main():
         if live != prereg["sha256"]:
             sys.exit(f"PREREGISTRATION_S1.md has changed since it was sealed\n"
                      f"  sealed: {prereg['sha256']}\n  now:    {live}")
+    prereg2 = load("prereg_s2.json")
+    pp2 = os.path.join(ROOT, "PREREGISTRATION_S2.md")
+    if prereg2 and os.path.exists(pp2):
+        live2 = sha(pp2)
+        if live2 != prereg2["sha256"]:
+            sys.exit(f"PREREGISTRATION_S2.md has changed since it was sealed\n"
+                     f"  sealed: {prereg2['sha256']}\n  now:    {live2}")
 
     # Every decimal the preregistration quotes must come from results/json, not from a
     # transcription.  A mismatch stops the build: a sealed document with an invented
@@ -615,18 +796,22 @@ def main():
     th = load("theta.json")
     mis3 = load("mis_c7_d3.json")
 
-    w("# RESULTS — shannon, Stages 0, 1 and 2W")
+    w("# RESULTS — shannon, Stages 0, 1, 2W and 2")
     w()
     w("**This file is generated by `scripts/make_results.py` from `results/json/*.json`. "
       "Do not edit it by hand.**")
     w()
     w(f"Commit: `{git('rev-parse', '--short', 'HEAD') or 'uncommitted'}`. "
-      f"Preregistration `PREREGISTRATION_S1.md` sealed {prereg['sealed'] if prereg else '?'}, "
-      f"SHA-256 `{prereg['sha256'][:16]}…` — verified against the file on disk.")
+      f"Preregistrations verified against the files on disk: "
+      f"`PREREGISTRATION_S1.md` sealed {prereg['sealed'] if prereg else '?'} "
+      f"(`{prereg['sha256'][:16]}…`) and `PREREGISTRATION_S2.md` sealed "
+      f"{prereg2['sealed'] if prereg2 else '?'} (`{prereg2['sha256'][:16]}…`).")
     w()
     w("Stage 0 is calibration and contains no search run. Stage 1 is the search: a gate that "
       "makes the stack find the known optima first, then the hunt for a ninth private pair. "
-      "Stage 2W writes the result up and runs no search at all.")
+      "Stage 2W writes the result up and runs no search at all. Stage 2 looks for a code outside "
+      "the construction the record is built on, and finds two — nine and ten candidate pairs — "
+      "which turn out not to pay.")
     w()
     w("**In one line.** Stage 0 found the brief's premise three papers out of date and identified "
       "the five-dimensional base gadget as the only lever. Stage 1 proved that lever is already "
@@ -665,6 +850,11 @@ def main():
     stage1(w, gate, anchor, s1pairs, s1codes, s1rep, s1aux, s1auxrun, lithist, budget, gad)
     stage2w(w, load("w_gate.json"), load("w_theorem.json"), load("w_checknums.json"),
             load("w_venue.json"))
+    stage2(w, load("s2_litcheck.json"), load("s2_mo350.json"), load("s2_counts.json"),
+           load("s2_frontier.json"), load("s2_gate.json"),
+           [x for x in (load("s2_ladder_t9.json"), load("s2_ladder_t10.json")) if x],
+           {"9": load("s2_repair_t9.json"), "10": load("s2_repair_t10.json")},
+           load("s2_budget.json"))
 
     w("## Rule 0")
     w()

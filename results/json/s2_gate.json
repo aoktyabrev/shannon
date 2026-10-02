@@ -1,0 +1,119 @@
+{
+  "threshold": 350,
+  "threshold_source": "Mathew-Ostergard [MO17-1], the published value for alpha(C_7^5)",
+  "runs": [
+    {
+      "engine": "E3 prescribed symmetry, the generator Mathew-Ostergard publish for their own 350-set",
+      "command": "scripts/s1_sym 7 5 --gen 0,1,2,3,4:1,1,1,1,1:0,1,1,5,1 --target 350 --seconds 900 --seed 1",
+      "best": 336,
+      "target": 350,
+      "reached": false,
+      "seconds": 900.0,
+      "restarts": 20479274,
+      "windows": null,
+      "improvements": null,
+      "orbits_usable": 2401,
+      "orbits_chosen": 48
+    },
+    {
+      "engine": "E3, the same generator, twice the time",
+      "command": "scripts/s1_sym 7 5 --gen 0,1,2,3,4:1,1,1,1,1:0,1,1,5,1 --target 350 --seconds 1800 --seed 11",
+      "best": 343,
+      "target": 350,
+      "reached": false,
+      "seconds": 1800.0,
+      "restarts": 50626712,
+      "windows": null,
+      "improvements": null,
+      "orbits_usable": 2401,
+      "orbits_chosen": 49
+    },
+    {
+      "engine": "E3, the same generator, four times the time and another seed",
+      "command": "scripts/s1_sym 7 5 --gen 0,1,2,3,4:1,1,1,1,1:0,1,1,5,1 --target 350 --seconds 3600 --seed 23",
+      "best": 336,
+      "target": 350,
+      "reached": false,
+      "seconds": 3600.0,
+      "restarts": 107062215,
+      "windows": null,
+      "improvements": null,
+      "orbits_usable": 2401,
+      "orbits_chosen": 48
+    },
+    {
+      "engine": "E3, a generic translation of order 7",
+      "command": "scripts/s1_sym 7 5 --gen 0,1,2,3,4:1,1,1,1,1:1,2,3,4,5 --target 350 --seconds 900 --seed 2",
+      "best": 329,
+      "target": 350,
+      "reached": false,
+      "seconds": 900.0,
+      "restarts": 20544555,
+      "windows": null,
+      "improvements": null,
+      "orbits_usable": 2401,
+      "orbits_chosen": 47
+    },
+    {
+      "engine": "E3, the degenerate translation (1,1,1,1,1) -- the control that must fail",
+      "command": "scripts/s1_sym 7 5 --gen 0,1,2,3,4:1,1,1,1,1:1,1,1,1,1 --target 350 --seconds 3600 --seed 29",
+      "best": 0,
+      "target": 350,
+      "reached": false,
+      "seconds": 3600.0,
+      "restarts": 1190264065,
+      "windows": null,
+      "improvements": null,
+      "orbits_usable": 0,
+      "orbits_chosen": 0
+    },
+    {
+      "engine": "E2 free local search from a random start, seed 3",
+      "command": "scripts/s1_ils 7 5 --target 350 --seconds 900 --seed 3",
+      "best": 311,
+      "target": 350,
+      "reached": false,
+      "seconds": 900.0,
+      "restarts": 434858,
+      "windows": null,
+      "improvements": null,
+      "orbits_usable": null,
+      "orbits_chosen": null
+    },
+    {
+      "engine": "E2 free local search from a random start, seed 4",
+      "command": "scripts/s1_ils 7 5 --target 350 --seconds 900 --seed 4",
+      "best": 308,
+      "target": 350,
+      "reached": false,
+      "seconds": 900.0,
+      "restarts": 434921,
+      "windows": null,
+      "improvements": null,
+      "orbits_usable": null,
+      "orbits_chosen": null
+    },
+    {
+      "engine": "E4 large-neighbourhood search with exact window repair, started from the best symmetric set",
+      "command": "scripts/s1_lns 7 5 --start <the 336-word symmetric set> --target 350 --seconds 1800 --seed 7",
+      "best": 336,
+      "target": 350,
+      "reached": false,
+      "seconds": 1800.0,
+      "restarts": null,
+      "windows": 4753802,
+      "improvements": 0,
+      "orbits_usable": null,
+      "orbits_chosen": null
+    }
+  ],
+  "best_reached": 343,
+  "passed": false,
+  "core_seconds": 14400.0,
+  "reading": "Not passed. The best is 343 = 49 orbits of 7, one orbit short of 350, and it came from the quotient by the very group whose 350-word set is printed in the appendix of [MO17] -- so a solution exists there and the engine does not find it. More time does not help: 3600 s with another seed gave 336 where 1800 s gave 343, which is seed variance, not a trend. Exact window repair added nothing at all from the 336 (4.75e6 windows, zero improvements). Free search from a random start reached 311 and 308. For scale, Mathew and Ostergard spent more than 2 CPU-years on the four results their paper reports, against the 200 core-hours preregistered here.",
+  "controls": {
+    "degenerate_generator": "The translation (1,1,1,1,1) has no usable orbit at all -- every orbit contains two words at circular distance 1 in every coordinate -- and the engine reported 0 usable orbits rather than searching a vacuum.",
+    "known_solution_in_the_quotient": "The MO generator's quotient provably contains a 50-orbit solution, which is what makes 343 a measurement of the engine rather than of the problem."
+  },
+  "consequence": "The gate guards direction S2.3.4, the free search for a new 367-word code: that direction is not started. The work done in this stage uses codes already in hand (S2.3.1 and the auxiliary-set question), which the gate does not cover."
+}

@@ -1,0 +1,52 @@
+{
+  "code": "sets/C7_d5_367_auxiliary_X.txt",
+  "code_sha256": "392260d103f11eee6a7720322797628eddbc7c18dcbae37d7695771b3bde10d1",
+  "candidates": 9,
+  "colourings": 16,
+  "rows_examined": 80,
+  "best": {
+    "row": 6,
+    "source": "sets/C7_d5_367_auxiliary_X.txt",
+    "colour_mask_ours": 354,
+    "colour_mask_in_dump": 184,
+    "bad": 2,
+    "deleted": 2,
+    "added": 1,
+    "replacements_available": 1,
+    "s": 366,
+    "o": 317,
+    "profile": [
+      367,
+      9,
+      366,
+      317
+    ],
+    "bound": "3.2584284058617487948749785254050651",
+    "beats_record": false,
+    "alpha_368_found": false
+  },
+  "record": "3.2588326203532663091215390518104754376053875943219",
+  "best_file": "sets/C7_d5_366_aux_for_t9.txt",
+  "best_sha256": "bcfeb06d0c8ca9526b522aaf0964d130a017c5e27cb2d33003a23b5501de76ba",
+  "best_verified": {
+    "file": "sets/C7_d5_366_aux_for_t9.txt",
+    "sha256": "bcfeb06d0c8ca9526b522aaf0964d130a017c5e27cb2d33003a23b5501de76ba",
+    "n": 7,
+    "d": 5,
+    "size": 366,
+    "universe": 16807,
+    "independent": true,
+    "box_collisions": 0,
+    "box_cells": 11712,
+    "box_passes": 1,
+    "box_seconds": 1.4e-05,
+    "cells_per_second": 850238442,
+    "vertices_per_second": 26569951,
+    "quadratic_run": true,
+    "quadratic_independent": true,
+    "quadratic_seconds": 0.000102,
+    "agree": true,
+    "witness_pair": null
+  },
+  "best_beats_record": false
+}
