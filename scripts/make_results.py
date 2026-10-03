@@ -744,6 +744,76 @@ def stage2(w, lit, mo, counts, frontier, gate, ladders, repairs, budget):
           "missing.")
         w()
 
+def stage2_1(w, room):
+    """Stage 2.1 -- is there room for 367 words outside the forbidden region?"""
+    if not room:
+        return
+    w("---")
+    w()
+    w("# Stage 2.1 — is there room for 367 words outside the forbidden region?")
+    w()
+    w("Stage 2 left one cheap question before anyone builds a search engine with two constraints: "
+      "**does 367 even fit** outside F = N(P_H) ∩ N(P_V)? An upper bound on α(C₇^⊠5 ∖ F) below "
+      "367 would close the direction by arithmetic. `PREREGISTRATION_S2_1.md` was sealed before "
+      "the first computation.")
+    w()
+    cal = room["calibration"]
+    ctl = room["control_empty_F"]
+    w("**Calibration first** (mandatory, and it has teeth: at t = 8 an auxiliary set of 367 words "
+      f"demonstrably exists). t = 8 exhibits 367: {tick(cal['t8_exhibited_is_367'])}. Its upper "
+      f"bound is at least 367: {tick(cal['t8_upper_bound_at_least_367'])}. With F empty the "
+      f"estimators return the volume bound {ctl['volume_bound']} and the Lovász bound "
+      f"{ctl['lovasz_bound']}, both ≥ the known 367 and the weaker one above the stronger: "
+      f"{tick(ctl['in_range'])}.")
+    w()
+    w("| case | t | \\|F\\| over 16 colourings | best certified upper bound | exhibited, verified | 1-opt | 2-opt |")
+    w("|---|---|---|---|---|---|---|")
+    for c in room["cases"]:
+        ot = c.get("opt_tests", {})
+        w(f"| {c['case']} | {c['t']} | {c['F_size_min']}–{c['F_size_max']} | "
+          f"**{c['upper_bounds']['best']}** | **{c['exhibited']['size']}** | "
+          f"{yn(ot.get('one_opt_improves'))} | {yn(ot.get('two_opt_improves'))} |")
+    w()
+    w(f"The certificates: α(G_F) ≤ α(C₇^⊠5) ≤ ⌊ϑ(C₇)⁵⌋ = {room['lovasz_bound']} "
+      f"(ϑ⁵ = {room['theta_to_the_fifth'][:22]}… at 60 digits [PS19-2]); the box-volume count, "
+      f"{min(c['upper_bounds']['box_volume'] for c in room['cases'])}–"
+      f"{max(c['upper_bounds']['box_volume'] for c in room['cases'])} depending on how many cells F "
+      "kills; and "
+      f"the layer rail 7·115 = {room['cases'][0]['upper_bounds']['layers_7_times_alpha_c7_4']} "
+      "[PS19-4, PS19-9].")
+    w()
+    w("**The answer to the brief's question is no, and for an instructive reason: the cheap "
+      "certificates are blind to F.** The Lovász bound is the same 401 whether F is empty or "
+      "removes 1268 vertices, because it bounds the whole graph; the volume bound notices F only "
+      "through the 70–90 cells whose owners are all forbidden. Neither can distinguish 367 from "
+      "401, so neither can close the direction. Said plainly: this stage cannot close it, and no "
+      "amount of the same kind of arithmetic will.")
+    w()
+    t9 = next(c for c in room["cases"] if c["t"] == 9)
+    t10 = next(c for c in room["cases"] if c["t"] == 10)
+    w("**What is informative is the other side.** Independent sets avoiding F, verified and checked "
+      "disjoint from F by a second code path, exist at "
+      f"**{t9['exhibited']['size']} words for t = 9** and **{t10['exhibited']['size']} for t = 10**. "
+      f"So the gap is {t9['gap_367_minus_exhibited']} word at t = 9 and "
+      f"{t10['gap_367_minus_exhibited']} at t = 10 — not the 34 that the upper bound suggests.")
+    w()
+    ot9 = t9["opt_tests"]
+    w("And the remaining search sits on the feasibility boundary rather than in open space. Inside "
+      "G_F, for every exhibited set: no allowed vertex can be added at all, and no removal of one "
+      "word lets two back in — both checked exactly, by coverage counting rather than by search. "
+      f"At t = 9 only {ot9['blockers_histogram_up_to_two'].get('1', 0)} allowed vertices are "
+      f"blocked by a single word of the set and "
+      f"{ot9['blockers_histogram_up_to_two'].get('2', 0)} by exactly two. The same tests on the "
+      "t = 8 case, where 367 *is* achieved, come out the same way, which is what makes them worth "
+      "trusting.")
+    w()
+    w("**Verdict.** The direction is alive on paper and one word short in practice. Closing it "
+      "needs an F-sensitive bound of ϑ strength on the induced subgraph — an SDP over the "
+      "15 539–15 851 allowed vertices, with no symmetry left to reduce it, since F breaks the "
+      "automorphism group. That is a separate stage with a real budget, and it is the honest price "
+      "of turning \"not found\" into \"does not exist\".")
+    w()
+
 def main():
     prereg = load("prereg.json")
     pp = os.path.join(ROOT, "PREREGISTRATION_S1.md")
@@ -752,6 +822,13 @@ def main():
         if live != prereg["sha256"]:
             sys.exit(f"PREREGISTRATION_S1.md has changed since it was sealed\n"
                      f"  sealed: {prereg['sha256']}\n  now:    {live}")
+    prereg3 = load("prereg_s2_1.json")
+    pp3 = os.path.join(ROOT, "PREREGISTRATION_S2_1.md")
+    if prereg3 and os.path.exists(pp3):
+        live3 = sha(pp3)
+        if live3 != prereg3["sha256"]:
+            sys.exit(f"PREREGISTRATION_S2_1.md has changed since it was sealed\n"
+                     f"  sealed: {prereg3['sha256']}\n  now:    {live3}")
     prereg2 = load("prereg_s2.json")
     pp2 = os.path.join(ROOT, "PREREGISTRATION_S2.md")
     if prereg2 and os.path.exists(pp2):
@@ -796,7 +873,7 @@ def main():
     th = load("theta.json")
     mis3 = load("mis_c7_d3.json")
 
-    w("# RESULTS — shannon, Stages 0, 1, 2W and 2")
+    w("# RESULTS — shannon, Stages 0, 1, 2W, 2 and 2.1")
     w()
     w("**This file is generated by `scripts/make_results.py` from `results/json/*.json`. "
       "Do not edit it by hand.**")
@@ -855,6 +932,7 @@ def main():
            [x for x in (load("s2_ladder_t9.json"), load("s2_ladder_t10.json")) if x],
            {"9": load("s2_repair_t9.json"), "10": load("s2_repair_t10.json")},
            load("s2_budget.json"))
+    stage2_1(w, load("s2_1_room.json"))
 
     w("## Rule 0")
     w()

@@ -1,0 +1,147 @@
+{
+  "lovasz_bound": 401,
+  "theta_to_the_fifth": "401.942658501070650120911504065338965489720374820682056241299",
+  "box_size": 32,
+  "universe": 16807,
+  "cases": [
+    {
+      "case": "t = 8, the published gadget",
+      "t": 8,
+      "code": "sets/C7_d5_367_polak_schrijver.txt",
+      "colourings": 16,
+      "F_size_min": 956,
+      "F_size_max": 984,
+      "colouring_used": 158,
+      "upper_bounds": {
+        "lovasz_theta_fifth": 401,
+        "box_volume": 523,
+        "dead_cells": 70,
+        "layers_7_times_alpha_c7_4": 805,
+        "best": 401
+      },
+      "exhibited": {
+        "file": "sets/C7_d5_367_auxiliary_X.txt",
+        "size": 367,
+        "sha256": "392260d103f11eee",
+        "verifier": {
+          "independent": true,
+          "size": 367
+        },
+        "disjoint_from_F_second_path": true
+      },
+      "opt_tests": {
+        "blockers_histogram_up_to_two": {
+          "1": 2,
+          "2": 176
+        },
+        "addable_without_removing": [],
+        "one_opt_improves": false,
+        "removals_that_free_a_single_word": 2,
+        "two_opt_improvements": [],
+        "two_opt_improves": false
+      },
+      "room_for_367": true,
+      "gap_upper_minus_367": 34,
+      "gap_367_minus_exhibited": 0
+    },
+    {
+      "case": "t = 9, the published auxiliary set as a code",
+      "t": 9,
+      "code": "sets/C7_d5_367_auxiliary_X.txt",
+      "colourings": 16,
+      "F_size_min": 1098,
+      "F_size_max": 1128,
+      "colouring_used": 354,
+      "upper_bounds": {
+        "lovasz_theta_fifth": 401,
+        "box_volume": 522,
+        "dead_cells": 80,
+        "layers_7_times_alpha_c7_4": 805,
+        "best": 401
+      },
+      "exhibited": {
+        "file": "sets/C7_d5_366_aux_for_t9.txt",
+        "size": 366,
+        "sha256": "bcfeb06d0c8ca952",
+        "verifier": {
+          "independent": true,
+          "size": 366
+        },
+        "disjoint_from_F_second_path": true
+      },
+      "opt_tests": {
+        "blockers_histogram_up_to_two": {
+          "1": 3,
+          "2": 175
+        },
+        "addable_without_removing": [],
+        "one_opt_improves": false,
+        "removals_that_free_a_single_word": 3,
+        "two_opt_improvements": [],
+        "two_opt_improves": false
+      },
+      "room_for_367": true,
+      "gap_upper_minus_367": 34,
+      "gap_367_minus_exhibited": 1
+    },
+    {
+      "case": "t = 10, the set Stage 1 repaired",
+      "t": 10,
+      "code": "sets/C7_d5_367_auxiliary_X_best.txt",
+      "colourings": 16,
+      "F_size_min": 1240,
+      "F_size_max": 1268,
+      "colouring_used": 370,
+      "upper_bounds": {
+        "lovasz_theta_fifth": 401,
+        "box_volume": 522,
+        "dead_cells": 90,
+        "layers_7_times_alpha_c7_4": 805,
+        "best": 401
+      },
+      "exhibited": {
+        "file": "sets/C7_d5_365_aux_for_t10.txt",
+        "size": 365,
+        "sha256": "af0df6277e28deae",
+        "verifier": {
+          "independent": true,
+          "size": 365
+        },
+        "disjoint_from_F_second_path": true
+      },
+      "opt_tests": {
+        "blockers_histogram_up_to_two": {
+          "1": 3,
+          "2": 173
+        },
+        "addable_without_removing": [],
+        "one_opt_improves": false,
+        "removals_that_free_a_single_word": 3,
+        "two_opt_improvements": [],
+        "two_opt_improves": false
+      },
+      "room_for_367": true,
+      "gap_upper_minus_367": 34,
+      "gap_367_minus_exhibited": 2
+    }
+  ],
+  "control_empty_F": {
+    "volume_bound": 525,
+    "lovasz_bound": 401,
+    "known_lower_bound": 367,
+    "in_range": true,
+    "note": "with no forbidden region the estimators must admit the known 367 and must not beat the Lovasz bound; the volume bound is weaker than Lovasz, as expected"
+  },
+  "calibration": {
+    "t8_exhibited_is_367": true,
+    "t8_upper_bound_at_least_367": true,
+    "empty_F_in_range": true,
+    "passed": true
+  },
+  "verdict": {
+    "criterion": "an upper bound below 367 at t = 9 would close the direction",
+    "upper_bound_at_t9": 401,
+    "direction_closed_by_arithmetic": false,
+    "reading": "The cheap certificates are far above 367, so they cannot close anything: the Lovasz bound does not see F at all and the volume bound is weaker still. What is informative is the other side -- a verified independent set avoiding F of 366 words at t = 9 and 365 at t = 10 -- so the search is one or two words from feasibility, not thirty-five."
+  }
+}
