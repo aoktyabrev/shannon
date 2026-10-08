@@ -915,7 +915,8 @@ def stage2_2(w, r, pilot):
     w(f"A 1-swap I → I − r + q along a candidate pair keeps size and independence by construction. "
       f"Breadth-first from all {len(pl['starts'])} 367-word files we hold, the 1-swap plateau is "
       f"**closed and exhausted at {o1['visited']} codes** ({pl['codes_not_independent']} of them "
-      f"rejected by `scripts/verify`). Adding 2-swaps changes nothing: {o2['visited']} codes, "
+      f"rejected by `scripts/verify`) — a count that belongs to those starting files, not to the "
+      f"structure: see Stage 2W-2, where one more start makes it 729. Adding 2-swaps changes nothing: {o2['visited']} codes, "
       f"{num(o2['k2_moves'])} 2-swap moves, none leaving the set. Up to Aut, by an exact isomorphism "
       f"test, these are **{pl['aut_classes']} classes**:")
     w()
@@ -926,9 +927,9 @@ def stage2_2(w, r, pilot):
     hist1 = o1["t_star_hist"]
     w("| codes | " + " | ".join(str(hist1.get(str(t), 0)) for t in range(5, 11)) + " |")
     w()
-    w("The code counts are 2·C(5,k)·2^(5−k) for t\\* = 5 + k: each of the two components of the "
-      "plateau is a cube {0,1,2}⁵ of five independent local switches, one state of which carries two "
-      "candidate pairs where the other two carry one. The ten-candidate code is the corner with all "
+    w("The code counts are c·C(5,k)·2^(5−k) for t\\* = 5 + k, with c = 2 the number of components "
+      "these starting files happen to lie in: each component is a cube {0,1,2}⁵ of five independent "
+      "local switches, one state of which carries two candidate pairs where the other two carry one. The ten-candidate code is the corner with all "
       "five switches set, and its stabiliser in Aut has order 5. The published code I₀, X Gao and "
       "every pipeline code lie on this plateau.")
     w()
@@ -1135,7 +1136,7 @@ def stage2_3(w, r):
       "|N[r]| + |N[q]|, and it holds globally: |F| + |U| = |N[P_H]| + |N[P_V]|.")
     w()
     w("The largest sets come from the exhaustive local construction: for every word r of every code "
-      f"we hold and every one of the {r['plateau_cells']['codes']} codes of the Stage 2.2 swap plateau, "
+      f"we hold and every one of the {r['plateau_cells']['codes']} codes the swap-plateau closure of those files had, "
       "and every shape d, put q = r + d, delete the other words adjacent to q, and add back an exact "
       "maximum independent set of the freed vertices that keep q private. Each row is the best over "
       "all of it, and the set is saved in `sets/`.")

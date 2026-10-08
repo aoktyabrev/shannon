@@ -215,3 +215,17 @@ version 1.1.0 is doi:10.5281/zenodo.22979509). `CITATION.cff` carries the machin
   publisher = {Zenodo}
 }
 ```
+
+The second note, *The shape of a private pair redistributes its cost* (`note2/`, Stages 2–2W-2), is a
+separate record, archived with this repository at tag `v1.2.0`: **doi:10.5281/zenodo.23234251**.
+
+```bibtex
+@misc{oktiabrev2026shape,
+  author    = {Oktiabrev, Artem},
+  title     = {The shape of a private pair redistributes its cost: private pairs as a
+               property of the code (with the shannon repository, Stages 2--2W-2)},
+  year      = {2026},
+  doi       = {10.5281/zenodo.23234251},
+  publisher = {Zenodo}
+}
+```

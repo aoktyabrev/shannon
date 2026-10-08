@@ -1,5 +1,5 @@
 {
-  "_status": "DRAFT, not deposited. A separate Zenodo record for the second note; see RESULTS.md, Stage 2W-2, and the proposal in the stage report.",
+  "_status": "Deposited as a separate record, reserved DOI 10.5281/zenodo.23234251 (deposition 23234251).",
   "title": "The shape of a private pair redistributes its cost: private pairs as a property of the code (with the shannon repository, Stages 2-2W-2)",
   "upload_type": "publication",
   "publication_type": "preprint",
@@ -57,5 +57,6 @@
       "scheme": "doi"
     }
   ],
-  "notes": "The one lemma is proved by hand and is elementary (inclusion-exclusion); everything else is finite computation, exhaustive or search as stated. The 366-word ceiling is not a proof of non-existence. Claude and Claude Code (Anthropic) were used for the implementation and for drafting the text, under the author's direction and responsibility."
+  "notes": "The one lemma is proved by hand and is elementary (inclusion-exclusion); everything else is finite computation, exhaustive or search as stated. The 366-word ceiling is not a proof of non-existence. Claude and Claude Code (Anthropic) were used for the implementation and for drafting the text, under the author's direction and responsibility.",
+  "doi": "10.5281/zenodo.23234251"
 }
