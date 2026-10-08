@@ -12,6 +12,12 @@ scripts/s1_sym
 scripts/s1_lns
 scripts/s1_aux
 scripts/s1_auxsearch
+scripts/s2_2_conf
+scripts/s2_2_aut
+scripts/s2_2_aut_big
+scripts/s2_2_sweep
+scripts/*.new
+scripts/*.new2
 
 # LaTeX build products of the note (note.pdf is kept)
 note/*.aux

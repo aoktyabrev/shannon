@@ -1,0 +1,62 @@
+{
+  "items": [
+    {
+      "what": "pilot sweep, 68 configurations x 51 sources (2179.7 s wall x 8 threads)",
+      "core_seconds": 17438,
+      "measured": false
+    },
+    {
+      "what": "pilot sweep calibration on I0 (user time)",
+      "core_seconds": 469,
+      "measured": true
+    },
+    {
+      "what": "pilot re-sweep of the 216 pairs reaching 366, dumping sets",
+      "core_seconds": 900,
+      "measured": false
+    },
+    {
+      "what": "pilot exact 3-opt on 108 sets (sum of per-run seconds)",
+      "core_seconds": 2415,
+      "measured": true
+    },
+    {
+      "what": "pilot window 4-swaps around X Gao, stopped",
+      "core_seconds": 2700,
+      "measured": false
+    },
+    {
+      "what": "pilot 1-, 2-, 3-swaps on X Gao and the plateau",
+      "core_seconds": 136,
+      "measured": true
+    },
+    {
+      "what": "pilot isomorphism classes of the 486 plateau codes (user time)",
+      "core_seconds": 856,
+      "measured": true
+    },
+    {
+      "what": "pilot isomorphism classes of the 68 forbidden regions (user time)",
+      "core_seconds": 38,
+      "measured": true
+    },
+    {
+      "what": "planting the k-opt controls in Python, including two abandoned slower versions",
+      "core_seconds": 2400,
+      "measured": false
+    },
+    {
+      "what": "the first driver run, stopped by the failed lemma control",
+      "core_seconds": 1500,
+      "measured": false
+    },
+    {
+      "what": "small counts and checks",
+      "core_seconds": 300,
+      "measured": false
+    }
+  ],
+  "core_seconds_upper_bound": 29152,
+  "core_hours_upper_bound": 8.1,
+  "note": "Work done before the clean run of scripts/s2_2.py, reconstructed from the session log; unmeasured items are bounded from above (wall time x threads)."
+}

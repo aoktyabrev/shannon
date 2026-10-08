@@ -814,6 +814,265 @@ def stage2_1(w, room):
       "of turning \"not found\" into \"does not exist\".")
     w()
 
+
+def num(n):
+    """An integer with thin-space thousands, as elsewhere in this file's prose."""
+    s = f"{n:,}".replace(",", "\u2009")
+    return s
+
+
+def stage2_2(w, r, pilot):
+    """Stage 2.2 -- nine-pair codes with a different forbidden region."""
+    if not r or "sweep" not in r:
+        return
+    c, pop, pl, ks, rg, sw, ko = (r["controls"], r["population"], r["plateau"], r["kswaps"],
+                                  r["regions"], r["sweep"], r["kopt"])
+    w("---")
+    w()
+    w("# Stage 2.2 — nine-pair codes with a different forbidden region")
+    w()
+    w("Stage 2.1 left the lower side one word short: 366 words avoid F at t = 9. This stage asks "
+      "whether **another nine-pair configuration** — another code, another colouring — has a "
+      "forbidden region that lets 367 words through. `PREREGISTRATION_S2_2.md` was sealed before "
+      "the first computation; it records one deviation from the brief, with its proof, before any "
+      "run: an automorphism g applied to the code moves F to g·F and leaves α(C₇^⊠5 ∖ F) unchanged, "
+      "so the variables are the code up to Aut and the colouring, and automorphisms keep their real "
+      "role as images of the auxiliary sources.")
+    w()
+    best = sw["grand_best_repaired_size"]
+    t9 = rg["F_classes_by_t"].get("9", {})
+    w(f"**In one line.** Up to automorphism there are exactly **{t9.get('classes')} forbidden regions "
+      f"at t = 9** among all the codes we can reach, and every nine-pair code class realises the "
+      f"same {t9.get('classes')}: F is fixed by the local geometry of the nine pairs, not by the rest "
+      f"of the code. Against each of them, every image of every known 367-word code class "
+      f"({num(sw['images_scored'])} images) puts at least {sw['grand_min_hits']} word in F, "
+      f"exact repair stops at **{best}**, and every {best}-word set is exactly 3-opt optimal inside "
+      f"G_F. No configuration reaches 367.")
+    w()
+    w("## Controls")
+    w()
+    ag = c["automorphism_generator"]
+    w("| control | result | |")
+    w("|---|---|---|")
+    w(f"| automorphism checker accepts a non-identity group element on all 16807·242 adjacencies | "
+      f"{yn(ag['test_element_accepted'])} | {tick(ag['test_element_accepted'] and not ag['test_element_is_identity'])} |")
+    w(f"| … rejects the non-automorphism x₀ ↦ 2x₀ | {yn(ag['mutant_2x_rejected'])} | {tick(ag['mutant_2x_rejected'])} |")
+    w(f"| … rejects a non-bijection | {yn(ag['collapse_rejected'])} | {tick(ag['collapse_rejected'])} |")
+    nl = len(c["lemma_on_random_g"])
+    w(f"| the lemma on {nl} random non-identity g (I₀ and X Gao): candidates, configurations and "
+      f"every \\|F\\| of gI equal those of I, and gI ≠ I | {yn(c['lemma_passed'])} | {tick(c['lemma_passed'])} |")
+    w(f"| the isomorphism test merges gI with I, and separates I₀ from X Gao | "
+      f"{yn(c['lemma_passed'] and c['iso_negative_control'])} | {tick(c['lemma_passed'] and c['iso_negative_control'])} |")
+    t8 = c["t8_counts"]
+    w(f"| t = 8: {t8['candidates']} candidates, \\|F\\| {t8['F_min']}–{t8['F_max']} over "
+      f"{t8['configurations_at_t_star']} colourings, as in Stage 2 | {yn(c['t8_counts_match_stage2'])} | "
+      f"{tick(c['t8_counts_match_stage2'])} |")
+    s8 = c["sweep_t8"]
+    w(f"| the new sweep reproduces Stage 1's histogram of forbidden hits on I₀ exactly "
+      f"({', '.join(f'{i}:{n}' for i, n in enumerate(s8['histogram']) if n)}) | "
+      f"{yn(s8['histogram_reproduced'])} | {tick(s8['histogram_reproduced'])} |")
+    w(f"| … and its repair reaches 367 at t = 8 ({s8['admissible_367_images']} admissible images; "
+      f"one re-verified, disjoint from F by a second path) | {s8['best_repaired_size']} | "
+      f"{tick(s8['best_repaired_size'] == 367 and s8['example_admissible']['disjoint_from_F_second_path'])} |")
+    for k in c["kopt_planted"]:
+        rec = k["recovered"] or {}
+        w(f"| k-opt inside G_F recovers 367 from a planted maximal 366 ({k['planted_k']} words replaced "
+          f"by {k['planted_k'] - 1}) | {rec.get('size')} | {tick(rec.get('size') == 367 and rec.get('disjoint_from_F_second_path'))} |")
+    w()
+    w("One control failed on the first run, and the failure was in the test, not in the lemma: it "
+      "compared the argmin fields of the configuration count, which are indices into the list of "
+      "candidates and are renumbered by g. The comparison was restricted to the numbers the lemma is "
+      "about (configurations and |F| for every t), and the run was repeated from the start.")
+    w()
+    w("## S2.2.a — the candidate count and the forbidden region of every code we hold")
+    w()
+    w("Exact for each file: candidates by one pass over Z₇⁵, t\\* by branch and bound, every family "
+      "of t\\* pairs with distinct centres and every proper colouring of it enumerated, |F| counted for "
+      "each. Colourings are counted up to the global H↔V swap. w is the number of coordinates in "
+      "which q − r is non-zero; a pair costs |N[r] ∩ N[q]| = 3^(5−w)·2^w forbidden vertices on its own.")
+    w()
+    w("| code | size | cand. | centres | Γ edges | bipartite | t\\* | configurations | \\|F\\| | spread | allowed | w |")
+    w("|---|---|---|---|---|---|---|---|---|---|---|---|")
+    for p in pop:
+        wh = ",".join(f"{i}:{n}" for i, n in enumerate(p["weight_hist"]) if n) or "—"
+        fr = f"{p['F_min']}–{p['F_max']}" if p["F_min"] else "—"
+        al = f"{p['allowed_vertices_min']}–{p['allowed_vertices_max']}" if p["F_min"] else "16807"
+        sp = f"{p['F_spread_percent']}%" if p["F_spread_percent"] is not None else "—"
+        w(f"| `{p['file'].replace('sets/', '')}` | {p['size']} | {p['candidates']} | {p['distinct_centres']} | "
+          f"{p['conflict_edges']} | {yn(p['conflict_graph_bipartite'])} | {p['t_star']} | "
+          f"{p['configurations_at_t_star']} | {fr} | {sp} | {al} | {wh} |")
+    w()
+    sp367 = max(p["F_spread_percent"] for p in pop if p["size"] == 367 and p["F_spread_percent"] is not None)
+    w("Two regularities, both new. **Every candidate of every 367-word code has w = 2**, so every pair "
+      f"costs 108 on its own, and the spread over colourings of one 367-word code is at most {sp367}%. "
+      "The only code whose pairs all have w = 1 is the Mathew–Östergård 350-word set; they cost 162 "
+      "each, which is why its forbidden region at t = 7 is larger than that of a 367-word code at "
+      "t = 8. The large spreads in the table all belong to codes that are not 367-word codes.")
+    w()
+    w("## S2.2.c — the swap plateau around every 367-word code")
+    w()
+    o1, o2 = pl["one_swaps"], pl["two_swaps"]
+    w(f"A 1-swap I → I − r + q along a candidate pair keeps size and independence by construction. "
+      f"Breadth-first from all {len(pl['starts'])} 367-word files we hold, the 1-swap plateau is "
+      f"**closed and exhausted at {o1['visited']} codes** ({pl['codes_not_independent']} of them "
+      f"rejected by `scripts/verify`). Adding 2-swaps changes nothing: {o2['visited']} codes, "
+      f"{num(o2['k2_moves'])} 2-swap moves, none leaving the set. Up to Aut, by an exact isomorphism "
+      f"test, these are **{pl['aut_classes']} classes**:")
+    w()
+    w("| t\\* | 5 | 6 | 7 | 8 | 9 | 10 |")
+    w("|---|---|---|---|---|---|---|")
+    cb = pl["classes_by_t_star"]
+    w("| classes | " + " | ".join(str(cb.get(str(t), 0)) for t in range(5, 11)) + " |")
+    hist1 = o1["t_star_hist"]
+    w("| codes | " + " | ".join(str(hist1.get(str(t), 0)) for t in range(5, 11)) + " |")
+    w()
+    w("The code counts are 2·C(5,k)·2^(5−k) for t\\* = 5 + k: each of the two components of the "
+      "plateau is a cube {0,1,2}⁵ of five independent local switches, one state of which carries two "
+      "candidate pairs where the other two carry one. The ten-candidate code is the corner with all "
+      "five switches set, and its stabiliser in Aut has order 5. The published code I₀, X Gao and "
+      "every pipeline code lie on this plateau.")
+    w()
+    k3 = ks["k3"]
+    w(f"Window swaps reach further: remove a connected window of k words, put back any independent "
+      f"k-set of the freed vertices. From one representative of each of the {pl['aut_classes']} "
+      f"classes, all {num(k3['windows'][1])} windows of 3 (and {num(k3['windows'][0])} of 2) give "
+      f"{num(k3['new_codes'])} distinct codes, of which **{ks['k3_codes_outside_plateau']}** lie "
+      f"outside the plateau.")
+    for k4 in ks["k4"]:
+        cls = next((x for x in pl["class_table"] if x["representative"].endswith(k4["code"].split("/")[-1])), None)
+        name = f"class {cls['class']} (t\\* = {cls['t_star']})" if cls else k4["code"].split("/")[-1]
+        w(f"Around {name} the windows of 4 ran for {k4['seconds']:.0f} s "
+          f"({num(k4['windows'][2])} windows, {'exhausted' if k4['exhausted'] else 'not exhausted'}): "
+          f"{k4['new_codes']} distinct codes, t\\* histogram {k4['new_t_star_hist'] or '—'}.")
+    w(f"Every code the windows of 4 produced lies on the plateau again "
+      f"({ks['k4_codes_outside_plateau']} outside it).")
+    oc = ks.get("outside_plateau_classes")
+    if oc:
+        best_out = max((x["t_star"] for x in oc["rows"]), default=None)
+        w(f"Codes outside the plateau fall into {oc['classes_outside_plateau']} new classes, best t\\* "
+          f"= {best_out}.")
+    w("No window ever admitted k + 1 words, which would have been a 368-word independent set of C₇^⊠5.")
+    w()
+    if r.get("new_t9_code"):
+        n9 = r["new_t9_code"]
+        w(f"**A second nine-pair code.** The plateau holds two classes with t\\* = 9; one is X Gao, the "
+          f"other is new, and is saved as `{n9['file']}` (SHA-256 `{n9['sha256'][:16]}…`, independent: "
+          f"{yn(n9['independent'])}). It does not help, for the reason in the next section.")
+        w()
+    w("## S2.2.b — every forbidden region at t ≥ 9, and what fits outside it")
+    w()
+    w(f"All {rg['configurations_listed']} configurations with t ≥ 9 of the nine- and ten-pair "
+      f"classes (families of nine or ten pairs, every colouring) give, up to Aut, "
+      f"**{rg['F_classes']} distinct forbidden regions**:")
+    w()
+    w("| t | distinct F up to Aut | \\|F\\| |")
+    w("|---|---|---|")
+    for t, v in sorted(rg["F_classes_by_t"].items()):
+        w(f"| {t} | {v['classes']} | {v['F_min']}–{v['F_max']} |")
+    w()
+    shared = all(len(e["from_code_classes"]) == len(rg["code_classes_with_t_star_ge_9"])
+                 for e in rg["table"] if e["t"] == 9)
+    w(("**Each of the t = 9 regions is realised by every nine-pair code class** — X Gao, the new code, "
+       "and the ten-pair code with one pair dropped. " if shared else "") +
+      "So the forbidden region is a function of the nine pairs and their colouring alone, and the "
+      "pairs are the same local switches in every code on the plateau. 'Another nine-pair code with "
+      "a different F' does not exist here: there is another code, and it has the same regions.")
+    w()
+    w(f"Against each region, every image of a representative of every one of the "
+      f"{pl['aut_classes']} source classes was scored: {sw['pairs']} (region, source) pairs, "
+      f"{num(sw['group_elements_per_pair'])} group elements each, "
+      f"{num(sw['images_scored'])} images in all, exhaustive. Every image with at most three words "
+      f"in F was repaired exactly.")
+    w()
+    w("| F class | t | \\|F\\| | fewest words of an image in F | best after exact repair | sources reaching it |")
+    w("|---|---|---|---|---|---|")
+    tof = {e["F_class"]: e["t"] for e in rg["table"]}
+    for p in sorted(sw["per_F_class"], key=lambda p: (tof[p["F_class"]], p["F_size"])):
+        if p["best_repaired_size"]:
+            w(f"| {p['F_class']} | {tof[p['F_class']]} | {p['F_size']} | {p['min_hits']} | "
+              f"**{p['best_repaired_size']}** | {p['sources_reaching_best']} |")
+        else:
+            w(f"| {p['F_class']} | {tof[p['F_class']]} | {p['F_size']} | {p['min_hits']} | "
+              f"— (no image within three words) | — |")
+    w()
+    w(f"No image of any known code avoids any of the regions; the minimum is "
+      f"{sw['grand_min_hits']} and the repair never exceeds {best}. Admissible 367-word sets "
+      f"found: **{sw['admissible_full_size']}**.")
+    w()
+    w(f"**Exact k-opt inside G_F.** Every {best}-word set the repair produced ({ko['sets']} files, "
+      f"each re-verified and checked disjoint from F by a second path: "
+      f"{tick(ko['all_verified_366_outside_F'])}) was tested over every connected window of up to "
+      f"three words: does removing it free room for more words than it held? Windows that are "
+      f"not connected decompose, so this is exact 3-opt. Sets with an improving window: "
+      f"**{ko['sets_with_an_improving_window']}**. The same code recovers 367 from the planted "
+      f"controls above.")
+    w()
+    if r.get("looseness"):
+        w("| F class | allowed vertices blocked by exactly one word | by exactly two | 1-opt | 2-opt |")
+        w("|---|---|---|---|---|")
+        for l in r["looseness"]:
+            h = l["blockers_histogram_up_to_two"]
+            w(f"| {l['F_class']} | {h.get('1', 0)} | {h.get('2', 0)} | {yn(l['one_opt_improves'])} | "
+              f"{yn(l['two_opt_improves'])} |")
+        w()
+    w("## Predictions against outcomes")
+    w()
+    other = [p for p in pop if p["size"] != 367 and p["F_spread_percent"] is not None and p["F_spread_percent"] >= 5]
+    t9codes = [x for x in pl["class_table"] if x["t_star"] == 9]
+    w("| # | prediction | outcome |")
+    w("|---|---|---|")
+    w(f"| P1 | automorphisms contribute exactly zero; colourings of one code spread \\|F\\| by 2–3.5% | "
+      f"zero: **held** (lemma tested). 2–3.5%: **held for every 367-word code** (max {sp367}%), "
+      f"**failed** for {len(other)} other codes, whose colourings spread \\|F\\| by ≥ 5% |")
+    w(f"| P2 | distinct codes with equal t\\* differ in min \\|F\\| by ≥ 5% | **failed at t = 9**: the "
+      f"{len(t9codes)} nine-pair classes have the same regions; held at t = 7, where Mathew–Östergård's "
+      f"w = 1 pairs cost more |")
+    w("| P3 | a new code with t\\* ≥ 9 on the swap plateau | " +
+      ("**held**: one new class |" if r.get("new_t9_code") else "**failed** |"))
+    w(f"| P4 | no configuration at t ≥ 9 reaches 367 | " +
+      (f"**held**: best {best} |" if best < 367 else f"**failed**: {best} |"))
+    w(f"| P5 | min \\|F\\| at t = 9 stays ≥ 1000 | **{'held' if t9.get('F_min', 0) >= 1000 else 'failed'}**: {t9.get('F_min')} |")
+    w(f"| P6 | the best t = 9 sets stay 1- and 2-opt optimal | " +
+      ("**held**, and 3-opt too |" if ko["sets_with_an_improving_window"] == 0 else "**failed** |"))
+    w(f"| architect | spread ≥ 5% over colourings and automorphisms of one code | **failed** for every "
+      f"367-word code (≤ {sp367}%, automorphisms 0); held for the non-maximal sets and MO-350 |")
+    w(f"| architect | no configuration at t = 9 gives 367 (~65%) | **{'held' if best < 367 else 'failed'}** |")
+    w("| architect | at least one new nine-candidate code besides X Gao | " +
+      ("**held** |" if r.get("new_t9_code") else "**failed** |"))
+    w()
+    w("## Deviations")
+    w()
+    w("1. **Automorphisms of the code are not swept** — recorded in the preregistration before any run, "
+      "with proof, and confirmed by the control above.")
+    w("2. **Subfamilies of the ten-pair code were included.** The preregistration spoke of all t "
+      "candidates being used; a ten-candidate code with one pair dropped is a nine-pair gadget too, "
+      "and the stage would have been incomplete without it. It added nothing new: its regions are "
+      "among the same sixteen.")
+    w("3. **The sweep ran against Aut-class representatives** of regions and of sources, not against "
+      "every member. By the lemma the result is the same; the pilot that preceded the clean run swept "
+      "all 68 configurations against the 51 sources and found the same ceiling.")
+    w("4. **Window 4-swaps were time-limited**, and are reported as such where not exhausted.")
+    w()
+    w("## Budget")
+    w()
+    b = r["budget"]
+    pc = pilot["core_hours_upper_bound"] if pilot else 0
+    w("| resource | ceiling | used |")
+    w("|---|---|---|")
+    w(f"| CPU | 40 core-hours | **{b['core_hours_this_run'] + pc:.1f}** — clean run {b['core_hours_this_run']} "
+      f"(getrusage), pilot and the failed first run ≤ {pc} (reconstructed from the run log, an upper bound) |")
+    w("| GPU | 0 | 0 |")
+    w("| wall-clock | 7 days | one day (2026-10-08) |")
+    w()
+    w("**Verdict.** The stage was built to move the obstruction by changing the code, and within reach "
+      "it cannot be moved that way: every nine-pair configuration we can construct has one of the same "
+      f"{t9.get('classes')} forbidden regions, and against those the ceiling is {best}, exactly k-opt "
+      "optimal for k ≤ 3. The one-word gap is a property of the nine-pair geometry, not of any one "
+      "code. Moving it needs nine pairs of a different shape — candidates with w ≠ 2, which no "
+      "367-word code we hold has — or an upper bound that sees F.")
+    w()
+
+
 def main():
     prereg = load("prereg.json")
     pp = os.path.join(ROOT, "PREREGISTRATION_S1.md")
@@ -829,6 +1088,13 @@ def main():
         if live3 != prereg3["sha256"]:
             sys.exit(f"PREREGISTRATION_S2_1.md has changed since it was sealed\n"
                      f"  sealed: {prereg3['sha256']}\n  now:    {live3}")
+    prereg4 = load("prereg_s2_2.json")
+    pp4 = os.path.join(ROOT, "PREREGISTRATION_S2_2.md")
+    if prereg4 and os.path.exists(pp4):
+        live4 = sha(pp4)
+        if live4 != prereg4["sha256"]:
+            sys.exit(f"PREREGISTRATION_S2_2.md has changed since it was sealed\n"
+                     f"  sealed: {prereg4['sha256']}\n  now:    {live4}")
     prereg2 = load("prereg_s2.json")
     pp2 = os.path.join(ROOT, "PREREGISTRATION_S2.md")
     if prereg2 and os.path.exists(pp2):
@@ -873,7 +1139,7 @@ def main():
     th = load("theta.json")
     mis3 = load("mis_c7_d3.json")
 
-    w("# RESULTS — shannon, Stages 0, 1, 2W, 2 and 2.1")
+    w("# RESULTS — shannon, Stages 0, 1, 2W, 2, 2.1 and 2.2")
     w()
     w("**This file is generated by `scripts/make_results.py` from `results/json/*.json`. "
       "Do not edit it by hand.**")
@@ -881,8 +1147,11 @@ def main():
     w(f"Commit: `{git('rev-parse', '--short', 'HEAD') or 'uncommitted'}`. "
       f"Preregistrations verified against the files on disk: "
       f"`PREREGISTRATION_S1.md` sealed {prereg['sealed'] if prereg else '?'} "
-      f"(`{prereg['sha256'][:16]}…`) and `PREREGISTRATION_S2.md` sealed "
-      f"{prereg2['sealed'] if prereg2 else '?'} (`{prereg2['sha256'][:16]}…`).")
+      f"(`{prereg['sha256'][:16]}…`), `PREREGISTRATION_S2.md` sealed "
+      f"{prereg2['sealed'] if prereg2 else '?'} (`{prereg2['sha256'][:16]}…`), "
+      f"`PREREGISTRATION_S2_1.md` sealed {prereg3['sealed'] if prereg3 else '?'} "
+      f"(`{prereg3['sha256'][:16] if prereg3 else '?'}…`) and `PREREGISTRATION_S2_2.md` sealed "
+      f"{prereg4['sealed'] if prereg4 else '?'} (`{prereg4['sha256'][:16] if prereg4 else '?'}…`).")
     w()
     w("Stage 0 is calibration and contains no search run. Stage 1 is the search: a gate that "
       "makes the stack find the known optima first, then the hunt for a ninth private pair. "
@@ -933,6 +1202,7 @@ def main():
            {"9": load("s2_repair_t9.json"), "10": load("s2_repair_t10.json")},
            load("s2_budget.json"))
     stage2_1(w, load("s2_1_room.json"))
+    stage2_2(w, load("s2_2.json"), load("s2_2_pilot.json"))
 
     w("## Rule 0")
     w()

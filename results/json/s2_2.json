@@ -1,0 +1,4086 @@
+{
+  "controls": {
+    "automorphism_generator": {
+      "test_element_is_identity": false,
+      "test_element_accepted": true,
+      "sampled_linear_parts_accepted": true,
+      "mutant_2x_rejected": true,
+      "collapse_rejected": true,
+      "passed": true
+    },
+    "lemma_on_random_g": [
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "g": {
+          "perm": [
+            4,
+            3,
+            1,
+            0,
+            2
+          ],
+          "signs": 9,
+          "shift": [
+            2,
+            0,
+            5,
+            1,
+            2
+          ]
+        },
+        "image_independent": true,
+        "image_differs_from_code": true,
+        "stats_equal": true,
+        "classified_isomorphic": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "g": {
+          "perm": [
+            2,
+            4,
+            0,
+            3,
+            1
+          ],
+          "signs": 1,
+          "shift": [
+            3,
+            2,
+            1,
+            1,
+            2
+          ]
+        },
+        "image_independent": true,
+        "image_differs_from_code": true,
+        "stats_equal": true,
+        "classified_isomorphic": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "g": {
+          "perm": [
+            1,
+            2,
+            4,
+            0,
+            3
+          ],
+          "signs": 18,
+          "shift": [
+            5,
+            3,
+            3,
+            3,
+            3
+          ]
+        },
+        "image_independent": true,
+        "image_differs_from_code": true,
+        "stats_equal": true,
+        "classified_isomorphic": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "g": {
+          "perm": [
+            2,
+            3,
+            1,
+            4,
+            0
+          ],
+          "signs": 31,
+          "shift": [
+            0,
+            2,
+            6,
+            4,
+            4
+          ]
+        },
+        "image_independent": true,
+        "image_differs_from_code": true,
+        "stats_equal": true,
+        "classified_isomorphic": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "g": {
+          "perm": [
+            2,
+            3,
+            1,
+            0,
+            4
+          ],
+          "signs": 22,
+          "shift": [
+            6,
+            0,
+            0,
+            5,
+            0
+          ]
+        },
+        "image_independent": true,
+        "image_differs_from_code": true,
+        "stats_equal": true,
+        "classified_isomorphic": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "g": {
+          "perm": [
+            4,
+            0,
+            3,
+            1,
+            2
+          ],
+          "signs": 5,
+          "shift": [
+            2,
+            6,
+            0,
+            1,
+            6
+          ]
+        },
+        "image_independent": true,
+        "image_differs_from_code": true,
+        "stats_equal": true,
+        "classified_isomorphic": true
+      }
+    ],
+    "lemma_passed": true,
+    "iso_negative_control": true,
+    "t8_counts": {
+      "candidates": 8,
+      "distinct_centres": 8,
+      "conflict_edges": 3,
+      "t_star": 8,
+      "configurations_at_t_star": 16,
+      "F_min": 956,
+      "F_max": 984,
+      "weight_hist": [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "3afd977820ecac7d"
+    },
+    "t8_counts_match_stage2": true,
+    "sweep_t8": {
+      "histogram": [
+        0,
+        4,
+        33,
+        101,
+        209,
+        358,
+        965,
+        6060
+      ],
+      "stage1_histogram": [
+        0,
+        4,
+        33,
+        101,
+        209,
+        358,
+        965,
+        6060
+      ],
+      "histogram_reproduced": true,
+      "best_repaired_size": 367,
+      "admissible_367_images": 29,
+      "example_admissible": {
+        "size": 367,
+        "independent": true,
+        "disjoint_from_F_second_path": true
+      },
+      "seconds": 61.1
+    },
+    "kopt_planted": [
+      {
+        "planted_k": 2,
+        "planting": "deleted [(0, 0, 5, 5, 0), (6, 1, 5, 5, 2)] inserted ((0, 0, 5, 5, 1),) size 366",
+        "planted_size": 366,
+        "planted_independent": true,
+        "window_k": 2,
+        "improving_windows": 69,
+        "recovered": {
+          "size": 367,
+          "independent": true,
+          "disjoint_from_F_second_path": true
+        }
+      },
+      {
+        "planted_k": 3,
+        "planting": "deleted [(3, 0, 3, 3, 5), (5, 1, 2, 3, 5), (5, 1, 4, 3, 6)] inserted ((4, 0, 3, 3, 5), (5, 0, 5, 3, 6)) size 366",
+        "planted_size": 366,
+        "planted_independent": true,
+        "window_k": 3,
+        "improving_windows": 5581,
+        "recovered": {
+          "size": 367,
+          "independent": true,
+          "disjoint_from_F_second_path": true
+        }
+      }
+    ],
+    "kopt_passed": true,
+    "passed": true
+  },
+  "population": [
+    {
+      "file": "sets/C7_d5_343_linear.txt",
+      "size": 343,
+      "independent": true,
+      "sha256": "fc4dcf8e7e214c8f",
+      "candidates": 0,
+      "distinct_centres": 0,
+      "conflict_edges": 0,
+      "t_star": 0,
+      "configurations_at_t_star": 0,
+      "F_min": null,
+      "F_max": null,
+      "weight_hist": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "e384cc74cc3cc33f",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 0,
+      "allowed_vertices_min": 16807,
+      "allowed_vertices_max": 16807,
+      "F_spread_percent": null
+    },
+    {
+      "file": "sets/C7_d5_350_mathew_ostergard.txt",
+      "size": 350,
+      "independent": true,
+      "sha256": "a8ae1e0dca26da54",
+      "candidates": 7,
+      "distinct_centres": 7,
+      "conflict_edges": 0,
+      "t_star": 7,
+      "configurations_at_t_star": 64,
+      "F_min": 1022,
+      "F_max": 1118,
+      "weight_hist": [
+        0,
+        7,
+        0,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "f32f922c5d4bf071",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 7,
+      "allowed_vertices_min": 15689,
+      "allowed_vertices_max": 15785,
+      "F_spread_percent": 9.39
+    },
+    {
+      "file": "sets/C7_d5_363_aux_for_t9.txt",
+      "size": 363,
+      "independent": true,
+      "sha256": "504e42294aa4b609",
+      "candidates": 20,
+      "distinct_centres": 18,
+      "conflict_edges": 20,
+      "t_star": 18,
+      "configurations_at_t_star": 96,
+      "F_min": 2171,
+      "F_max": 2308,
+      "weight_hist": [
+        0,
+        2,
+        16,
+        2,
+        0,
+        0
+      ],
+      "fingerprint": "23bf99f868f5e8a3",
+      "conflict_graph_bipartite": false,
+      "conflict_graph_components": 1,
+      "allowed_vertices_min": 14499,
+      "allowed_vertices_max": 14636,
+      "F_spread_percent": 6.31
+    },
+    {
+      "file": "sets/C7_d5_365_aux_for_t10.txt",
+      "size": 365,
+      "independent": true,
+      "sha256": "af0df6277e28deae",
+      "candidates": 13,
+      "distinct_centres": 13,
+      "conflict_edges": 5,
+      "t_star": 13,
+      "configurations_at_t_star": 128,
+      "F_min": 1582,
+      "F_max": 1726,
+      "weight_hist": [
+        0,
+        0,
+        13,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "6a070ab158f663c4",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 8,
+      "allowed_vertices_min": 15081,
+      "allowed_vertices_max": 15225,
+      "F_spread_percent": 9.1
+    },
+    {
+      "file": "sets/C7_d5_366_aux_for_t9.txt",
+      "size": 366,
+      "independent": true,
+      "sha256": "bcfeb06d0c8ca952",
+      "candidates": 12,
+      "distinct_centres": 12,
+      "conflict_edges": 5,
+      "t_star": 12,
+      "configurations_at_t_star": 64,
+      "F_min": 1460,
+      "F_max": 1561,
+      "weight_hist": [
+        0,
+        0,
+        12,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "a06a4d0bef9d1ab4",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 7,
+      "allowed_vertices_min": 15246,
+      "allowed_vertices_max": 15347,
+      "F_spread_percent": 6.92
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_04.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "0e0046d0f81c4a8e",
+      "candidates": 5,
+      "distinct_centres": 5,
+      "conflict_edges": 0,
+      "t_star": 5,
+      "configurations_at_t_star": 16,
+      "F_min": 552,
+      "F_max": 568,
+      "weight_hist": [
+        0,
+        0,
+        5,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "ad7748e47a78fdd8",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 16239,
+      "allowed_vertices_max": 16255,
+      "F_spread_percent": 2.9
+    },
+    {
+      "file": "sets/C7_d5_367_reproduced.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "23826340a496cb04",
+      "candidates": 6,
+      "distinct_centres": 6,
+      "conflict_edges": 1,
+      "t_star": 6,
+      "configurations_at_t_star": 16,
+      "F_min": 686,
+      "F_max": 708,
+      "weight_hist": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "ea516015e35e3ef1",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 16099,
+      "allowed_vertices_max": 16121,
+      "F_spread_percent": 3.21
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_00.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "208243cea1551fc5",
+      "candidates": 6,
+      "distinct_centres": 6,
+      "conflict_edges": 1,
+      "t_star": 6,
+      "configurations_at_t_star": 16,
+      "F_min": 686,
+      "F_max": 708,
+      "weight_hist": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "ea516015e35e3ef1",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 16099,
+      "allowed_vertices_max": 16121,
+      "F_spread_percent": 3.21
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_05.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "76e1dce9207446d6",
+      "candidates": 6,
+      "distinct_centres": 6,
+      "conflict_edges": 1,
+      "t_star": 6,
+      "configurations_at_t_star": 16,
+      "F_min": 686,
+      "F_max": 708,
+      "weight_hist": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "d1b03fd692bcc3dd",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 16099,
+      "allowed_vertices_max": 16121,
+      "F_spread_percent": 3.21
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_06.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "f5d9a41ad076f6b8",
+      "candidates": 6,
+      "distinct_centres": 6,
+      "conflict_edges": 1,
+      "t_star": 6,
+      "configurations_at_t_star": 16,
+      "F_min": 688,
+      "F_max": 708,
+      "weight_hist": [
+        0,
+        0,
+        6,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "d8e652f64bcdad81",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 16099,
+      "allowed_vertices_max": 16119,
+      "F_spread_percent": 2.91
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_01.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "973074520160047a",
+      "candidates": 7,
+      "distinct_centres": 7,
+      "conflict_edges": 2,
+      "t_star": 7,
+      "configurations_at_t_star": 16,
+      "F_min": 820,
+      "F_max": 844,
+      "weight_hist": [
+        0,
+        0,
+        7,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "95d820182ed0efe6",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 15963,
+      "allowed_vertices_max": 15987,
+      "F_spread_percent": 2.93
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_02.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "7c82f917f5991f11",
+      "candidates": 7,
+      "distinct_centres": 7,
+      "conflict_edges": 2,
+      "t_star": 7,
+      "configurations_at_t_star": 16,
+      "F_min": 822,
+      "F_max": 848,
+      "weight_hist": [
+        0,
+        0,
+        7,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "43b27ecd9b90f9f2",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 15959,
+      "allowed_vertices_max": 15985,
+      "F_spread_percent": 3.16
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_07.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "1b701dca0a115864",
+      "candidates": 7,
+      "distinct_centres": 7,
+      "conflict_edges": 2,
+      "t_star": 7,
+      "configurations_at_t_star": 16,
+      "F_min": 822,
+      "F_max": 848,
+      "weight_hist": [
+        0,
+        0,
+        7,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "91a38cdb7a537e1a",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 15959,
+      "allowed_vertices_max": 15985,
+      "F_spread_percent": 3.16
+    },
+    {
+      "file": "sets/C7_d5_367_best_t_from_pipeline.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "a1f78db7478de2d1",
+      "candidates": 8,
+      "distinct_centres": 8,
+      "conflict_edges": 3,
+      "t_star": 8,
+      "configurations_at_t_star": 16,
+      "F_min": 956,
+      "F_max": 984,
+      "weight_hist": [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "3afd977820ecac7d",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 15823,
+      "allowed_vertices_max": 15851,
+      "F_spread_percent": 2.93
+    },
+    {
+      "file": "sets/C7_d5_367_polak_schrijver.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "9bdb8b9d69d9451e",
+      "candidates": 8,
+      "distinct_centres": 8,
+      "conflict_edges": 3,
+      "t_star": 8,
+      "configurations_at_t_star": 16,
+      "F_min": 956,
+      "F_max": 984,
+      "weight_hist": [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "3afd977820ecac7d",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 15823,
+      "allowed_vertices_max": 15851,
+      "F_spread_percent": 2.93
+    },
+    {
+      "file": "sets/pipeline_codes/C7_d5_367_pipeline_03.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "2c325a3edd958d76",
+      "candidates": 8,
+      "distinct_centres": 8,
+      "conflict_edges": 3,
+      "t_star": 8,
+      "configurations_at_t_star": 16,
+      "F_min": 956,
+      "F_max": 984,
+      "weight_hist": [
+        0,
+        0,
+        8,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "3afd977820ecac7d",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 15823,
+      "allowed_vertices_max": 15851,
+      "F_spread_percent": 2.93
+    },
+    {
+      "file": "sets/C7_d5_367_auxiliary_X.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "392260d103f11eee",
+      "candidates": 9,
+      "distinct_centres": 9,
+      "conflict_edges": 4,
+      "t_star": 9,
+      "configurations_at_t_star": 16,
+      "F_min": 1098,
+      "F_max": 1128,
+      "weight_hist": [
+        0,
+        0,
+        9,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "9879b9ca2896648a",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 15679,
+      "allowed_vertices_max": 15709,
+      "F_spread_percent": 2.73
+    },
+    {
+      "file": "sets/C7_d5_367_auxiliary_X_best.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "79eea8fc28a435a3",
+      "candidates": 10,
+      "distinct_centres": 10,
+      "conflict_edges": 5,
+      "t_star": 10,
+      "configurations_at_t_star": 16,
+      "F_min": 1240,
+      "F_max": 1268,
+      "weight_hist": [
+        0,
+        0,
+        10,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "b5d16520f67ec447",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 15539,
+      "allowed_vertices_max": 15567,
+      "F_spread_percent": 2.26
+    },
+    {
+      "file": "sets/C7_d5_367_auxiliary_X_o322.txt",
+      "size": 367,
+      "independent": true,
+      "sha256": "a4009726c06beb61",
+      "candidates": 10,
+      "distinct_centres": 10,
+      "conflict_edges": 5,
+      "t_star": 10,
+      "configurations_at_t_star": 16,
+      "F_min": 1240,
+      "F_max": 1268,
+      "weight_hist": [
+        0,
+        0,
+        10,
+        0,
+        0,
+        0
+      ],
+      "fingerprint": "b5d16520f67ec447",
+      "conflict_graph_bipartite": true,
+      "conflict_graph_components": 5,
+      "allowed_vertices_min": 15539,
+      "allowed_vertices_max": 15567,
+      "F_spread_percent": 2.26
+    }
+  ],
+  "plateau": {
+    "starts": [
+      "sets/C7_d5_367_auxiliary_X.txt",
+      "sets/C7_d5_367_auxiliary_X_best.txt",
+      "sets/C7_d5_367_auxiliary_X_o322.txt",
+      "sets/C7_d5_367_best_t_from_pipeline.txt",
+      "sets/C7_d5_367_polak_schrijver.txt",
+      "sets/C7_d5_367_reproduced.txt",
+      "sets/pipeline_codes/C7_d5_367_pipeline_00.txt",
+      "sets/pipeline_codes/C7_d5_367_pipeline_01.txt",
+      "sets/pipeline_codes/C7_d5_367_pipeline_02.txt",
+      "sets/pipeline_codes/C7_d5_367_pipeline_03.txt",
+      "sets/pipeline_codes/C7_d5_367_pipeline_04.txt",
+      "sets/pipeline_codes/C7_d5_367_pipeline_05.txt",
+      "sets/pipeline_codes/C7_d5_367_pipeline_06.txt",
+      "sets/pipeline_codes/C7_d5_367_pipeline_07.txt"
+    ],
+    "one_swaps": {
+      "visited": 486,
+      "exhausted": true,
+      "t_star_hist": {
+        "5": 64,
+        "6": 160,
+        "7": 160,
+        "8": 80,
+        "9": 20,
+        "10": 2
+      },
+      "distinct_fingerprints": 47
+    },
+    "two_swaps": {
+      "visited": 486,
+      "exhausted": true,
+      "k2_moves": 3240,
+      "k2_new": 390
+    },
+    "codes_written": 486,
+    "codes_not_independent": 0,
+    "aut_classes": 51,
+    "classes_by_t_star": {
+      "5": 8,
+      "6": 16,
+      "7": 16,
+      "8": 8,
+      "9": 2,
+      "10": 1
+    },
+    "class_table": [
+      {
+        "class": 0,
+        "representative": "$SHANNON_TMP/plateau/all_000000_t9.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 9,
+        "distinct_centres": 9,
+        "conflict_edges": 4,
+        "t_star": 9,
+        "configurations_at_t_star": 16,
+        "F_min": 1098,
+        "F_max": 1128,
+        "weight_hist": [
+          0,
+          0,
+          9,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "9879b9ca2896648a"
+      },
+      {
+        "class": 1,
+        "representative": "$SHANNON_TMP/plateau/all_000001_t10.txt",
+        "members_in_plateau": 2,
+        "stabiliser_order": 5,
+        "candidates": 10,
+        "distinct_centres": 10,
+        "conflict_edges": 5,
+        "t_star": 10,
+        "configurations_at_t_star": 16,
+        "F_min": 1240,
+        "F_max": 1268,
+        "weight_hist": [
+          0,
+          0,
+          10,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "b5d16520f67ec447"
+      },
+      {
+        "class": 2,
+        "representative": "$SHANNON_TMP/plateau/all_000002_t8.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 8,
+        "distinct_centres": 8,
+        "conflict_edges": 3,
+        "t_star": 8,
+        "configurations_at_t_star": 16,
+        "F_min": 956,
+        "F_max": 984,
+        "weight_hist": [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "3afd977820ecac7d"
+      },
+      {
+        "class": 3,
+        "representative": "$SHANNON_TMP/plateau/all_000003_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 686,
+        "F_max": 708,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "ea516015e35e3ef1"
+      },
+      {
+        "class": 4,
+        "representative": "$SHANNON_TMP/plateau/all_000004_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 820,
+        "F_max": 844,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "95d820182ed0efe6"
+      },
+      {
+        "class": 5,
+        "representative": "$SHANNON_TMP/plateau/all_000005_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 822,
+        "F_max": 848,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "43b27ecd9b90f9f2"
+      },
+      {
+        "class": 6,
+        "representative": "$SHANNON_TMP/plateau/all_000006_t5.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 5,
+        "distinct_centres": 5,
+        "conflict_edges": 0,
+        "t_star": 5,
+        "configurations_at_t_star": 16,
+        "F_min": 552,
+        "F_max": 568,
+        "weight_hist": [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "ad7748e47a78fdd8"
+      },
+      {
+        "class": 7,
+        "representative": "$SHANNON_TMP/plateau/all_000007_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 686,
+        "F_max": 708,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "d1b03fd692bcc3dd"
+      },
+      {
+        "class": 8,
+        "representative": "$SHANNON_TMP/plateau/all_000008_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 688,
+        "F_max": 708,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "d8e652f64bcdad81"
+      },
+      {
+        "class": 9,
+        "representative": "$SHANNON_TMP/plateau/all_000009_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 822,
+        "F_max": 848,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "91a38cdb7a537e1a"
+      },
+      {
+        "class": 10,
+        "representative": "$SHANNON_TMP/plateau/all_000011_t8.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 8,
+        "distinct_centres": 8,
+        "conflict_edges": 3,
+        "t_star": 8,
+        "configurations_at_t_star": 16,
+        "F_min": 960,
+        "F_max": 988,
+        "weight_hist": [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "c2fcc5597b6bc34b"
+      },
+      {
+        "class": 11,
+        "representative": "$SHANNON_TMP/plateau/all_000013_t8.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 8,
+        "distinct_centres": 8,
+        "conflict_edges": 3,
+        "t_star": 8,
+        "configurations_at_t_star": 16,
+        "F_min": 960,
+        "F_max": 988,
+        "weight_hist": [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "c2fcc5597b6bc34b"
+      },
+      {
+        "class": 12,
+        "representative": "$SHANNON_TMP/plateau/all_000014_t8.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 8,
+        "distinct_centres": 8,
+        "conflict_edges": 3,
+        "t_star": 8,
+        "configurations_at_t_star": 16,
+        "F_min": 964,
+        "F_max": 988,
+        "weight_hist": [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "15c5a38717b76747"
+      },
+      {
+        "class": 13,
+        "representative": "$SHANNON_TMP/plateau/all_000015_t8.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 8,
+        "distinct_centres": 8,
+        "conflict_edges": 3,
+        "t_star": 8,
+        "configurations_at_t_star": 16,
+        "F_min": 962,
+        "F_max": 986,
+        "weight_hist": [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "84bf663618be7fff"
+      },
+      {
+        "class": 14,
+        "representative": "$SHANNON_TMP/plateau/all_000017_t8.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 8,
+        "distinct_centres": 8,
+        "conflict_edges": 3,
+        "t_star": 8,
+        "configurations_at_t_star": 16,
+        "F_min": 964,
+        "F_max": 988,
+        "weight_hist": [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "4654efac99c6b07f"
+      },
+      {
+        "class": 15,
+        "representative": "$SHANNON_TMP/plateau/all_000018_t9.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 9,
+        "distinct_centres": 9,
+        "conflict_edges": 4,
+        "t_star": 9,
+        "configurations_at_t_star": 16,
+        "F_min": 1098,
+        "F_max": 1128,
+        "weight_hist": [
+          0,
+          0,
+          9,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "9fac21b09546fedc"
+      },
+      {
+        "class": 16,
+        "representative": "$SHANNON_TMP/plateau/all_000028_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 820,
+        "F_max": 842,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "7398313ec5a497ee"
+      },
+      {
+        "class": 17,
+        "representative": "$SHANNON_TMP/plateau/all_000031_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 820,
+        "F_max": 844,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "77223cbe57927308"
+      },
+      {
+        "class": 18,
+        "representative": "$SHANNON_TMP/plateau/all_000032_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 820,
+        "F_max": 844,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "641e0b7469adb508"
+      },
+      {
+        "class": 19,
+        "representative": "$SHANNON_TMP/plateau/all_000033_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 822,
+        "F_max": 848,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "9bd36f67765e1e3e"
+      },
+      {
+        "class": 20,
+        "representative": "$SHANNON_TMP/plateau/all_000034_t5.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 5,
+        "distinct_centres": 5,
+        "conflict_edges": 0,
+        "t_star": 5,
+        "configurations_at_t_star": 16,
+        "F_min": 552,
+        "F_max": 568,
+        "weight_hist": [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "358a147b80788e04"
+      },
+      {
+        "class": 21,
+        "representative": "$SHANNON_TMP/plateau/all_000036_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 686,
+        "F_max": 704,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "70c814804fa0f0eb"
+      },
+      {
+        "class": 22,
+        "representative": "$SHANNON_TMP/plateau/all_000038_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 686,
+        "F_max": 704,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "9e151e30ece9f211"
+      },
+      {
+        "class": 23,
+        "representative": "$SHANNON_TMP/plateau/all_000042_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 692,
+        "F_max": 712,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "cd609560f14464ad"
+      },
+      {
+        "class": 24,
+        "representative": "$SHANNON_TMP/plateau/all_000043_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 686,
+        "F_max": 704,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "5a3dd622554ae72d"
+      },
+      {
+        "class": 25,
+        "representative": "$SHANNON_TMP/plateau/all_000044_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 686,
+        "F_max": 704,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "120b89d5921482f7"
+      },
+      {
+        "class": 26,
+        "representative": "$SHANNON_TMP/plateau/all_000045_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 822,
+        "F_max": 848,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "caeda93c42af69b2"
+      },
+      {
+        "class": 27,
+        "representative": "$SHANNON_TMP/plateau/all_000048_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 826,
+        "F_max": 848,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "43f2bb93991cc66c"
+      },
+      {
+        "class": 28,
+        "representative": "$SHANNON_TMP/plateau/all_000049_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 826,
+        "F_max": 848,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "fe7aa957e85ec642"
+      },
+      {
+        "class": 29,
+        "representative": "$SHANNON_TMP/plateau/all_000050_t5.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 5,
+        "distinct_centres": 5,
+        "conflict_edges": 0,
+        "t_star": 5,
+        "configurations_at_t_star": 16,
+        "F_min": 564,
+        "F_max": 584,
+        "weight_hist": [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "d9ff026b913a182e"
+      },
+      {
+        "class": 30,
+        "representative": "$SHANNON_TMP/plateau/all_000054_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 692,
+        "F_max": 712,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "cd609560f14464ad"
+      },
+      {
+        "class": 31,
+        "representative": "$SHANNON_TMP/plateau/all_000064_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 826,
+        "F_max": 848,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "05be05e6b1715836"
+      },
+      {
+        "class": 32,
+        "representative": "$SHANNON_TMP/plateau/all_000071_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 826,
+        "F_max": 848,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "4c22c785778b290c"
+      },
+      {
+        "class": 33,
+        "representative": "$SHANNON_TMP/plateau/all_000074_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 834,
+        "F_max": 854,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "a7b2f644c3768038"
+      },
+      {
+        "class": 34,
+        "representative": "$SHANNON_TMP/plateau/all_000075_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 834,
+        "F_max": 854,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "5673ddcfb0bacafa"
+      },
+      {
+        "class": 35,
+        "representative": "$SHANNON_TMP/plateau/all_000080_t8.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 8,
+        "distinct_centres": 8,
+        "conflict_edges": 3,
+        "t_star": 8,
+        "configurations_at_t_star": 16,
+        "F_min": 962,
+        "F_max": 986,
+        "weight_hist": [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "82670c9e955d12d3"
+      },
+      {
+        "class": 36,
+        "representative": "$SHANNON_TMP/plateau/all_000083_t8.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 8,
+        "distinct_centres": 8,
+        "conflict_edges": 3,
+        "t_star": 8,
+        "configurations_at_t_star": 16,
+        "F_min": 956,
+        "F_max": 984,
+        "weight_hist": [
+          0,
+          0,
+          8,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "754c652609018ef9"
+      },
+      {
+        "class": 37,
+        "representative": "$SHANNON_TMP/plateau/all_000117_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 684,
+        "F_max": 702,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "3455cb6c1a11a725"
+      },
+      {
+        "class": 38,
+        "representative": "$SHANNON_TMP/plateau/all_000126_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 688,
+        "F_max": 708,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "d8e652f64bcdad81"
+      },
+      {
+        "class": 39,
+        "representative": "$SHANNON_TMP/plateau/all_000127_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 692,
+        "F_max": 712,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "4dd5c44f8984da29"
+      },
+      {
+        "class": 40,
+        "representative": "$SHANNON_TMP/plateau/all_000133_t5.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 5,
+        "distinct_centres": 5,
+        "conflict_edges": 0,
+        "t_star": 5,
+        "configurations_at_t_star": 16,
+        "F_min": 552,
+        "F_max": 570,
+        "weight_hist": [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "5ac780578a60240e"
+      },
+      {
+        "class": 41,
+        "representative": "$SHANNON_TMP/plateau/all_000144_t5.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 5,
+        "distinct_centres": 5,
+        "conflict_edges": 0,
+        "t_star": 5,
+        "configurations_at_t_star": 16,
+        "F_min": 552,
+        "F_max": 570,
+        "weight_hist": [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "26ee7b730f6705c0"
+      },
+      {
+        "class": 42,
+        "representative": "$SHANNON_TMP/plateau/all_000145_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 820,
+        "F_max": 842,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "2a8b9d97460c0dfa"
+      },
+      {
+        "class": 43,
+        "representative": "$SHANNON_TMP/plateau/all_000147_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 692,
+        "F_max": 712,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "4dd5c44f8984da29"
+      },
+      {
+        "class": 44,
+        "representative": "$SHANNON_TMP/plateau/all_000154_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 702,
+        "F_max": 720,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "75680dd57e13d221"
+      },
+      {
+        "class": 45,
+        "representative": "$SHANNON_TMP/plateau/all_000156_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 702,
+        "F_max": 720,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "2f94a6a8b7c90235"
+      },
+      {
+        "class": 46,
+        "representative": "$SHANNON_TMP/plateau/all_000204_t7.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 7,
+        "distinct_centres": 7,
+        "conflict_edges": 2,
+        "t_star": 7,
+        "configurations_at_t_star": 16,
+        "F_min": 820,
+        "F_max": 844,
+        "weight_hist": [
+          0,
+          0,
+          7,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "c466a17b5b19b00a"
+      },
+      {
+        "class": 47,
+        "representative": "$SHANNON_TMP/plateau/all_000267_t5.txt",
+        "members_in_plateau": 2,
+        "stabiliser_order": 5,
+        "candidates": 5,
+        "distinct_centres": 5,
+        "conflict_edges": 0,
+        "t_star": 5,
+        "configurations_at_t_star": 16,
+        "F_min": 540,
+        "F_max": 556,
+        "weight_hist": [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "5c1f9f0b146de580"
+      },
+      {
+        "class": 48,
+        "representative": "$SHANNON_TMP/plateau/all_000275_t5.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 5,
+        "distinct_centres": 5,
+        "conflict_edges": 0,
+        "t_star": 5,
+        "configurations_at_t_star": 16,
+        "F_min": 564,
+        "F_max": 584,
+        "weight_hist": [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "a9232a8b3bbd149c"
+      },
+      {
+        "class": 49,
+        "representative": "$SHANNON_TMP/plateau/all_000296_t6.txt",
+        "members_in_plateau": 10,
+        "stabiliser_order": 1,
+        "candidates": 6,
+        "distinct_centres": 6,
+        "conflict_edges": 1,
+        "t_star": 6,
+        "configurations_at_t_star": 16,
+        "F_min": 684,
+        "F_max": 702,
+        "weight_hist": [
+          0,
+          0,
+          6,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "fe15c9ec1e908d75"
+      },
+      {
+        "class": 50,
+        "representative": "$SHANNON_TMP/plateau/all_000419_t5.txt",
+        "members_in_plateau": 2,
+        "stabiliser_order": 5,
+        "candidates": 5,
+        "distinct_centres": 5,
+        "conflict_edges": 0,
+        "t_star": 5,
+        "configurations_at_t_star": 16,
+        "F_min": 540,
+        "F_max": 556,
+        "weight_hist": [
+          0,
+          0,
+          5,
+          0,
+          0,
+          0
+        ],
+        "fingerprint": "25e1501be6a060b4"
+      }
+    ],
+    "known_codes_class": {
+      "sets/C7_d5_367_auxiliary_X.txt": 0,
+      "sets/C7_d5_367_auxiliary_X_best.txt": 1,
+      "sets/C7_d5_367_auxiliary_X_o322.txt": 1,
+      "sets/C7_d5_367_best_t_from_pipeline.txt": 2,
+      "sets/C7_d5_367_polak_schrijver.txt": 2,
+      "sets/C7_d5_367_reproduced.txt": 3,
+      "sets/pipeline_codes/C7_d5_367_pipeline_00.txt": 3,
+      "sets/pipeline_codes/C7_d5_367_pipeline_01.txt": 4,
+      "sets/pipeline_codes/C7_d5_367_pipeline_02.txt": 5,
+      "sets/pipeline_codes/C7_d5_367_pipeline_03.txt": 2,
+      "sets/pipeline_codes/C7_d5_367_pipeline_04.txt": 6,
+      "sets/pipeline_codes/C7_d5_367_pipeline_05.txt": 7,
+      "sets/pipeline_codes/C7_d5_367_pipeline_06.txt": 8,
+      "sets/pipeline_codes/C7_d5_367_pipeline_07.txt": 9
+    }
+  },
+  "kswaps": {
+    "k3": {
+      "codes": 51,
+      "windows": [
+        638837,
+        36112845,
+        0,
+        0,
+        0
+      ],
+      "moves": 2057978,
+      "new_codes": 1465,
+      "windows_admitting_more_than_k": 0,
+      "seconds": 153.1
+    },
+    "k3_new_t_star_hist": {
+      "5": 167,
+      "6": 450,
+      "7": 483,
+      "8": 284,
+      "9": 73,
+      "10": 8
+    },
+    "k3_codes_outside_plateau": 0,
+    "k4": [
+      {
+        "code": "../../..$SHANNON_TMP/plateau/all_000000_t9.txt",
+        "windows": [
+          4765,
+          354525,
+          27571249,
+          0,
+          0
+        ],
+        "moves": 2681356,
+        "new_codes": 117,
+        "exhausted": false,
+        "seconds": 1200.2,
+        "windows_admitting_more_than_k": 0,
+        "new_t_star_hist": {
+          "5": 5,
+          "6": 29,
+          "7": 36,
+          "8": 37,
+          "9": 9,
+          "10": 1
+        }
+      },
+      {
+        "code": "../../..$SHANNON_TMP/plateau/all_000001_t10.txt",
+        "windows": [
+          4762,
+          354426,
+          27563159,
+          0,
+          0
+        ],
+        "moves": 2893082,
+        "new_codes": 140,
+        "exhausted": false,
+        "seconds": 1200.2,
+        "windows_admitting_more_than_k": 0,
+        "new_t_star_hist": {
+          "6": 20,
+          "7": 70,
+          "8": 40,
+          "9": 10
+        }
+      },
+      {
+        "code": "../../..$SHANNON_TMP/plateau/all_000018_t9.txt",
+        "windows": [
+          4750,
+          353884,
+          27535041,
+          0,
+          0
+        ],
+        "moves": 2665370,
+        "new_codes": 110,
+        "exhausted": false,
+        "seconds": 1200.1,
+        "windows_admitting_more_than_k": 0,
+        "new_t_star_hist": {
+          "5": 5,
+          "6": 29,
+          "7": 28,
+          "8": 38,
+          "9": 9,
+          "10": 1
+        }
+      }
+    ],
+    "k4_codes_outside_plateau": 0,
+    "outside_plateau_classes": null
+  },
+  "regions": {
+    "configurations_listed": 208,
+    "code_classes_with_t_star_ge_9": [
+      0,
+      1,
+      15
+    ],
+    "F_classes": 20,
+    "table": [
+      {
+        "F_class": 0,
+        "t": 9,
+        "F_size": 1128,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 1,
+        "t": 9,
+        "F_size": 1102,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 2,
+        "t": 9,
+        "F_size": 1098,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 3,
+        "t": 9,
+        "F_size": 1116,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 4,
+        "t": 9,
+        "F_size": 1124,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 5,
+        "t": 9,
+        "F_size": 1118,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 6,
+        "t": 9,
+        "F_size": 1118,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 7,
+        "t": 9,
+        "F_size": 1104,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 8,
+        "t": 9,
+        "F_size": 1098,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 9,
+        "t": 9,
+        "F_size": 1110,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 10,
+        "t": 9,
+        "F_size": 1128,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 11,
+        "t": 9,
+        "F_size": 1110,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 12,
+        "t": 9,
+        "F_size": 1124,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 13,
+        "t": 9,
+        "F_size": 1118,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 14,
+        "t": 9,
+        "F_size": 1118,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 15,
+        "t": 9,
+        "F_size": 1102,
+        "from_code_classes": {
+          "0": 1,
+          "1": 10,
+          "15": 1
+        }
+      },
+      {
+        "F_class": 16,
+        "t": 10,
+        "F_size": 1256,
+        "from_code_classes": {
+          "1": 5
+        }
+      },
+      {
+        "F_class": 17,
+        "t": 10,
+        "F_size": 1240,
+        "from_code_classes": {
+          "1": 5
+        }
+      },
+      {
+        "F_class": 18,
+        "t": 10,
+        "F_size": 1268,
+        "from_code_classes": {
+          "1": 5
+        }
+      },
+      {
+        "F_class": 19,
+        "t": 10,
+        "F_size": 1260,
+        "from_code_classes": {
+          "1": 1
+        }
+      }
+    ],
+    "F_classes_by_t": {
+      "9": {
+        "classes": 16,
+        "F_min": 1098,
+        "F_max": 1128
+      },
+      "10": {
+        "classes": 4,
+        "F_min": 1240,
+        "F_max": 1268
+      }
+    }
+  },
+  "sweep": {
+    "pairs": 1020,
+    "group_elements_per_pair": 64538880,
+    "images_scored": 65829657600,
+    "grand_hist": [
+      0,
+      24,
+      114,
+      370,
+      918,
+      1492,
+      2290,
+      4410
+    ],
+    "grand_min_hits": 1,
+    "grand_best_repaired_size": 366,
+    "admissible_full_size": 0,
+    "admissible_checked": [],
+    "per_F_class": [
+      {
+        "F_class": 0,
+        "F_size": 1128,
+        "min_hits": 5,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          12,
+          34,
+          156
+        ]
+      },
+      {
+        "F_class": 1,
+        "F_size": 1102,
+        "min_hits": 2,
+        "best_repaired_size": 365,
+        "sources_reaching_best": 11,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          12,
+          34,
+          124,
+          216,
+          295,
+          481
+        ]
+      },
+      {
+        "F_class": 2,
+        "F_size": 1098,
+        "min_hits": 1,
+        "best_repaired_size": 366,
+        "sources_reaching_best": 27,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          12,
+          34,
+          124,
+          210,
+          248,
+          254,
+          390
+        ]
+      },
+      {
+        "F_class": 3,
+        "F_size": 1116,
+        "min_hits": 6,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          12,
+          88
+        ]
+      },
+      {
+        "F_class": 4,
+        "F_size": 1124,
+        "min_hits": 5,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          12,
+          48,
+          204
+        ]
+      },
+      {
+        "F_class": 5,
+        "F_size": 1118,
+        "min_hits": 5,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          12,
+          48,
+          198
+        ]
+      },
+      {
+        "F_class": 6,
+        "F_size": 1118,
+        "min_hits": 8,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "F_class": 7,
+        "F_size": 1104,
+        "min_hits": 2,
+        "best_repaired_size": 365,
+        "sources_reaching_best": 11,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          12,
+          34,
+          124,
+          210,
+          274,
+          394
+        ]
+      },
+      {
+        "F_class": 8,
+        "F_size": 1098,
+        "min_hits": 1,
+        "best_repaired_size": 366,
+        "sources_reaching_best": 27,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          12,
+          34,
+          124,
+          210,
+          254,
+          289,
+          461
+        ]
+      },
+      {
+        "F_class": 9,
+        "F_size": 1110,
+        "min_hits": 4,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          12,
+          34,
+          124,
+          268
+        ]
+      },
+      {
+        "F_class": 10,
+        "F_size": 1128,
+        "min_hits": 5,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          12,
+          34,
+          156
+        ]
+      },
+      {
+        "F_class": 11,
+        "F_size": 1110,
+        "min_hits": 4,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          12,
+          34,
+          138,
+          282
+        ]
+      },
+      {
+        "F_class": 12,
+        "F_size": 1124,
+        "min_hits": 5,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          12,
+          34,
+          144
+        ]
+      },
+      {
+        "F_class": 13,
+        "F_size": 1118,
+        "min_hits": 4,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          12,
+          34,
+          126,
+          248
+        ]
+      },
+      {
+        "F_class": 14,
+        "F_size": 1118,
+        "min_hits": 5,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          12,
+          34,
+          144
+        ]
+      },
+      {
+        "F_class": 15,
+        "F_size": 1102,
+        "min_hits": 2,
+        "best_repaired_size": 365,
+        "sources_reaching_best": 11,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          12,
+          34,
+          124,
+          210,
+          286,
+          496
+        ]
+      },
+      {
+        "F_class": 16,
+        "F_size": 1256,
+        "min_hits": 6,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          20
+        ]
+      },
+      {
+        "F_class": 17,
+        "F_size": 1240,
+        "min_hits": 2,
+        "best_repaired_size": 365,
+        "sources_reaching_best": 3,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          10,
+          20,
+          90,
+          180,
+          240,
+          260
+        ]
+      },
+      {
+        "F_class": 18,
+        "F_size": 1268,
+        "min_hits": 6,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          20
+        ]
+      },
+      {
+        "F_class": 19,
+        "F_size": 1260,
+        "min_hits": 10,
+        "best_repaired_size": 0,
+        "sources_reaching_best": 51,
+        "admissible_full_size": 0,
+        "hist": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "seconds": 576.2
+  },
+  "kopt": {
+    "sets": 108,
+    "all_verified_366_outside_F": true,
+    "sets_with_an_improving_window": 0,
+    "by_F_class": {
+      "2": 54,
+      "8": 54
+    },
+    "rows": [
+      {
+        "set": "near_s366_F2_S0_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S0_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12451,
+          701387
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S10_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S10_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12451,
+          701387
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S11_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S11_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12451,
+          701387
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S12_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S12_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12451,
+          701387
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S13_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S13_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12451,
+          701387
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S14_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S14_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12451,
+          701387
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S15_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701636
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S15_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S16_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S16_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S17_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S17_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S18_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S18_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S19_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S19_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S1_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701636
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S1_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12451,
+          701387
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S26_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S26_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S27_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S27_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S28_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S28_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S2_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12451,
+          701387
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S2_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S31_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S31_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S32_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S32_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S33_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S33_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S34_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S34_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S35_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701636
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S35_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S36_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701636
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S36_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S42_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S42_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S46_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S46_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701648
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S4_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S4_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S5_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S5_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S9_1.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F2_S9_2.txt",
+        "F_class": 2,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12454,
+          701779
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S0_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S0_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701636
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S10_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S10_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701636
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S11_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S11_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701636
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S12_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S12_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701636
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S13_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S13_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701636
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S14_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S14_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701636
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S15_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12451,
+          701387
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S15_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S16_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S16_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S17_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S17_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S18_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S18_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S19_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S19_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S1_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12451,
+          701387
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S1_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701636
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S26_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S26_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S27_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S27_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S28_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S28_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S2_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S2_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12453,
+          701636
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S31_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S31_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S32_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S32_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S33_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S33_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S34_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S34_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S35_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12451,
+          701387
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S35_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S36_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12451,
+          701387
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S36_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S42_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S42_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S46_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S46_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12455,
+          701894
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S4_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S4_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S5_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S5_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S9_1.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      },
+      {
+        "set": "near_s366_F8_S9_2.txt",
+        "F_class": 8,
+        "size": 366,
+        "independent": true,
+        "disjoint_from_F_second_path": true,
+        "windows": [
+          12452,
+          701527
+        ],
+        "improving_windows": 0,
+        "improved_files": []
+      }
+    ]
+  },
+  "looseness": [
+    {
+      "F_class": 2,
+      "set": "near_s366_F2_S0_1.txt",
+      "blockers_histogram_up_to_two": {
+        "1": 2,
+        "2": 174
+      },
+      "one_opt_improves": false,
+      "two_opt_improves": false
+    },
+    {
+      "F_class": 8,
+      "set": "near_s366_F8_S0_1.txt",
+      "blockers_histogram_up_to_two": {
+        "1": 3,
+        "2": 172
+      },
+      "one_opt_improves": false,
+      "two_opt_improves": false
+    }
+  ],
+  "new_t9_code": {
+    "file": "sets/C7_d5_367_t9_second_class.txt",
+    "sha256": "1ecbf8eb6090458093991e9d5bf5fb721bbdc3c4a4155e24307e3797b4bf45b0",
+    "independent": true,
+    "size": 367,
+    "class": 15
+  },
+  "budget": {
+    "ceiling_core_hours": 40,
+    "core_seconds_this_run": 14579.0,
+    "core_hours_this_run": 4.05,
+    "wall_seconds_this_run": 2967.3
+  }
+}
