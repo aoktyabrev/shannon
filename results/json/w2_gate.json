@@ -1,0 +1,265 @@
+{
+  "date": "2026-10-08",
+  "extra_searches": [
+    {
+      "query": "\"private pairs\" Shannon capacity",
+      "url": "https://arxiv.org/search/?searchtype=all&query=%22private+pairs%22+Shannon+capacity&start=0&sortBy=submitted_date&sortOrder=descending",
+      "hits": []
+    },
+    {
+      "query": "\"private pair\" independent set strong product",
+      "url": "https://arxiv.org/search/?searchtype=all&query=%22private+pair%22+independent+set+strong+product&start=0&sortBy=submitted_date&sortOrder=descending",
+      "hits": []
+    },
+    {
+      "query": "gadget Shannon capacity odd cycle recursion",
+      "url": "https://arxiv.org/search/?searchtype=all&query=gadget+Shannon+capacity+odd+cycle+recursion&start=0&sortBy=submitted_date&sortOrder=descending",
+      "hits": [
+        {
+          "id": "2608.30273",
+          "title": "Strengthening Recursive Constructions for Zero-Error Shannon Capacity",
+          "submitted": "31 August, 2026"
+        }
+      ]
+    },
+    {
+      "query": "\"C_7^5\" independent set",
+      "url": "https://arxiv.org/search/?searchtype=all&query=%22C_7^5%22+independent+set&start=0&sortBy=submitted_date&sortOrder=descending",
+      "hits": [
+        {
+          "id": "2607.27869",
+          "title": "A Recursive Construction Improving the Lower Bound on the Shannon Capacity of $C_7$",
+          "submitted": "30 July, 2026"
+        },
+        {
+          "id": "1504.01472",
+          "title": "New Lower Bounds for the Shannon Capacity of Odd Cycles",
+          "submitted": "7 April, 2015"
+        }
+      ]
+    },
+    {
+      "query": "zero-error capacity seven-cycle lower bound",
+      "url": "https://arxiv.org/search/?searchtype=all&query=zero-error+capacity+seven-cycle+lower+bound&start=0&sortBy=submitted_date&sortOrder=descending",
+      "hits": [
+        {
+          "id": "2608.30273",
+          "title": "Strengthening Recursive Constructions for Zero-Error Shannon Capacity",
+          "submitted": "31 August, 2026"
+        }
+      ]
+    }
+  ],
+  "dump_sentences": {
+    "1808.07438": {
+      "who": "Polak-Schrijver 2019",
+      "count_or_shape": [],
+      "identity_or_tradeoff": []
+    },
+    "2607.21517": {
+      "who": "Itty-Rosin-Carstensen-Reichman 2026",
+      "count_or_shape": [],
+      "identity_or_tradeoff": []
+    },
+    "2607.27869": {
+      "who": "Gao 2026",
+      "count_or_shape": [
+        {
+          "file": "paper.tex",
+          "sentence": "\\] The point $r$ is the \\textit{center}, and $q$ is its \\textit{private neighbor}; both are called endpoints of the private pair."
+        },
+        {
+          "file": "paper.tex",
+          "sentence": "\\end{definition} The condition in Definition~\\ref{def:gadget} also implies that $X$ is disjoint from all private-pair endpoints."
+        },
+        {
+          "file": "paper.tex",
+          "sentence": "The verification program described in Section~\\ref{sec:verification} checks the following directly from the $367$ vectors of $I_0$: \\begin{enumerate} \\item $I_0$ and $X$ are independent and each has size $367$; \\item for every $j$, \\[ N(\\{q_j\\})\\cap I_0=\\{r_j\\}; \\] \\item $\\PH$ and $\\PV$ are independent; \\item $X$ is disjoint from the sixteen pair endpoints; \\item among the points of $X$, exactly $321$ are confusable with neither $\\PH$ nor $\\PV$, exactly $26$ are confusable with $\\PH$ only, exactly $20$ are confusable with $\\PV$ only, and none is confusable with both."
+        }
+      ],
+      "identity_or_tradeoff": [
+        {
+          "file": "paper.tex",
+          "sentence": "\\] \\end{enumerate} Write \\[ \\begin{aligned} O&=X\\setminus\\bigl(N(\\PH)\\cup N(\\PV)\\bigr),\\\\ H&=X\\cap N(\\PH),\\\\ V&=X\\cap N(\\PV), \\end{aligned} \\] and set \\[ (s,o,h,v)=(|X|,|O|,|H|,|V|)."
+        },
+        {
+          "file": "paper.tex",
+          "sentence": "\\] The private-pair condition and the independence of $I$ imply \\begin{equation}\\label{eq:B-avoids-endpoints} B\\cap N(R\\cup Q)=\\emptyset."
+        }
+      ]
+    },
+    "2607.29681": {
+      "who": "Buys-Polak-Zuiddam 2026",
+      "count_or_shape": [],
+      "identity_or_tradeoff": []
+    },
+    "2608.30273": {
+      "who": "Tandon 2026",
+      "count_or_shape": [
+        {
+          "file": "main.tex",
+          "sentence": "We then introduce a \\textit{heterogeneous refinement} (Theorem~\\ref{thm:heteroGao}) in which different classes of the right-hand auxiliary set may be paired with different left-hand independent sets, derive the corresponding propagation rules, and show that this already improves the bounds obtained from Gao's recursion~\\cite{Gao2026} and the first BPZ refinement~\\cite{BuysPolakZuiddam2026}."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "A pair $(r,q)$ of vertices of $G$ is called a \\emph{private pair} for $I$ if \\begin{align} r\\in I,\\qquad q\\notin I,\\qquad N(q)\\cap I=\\{r\\}."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "\\end{align} The vertex $r$ is called the \\emph{center} of the private pair, and $q$ is called its \\emph{private neighbor}."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "Thus each private pair contributes exactly one endpoint to each transversal."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "Thus, the code size, number of private pairs, and auxiliary-set size remain unchanged, while the number of auxiliary words confusable with neither transversal increases from $321$ to $322$."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "The code size and the selected private-pair count are unchanged from Gao's product: \\begin{align} a_{LR} &= (a_L-t_L)(a_R-t_R)+t_Ls_R+s_Lt_R, \\nonumber\\\\ t_{LR} &= t_Lo_R+o_Lt_R."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "\\end{align} Finally, since neither the product code nor the selected propagated private pairs have been changed, their parameters remain \\begin{align} a_{LR} &= (a_L-t_L)(a_R-t_R)+t_Ls_R+s_Lt_R, \\nonumber\\\\ t_{LR} &= t_Lo_R+o_Lt_R."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "The main product code, propagated private pairs, and propagated transversals are exactly those of the ordinary Gao product formed using $X_L$ and $X_R$; the sets $J_0,J_{\\mathrm H},J_{\\mathrm V}$ enter only in the choice of the output auxiliary set, and hence in the parameters $s,o,h,v$ of the resulting gadget."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "In the notation of Definition~\\ref{def:GaoGadget}, its profile is \\begin{align} \\pi(\\mathcal G_5) = (a_5,t_5,s_5,o_5,h_5,v_5) = (367,8,367,322,26,19), \\end{align} where $a_5$ is the size of the main independent set, $t_5$ is the number of selected private pairs, $s_5$ is the size of the auxiliary independent set, and $o_5$, $h_5$, and $v_5$ are the sizes of its neutral, $\\mathrm H$-side, and $\\mathrm V$-side parts, respectively."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "The $i$th coordinate of each tuple in $T_\\lambda$ is paired with the $i$th input representation $\\mathcal F^{(i)}$."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "Second, a genuinely two-sided extension of Theorem~\\ref{thm:heteroGao} would allow both coordinates to vary (see Remark~\\ref{remark:twosided}), but would require additional compatibility conditions ensuring that every pair of product blocks is separated in at least one coordinate."
+        }
+      ],
+      "identity_or_tradeoff": [
+        {
+          "file": "main.tex",
+          "sentence": "Define \\begin{align} X^0 &=X\\setminus\\left(N(P^{\\mathrm H})\\cup N(P^{\\mathrm V})\\right), \\nonumber\\\\ X^{\\mathrm H} &=X\\cap N(P^{\\mathrm H}), \\nonumber\\\\ X^{\\mathrm V} &=X\\cap N(P^{\\mathrm V})."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "\\textup{(a)} A Gao gadget $\\mathcal G$ with six-parameter profile $\\pi(\\mathcal G)=(a,t,s,o,h,v)$, consisting of a main independent set $I=B\\mathbin{\\dot\\cup}R$, two independent complementary transversals $P^{\\mathrm H}$ and $P^{\\mathrm V}$, and an auxiliary independent set $X=X^0\\mathbin{\\dot\\cup}X^{\\mathrm H}\\mathbin{\\dot\\cup}X^{\\mathrm V}$ satisfying $X\\cap N(P^{\\mathrm H})\\cap N(P^{\\mathrm V})=\\emptyset$."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "We may therefore choose three independent sets $J_0,J_{\\mathrm H},J_{\\mathrm V}\\subseteq V(G_L)$, where $J_0$ additionally satisfies \\begin{align} J_0\\cap N(P_L^{\\mathrm H})\\cap N(P_L^{\\mathrm V}) = \\varnothing, \\end{align} and define the heterogeneous auxiliary set \\begin{align} X_{LR}^{\\mathrm{het}} = (J_0\\times X_R^0) \\mathbin{\\dot\\cup} (J_{\\mathrm H}\\times X_R^{\\mathrm H}) \\mathbin{\\dot\\cup} (J_{\\mathrm V}\\times X_R^{\\mathrm V})."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "The independent set $J^+\\subseteq V(C_7^{\\boxtimes 10})$ is obtained from the automorphic image $(T\\times T)(I_{10})$, followed by eight exchanges along selected private pairs, where \\begin{align} T(w_0,w_1,w_2,w_3,w_4) = (2-w_1,w_3,w_0,2-w_2,w_4) \\pmod 7."
+        },
+        {
+          "file": "main.tex",
+          "sentence": "Since the neutral part depends only on the union of the two transversal neighborhoods, $X^0$ is unchanged, while the two one-sided parts are exchanged: $X^{\\mathrm H} \\longleftrightarrow X^{\\mathrm V}$."
+        }
+      ]
+    }
+  },
+  "extra_union": [
+    {
+      "id": "2608.30273",
+      "title": "Strengthening Recursive Constructions for Zero-Error Shannon Capacity",
+      "submitted": "31 August, 2026"
+    },
+    {
+      "id": "2607.27869",
+      "title": "A Recursive Construction Improving the Lower Bound on the Shannon Capacity of $C_7$",
+      "submitted": "30 July, 2026"
+    },
+    {
+      "id": "1504.01472",
+      "title": "New Lower Bounds for the Shannon Capacity of Odd Cycles",
+      "submitted": "7 April, 2015"
+    }
+  ],
+  "newer_than_the_record": [
+    {
+      "id": "2610.06758",
+      "title": "Nonadditivity in fermionic quantum Shannon theory",
+      "on_our_subject": false
+    },
+    {
+      "id": "2610.05390",
+      "title": "Energy Efficiency Optimization for 5G NR PDSCH: A Cross-Layer Link Abstraction Framework",
+      "on_our_subject": false
+    },
+    {
+      "id": "2609.40054",
+      "title": "Transmitting algebras through quantum channels",
+      "on_our_subject": false
+    },
+    {
+      "id": "2609.34744",
+      "title": "Optimizing and Securing the Modern Watermarking Channel for Images",
+      "on_our_subject": false
+    },
+    {
+      "id": "2609.34213",
+      "title": "Monotonicity of the R\u00e9nyi channel capacity under non-signaling assisted channel simulation",
+      "on_our_subject": false
+    },
+    {
+      "id": "2609.28363",
+      "title": "Curvature-Domain Wireless Communications: Gauge-Fixed Signal Spaces, Fredholm Capacity, and Differentiation-Limited Scaling for Continuous Apertures",
+      "on_our_subject": false
+    },
+    {
+      "id": "2609.27767",
+      "title": "Benign Projective Landscapes for Measured Quantum Divergences",
+      "on_our_subject": false
+    },
+    {
+      "id": "2609.22314",
+      "title": "Integrated Sensing and Communications: A Tutorial on Mathematical Foundations, Signal Processing and System Design for 6G",
+      "on_our_subject": false
+    },
+    {
+      "id": "2609.18352",
+      "title": "Information Spectrum Methods for $\\varepsilon$-Capacity Problems in the Theory of Mixed Multiple-Access Channels with Cost Constraint",
+      "on_our_subject": false
+    },
+    {
+      "id": "2609.18200",
+      "title": "Shannon entropy and complex network community detection to study electoral coalition behaviour at municipal scale",
+      "on_our_subject": false
+    },
+    {
+      "id": "2609.11368",
+      "title": "A Tight Second-Order Converse Bound for Variable-Length Feedback Codes",
+      "on_our_subject": false
+    },
+    {
+      "id": "2609.10986",
+      "title": "A Mathematical Theory of Pragmatic Information",
+      "on_our_subject": false
+    },
+    {
+      "id": "2609.10436",
+      "title": "Mobility Information Capacity in the Sky: A Gaussian Channel Perspective",
+      "on_our_subject": false
+    }
+  ],
+  "candidate_sentences_total": {
+    "count_or_shape": 14,
+    "identity_or_tradeoff": 7
+  },
+  "verdict": {
+    "pair_count_published_as_a_property_of_codes": false,
+    "table_of_pair_shapes_published": false,
+    "identity_F_plus_U_published_or_applied": false,
+    "shape_cost_invariance_derived_anywhere": false,
+    "new_record_or_gadget_work_since_tandon": false,
+    "note_may_be_written": true,
+    "reading": "Gao and Tandon define the private pair and the closed neighbourhood [G26-10, T26-7, T26-8]; Gao checks that each of the eight pairs is private; Tandon counts 'selected private pairs' inside profiles and uses 'exchanges along selected private pairs' [T26-9] -- the 1-swap of Stage 2.2 -- to build an auxiliary set. No paper counts the candidate pairs of a code, none considers the shape q - r of a pair, and the only sentences joining the cap and the cup of N(P^H), N(P^V) are the definitions of the gadget and of the neutral part X^0, with no statement about their sizes. Nothing on the subject has appeared on arXiv after 2608.30273."
+  }
+}

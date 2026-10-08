@@ -1,0 +1,611 @@
+{
+  "text_files": [
+    "note2/note2-abstract.tex",
+    "note2/note2-content.tex"
+  ],
+  "ledger_entries": 56,
+  "claims": 29,
+  "failures": 0,
+  "distinct_numeric_tokens": 59,
+  "unaccounted_tokens": [],
+  "rows": [
+    {
+      "printed": "367",
+      "computed": "367",
+      "what": "size of the code",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "486",
+      "computed": "486",
+      "what": "|F| + |U| for one pair in C_7^5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "486",
+      "computed": "486",
+      "what": "codes of the Stage 2.2 plateau",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "243",
+      "computed": "243",
+      "what": "codes per component, 3^5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "242",
+      "computed": "242",
+      "what": "shapes in C_7^5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "4050",
+      "computed": "4050",
+      "what": "|F|+|U|, nine pairs, least",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "4080",
+      "computed": "4080",
+      "what": "|F|+|U|, nine pairs, most",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "4374",
+      "computed": "4374",
+      "what": "2 * 9 * 3^5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "162",
+      "computed": "162",
+      "what": "forbidden, k = 1",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "108",
+      "computed": "108",
+      "what": "forbidden, k = 2",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "72",
+      "computed": "72",
+      "what": "forbidden, k = 3",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "48",
+      "computed": "48",
+      "what": "forbidden, k = 4",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "32",
+      "computed": "32",
+      "what": "forbidden, k = 5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "32",
+      "computed": "32",
+      "what": "shapes with k = 5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "32",
+      "computed": "32",
+      "what": "cells of a box",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "324",
+      "computed": "324",
+      "what": "penalised, k = 1",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "378",
+      "computed": "378",
+      "what": "penalised, k = 2",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "414",
+      "computed": "414",
+      "what": "penalised, k = 3",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "438",
+      "computed": "438",
+      "what": "penalised, k = 4",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "454",
+      "computed": "454",
+      "what": "penalised, k = 5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "10",
+      "computed": "10",
+      "what": "shapes with k = 1",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "40",
+      "computed": "40",
+      "what": "shapes with k = 2",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "80",
+      "computed": "80",
+      "what": "shapes with k = 3",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "80",
+      "computed": "80",
+      "what": "shapes with k = 4",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "366",
+      "computed": "366",
+      "what": "largest set with a k = 1 pair",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "367",
+      "computed": "367",
+      "what": "largest set with a k = 2 pair",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "366",
+      "computed": "366",
+      "what": "largest set with a k = 3 pair",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "366",
+      "computed": "366",
+      "what": "largest set with a k = 4 pair",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "366",
+      "computed": "366",
+      "what": "largest set with a k = 5 pair",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "343",
+      "computed": "343",
+      "what": "the linear code",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "350",
+      "computed": "350",
+      "what": "the Mathew-Ostergard set",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "3.21",
+      "computed": "3.21",
+      "what": "largest spread of |F| over colourings, 367-word codes",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "51",
+      "computed": "51",
+      "what": "Aut-classes of the plateau",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "208",
+      "computed": "208",
+      "what": "configurations with t >= 9",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "1098",
+      "computed": "1098",
+      "what": "|F| at t = 9, least",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "1128",
+      "computed": "1128",
+      "what": "|F| at t = 9, most",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "1240",
+      "computed": "1240",
+      "what": "|F| at t = 10, least",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "1268",
+      "computed": "1268",
+      "what": "|F| at t = 10, most",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "972",
+      "computed": "972",
+      "what": "per-pair part of the nine-pair regions",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "126",
+      "computed": "126",
+      "what": "cross terms, least",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "156",
+      "computed": "156",
+      "what": "cross terms, most",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "64538880",
+      "computed": "64538880",
+      "what": "group elements per pair",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "65829657600",
+      "computed": "65829657600",
+      "what": "images scored",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "366",
+      "computed": "366",
+      "what": "best repaired at t = 9",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "365",
+      "computed": "365",
+      "what": "best repaired at t = 10",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "108",
+      "computed": "108",
+      "what": "repaired 366-word sets tested for 3-opt",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "401",
+      "computed": "401",
+      "what": "the Lovasz bound on alpha(C_7^5)",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "15679",
+      "computed": "15679",
+      "what": "allowed vertices, least",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "15709",
+      "computed": "15709",
+      "what": "allowed vertices, most",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "0.879",
+      "computed": "0.879",
+      "what": "ratio needed, k = 1",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "0.754",
+      "computed": "0.754",
+      "what": "ratio needed, k = 2",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "0.688",
+      "computed": "0.688",
+      "what": "ratio needed, k = 3",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "0.651",
+      "computed": "0.651",
+      "what": "ratio needed, k = 4",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "0.628",
+      "computed": "0.628",
+      "what": "ratio needed, k = 5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "0.7678",
+      "computed": "0.7678",
+      "what": "best ratio on record",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "printed": "0.68",
+      "computed": "0.68",
+      "what": "largest ratio at 366 words",
+      "value_agrees": true,
+      "appears_in_note": true
+    }
+  ],
+  "claim_rows": [
+    {
+      "pattern": "has\\s+seven",
+      "computed": "7",
+      "expected": "7",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "all seven\\s+candidates",
+      "computed": "7",
+      "expected": "7",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "code \\\\cite\\{baumert1971\\} has none",
+      "computed": "0",
+      "expected": "0",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "differs in two words has six",
+      "computed": "6",
+      "expected": "6",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "code has eight",
+      "computed": "8",
+      "expected": "8",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "run from\\s+\\$5\\$",
+      "computed": "5",
+      "expected": "5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "to \\$10\\$",
+      "computed": "10",
+      "expected": "10",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "every candidate has shape \\$k=2\\$",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "Two classes have nine candidates",
+      "computed": "2",
+      "expected": "2",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "one class has ten",
+      "computed": "1",
+      "expected": "1",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "exactly \\$16\\$ forbidden regions at \\$t=9\\$",
+      "computed": "16",
+      "expected": "16",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "\\$4\\$ at \\$t=10\\$",
+      "computed": "4",
+      "expected": "4",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "in \\$F\\$ is \\$1\\$",
+      "computed": "1",
+      "expected": "1",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "exactly \\$3\\$-opt optimal",
+      "computed": "0",
+      "expected": "0",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "Only \\$2\\$ or \\$3\\$",
+      "computed": "[2, 3]",
+      "expected": "[2, 3]",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "has at least \\$5\\$",
+      "computed": "5",
+      "expected": "5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "five independent three-state switches",
+      "computed": "5",
+      "expected": "5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "product of\\s+five independent",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "cyclically adjacent pairs of coordinates",
+      "computed": "[[0, 1], [0, 4], [1, 2], [2, 3], [3, 4]]",
+      "expected": "[[0, 1], [0, 4], [1, 2], [2, 3], [3, 4]]",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "automorphism\\s+of order \\$5\\$",
+      "computed": "5",
+      "expected": "5",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "cycles\\s+the coordinates",
+      "computed": "[[5], [5], [5], [5]]",
+      "expected": "[[5], [5], [5], [5]]",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "a third start adds a third",
+      "computed": "3",
+      "expected": "3",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "checked by direct count for every shape",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "not\\s+Lemma~\\\\ref\\{lem:shape\\}",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "No image avoids any region",
+      "computed": "0",
+      "expected": "0",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "reproduces the histogram",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "reaches \\$367\\$ at \\$t=8\\$",
+      "computed": "367",
+      "expected": "367",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "recovers \\$367\\$ from deliberately damaged sets",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears_in_note": true
+    },
+    {
+      "pattern": "rejects a non-automorphism",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears_in_note": true
+    }
+  ],
+  "all_pass": true
+}

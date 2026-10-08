@@ -1230,6 +1230,82 @@ def stage2_3(w, r):
       "can answer.")
     w()
 
+def stage2w2(w, gate, core, nums):
+    """Stage 2W-2 -- the second note."""
+    if not (gate and core and nums):
+        return
+    w("---")
+    w()
+    w("# Stage 2W-2 — the second note")
+    w()
+    w("The text is `note2/note2.tex` (with `note2-abstract.tex`, `note2-content.tex`); no new search "
+      "was run, only the checks below.")
+    w()
+    v = gate["verdict"]
+    w("## W2.0 — the literature gate")
+    w()
+    newer = [h for h in gate["newer_than_the_record"] if h["on_our_subject"]]
+    w(f"Fresh arXiv searches ({len(gate['extra_searches'])} targeted queries on top of `scripts/litcheck.py`) "
+      f"and a mechanical scan of the five dumped papers: {gate['candidate_sentences_total']['count_or_shape']} "
+      f"candidate sentences on counts or shapes of pairs, {gate['candidate_sentences_total']['identity_or_tradeoff']} "
+      f"on the identity or a cost trade-off, all read in full (`results/json/w2_gate.json`). Items after "
+      f"arXiv:2608.30273 on our subject: {len(newer)}.")
+    w()
+    w("| question | answer |")
+    w("|---|---|")
+    w(f"| pair count published as a property of codes | {yn(v['pair_count_published_as_a_property_of_codes'])} |")
+    w(f"| table of pair shapes published | {yn(v['table_of_pair_shapes_published'])} |")
+    w(f"| \\|F\\| + \\|U\\| identity published or applied | {yn(v['identity_F_plus_U_published_or_applied'])} |")
+    w(f"| shape-invariance of the total cost derived | {yn(v['shape_cost_invariance_derived_anywhere'])} |")
+    w(f"| new record or gadget work since Tandon | {yn(v['new_record_or_gadget_work_since_tandon'])} |")
+    w()
+    w(v["reading"] + " The new quotations are [G26-10], [T26-7], [T26-8], [T26-9] in `SOURCES.md`.")
+    w()
+    w("## W2.1 — the proved core, checked before it was written")
+    w()
+    w(f"* **Definitions.** {core['definitions']['gao']}; {core['definitions']['tandon']}. Ours are the same "
+      "(closed, 3⁵ vertices). For one pair F = N(r) ∩ N(q), U = N(r) ∪ N(q); for a family "
+      f"{core['definitions']['family']}.")
+    ok = all(r["sum_equals_2_3_pow_d_for_every_shape"] for r in core["identity"])
+    w(f"* **The identity** |F| + |U| = 2·3^d holds for every shape at d = 3, 4, 5 and n = 3, 4, 5, 7, 9: "
+      f"{tick(ok)} (54, 162, 486). The cost-by-shape formula 3^(d−k)·2^k holds for n ≥ 4 "
+      f"({tick(core['shape_formula_holds_for_n_ge_4'])}) and fails at n = 3, where C₃ is complete "
+      f"({tick(core['shape_formula_fails_for_n_3'])}). The family form holds on every t = 8 and t = 9 "
+      f"configuration of I₀ and X Gao ({tick(core['family']['identity_holds_on_every_configuration'])}); at "
+      f"t = 9, |F| + |U| = {core['family']['F_plus_U_range_by_t']['9'][0]}–{core['family']['F_plus_U_range_by_t']['9'][1]} "
+      f"against 2·9·3⁵ = {core['family']['two_t_3_pow_5_by_t']['9']}.")
+    p = core["plateau"]
+    w(f"* **The second 486 has a different origin.** Rebuilt constructively, each component of the swap "
+      f"plateau is a product of {p['switches_found']} three-state switches, {p['component_sizes'][0]} codes "
+      f"({tick(p['component_rebuilt_from_switches'])}); the switches sit on the coordinate pairs "
+      f"{p['coordinates_moved_per_switch']} — the five edges of a 5-cycle on the coordinates — and the "
+      f"order-{p['stabiliser_order']} stabiliser of the ten-pair code cycles the coordinates. Its 3 counts "
+      f"states of a switch, not {{−1, 0, 1}}. And its 2 was the number of components our starting codes "
+      f"lay in: with the 367-word set Stage 2.3 added to `sets/`, the same closure has "
+      f"**{p['codes']} codes in {p['components']} components**. The new component is an image of a known "
+      "one, so the 51 Aut-classes of Stage 2.2 are unchanged; the count 486 there was correct for its "
+      "fourteen starting files and is not a structural number.")
+    w()
+    w("## W2.2 — the numbers in the note")
+    w()
+    w(f"`scripts/w2_checknums.py`: {nums['ledger_entries']} ledger entries and {nums['claims']} claims, "
+      f"{nums['failures']} failures; {nums['distinct_numeric_tokens']} distinct numeric tokens in the text, "
+      f"{len(nums['unaccounted_tokens'])} unaccounted: {tick(nums['all_pass'])}.")
+    w()
+    w("## Deviations from the brief")
+    w()
+    w("1. **'Theorem' became a lemma, said to be inclusion–exclusion.** The identity holds for any two "
+      "vertices, private or not; calling it a theorem would make the public text stronger than its "
+      "content. What the note claims is its consequence for gadgets.")
+    w("2. **The identity is stated for families with an inequality.** |F| + |U| = 2·3^d is true for one "
+      "pair; for t pairs it is |N(P_H)| + |N(P_V)| ≤ 2t·3^d, and the measured nine-pair values sit "
+      "below the bound.")
+    w("3. **n ≥ 3, not n ≥ 5**, for the identity; the shape formula needs n ≥ 4.")
+    w("4. **'Together they close the route' is stated for the codes we hold.** The first note proves "
+      "there is no ninth pair on I₀; this one shows the nine- and ten-pair codes we hold fall one and "
+      "two words short, which is not a proof for all codes.")
+    w()
+
 
 def main():
     prereg = load("prereg.json")
@@ -1301,7 +1377,7 @@ def main():
     th = load("theta.json")
     mis3 = load("mis_c7_d3.json")
 
-    w("# RESULTS — shannon, Stages 0, 1, 2W, 2, 2.1, 2.2 and 2.3")
+    w("# RESULTS — shannon, Stages 0, 1, 2W, 2, 2.1, 2.2, 2.3 and 2W-2")
     w()
     w("**This file is generated by `scripts/make_results.py` from `results/json/*.json`. "
       "Do not edit it by hand.**")
@@ -1368,6 +1444,7 @@ def main():
     stage2_1(w, load("s2_1_room.json"))
     stage2_2(w, load("s2_2.json"), load("s2_2_pilot.json"))
     stage2_3(w, load("s2_3.json"))
+    stage2w2(w, load("w2_gate.json"), load("w2_core.json"), load("w2_checknums.json"))
 
     w("## Rule 0")
     w()

@@ -1,0 +1,61 @@
+{
+  "_status": "DRAFT, not deposited. A separate Zenodo record for the second note; see RESULTS.md, Stage 2W-2, and the proposal in the stage report.",
+  "title": "The shape of a private pair redistributes its cost: private pairs as a property of the code (with the shannon repository, Stages 2-2W-2)",
+  "upload_type": "publication",
+  "publication_type": "preprint",
+  "creators": [
+    {
+      "name": "Oktiabrev, Artem",
+      "orcid": "0009-0003-3626-2002"
+    }
+  ],
+  "license": "cc-by-4.0",
+  "access_right": "open",
+  "version": "1.0.0",
+  "language": "eng",
+  "publication_date": "2026-10-08",
+  "keywords": [
+    "Shannon capacity",
+    "zero-error capacity",
+    "independent sets",
+    "strong graph product",
+    "odd cycles",
+    "C7",
+    "private pairs",
+    "gadget product",
+    "reproducible research"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.22979509",
+      "relation": "continues",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.5281/zenodo.22979509",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "https://github.com/aoktyabrev/shannon/tree/v1.2.0",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.48550/arXiv.2607.27869",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.48550/arXiv.2608.30273",
+      "relation": "references",
+      "scheme": "doi"
+    },
+    {
+      "identifier": "10.48550/arXiv.1808.07438",
+      "relation": "references",
+      "scheme": "doi"
+    }
+  ],
+  "notes": "The one lemma is proved by hand and is elementary (inclusion-exclusion); everything else is finite computation, exhaustive or search as stated. The 366-word ceiling is not a proof of non-existence. Claude and Claude Code (Anthropic) were used for the implementation and for drafting the text, under the author's direction and responsibility."
+}

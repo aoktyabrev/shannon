@@ -48,3 +48,7 @@ sources/*/src/
 submission/ipl/package/
 submission/ipl/ipl-submission*.zip
 sources/venue/*.txt
+# LaTeX build products of the second note (note2.pdf is kept)
+note2/*.aux
+note2/*.log
+note2/*.out

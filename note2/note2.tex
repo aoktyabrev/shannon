@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage{multicol}
+\usepackage[inline]{enumitem}
+\setlist{nosep}
+\setlength{\abovedisplayskip}{4pt}
+\setlength{\belowdisplayskip}{4pt}
+\setlength{\abovedisplayshortskip}{2pt}
+\setlength{\belowdisplayshortskip}{2pt}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{observation}[theorem]{Observation}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\PH}{P^{\mathrm H}}
+\newcommand{\PV}{P^{\mathrm V}}
+\newcommand{\Zs}{\mathbb{Z}_7^5}
+\newcommand{\boxt}{\boxtimes}
+
+\title{The shape of a private pair redistributes its cost:\\ private pairs as a property of the code}
+\author{Artem Oktiabrev\thanks{Independent researcher, Ukraine.
+\href{https://orcid.org/0009-0003-3626-2002}{ORCID 0009-0003-3626-2002},
+\texttt{aoktyabrev@gmail.com}.}}
+\date{8 October 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\input{note2-abstract}
+\end{abstract}
+
+\input{note2-content}
+
+\footnotesize
+\begin{multicols}{2}
+\begin{thebibliography}{99}
+\setlength{\itemsep}{-1pt}
+\setlength{\parsep}{0pt}
+\bibitem{oktiabrev2026a} A.~Oktiabrev, The Polak--Schrijver code has exactly eight private
+pairs, preprint, Zenodo, 2026.
+\href{https://doi.org/10.5281/zenodo.22979509}{doi:10.5281/zenodo.22979509}.
+\bibitem{shannonarchive2} A.~Oktiabrev, Sets, verifier and scripts for ``The shape of a private
+pair redistributes its cost'' [dataset], Zenodo, 2026. DOI to be assigned on deposit.
+\bibitem{baumert1971} L.~Baumert, R.~McEliece, E.~Rodemich, H.~Rumsey, R.~Stanley, H.~Taylor,
+A combinatorial packing problem, \textit{Computers in Algebra and Number Theory}, American
+Mathematical Society, 1971.
+\bibitem{bpz2026} P.~Buys, S.~Polak, J.~Zuiddam, Lean-verified lower bounds for the Shannon
+capacity of odd cycles, arXiv preprint, 2026. \href{https://doi.org/10.48550/arXiv.2607.29681}{doi:10.48550/arXiv.2607.29681}.
+\bibitem{gao2026} Y.~Gao, A recursive construction improving the lower bound on the Shannon
+capacity of $C_7$, arXiv preprint, 2026. \href{https://doi.org/10.48550/arXiv.2607.27869}{doi:10.48550/arXiv.2607.27869}.
+\bibitem{itty2026} N.~Itty, C.~D.~Rosin, C.~Carstensen, D.~Reichman, Improved lower bounds
+for the Shannon capacity of odd cycles, arXiv preprint, 2026. \href{https://doi.org/10.48550/arXiv.2607.21517}{doi:10.48550/arXiv.2607.21517}.
+\bibitem{lovasz1979} L.~Lov\'asz, On the Shannon capacity of a graph, \textit{IEEE
+Transactions on Information Theory} 25 (1979) 1--7.
+\bibitem{mathew2017} K.~A.~Mathew, P.~R.~J.~\"Osterg{\aa}rd, New lower bounds for the Shannon
+capacity of odd cycles, \textit{Designs, Codes and Cryptography} 84 (2017) 13--22.
+\bibitem{polak2019} S.~C.~Polak, A.~Schrijver, New lower bound on the Shannon capacity of
+$C_7$ from circular graphs, \textit{Information Processing Letters} 143 (2019) 37--40.
+\bibitem{tandon2026} R.~Tandon, Strengthening recursive constructions for zero-error Shannon
+capacity, arXiv preprint, 2026. \href{https://doi.org/10.48550/arXiv.2608.30273}{doi:10.48550/arXiv.2608.30273}.
+\end{thebibliography}
+\end{multicols}
+
+\end{document}

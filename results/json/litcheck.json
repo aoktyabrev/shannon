@@ -1,12 +1,22 @@
 {
-  "date": "2026-10-02",
-  "timestamp": "2026-10-02T12:19:26Z",
-  "label": "stage2-start",
+  "date": "2026-10-08",
+  "timestamp": "2026-10-08T08:19:37Z",
+  "label": "note2-gate",
   "searches": [
     {
       "query": "Shannon capacity",
       "url": "https://arxiv.org/search/?searchtype=all&query=Shannon+capacity&start=0&sortBy=submitted_date&sortOrder=descending",
       "hits": [
+        {
+          "id": "2610.06758",
+          "title": "Nonadditivity in fermionic quantum Shannon theory",
+          "submitted": "5 October, 2026"
+        },
+        {
+          "id": "2610.05390",
+          "title": "Energy Efficiency Optimization for 5G NR PDSCH: A Cross-Layer Link Abstraction Framework",
+          "submitted": "4 October, 2026"
+        },
         {
           "id": "2609.40054",
           "title": "Transmitting algebras through quantum channels",
@@ -46,11 +56,6 @@
           "id": "2609.18200",
           "title": "Shannon entropy and complex network community detection to study electoral coalition behaviour at municipal scale",
           "submitted": "16 September, 2026"
-        },
-        {
-          "id": "2609.14621",
-          "title": "A pretty-tight converse on the classical capacity of generalized amplitude-damping channels",
-          "submitted": "13 September, 2026"
         },
         {
           "id": "2609.11368",
@@ -251,11 +256,6 @@
           "id": "2604.18065",
           "title": "Morita equivalence for quantum graphs",
           "submitted": "20 April, 2026"
-        },
-        {
-          "id": "2604.11204",
-          "title": "Semantic Rate-Distortion Theory: Deductive Compression and Closure Fidelity",
-          "submitted": "13 April, 2026"
         }
       ]
     },
@@ -360,6 +360,16 @@
   ],
   "union_sorted_by_id": [
     {
+      "id": "2610.06758",
+      "title": "Nonadditivity in fermionic quantum Shannon theory",
+      "submitted": "5 October, 2026"
+    },
+    {
+      "id": "2610.05390",
+      "title": "Energy Efficiency Optimization for 5G NR PDSCH: A Cross-Layer Link Abstraction Framework",
+      "submitted": "4 October, 2026"
+    },
+    {
       "id": "2609.40054",
       "title": "Transmitting algebras through quantum channels",
       "submitted": "30 September, 2026"
@@ -398,11 +408,6 @@
       "id": "2609.18200",
       "title": "Shannon entropy and complex network community detection to study electoral coalition behaviour at municipal scale",
       "submitted": "16 September, 2026"
-    },
-    {
-      "id": "2609.14621",
-      "title": "A pretty-tight converse on the classical capacity of generalized amplitude-damping channels",
-      "submitted": "13 September, 2026"
     },
     {
       "id": "2609.11368",
@@ -615,11 +620,6 @@
       "submitted": "20 April, 2026"
     },
     {
-      "id": "2604.11204",
-      "title": "Semantic Rate-Distortion Theory: Deductive Compression and Closure Fidelity",
-      "submitted": "13 April, 2026"
-    },
-    {
       "id": "1912.04337",
       "title": "Exact solution of stochastic gene expression models with bursting, cell cycle and replication dynamics",
       "submitted": "13 February, 2020"
@@ -661,5 +661,5 @@
     "2607.29681": true,
     "2608.30273": true
   },
-  "newest_hit_id": "2609.40054"
+  "newest_hit_id": "2610.06758"
 }

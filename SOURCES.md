@@ -510,3 +510,30 @@ G(5,7) ≥ 350; `scripts/s2_reconstruct_mo.py` parses them out of the dump, gene
 under the translation x ↦ x + (0,1,1,5,1), and `scripts/verify` confirms the resulting 350 words
 are independent (box and quadratic paths agreeing). Stage 0 had recorded that this set was not
 available to us; that was wrong, and `RESULTS.md` says so at the point where the claim was made.
+
+---
+
+## Additional quotations used by the second note (Stage 2W-2)
+
+### [G26-10] the neighbourhood is closed — arXiv:2607.27869, `paper.tex` lines 113–118
+
+> For $S\subseteq V(G)$, put
+> N(S)=\{x\in V(G):x\closeadj s
+> \text{ for some }s\in S\}.
+> Thus $N(S)$ is the closed neighborhood of $S$.
+
+### [T26-7] the neighbourhood is closed, in Tandon's notation — arXiv:2608.30273, `main.tex` lines 633–637
+
+> For vertices $u,v$ of a graph $G$, write $u\simeq v$ when $u=v$ or $u$ and $v$ are adjacent, so that $u\simeq v$ means that the two vertices are confusable. For $S\subseteq V(G)$, let
+> N(S)=\{u\in V(G):u\simeq v\text{ for some }v\in S\}
+> denote the closed neighborhood of $S$. For a singleton, we write $N(v)=N(\{v\})$.
+
+### [T26-8] private pair — arXiv:2608.30273, `main.tex` lines 639–646
+
+> Let $I\subseteq V(G)$ be an independent set. A pair $(r,q)$ of vertices of $G$ is called a \emph{private pair} for $I$ if
+> r\in I,\qquad q\notin I,\qquad N(q)\cap I=\{r\}.
+> Equivalently, $q$ is confusable with exactly one vertex of $I$, namely $r$.
+
+### [T26-9] exchanges along private pairs (our 1-swap) — arXiv:2608.30273, `main.tex` line 1424
+
+> The independent set $J^+\subseteq V(C_7^{\boxtimes 10})$ is obtained from the automorphic image $(T\times T)(I_{10})$, followed by eight exchanges along selected private pairs, where

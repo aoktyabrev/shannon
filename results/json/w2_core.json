@@ -1,0 +1,923 @@
+{
+  "definitions": {
+    "ours": "F = N[P_H] cap N[P_V], U = N[P_H] cup N[P_V], closed neighbourhoods of 3^5 vertices (scripts/s1_aux.c)",
+    "gao": "N(S) is the closed neighborhood of S [G26-10]; gadget condition X cap N(P_H) cap N(P_V) = {} and O = X minus (N(P_H) cup N(P_V)) [G26-1]",
+    "tandon": "N(S) denotes the closed neighborhood of S [T26-7]",
+    "same": true,
+    "one_pair": "for t = 1, F = N[r] cap N[q] and U = N[r] cup N[q]",
+    "family": "|F| + |U| = |N[P_H]| + |N[P_V]| <= 2 t 3^d, equality iff the neighbourhoods within each transversal are pairwise disjoint"
+  },
+  "identity": [
+    {
+      "d": 3,
+      "n": 3,
+      "closed_nbhd": 27,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          27
+        ],
+        "2": [
+          27
+        ],
+        "3": [
+          27
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": false
+    },
+    {
+      "d": 3,
+      "n": 4,
+      "closed_nbhd": 27,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          18
+        ],
+        "2": [
+          12
+        ],
+        "3": [
+          8
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": true
+    },
+    {
+      "d": 3,
+      "n": 5,
+      "closed_nbhd": 27,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          18
+        ],
+        "2": [
+          12
+        ],
+        "3": [
+          8
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": true
+    },
+    {
+      "d": 3,
+      "n": 7,
+      "closed_nbhd": 27,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          18
+        ],
+        "2": [
+          12
+        ],
+        "3": [
+          8
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": true
+    },
+    {
+      "d": 3,
+      "n": 9,
+      "closed_nbhd": 27,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          18
+        ],
+        "2": [
+          12
+        ],
+        "3": [
+          8
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": true
+    },
+    {
+      "d": 4,
+      "n": 3,
+      "closed_nbhd": 81,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          81
+        ],
+        "2": [
+          81
+        ],
+        "3": [
+          81
+        ],
+        "4": [
+          81
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": false
+    },
+    {
+      "d": 4,
+      "n": 4,
+      "closed_nbhd": 81,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          54
+        ],
+        "2": [
+          36
+        ],
+        "3": [
+          24
+        ],
+        "4": [
+          16
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": true
+    },
+    {
+      "d": 4,
+      "n": 5,
+      "closed_nbhd": 81,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          54
+        ],
+        "2": [
+          36
+        ],
+        "3": [
+          24
+        ],
+        "4": [
+          16
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": true
+    },
+    {
+      "d": 4,
+      "n": 7,
+      "closed_nbhd": 81,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          54
+        ],
+        "2": [
+          36
+        ],
+        "3": [
+          24
+        ],
+        "4": [
+          16
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": true
+    },
+    {
+      "d": 4,
+      "n": 9,
+      "closed_nbhd": 81,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          54
+        ],
+        "2": [
+          36
+        ],
+        "3": [
+          24
+        ],
+        "4": [
+          16
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": true
+    },
+    {
+      "d": 5,
+      "n": 3,
+      "closed_nbhd": 243,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          243
+        ],
+        "2": [
+          243
+        ],
+        "3": [
+          243
+        ],
+        "4": [
+          243
+        ],
+        "5": [
+          243
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": false
+    },
+    {
+      "d": 5,
+      "n": 4,
+      "closed_nbhd": 243,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          162
+        ],
+        "2": [
+          108
+        ],
+        "3": [
+          72
+        ],
+        "4": [
+          48
+        ],
+        "5": [
+          32
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": true
+    },
+    {
+      "d": 5,
+      "n": 5,
+      "closed_nbhd": 243,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          162
+        ],
+        "2": [
+          108
+        ],
+        "3": [
+          72
+        ],
+        "4": [
+          48
+        ],
+        "5": [
+          32
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": true
+    },
+    {
+      "d": 5,
+      "n": 7,
+      "closed_nbhd": 243,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          162
+        ],
+        "2": [
+          108
+        ],
+        "3": [
+          72
+        ],
+        "4": [
+          48
+        ],
+        "5": [
+          32
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": true
+    },
+    {
+      "d": 5,
+      "n": 9,
+      "closed_nbhd": 243,
+      "is_3_pow_d": true,
+      "sum_equals_2_3_pow_d_for_every_shape": true,
+      "forbidden_by_shape": {
+        "1": [
+          162
+        ],
+        "2": [
+          108
+        ],
+        "3": [
+          72
+        ],
+        "4": [
+          48
+        ],
+        "5": [
+          32
+        ]
+      },
+      "shape_formula_3_pow_d_minus_k_2_pow_k": true
+    }
+  ],
+  "identity_all_pass": true,
+  "shape_formula_holds_for_n_ge_4": true,
+  "shape_formula_fails_for_n_3": true,
+  "family": {
+    "rows": [
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 31,
+        "F": 972,
+        "U": 2684,
+        "N_PH": 1802,
+        "N_PV": 1854,
+        "F_plus_U": 3656,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 15,
+        "F": 966,
+        "U": 2684,
+        "N_PH": 1824,
+        "N_PV": 1826,
+        "F_plus_U": 3650,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 151,
+        "F": 978,
+        "U": 2684,
+        "N_PH": 1808,
+        "N_PV": 1854,
+        "F_plus_U": 3662,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 135,
+        "F": 966,
+        "U": 2684,
+        "N_PH": 1826,
+        "N_PV": 1824,
+        "F_plus_U": 3650,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 91,
+        "F": 976,
+        "U": 2684,
+        "N_PH": 1822,
+        "N_PV": 1838,
+        "F_plus_U": 3660,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 75,
+        "F": 978,
+        "U": 2684,
+        "N_PH": 1848,
+        "N_PV": 1814,
+        "F_plus_U": 3662,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 211,
+        "F": 964,
+        "U": 2684,
+        "N_PH": 1820,
+        "N_PV": 1828,
+        "F_plus_U": 3648,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 195,
+        "F": 960,
+        "U": 2684,
+        "N_PH": 1842,
+        "N_PV": 1802,
+        "F_plus_U": 3644,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 61,
+        "F": 956,
+        "U": 2684,
+        "N_PH": 1794,
+        "N_PV": 1846,
+        "F_plus_U": 3640,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 45,
+        "F": 960,
+        "U": 2684,
+        "N_PH": 1820,
+        "N_PV": 1824,
+        "F_plus_U": 3644,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 181,
+        "F": 980,
+        "U": 2684,
+        "N_PH": 1808,
+        "N_PV": 1856,
+        "F_plus_U": 3664,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 165,
+        "F": 978,
+        "U": 2684,
+        "N_PH": 1832,
+        "N_PV": 1830,
+        "F_plus_U": 3662,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 121,
+        "F": 972,
+        "U": 2684,
+        "N_PH": 1820,
+        "N_PV": 1836,
+        "F_plus_U": 3656,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 105,
+        "F": 984,
+        "U": 2684,
+        "N_PH": 1850,
+        "N_PV": 1818,
+        "F_plus_U": 3668,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 241,
+        "F": 978,
+        "U": 2684,
+        "N_PH": 1826,
+        "N_PV": 1836,
+        "F_plus_U": 3662,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_polak_schrijver.txt",
+        "t": 8,
+        "colouring": 225,
+        "F": 984,
+        "U": 2684,
+        "N_PH": 1854,
+        "N_PV": 1814,
+        "F_plus_U": 3668,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 3888,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 31,
+        "F": 1104,
+        "U": 2952,
+        "N_PH": 2003,
+        "N_PV": 2053,
+        "F_plus_U": 4056,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 79,
+        "F": 1102,
+        "U": 2952,
+        "N_PH": 2003,
+        "N_PV": 2051,
+        "F_plus_U": 4054,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 279,
+        "F": 1118,
+        "U": 2952,
+        "N_PH": 2011,
+        "N_PV": 2059,
+        "F_plus_U": 4070,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 327,
+        "F": 1098,
+        "U": 2952,
+        "N_PH": 2003,
+        "N_PV": 2047,
+        "F_plus_U": 4050,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 155,
+        "F": 1102,
+        "U": 2952,
+        "N_PH": 2003,
+        "N_PV": 2051,
+        "F_plus_U": 4054,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 203,
+        "F": 1116,
+        "U": 2952,
+        "N_PH": 2011,
+        "N_PV": 2057,
+        "F_plus_U": 4068,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 403,
+        "F": 1128,
+        "U": 2952,
+        "N_PH": 2017,
+        "N_PV": 2063,
+        "F_plus_U": 4080,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 451,
+        "F": 1124,
+        "U": 2952,
+        "N_PH": 2017,
+        "N_PV": 2059,
+        "F_plus_U": 4076,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 61,
+        "F": 1118,
+        "U": 2952,
+        "N_PH": 2029,
+        "N_PV": 2041,
+        "F_plus_U": 4070,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 109,
+        "F": 1128,
+        "U": 2952,
+        "N_PH": 2035,
+        "N_PV": 2045,
+        "F_plus_U": 4080,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 309,
+        "F": 1118,
+        "U": 2952,
+        "N_PH": 2031,
+        "N_PV": 2039,
+        "F_plus_U": 4070,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 357,
+        "F": 1110,
+        "U": 2952,
+        "N_PH": 2029,
+        "N_PV": 2033,
+        "F_plus_U": 4062,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 185,
+        "F": 1098,
+        "U": 2952,
+        "N_PH": 2021,
+        "N_PV": 2029,
+        "F_plus_U": 4050,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 233,
+        "F": 1124,
+        "U": 2952,
+        "N_PH": 2035,
+        "N_PV": 2041,
+        "F_plus_U": 4076,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 433,
+        "F": 1110,
+        "U": 2952,
+        "N_PH": 2029,
+        "N_PV": 2033,
+        "F_plus_U": 4062,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      },
+      {
+        "code": "sets/C7_d5_367_auxiliary_X.txt",
+        "t": 9,
+        "colouring": 481,
+        "F": 1118,
+        "U": 2952,
+        "N_PH": 2035,
+        "N_PV": 2035,
+        "F_plus_U": 4070,
+        "equals_N_PH_plus_N_PV": true,
+        "two_t_3_pow_5": 4374,
+        "F_matches_C": true
+      }
+    ],
+    "identity_holds_on_every_configuration": true,
+    "F_plus_U_range_by_t": {
+      "8": [
+        3640,
+        3668
+      ],
+      "9": [
+        4050,
+        4080
+      ]
+    },
+    "two_t_3_pow_5_by_t": {
+      "8": 3888,
+      "9": 4374
+    }
+  },
+  "plateau": {
+    "codes": 729,
+    "components": 3,
+    "component_sizes": [
+      243
+    ],
+    "one_swap_edges": 2430,
+    "edges_of_two_copies_of_P3_box_5": 1620,
+    "degree_hist_in_component": {
+      "5": 32,
+      "6": 80,
+      "7": 80,
+      "8": 40,
+      "9": 10,
+      "10": 1
+    },
+    "P3_box_5_degree_hist": {
+      "5": 32,
+      "6": 80,
+      "7": 80,
+      "8": 40,
+      "9": 10,
+      "10": 1
+    },
+    "switches_found": 5,
+    "moves_per_switch": [
+      2,
+      2,
+      2,
+      2,
+      2
+    ],
+    "component_rebuilt_from_switches": true,
+    "shapes_of_switch_moves": [
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "coordinates_moved_per_switch": [
+      [
+        0,
+        4
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ]
+    ],
+    "stabiliser_order": 5,
+    "stabiliser_coordinate_cycle_types": [
+      [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ],
+      [
+        5
+      ]
+    ],
+    "stabiliser_action_on_switches": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      [
+        2,
+        4,
+        3,
+        1,
+        0
+      ],
+      [
+        4,
+        3,
+        0,
+        2,
+        1
+      ],
+      [
+        3,
+        0,
+        1,
+        4,
+        2
+      ],
+      [
+        1,
+        2,
+        4,
+        0,
+        3
+      ]
+    ],
+    "I0_component": 1,
+    "T_of_I0_in_plateau": true,
+    "T_of_I0_component": 0,
+    "T_maps_I0_component_to": [
+      0
+    ]
+  }
+}

@@ -1,0 +1,231 @@
+% The body of the second note.  Every number in this file is checked by
+% scripts/w2_checknums.py against results/json.
+\section{Context}
+\label{sec:intro}
+
+Since July 2026 every improvement of the lower bound on $\Theta(C_7)$
+\cite{itty2026,gao2026,bpz2026,tandon2026} starts from one five-dimensional gadget
+\cite{gao2026}: the $367$-word Polak--Schrijver code $I_0$ \cite{polak2019}, eight private
+pairs, two transversals of their endpoints, and an auxiliary set $X$. The recursions built on
+it are most sensitive to the number $t$ of private pairs, and a companion note
+\cite{oktiabrev2026a} proves that for $I_0$ this number cannot be raised: $t^*(I_0)=8$. That
+leaves the obvious next question --- another code with more pairs --- and this note answers why
+that route does not pay as directly as the sensitivity suggests. Together with
+\cite{oktiabrev2026a} it accounts for the route ``more private pairs'' on every code we hold:
+on $I_0$ there is no ninth pair, and on the codes that have nine or ten the best auxiliary set
+falls one word short at nine pairs and two at ten, against forbidden regions that are fixed by
+the geometry of the pairs rather than by the code. That is a statement about
+the codes we hold, not about all codes; Section~\ref{sec:open} says what would change it.
+
+Only one statement below is proved by hand, and it is elementary. Everything else is a finite
+computation, exhaustive where we say so and a search where we say so; the status is given with
+each item, as in \cite{oktiabrev2026a}.
+
+\section{Definitions}
+\label{sec:defs}
+
+Vertices of $C_7^{\boxt d}$ are the elements of $\mathbb{Z}_7^d$; two distinct vertices are
+confusable iff their circular distance is at most $1$ in every coordinate. $N(S)$ is the
+\emph{closed} neighbourhood of a set $S$, as in \cite{gao2026,tandon2026}; for a single
+vertex $|N(v)|=3^d$. A pair $(r,q)$ with $r\in I$, $q\notin I$ is a \emph{private pair} for an
+independent set $I$ if $N(q)\cap I=\{r\}$ \cite{gao2026,tandon2026}. A gadget
+\cite{gao2026} has a code $I$, private pairs $(r_i,q_i)$, $1\le i\le t$, with disjoint
+endpoint sets, two independent complementary transversals $\PH,\PV$ (one endpoint of every
+pair in each), and an independent $X$ with $X\cap N(\PH)\cap N(\PV)=\emptyset$; its profile
+counts $o=|X\setminus(N(\PH)\cup N(\PV))|$. We name the two sets in that definition:
+\[
+  F=N(\PH)\cap N(\PV)\quad\text{(forbidden)},\qquad
+  U=N(\PH)\cup N(\PV)\quad\text{(penalised)}.
+\]
+$X$ must avoid $F$, and every word of $X$ in $U$ is lost from $o$. The \emph{shape} of a pair is
+$\delta=q-r\in\{0,\pm1\}^d\setminus\{0\}$; $k$ is its number of non-zero coordinates.
+
+\section{Cost is conserved}
+\label{sec:identity}
+
+\begin{lemma}
+\label{lem:conserve}
+Let $n\ge3$ and let $\PH,\PV$ be any two sets of vertices of $C_n^{\boxt d}$. Then
+\[
+  |F|+|U| \;=\; |N(\PH)|+|N(\PV)| \;\le\; 3^d\,(|\PH|+|\PV|),
+\]
+with equality iff the closed neighbourhoods of the vertices inside each of $\PH$ and $\PV$ are
+pairwise disjoint. In particular, for a single pair, $\PH=\{r\}$ and $\PV=\{q\}$,
+\[
+  |N(r)\cap N(q)|+|N(r)\cup N(q)| \;=\; 2\cdot 3^d .
+\]
+\end{lemma}
+
+\begin{proof}
+$|A\cap B|+|A\cup B|=|A|+|B|$ for any finite sets, with $A=N(\PH)$, $B=N(\PV)$; and
+$|N(S)|\le\sum_{s\in S}|N(s)|=3^d|S|$, since for $n\ge3$ the three values $a-1,a,a+1$ of
+every coordinate are distinct.
+\end{proof}
+
+The lemma is inclusion--exclusion, and it holds for any two vertices, private or not; it is
+stated because of what it implies for gadgets. A pair contributes $N(r)\cap N(q)$ to $F$ and
+$N(r)\cup N(q)$ to $U$, and the two always add up to $2\cdot 3^d$, which is $486$ in
+$C_7^{\boxt 5}$. \emph{The shape of a pair redistributes its cost between the forbidden and the
+penalised region; it does not lower it.} A shape that makes $F$ small makes $U$ large by the
+same amount, and $U$ is what $o$ is paid from.
+
+\begin{lemma}
+\label{lem:shape}
+For $n\ge4$ and a pair of shape $k$, $|N(r)\cap N(q)|=3^{d-k}\,2^{k}$.
+\end{lemma}
+
+\begin{proof}
+Coordinatewise, $\{a-1,a,a+1\}\cap\{a+\delta-1,a+\delta,a+\delta+1\}$ has $3$ elements if
+$\delta=0$ and $2$ if $\delta=\pm1$, for $n\ge4$; closed neighbourhoods in the strong product
+are products of the coordinate neighbourhoods.
+\end{proof}
+
+Both lemmas were also checked by direct count for every shape with $d=3,4,5$ and
+$n=3,4,5,7,9$ ($n=3$ satisfies Lemma~\ref{lem:conserve} and, as it must, not
+Lemma~\ref{lem:shape}). For families the inequality is strict in practice: the nine-pair
+configurations of Section~\ref{sec:regions} have $|F|+|U|$ between $4050$ and $4080$ against
+$2\cdot9\cdot3^5=4374$.
+
+\section{The five shapes}
+\label{sec:shapes}
+
+The $242$ shapes in $C_7^{\boxt 5}$ fall into five orbits under the stabiliser of a vertex in
+$(D_7)^5\rtimes S_5$, one per $k$. The last column is a finite computation, exhaustive over
+its inputs: for every word $r$ of every code we hold and of the swap plateau of
+Section~\ref{sec:regions}, and every shape, put $q=r+\delta$, delete the other code words
+confusable with $q$, and add back an exact maximum independent set of the freed vertices that
+keep $q$ private. Every set reported is verified, and its pair is re-checked to be private by
+a second program.
+
+\begin{center}\small
+\begin{tabular}{@{}crrrcr@{}}
+\toprule
+$k$ & shapes & $|N(r)\cap N(q)|$ & $|N(r)\cup N(q)|$ & covered cells in box$(q)$ & largest set found \\
+ & & (forbidden) & (penalised) & & \\
+\midrule
+1 & 10 & 162 & 324 & 16 & 366 \\
+2 & 40 & 108 & 378 & 8  & 367 \\
+3 & 80 & 72  & 414 & 4  & 366 \\
+4 & 80 & 48  & 438 & 2  & 366 \\
+5 & 32 & 32  & 454 & 1  & 366 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The cost in $F$ \emph{falls} with $k$; the two-coordinate shape is in the middle, not at the
+minimum. Every shape is realisable as a private pair, the expensive $k=1$ included --- all seven
+candidates of the Mathew--\"Osterg{\aa}rd $350$-word set \cite{mathew2017} have $k=1$ --- but
+in the sets we can build, shapes other than $k=2$ occur only one word below $367$.
+
+The column of covered cells explains why. A word $w$ occupies the box $w+\{0,1\}^5$ of $32$
+cells, and two vertices are non-confusable exactly when their boxes are disjoint; a private
+$q$ meets the code's boxes only inside box$(r)$, in $2^{5-k}$ cells. A pair of shape $k\ge3$
+therefore needs a box with at most $4$ covered cells. In every one of the $367$-word codes we
+can reach, every box outside the code has at least $5$.
+
+\section{The count is a property of the code}
+\label{sec:count}
+
+Counting the candidates --- the vertices with exactly one neighbour in the code --- for every
+code we hold gives a statistic that, as far as we can find, no paper reports. The counts do not
+follow size: the linear $343$-word code \cite{baumert1971} has none, the $350$-word set of
+\cite{mathew2017} has seven, the printed $367$-word code has eight, and an independent rebuild
+of it that differs in two words has six. Among the $367$-word codes the counts we see run from
+$5$ to $10$, every candidate has shape $k=2$, and for a fixed code the forbidden region varies
+over the admissible colourings by at most $3.21\%$.
+
+\section{Sixteen forbidden regions}
+\label{sec:regions}
+
+A private pair is also a move: $I\mapsto I-r+q$ keeps size and independence, and it is the
+exchange used in \cite{tandon2026}. Closing every $367$-word code we hold under these moves,
+and under exhaustive exchanges of two and three words, gives a finite plateau that falls into
+$51$ classes under $\mathrm{Aut}(C_7^{\boxt 5})$. Each connected component is a product of
+five independent three-state switches, $3^5=243$ codes, and the five switches sit on the five
+cyclically adjacent pairs of coordinates, permuted by an automorphism of order $5$ that cycles
+the coordinates. (The plateau first appeared with $486$ codes, two components; that $486$ also
+equals $2\cdot3^5$ is a coincidence: its $3$ counts states of a switch and its $2$ counts the
+components our starting codes happened to lie in --- a third start adds a third.)
+
+Two classes have nine candidates: the published auxiliary set of \cite{gao2026} read as a code,
+and one more; one class has ten. An automorphism $g$ moves the forbidden region to $g\cdot F$
+and leaves $\alpha(C_7^{\boxt5}\setminus F)$ unchanged, so the variables are the code up to
+$\mathrm{Aut}$ and the colouring. All $208$ configurations with $t\ge9$ give, up to
+automorphism, exactly $16$ forbidden regions at $t=9$ and $4$ at $t=10$, with
+\[
+  1098\le|F|\le1128\ (t=9),\qquad 1240\le|F|\le1268\ (t=10),
+\]
+and \emph{each of the sixteen is produced by every nine-pair class}. The forbidden region is a
+function of the geometry of the nine pairs, which are the same switches in every code, and not
+of the rest of the code. In the nine-pair regions $972=9\cdot108$ vertices come from the pairs
+themselves and $126$ to $156$ from cross terms between pairs.
+
+\section{One word short: what is known, and with what status}
+\label{sec:gap}
+
+Against each of the $20$ regions, every image under $(D_7)^5\rtimes S_5$ of one representative
+of each of the $51$ classes was scored exhaustively: $64{,}538{,}880$ group elements per pair,
+$65{,}829{,}657{,}600$ images in all. No image avoids any region; the fewest words of an image
+in $F$ is $1$. Every image within three words of admissible was repaired exactly, and the best
+results are
+\[
+  366 \text{ words at } t=9,\qquad 365 \text{ at } t=10 .
+\]
+All $108$ repaired $366$-word sets are exactly $3$-opt optimal inside $G_F=C_7^{\boxt5}\setminus
+F$: no window of at most three words can be traded for one more, decided by counting blockers
+rather than by search. Only $2$ or $3$ allowed vertices are blocked by a single word of such a
+set.
+
+\emph{Status.} This is not a proof that $367$ words do not fit outside $F$. The cheap upper
+bounds cannot see $F$: the Lov\'asz bound gives $401$ whether $F$ is empty or removes $1268$
+vertices, because it bounds the whole graph, and a box-volume count is weaker still. An honest
+bound needs $\vartheta$ of the induced subgraph on $15{,}679$ to $15{,}709$ vertices, and $F$
+breaks the symmetry that would reduce it.
+
+\emph{Why a cheaper shape does not obviously help.} With $|U|$ taken without overlaps, the
+fraction of its random share that $X$ may touch at $t=9$ and $367$ words is $0.879$, $0.754$,
+$0.688$, $0.651$, $0.628$ for $k=1,\dots,5$; the best auxiliary sets on record reach $0.7678$.
+The shapes that would shrink $F$ are the ones that ask most of $o$ (Lemma~\ref{lem:conserve}),
+and at $366$ words no shape allows more than $0.68$ of the random share at $t=9$, $13$ or $16$. These are distances to
+the best known search, not impossibility results.
+
+\section{What remains open}
+\label{sec:open}
+
+\begin{enumerate}
+\item \emph{A $367$-word code with a deeper hole}: a box covered in at most $4$ cells, which a
+pair of shape $k\ge3$ needs. None of the codes we can reach has one; finding one requires
+$367$-word codes from outside the known family, which is the open problem around
+$\alpha(C_7^{\boxt 5})$ itself.
+\item \emph{An upper bound that sees $F$}, of $\vartheta$ strength on the induced subgraph, which
+would turn the one-word gap of Section~\ref{sec:gap} into a theorem or refute it.
+\end{enumerate}
+
+\section{Reproducibility}
+\label{sec:repro}
+
+All computations are exact integer computations, published with the scripts that produce them,
+the predictions registered before each run, the calibrations each estimator had to pass (among
+them: the new group sweep reproduces the histogram of \cite{oktiabrev2026a} exactly, the repair
+reaches $367$ at $t=8$, the window search recovers $367$ from deliberately damaged sets, and the
+automorphism checker rejects a non-automorphism), and a machine reconciliation of every number
+in this note against the stored results. They were produced through Claude Code under the
+author's direction.
+
+\paragraph{Data and code availability.}
+Archived with this note on Zenodo \cite{shannonarchive2}.
+
+\paragraph{Declaration of competing interest.}
+The author declares that he has no known competing financial interests or personal relationships
+that could have appeared to influence the work reported in this paper.
+
+\paragraph{Funding.}
+This research did not receive any specific grant from funding agencies in the public, commercial,
+or not-for-profit sectors.
+
+\paragraph{Declaration of generative AI and AI-assisted technologies in the manuscript
+preparation process.}
+During the preparation of this work the author used Claude and Claude Code (Anthropic) in order
+to implement the computations and draft the text. After using this tool/service the author
+reviewed and edited the content as needed and takes full responsibility for the content of the
+published article.
