@@ -16,6 +16,7 @@ scripts/s2_2_conf
 scripts/s2_2_aut
 scripts/s2_2_aut_big
 scripts/s2_2_sweep
+scripts/s2_3_shapes
 scripts/*.new
 scripts/*.new2
 

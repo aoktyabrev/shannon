@@ -19,9 +19,10 @@ $CC -O2 -march=native -o s2_2_conf s2_2_conf.c
 $CC -O2 -march=native -fopenmp -o s2_2_aut s2_2_aut.c
 $CC -O2 -march=native -fopenmp -DMAXI=2048 -o s2_2_aut_big s2_2_aut.c
 $CC -O2 -march=native -fopenmp -o s2_2_sweep s2_2_sweep.c
+$CC -O2 -march=native -o s2_3_shapes s2_3_shapes.c
 if command -v nvcc >/dev/null 2>&1; then
     nvcc -O3 -o verify_gpu verify_gpu.cu
 else
     echo "nvcc not found: skipping verify_gpu (S0.4 will report the CPU numbers only)" >&2
 fi
-echo "built: verify verify_mutant mis s1_alpha3 s1_ils s1_sym s1_lns s1_aux s1_auxsearch s2_2_conf s2_2_aut s2_2_aut_big s2_2_sweep$( [ -x verify_gpu ] && echo ' verify_gpu' )"
+echo "built: verify verify_mutant mis s1_alpha3 s1_ils s1_sym s1_lns s1_aux s1_auxsearch s2_2_conf s2_2_aut s2_2_aut_big s2_2_sweep s2_3_shapes$( [ -x verify_gpu ] && echo ' verify_gpu' )"

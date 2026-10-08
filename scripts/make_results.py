@@ -1073,6 +1073,164 @@ def stage2_2(w, r, pilot):
     w()
 
 
+def stage2_3(w, r):
+    """Stage 2.3 -- which shapes a private pair can have, and what each costs."""
+    if not r:
+        return
+    sh, cal, rz, dc, pm = r["shapes"], r["calibration"], r["realisability"], r["decomposition"], r["price_model"]
+    w("---")
+    w()
+    w("# Stage 2.3 — which shapes a private pair can have, and what each costs")
+    w()
+    w("Stage 2.2 ended on the observation that every candidate of every 367-word code has q − r "
+      "non-zero in exactly two coordinates. This stage asks which shapes d = q − r are possible at "
+      "all, what each costs, and how large a code can be that carries one. `PREREGISTRATION_S2_3.md` "
+      "was sealed before the first computation, and it already wrote down the closed formula for the "
+      "cost — so the counts below are its check, not its source. No stochastic search is run.")
+    w()
+    rmax = {x["k"]: x["largest_size"] for x in rz}
+    w("**In one line.** The cost of a pair falls with the number k of non-zero coordinates — 162, "
+      "108, 72, 48, 32 forbidden vertices — and every shape is realisable as a private pair, but "
+      "**the forbidden and the penalised vertices of a pair always add up to 486**, so a cheaper F is "
+      "paid for in o. Among all the sets we can build, shapes other than k = 2 occur only at "
+      f"{max(v for k, v in rmax.items() if k != 2)} words, and at that size no shape and no number of "
+      "pairs up to sixteen asks for less than the auxiliary sets on record have achieved. Arithmetic "
+      "does not close the direction; it moves the question to whether a 367-word code can have a "
+      "candidate with k ≠ 2.")
+    w()
+    w("## Calibration")
+    w()
+    w("| check | result | |")
+    w("|---|---|---|")
+    w(f"| one pair of shape k = 2 forbids 108 vertices, the number Stage 2.2 measured | "
+      f"{yn(cal['k2_gives_108'])} | {tick(cal['k2_gives_108'])} |")
+    w(f"| 242 shapes, orbits under the vertex stabiliser of sizes {', '.join(map(str, cal['orbit_sizes']))} = C(5,k)·2^k; "
+      f"the count is the same on every member of an orbit | {yn(cal['shapes_total_242'] and cal['constant_on_orbits'])} | "
+      f"{tick(cal['shapes_total_242'] and cal['constant_on_orbits'])} |")
+    w(f"| Stage 2.2's 1098 recovered as {dc['per_pair_sum']} from the nine pairs plus {dc['cross_terms_min']}–"
+      f"{dc['cross_terms_max']} of cross terms, over all 16 colourings, and equal to the C count | "
+      f"{yn(cal['decomposition_reproduces_1098'])} | {tick(cal['decomposition_reproduces_1098'])} |")
+    w(f"| the local construction reaches 367 at k = 2, where the answer is known | "
+      f"{yn(cal['local_construction_reaches_367_at_k2'])} | {tick(cal['local_construction_reaches_367_at_k2'])} |")
+    w(f"| every set below re-verified, and its pair re-checked private by counting the neighbours of q "
+      f"in Python | {yn(r['realisability_checked'])} | {tick(r['realisability_checked'])} |")
+    w()
+    w("## S2.3.a — the shapes")
+    w()
+    w("A word occupies the box w + {0,1}⁵ of 32 cells, and two vertices are non-adjacent exactly when "
+      "their boxes are disjoint. A private q meets the code's boxes only inside box(r), in 2^(5−k) "
+      "cells — so a pair of shape k needs a box with only that many covered cells.")
+    w()
+    w("| k | shapes in the orbit | forbidden by one pair, \\|N[r] ∩ N[q]\\| | penalised, \\|N[r] ∪ N[q]\\| | "
+      "covered cells in box(q) | largest set carrying one, found | its source |")
+    w("|---|---|---|---|---|---|---|")
+    for o in sh["orbits"]:
+        x = next(y for y in rz if y["k"] == o["k"])
+        w(f"| {o['k']} | {o['size']} | **{o['forbidden_by_one_pair']}** | {o['penalised_by_one_pair']} | "
+          f"{2 ** (5 - o['k'])} | **{x['largest_size']}** (`{x['file'].replace('sets/', '')}`) | "
+          f"{x['source'].replace('sets/', '')}, {x['words_deleted']} word(s) deleted |")
+    w()
+    w(f"The direct counts equal 3^(5−k)·2^k: {yn(sh['formula_3_pow_5_minus_k_times_2_pow_k'])}. Forbidden "
+      f"plus penalised, per pair: {', '.join(map(str, sh['F_plus_U_per_pair']))} for every shape — which is "
+      "|N[r]| + |N[q]|, and it holds globally: |F| + |U| = |N[P_H]| + |N[P_V]|.")
+    w()
+    w("The largest sets come from the exhaustive local construction: for every word r of every code "
+      f"we hold and every one of the {r['plateau_cells']['codes']} codes of the Stage 2.2 swap plateau, "
+      "and every shape d, put q = r + d, delete the other words adjacent to q, and add back an exact "
+      "maximum independent set of the freed vertices that keep q private. Each row is the best over "
+      "all of it, and the set is saved in `sets/`.")
+    w()
+    pc = r["plateau_cells"]
+    w(f"Over all {pc['codes']} plateau codes the candidates by shape are "
+      f"{', '.join(f'k={i + 1}: {n}' for i, n in enumerate(pc['candidate_shapes_by_k_summed']))}, and no box outside "
+      f"a code has fewer than **{pc['fewest_covered_cells_in_a_box']}** covered cells — while a shape "
+      "k ≥ 3 needs a box with 4 or fewer. The holes of the known 367-word codes are one cell too "
+      "shallow for a cheap pair. Every code in `sets/`:")
+    w()
+    w("| code | size | uncovered cells | addable vertices | candidates by k = 1…5 | fewest covered cells in a box outside it |")
+    w("|---|---|---|---|---|---|")
+    for p in r["population"]:
+        w(f"| `{p['file'].replace('sets/', '')}` | {p['size']} | {p['uncovered_cells']} | {p['addable_vertices']} | "
+          f"{', '.join(map(str, p['candidate_shapes_by_k']))} | {p['fewest_covered_cells_in_a_box_outside_the_code']} |")
+    w()
+    w("## S2.3.b — nine pairs")
+    w()
+    rows9 = {x["k"]: x for x in pm["rows"] if x["a"] == 367 and x["t"] == 9}
+    w("Without cross terms nine pairs forbid "
+      + ", ".join(f"{rows9[k]['F_no_cross_terms']} (k = {k})" for k in sorted(rows9))
+      + ". **Every shape with k ≥ 2 gets below 1000**, k = 2 included — the 1098 of Stage 2.2 is "
+      f"972 plus {dc['cross_terms_min']} vertices of cross terms that the plateau's geometry adds. The "
+      "brief's criterion (minimal |F| at nine pairs still too large) is therefore not met for any "
+      "shape, and the direction is **not** closed by arithmetic.")
+    w()
+    w("What the arithmetic does say comes from the other region. o = |X ∖ U|, and the o needed to clear "
+      "the record fixes how many words u of X may touch U. Measured against the random expectation "
+      "367·|U|/16807, the best auxiliary sets on record reach:")
+    w()
+    w("| auxiliary set | \\|U\\| | u | random expectation | ratio |")
+    w("|---|---|---|---|---|")
+    for a in r["achieved_ratio"]:
+        w(f"| `{a['aux_set'].replace('sets/', '')}` (t = 8) | {a['U']} | {a['u']} | {a['u_random_expectation']} | {a['ratio']} |")
+    w()
+    w(f"The ratio each shape would need, with |U| taken without overlaps (the largest it can be, so "
+      f"these ratios are the strictest reading; overlaps between pairs lower U and raise the ratio):")
+    w()
+    w("| code size a | t | k = 1 | k = 2 | k = 3 | k = 4 | k = 5 |")
+    w("|---|---|---|---|---|---|---|")
+    best_r = pm["best_ratio_on_record"]
+    for a in (367, 366, 365):
+        for t in (9, 13, 16):
+            cells = []
+            for k in range(1, 6):
+                x = next((y for y in pm["rows"] if y["a"] == a and y["t"] == t and y["k"] == k), None)
+                v = x["ratio_needed"] if x else None
+                cells.append("—" if v is None else (f"**{v}**" if v >= best_r else f"{v}"))
+            w(f"| {a} | {t} | " + " | ".join(cells) + " |")
+    w()
+    w(f"Bold: at or above the best ratio on record ({best_r}), i.e. no harder than what has been done. "
+      "In o the order of the shapes is reversed: at 367 words and nine pairs k = 1 is the cheapest "
+      "and the only one inside the record, k = 2 sits just below it in this strictest reading (with "
+      "the real overlaps of the plateau, |U| = 2952, it needs 0.87), and the shapes cheap in F, k ≥ 3, "
+      "ask for ratios no auxiliary set has reached. With thirteen or more pairs at 367 every shape is "
+      "easy in o and only existence binds. **At 366 and 365 words nothing up to sixteen pairs "
+      "is within reach**, whatever the shape. A ratio below the record is the distance to the best "
+      "search we know, not a proof that no set exists.")
+    w()
+    w("## S2.3.c — what a 367-word code would need")
+    w()
+    w(f"A candidate of shape k ≥ 3 in a 367-word code means a box with at most 4 covered cells; every "
+      f"367-word code we can reach has at least {pc['fewest_covered_cells_in_a_box']}. The local "
+      f"construction, exhaustive over all of them, makes a cheap pair private only at the price of one "
+      f"word. Whether some 367-word code has a deeper hole is the open question this stage leaves, and "
+      "answering it is a search for new 367-word codes — the problem the Stage 2 gate guards.")
+    w()
+    w("## Predictions against outcomes")
+    w()
+    w("| # | prediction | outcome |")
+    w("|---|---|---|")
+    w(f"| P1 | 162, 108, 72, 48, 32, with 108 at k = 2 | **held** |")
+    w(f"| P2 | orbits 10, 40, 80, 80, 32 | **held** |")
+    w(f"| P3 | k = 1 realisable at ≥ 366 | **{'held' if rmax[1] >= 366 else 'failed'}**: {rmax[1]} |")
+    w(f"| P4 | no known 367-word code has a candidate with k ≠ 2 | **held** |")
+    w(f"| P5 | not 367 for k ≥ 3; 366 for k = 3 | **{'held' if max(rmax[k] for k in (3, 4, 5)) < 367 and rmax[3] == 366 else 'failed'}** |")
+    w("| P6 | \\|F\\| < 1000 possible for nine pairs of every k ≥ 2; not closed by arithmetic | **held** |")
+    w("| architect | no k = 1 private pairs | **failed**: seven in the Mathew–Östergård set, and one in a 366-word set |")
+    w("| architect | cost grows with k, two coordinates minimal | **failed**: it falls, 108 is the middle |")
+    w("| architect | the direction closes by arithmetic | **failed** for F; the price moves to o (above) |")
+    w()
+    b = r["budget"]
+    w(f"**Budget.** {b['core_seconds']} core-seconds for the run, against a ceiling of 4 core-hours; one "
+      "evening (2026-10-08).")
+    w()
+    w("**Verdict.** The shape of a pair is not a free lever: what it saves in F it spends in U, "
+      "pair by pair, because |F| + |U| = |N[P_H]| + |N[P_V]|. At 367 words and nine pairs the shapes "
+      "that would shrink F are exactly the ones that ask most of o, and they exist only in sets one word "
+      "smaller, where no shape pays. The line on these gadgets now hangs on one structural question — "
+      "a 367-word code with a box covered in four cells or fewer — which only a search for new codes "
+      "can answer.")
+    w()
+
+
 def main():
     prereg = load("prereg.json")
     pp = os.path.join(ROOT, "PREREGISTRATION_S1.md")
@@ -1088,6 +1246,10 @@ def main():
         if live3 != prereg3["sha256"]:
             sys.exit(f"PREREGISTRATION_S2_1.md has changed since it was sealed\n"
                      f"  sealed: {prereg3['sha256']}\n  now:    {live3}")
+    prereg5 = load("prereg_s2_3.json")
+    pp5 = os.path.join(ROOT, "PREREGISTRATION_S2_3.md")
+    if prereg5 and os.path.exists(pp5) and sha(pp5) != prereg5["sha256"]:
+        sys.exit("PREREGISTRATION_S2_3.md has changed since it was sealed")
     prereg4 = load("prereg_s2_2.json")
     pp4 = os.path.join(ROOT, "PREREGISTRATION_S2_2.md")
     if prereg4 and os.path.exists(pp4):
@@ -1139,7 +1301,7 @@ def main():
     th = load("theta.json")
     mis3 = load("mis_c7_d3.json")
 
-    w("# RESULTS — shannon, Stages 0, 1, 2W, 2, 2.1 and 2.2")
+    w("# RESULTS — shannon, Stages 0, 1, 2W, 2, 2.1, 2.2 and 2.3")
     w()
     w("**This file is generated by `scripts/make_results.py` from `results/json/*.json`. "
       "Do not edit it by hand.**")
@@ -1150,8 +1312,10 @@ def main():
       f"(`{prereg['sha256'][:16]}…`), `PREREGISTRATION_S2.md` sealed "
       f"{prereg2['sealed'] if prereg2 else '?'} (`{prereg2['sha256'][:16]}…`), "
       f"`PREREGISTRATION_S2_1.md` sealed {prereg3['sealed'] if prereg3 else '?'} "
-      f"(`{prereg3['sha256'][:16] if prereg3 else '?'}…`) and `PREREGISTRATION_S2_2.md` sealed "
-      f"{prereg4['sealed'] if prereg4 else '?'} (`{prereg4['sha256'][:16] if prereg4 else '?'}…`).")
+      f"(`{prereg3['sha256'][:16] if prereg3 else '?'}…`), `PREREGISTRATION_S2_2.md` sealed "
+      f"{prereg4['sealed'] if prereg4 else '?'} (`{prereg4['sha256'][:16] if prereg4 else '?'}…`) and "
+      f"`PREREGISTRATION_S2_3.md` sealed {prereg5['sealed'] if prereg5 else '?'} "
+      f"(`{prereg5['sha256'][:16] if prereg5 else '?'}…`).")
     w()
     w("Stage 0 is calibration and contains no search run. Stage 1 is the search: a gate that "
       "makes the stack find the known optima first, then the hunt for a ninth private pair. "
@@ -1203,6 +1367,7 @@ def main():
            load("s2_budget.json"))
     stage2_1(w, load("s2_1_room.json"))
     stage2_2(w, load("s2_2.json"), load("s2_2_pilot.json"))
+    stage2_3(w, load("s2_3.json"))
 
     w("## Rule 0")
     w()
