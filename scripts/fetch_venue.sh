@@ -31,4 +31,10 @@ fetch ipl_guide_for_authors_blocked    "https://www.sciencedirect.com/journal/in
 # confirmed against the live page in a browser before submission.
 fetch ipl_guide_for_authors_wayback2024 "http://web.archive.org/web/20240424192433/https://www.sciencedirect.com/journal/information-processing-letters/publish/guide-for-authors"
 
+# Discrete Applied Mathematics, for the merged paper (Stage J.0). The live guide answers 403 here
+# as well; the newest Internet Archive copy (2024-01-08) is dated evidence, as above.
+fetch dam_journal_page                 "https://shop.elsevier.com/journals/discrete-applied-mathematics/0166-218X"
+fetch dam_guide_for_authors_blocked    "https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors"
+fetch dam_guide_for_authors_wayback2024 "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors"
+
 (cd "$DIR" && sha256sum *.html > SHA256)

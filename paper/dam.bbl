@@ -1,0 +1,51 @@
+\begin{thebibliography}{10}
+\expandafter\ifx\csname url\endcsname\relax
+  \def\url#1{\texttt{#1}}\fi
+\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \def\href#1#2{#2} \def\path#1{#1}\fi
+
+\bibitem{shannon1956}
+C.~E. Shannon, The zero-error capacity of a noisy channel, IRE Trans. Inform. Theory 2 (1956) 8--19.
+
+\bibitem{lovasz1979}
+L.~Lov{\'a}sz, On the {S}hannon capacity of a graph, IEEE Trans. Inform. Theory 25 (1979) 1--7.
+
+\bibitem{baumert1971}
+L.~Baumert, R.~McEliece, E.~Rodemich, H.~Rumsey, R.~Stanley, H.~Taylor, A combinatorial packing problem, in: Computers in Algebra and Number Theory, American Mathematical Society, 1971.
+
+\bibitem{mathew2017}
+K.~A. Mathew, P.~R.~J. {\"O}sterg{\aa}rd, New lower bounds for the {S}hannon capacity of odd cycles, Des. Codes Cryptogr. 84 (2017) 13--22, arXiv:1504.01472.
+
+\bibitem{polak2019}
+S.~C. Polak, A.~Schrijver, New lower bound on the {S}hannon capacity of $c_7$ from circular graphs, Inform. Process. Lett. 143 (2019) 37--40, arXiv:1808.07438.
+\newblock \href {https://doi.org/10.1016/j.ipl.2018.11.006} {\path{doi:10.1016/j.ipl.2018.11.006}}.
+
+\bibitem{itty2026}
+N.~Itty, C.~D. Rosin, C.~Carstensen, D.~Reichman, Improved lower bounds for the {S}hannon capacity of odd cycles, arXiv preprint (2026).
+\newblock \href {https://doi.org/10.48550/arXiv.2607.21517} {\path{doi:10.48550/arXiv.2607.21517}}.
+
+\bibitem{gao2026}
+Y.~Gao, A recursive construction improving the lower bound on the {S}hannon capacity of $c_7$, arXiv preprint (2026).
+\newblock \href {https://doi.org/10.48550/arXiv.2607.27869} {\path{doi:10.48550/arXiv.2607.27869}}.
+
+\bibitem{bpz2026}
+P.~Buys, S.~Polak, J.~Zuiddam, {L}ean-verified lower bounds for the {S}hannon capacity of odd cycles, arXiv preprint (2026).
+\newblock \href {https://doi.org/10.48550/arXiv.2607.29681} {\path{doi:10.48550/arXiv.2607.29681}}.
+
+\bibitem{tandon2026}
+R.~Tandon, Strengthening recursive constructions for zero-error {S}hannon capacity, arXiv preprint (2026).
+\newblock \href {https://doi.org/10.48550/arXiv.2608.30273} {\path{doi:10.48550/arXiv.2608.30273}}.
+
+\bibitem{oktiabrev2026a}
+A.~Oktiabrev, The {P}olak--{S}chrijver code has exactly eight private pairs, Preprint, Zenodo (2026).
+\newblock \href {https://doi.org/10.5281/zenodo.22979509} {\path{doi:10.5281/zenodo.22979509}}.
+
+\bibitem{oktiabrev2026b}
+A.~Oktiabrev, The shape of a private pair redistributes its cost: private pairs as a property of the code, Preprint, Zenodo (2026).
+\newblock \href {https://doi.org/10.5281/zenodo.23234251} {\path{doi:10.5281/zenodo.23234251}}.
+
+\bibitem{shannonrepo}
+A.~Oktiabrev, shannon: sets, verifier, scripts and preregistrations for the private-pair study, \url{https://github.com/aoktyabrev/shannon}, archived with the two preprints (2026).
+
+\end{thebibliography}

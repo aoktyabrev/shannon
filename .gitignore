@@ -52,3 +52,9 @@ sources/venue/*.txt
 note2/*.aux
 note2/*.log
 note2/*.out
+# LaTeX build products of the merged paper (dam.pdf is kept)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.blg
+paper/*.spl

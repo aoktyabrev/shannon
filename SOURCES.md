@@ -537,3 +537,89 @@ available to us; that was wrong, and `RESULTS.md` says so at the point where the
 ### [T26-9] exchanges along private pairs (our 1-swap) — arXiv:2608.30273, `main.tex` line 1424
 
 > The independent set $J^+\subseteq V(C_7^{\boxtimes 10})$ is obtained from the automorphic image $(T\times T)(I_{10})$, followed by eight exchanges along selected private pairs, where
+
+---
+
+## Venue quotations — Discrete Applied Mathematics (Stage J.0)
+
+Publisher pages, not arXiv: these are checked by `scripts/j_venue.py` against the dumps in `sources/venue/`
+(URL, HTTP status and SHA-256 beside each), and that script also requires every quotation below to appear
+here verbatim. The Guide for Authors is the Internet Archive copy of 2024-01-08 — dated evidence, because
+sciencedirect.com answers 403 to this host; the Elsevier AI policy and pricing pages are live dumps.
+
+**dam_journal_page** — https://shop.elsevier.com/journals/discrete-applied-mathematics/0166-218X
+
+*what the journal takes:*
+> Contributions presented to the journal can be research papers, short notes, surveys, and possibly research problems.
+
+**dam_guide_for_authors_wayback2024** — http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors
+
+*article type for a long paper:*
+> Contribution - Full length original research article of more than 10 pages.
+
+*article type for a short paper:*
+> Note - A short self-contained original research article of 10 pages or less
+
+*Communications go through a board member:*
+> Please note that Communications should be sent directly to a member of the Editorial Board chosen by the author.
+
+*the LaTeX class:*
+> You are recommended to use the Elsevier article class elsarticle.cls to prepare your manuscript and BibTeX to generate your bibliography.
+
+*first submission may be a single PDF:*
+> You may choose to submit your manuscript as a single Word or PDF file to be used in the refereeing process.
+
+*sources are needed for typesetting:*
+> Editable files (e.g., Word, LaTeX) are required to typeset your article for final publication.
+
+*a preprint is not prior publication:*
+> Sharing your preprints e.g. on a preprint server will not count as prior publication
+
+*not under consideration elsewhere:*
+> that it is not under consideration for publication elsewhere
+
+*hybrid journal:*
+> Supports open access
+
+*highlights:*
+> include 3 to 5 bullet points (maximum 85 characters, including spaces, per bullet point)
+
+*AI in writing, 2024 wording (stricter than the live policy):*
+> authors should only use these technologies to improve readability and language
+
+*AI declaration: placement:*
+> by adding a statement at the end of their manuscript in the core manuscript file, before the References list
+
+**elsevier_generative_ai_policy** — https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals
+
+*the policy's date:*
+> Policy updated June 2026.
+
+*drafting is allowed, substitution is not:*
+> AI tools may support drafting or improving clarity, but they must not replace your intellectual contribution.
+
+*AI in the research process goes in Methods:*
+> Where AI tools are used as part of the research process rather than manuscript preparation, this use should be described in detail in the Methods section.
+
+*declaration required:*
+> Authors should disclose the use of AI tools for manuscript preparation in a separate AI declaration statement included in their manuscript upon submission.
+
+*section title:*
+> Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
+
+*keep records of the use:*
+> This may include retaining logs provided by the tool, saving prompts and generated outputs
+
+**elsevier_pricing_policy** — https://www.elsevier.com/about/policies-and-standards/pricing
+
+*the subscription route is free in a hybrid journal:*
+> Authors publishing in hybrid journals can publish under the subscription model at no cost
+
+*the APC range, for reference:*
+> fees range between approximately $200 and $11,400 US Dollars, excluding tax
+
+**UNVERIFIED** (could not be read from this host, and not supplied from memory):
+
+* the live Guide for Authors — sciencedirect.com answers 403 to this host (dump kept); the 2024-01-08 archive copy is used, dated.
+* the APC of Discrete Applied Mathematics itself — shown only on sciencedirect.com and in Elsevier's APC list, neither reachable; only the Elsevier-wide range is quoted.
+* a limit on the number of submissions, or a rule on resubmission after rejection — the 2024 guide says nothing on either (searched for resubmi, appeal, rejected); the live page could not be read.

@@ -1,0 +1,1121 @@
+{
+  "text_files": [
+    "paper/dam-abstract.tex",
+    "paper/dam-content.tex"
+  ],
+  "ledger_entries": 119,
+  "ledger_entries_used_in_text": 98,
+  "claims": 38,
+  "failures": 0,
+  "distinct_numeric_tokens": 90,
+  "unaccounted_tokens": [],
+  "generated_tables_unchanged": true,
+  "tables_report": [
+    "ok      tab-codes.tex",
+    "ok      tab-shapes.tex"
+  ],
+  "rows": [
+    {
+      "printed": "367",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "size of the Polak-Schrijver code"
+    },
+    {
+      "printed": "16807",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "|Z_7^5|"
+    },
+    {
+      "printed": "16440",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "words outside I"
+    },
+    {
+      "printed": "8",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "words with exactly one I-neighbour"
+    },
+    {
+      "printed": "254",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "words with two I-neighbours"
+    },
+    {
+      "printed": "16178",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "words with three or more"
+    },
+    {
+      "printed": "5",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "components of the conflict graph"
+    },
+    {
+      "printed": "3",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "edges of the conflict graph"
+    },
+    {
+      "printed": "16",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "proper 2-colourings up to swap"
+    },
+    {
+      "printed": "3.2587891539086910161967650155206769",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "Gao's bound, reproduced"
+    },
+    {
+      "printed": "3.2588053698854655725829750306238067",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "the BPZ profile through our homogeneous recursion"
+    },
+    {
+      "printed": "3.2588326203532663091215390518104754",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "the current record [T26]"
+    },
+    {
+      "printed": "3.2590062007738521305802",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "what a ninth private pair would give"
+    },
+    {
+      "printed": "3.3176672073940953927",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "the Lovasz upper bound"
+    },
+    {
+      "printed": "1.736",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "margin of a ninth pair over the record"
+    },
+    {
+      "printed": "1.7",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "the same margin, to two digits"
+    },
+    {
+      "printed": "6.993",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "margin of (367,8,367,324)"
+    },
+    {
+      "printed": "2.725",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "the framework gap"
+    },
+    {
+      "printed": "3.2578659667835159504124",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "367^(1/5)"
+    },
+    {
+      "printed": "3.2580207372932453595278",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "134753^(1/10)"
+    },
+    {
+      "printed": "134753",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "the Itty et al. set"
+    },
+    {
+      "printed": "321",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "Gao's o"
+    },
+    {
+      "printed": "26",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "Gao's h"
+    },
+    {
+      "printed": "20",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "Gao's v"
+    },
+    {
+      "printed": "322",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "BPZ's o"
+    },
+    {
+      "printed": "19",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "BPZ's v"
+    },
+    {
+      "printed": "327",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "the core M"
+    },
+    {
+      "printed": "71",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "extension graph vertices"
+    },
+    {
+      "printed": "85",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "extension graph edges"
+    },
+    {
+      "printed": "40",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "its independence number"
+    },
+    {
+      "printed": "8",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "codes of size 367"
+    },
+    {
+      "printed": "13",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "pairs needed at a = 366"
+    },
+    {
+      "printed": "16",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "pairs needed at a = 365"
+    },
+    {
+      "printed": "23",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "pairs needed at a = 360"
+    },
+    {
+      "printed": "366",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "code size in the break-even table"
+    },
+    {
+      "printed": "365",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "also: words shared by our rebuild and the printed set"
+    },
+    {
+      "printed": "360",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "code size in the break-even table"
+    },
+    {
+      "printed": "120",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "|S_5|"
+    },
+    {
+      "printed": "14",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "|D_7|"
+    },
+    {
+      "printed": "64538880",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "|(D_7)^5 rtimes S_5|"
+    },
+    {
+      "printed": "8260976640",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "triples swept"
+    },
+    {
+      "printed": "4",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "triples with 1 forbidden word"
+    },
+    {
+      "printed": "33",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "with 2"
+    },
+    {
+      "printed": "101",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "with 3"
+    },
+    {
+      "printed": "209",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "with 4"
+    },
+    {
+      "printed": "358",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "with 5"
+    },
+    {
+      "printed": "965",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "with 6"
+    },
+    {
+      "printed": "6060",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "with 7"
+    },
+    {
+      "printed": "663.9",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "seconds of the sweep"
+    },
+    {
+      "printed": "60",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "repaired candidates"
+    },
+    {
+      "printed": "368",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "the record for alpha that a bigger repair would have given"
+    },
+    {
+      "printed": "324",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "the o that would be needed to clear the record"
+    },
+    {
+      "printed": "1500",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "seconds per colouring"
+    },
+    {
+      "printed": "11744",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "box cells of a 367-word set"
+    },
+    {
+      "printed": "137987072",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "box cells at d = 10"
+    },
+    {
+      "printed": "0.47",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "seconds for that sweep"
+    },
+    {
+      "printed": "1177",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "single-vertex corruptions tested"
+    },
+    {
+      "printed": "18",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "corruptions that leave an independent set"
+    },
+    {
+      "printed": "18.7",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "core-hours used"
+    },
+    {
+      "printed": "143",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "volume of Polak-Schrijver, quoted in the cover letter"
+    },
+    {
+      "printed": "37",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "its first page"
+    },
+    {
+      "printed": "343",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "Baumert et al., quoted in SOURCES.md"
+    },
+    {
+      "printed": "350",
+      "from": "w_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "Mathew-Ostergard, quoted in SOURCES.md"
+    },
+    {
+      "printed": "367",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "size of the code"
+    },
+    {
+      "printed": "486",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "|F| + |U| for one pair in C_7^5"
+    },
+    {
+      "printed": "486",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "codes of the Stage 2.2 plateau"
+    },
+    {
+      "printed": "243",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "codes per component, 3^5"
+    },
+    {
+      "printed": "242",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "shapes in C_7^5"
+    },
+    {
+      "printed": "4050",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "|F|+|U|, nine pairs, least"
+    },
+    {
+      "printed": "4080",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "|F|+|U|, nine pairs, most"
+    },
+    {
+      "printed": "4374",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "2 * 9 * 3^5"
+    },
+    {
+      "printed": "162",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "forbidden, k = 1"
+    },
+    {
+      "printed": "108",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "forbidden, k = 2"
+    },
+    {
+      "printed": "72",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "forbidden, k = 3"
+    },
+    {
+      "printed": "48",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "forbidden, k = 4"
+    },
+    {
+      "printed": "32",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "forbidden, k = 5"
+    },
+    {
+      "printed": "32",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "shapes with k = 5"
+    },
+    {
+      "printed": "32",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "cells of a box"
+    },
+    {
+      "printed": "324",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "penalised, k = 1"
+    },
+    {
+      "printed": "378",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "penalised, k = 2"
+    },
+    {
+      "printed": "414",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "penalised, k = 3"
+    },
+    {
+      "printed": "438",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "penalised, k = 4"
+    },
+    {
+      "printed": "454",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "penalised, k = 5"
+    },
+    {
+      "printed": "10",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "shapes with k = 1"
+    },
+    {
+      "printed": "40",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "shapes with k = 2"
+    },
+    {
+      "printed": "80",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "shapes with k = 3"
+    },
+    {
+      "printed": "80",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": false,
+      "what": "shapes with k = 4"
+    },
+    {
+      "printed": "366",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "largest set with a k = 1 pair"
+    },
+    {
+      "printed": "367",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "largest set with a k = 2 pair"
+    },
+    {
+      "printed": "366",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "largest set with a k = 3 pair"
+    },
+    {
+      "printed": "366",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "largest set with a k = 4 pair"
+    },
+    {
+      "printed": "366",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "largest set with a k = 5 pair"
+    },
+    {
+      "printed": "343",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "the linear code"
+    },
+    {
+      "printed": "350",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "the Mathew-Ostergard set"
+    },
+    {
+      "printed": "3.21",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "largest spread of |F| over colourings, 367-word codes"
+    },
+    {
+      "printed": "51",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "Aut-classes of the plateau"
+    },
+    {
+      "printed": "208",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "configurations with t >= 9"
+    },
+    {
+      "printed": "1098",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "|F| at t = 9, least"
+    },
+    {
+      "printed": "1128",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "|F| at t = 9, most"
+    },
+    {
+      "printed": "1240",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "|F| at t = 10, least"
+    },
+    {
+      "printed": "1268",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "|F| at t = 10, most"
+    },
+    {
+      "printed": "972",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "per-pair part of the nine-pair regions"
+    },
+    {
+      "printed": "126",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "cross terms, least"
+    },
+    {
+      "printed": "156",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "cross terms, most"
+    },
+    {
+      "printed": "64538880",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "group elements per pair"
+    },
+    {
+      "printed": "65829657600",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "images scored"
+    },
+    {
+      "printed": "366",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "best repaired at t = 9"
+    },
+    {
+      "printed": "365",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "best repaired at t = 10"
+    },
+    {
+      "printed": "108",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "repaired 366-word sets tested for 3-opt"
+    },
+    {
+      "printed": "401",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "the Lovasz bound on alpha(C_7^5)"
+    },
+    {
+      "printed": "15679",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "allowed vertices, least"
+    },
+    {
+      "printed": "15709",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "allowed vertices, most"
+    },
+    {
+      "printed": "0.879",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "ratio needed, k = 1"
+    },
+    {
+      "printed": "0.754",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "ratio needed, k = 2"
+    },
+    {
+      "printed": "0.688",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "ratio needed, k = 3"
+    },
+    {
+      "printed": "0.651",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "ratio needed, k = 4"
+    },
+    {
+      "printed": "0.628",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "ratio needed, k = 5"
+    },
+    {
+      "printed": "0.7678",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "best ratio on record"
+    },
+    {
+      "printed": "0.68",
+      "from": "w2_checknums",
+      "value_agrees": true,
+      "appears": true,
+      "what": "largest ratio at 366 words"
+    }
+  ],
+  "claim_rows": [
+    {
+      "pattern": "q_0\\\\sim q_1,\\\\qquad q_2\\\\sim q_6,\\\\qquad q_3\\\\sim q_5",
+      "computed": "[[0, 1], [2, 6], [3, 5]]",
+      "expected": "[[0, 1], [2, 6], [3, 5]]",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "\\$3\\+2=5\\$ components",
+      "computed": "5",
+      "expected": "5",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "\\$16\\$ of them up to exchanging",
+      "computed": "16",
+      "expected": "16",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "The eight are exactly the\\s+private neighbours",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "5,\\\\;6,\\\\;6,\\\\;6,\\\\;7,\\\\;7,\\\\;7,\\\\;8",
+      "computed": "[5, 6, 6, 6, 7, 7, 7, 8]",
+      "expected": "[5, 6, 6, 6, 7, 7, 7, 8]",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "the unique code attaining \\$8\\$ being the printed one",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "found under exactly one of the \\$16\\$ colourings",
+      "computed": "1",
+      "expected": "1",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "reaches \\$s=367\\$, \\$o=322\\$",
+      "computed": "322",
+      "expected": "322",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "forbidden intersection is never empty",
+      "computed": "0",
+      "expected": "0",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "\\\\cite\\{mathew2017\\} has seven",
+      "computed": "7",
+      "expected": "7",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "all seven\\s+candidates",
+      "computed": "7",
+      "expected": "7",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "\\\\cite\\{baumert1971\\} has none",
+      "computed": "0",
+      "expected": "0",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "of its words, has six",
+      "computed": "6",
+      "expected": "6",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "\\$367\\$-word code has eight",
+      "computed": "8",
+      "expected": "8",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "run from \\$5\\$",
+      "computed": "5",
+      "expected": "5",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "to \\$10\\$",
+      "computed": "10",
+      "expected": "10",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "every candidate has\\s+shape \\$k=2\\$",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "Two classes have nine candidates",
+      "computed": "2",
+      "expected": "2",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "one class has ten",
+      "computed": "1",
+      "expected": "1",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "exactly \\$16\\$ forbidden regions at \\$t=9\\$",
+      "computed": "16",
+      "expected": "16",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "\\$4\\$ at \\$t=10\\$",
+      "computed": "4",
+      "expected": "4",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "in \\$F\\$ is \\$1\\$",
+      "computed": "1",
+      "expected": "1",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "exactly \\$3\\$-opt optimal",
+      "computed": "0",
+      "expected": "0",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "Only \\$2\\$ or\\s+\\$3\\$",
+      "computed": "[2, 3]",
+      "expected": "[2, 3]",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "has at least \\$5\\$",
+      "computed": "5",
+      "expected": "5",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "five independent three-state\\s+switches",
+      "computed": "5",
+      "expected": "5",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "product of five independent",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "cyclically adjacent pairs of coordinates",
+      "computed": "[[0, 1], [0, 4], [1, 2], [2, 3], [3, 4]]",
+      "expected": "[[0, 1], [0, 4], [1, 2], [2, 3], [3, 4]]",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "automorphism of order \\$5\\$",
+      "computed": "5",
+      "expected": "5",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "number of\\s+components depends on the starting codes",
+      "computed": "3",
+      "expected": "3",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "checked by direct count for every shape",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "not Lemma~\\\\ref\\{lem:shape\\}",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "No image avoids any region",
+      "computed": "0",
+      "expected": "0",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "reproduces the\\s+\\$t=8\\$ histogram above exactly",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "reaches \\$367\\$ at \\$t=8\\$",
+      "computed": "367",
+      "expected": "367",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "recovers \\$367\\$ from\\s+deliberately damaged sets",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "rejects a non-automorphism",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears": true
+    },
+    {
+      "pattern": "each of the sixteen is produced by every nine-pair class",
+      "computed": "True",
+      "expected": "True",
+      "value_agrees": true,
+      "appears": true
+    }
+  ],
+  "all_pass": true
+}

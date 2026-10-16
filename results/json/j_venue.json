@@ -1,0 +1,239 @@
+{
+  "venue": "Discrete Applied Mathematics (Elsevier)",
+  "quotes": [
+    {
+      "page": "dam_journal_page",
+      "url": "https://shop.elsevier.com/journals/discrete-applied-mathematics/0166-218X",
+      "http": "200",
+      "sha256": "4c8cebbc42ab9127",
+      "what": "what the journal takes",
+      "quote": "Contributions presented to the journal can be research papers, short notes, surveys, and possibly research problems.",
+      "found": true,
+      "dated_archive_copy": false
+    },
+    {
+      "page": "dam_guide_for_authors_wayback2024",
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http": "200",
+      "sha256": "9f5932e748ad9f9d",
+      "what": "article type for a long paper",
+      "quote": "Contribution - Full length original research article of more than 10 pages.",
+      "found": true,
+      "dated_archive_copy": true
+    },
+    {
+      "page": "dam_guide_for_authors_wayback2024",
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http": "200",
+      "sha256": "9f5932e748ad9f9d",
+      "what": "article type for a short paper",
+      "quote": "Note - A short self-contained original research article of 10 pages or less",
+      "found": true,
+      "dated_archive_copy": true
+    },
+    {
+      "page": "dam_guide_for_authors_wayback2024",
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http": "200",
+      "sha256": "9f5932e748ad9f9d",
+      "what": "Communications go through a board member",
+      "quote": "Please note that Communications should be sent directly to a member of the Editorial Board chosen by the author.",
+      "found": true,
+      "dated_archive_copy": true
+    },
+    {
+      "page": "dam_guide_for_authors_wayback2024",
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http": "200",
+      "sha256": "9f5932e748ad9f9d",
+      "what": "the LaTeX class",
+      "quote": "You are recommended to use the Elsevier article class elsarticle.cls to prepare your manuscript and BibTeX to generate your bibliography.",
+      "found": true,
+      "dated_archive_copy": true
+    },
+    {
+      "page": "dam_guide_for_authors_wayback2024",
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http": "200",
+      "sha256": "9f5932e748ad9f9d",
+      "what": "first submission may be a single PDF",
+      "quote": "You may choose to submit your manuscript as a single Word or PDF file to be used in the refereeing process.",
+      "found": true,
+      "dated_archive_copy": true
+    },
+    {
+      "page": "dam_guide_for_authors_wayback2024",
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http": "200",
+      "sha256": "9f5932e748ad9f9d",
+      "what": "sources are needed for typesetting",
+      "quote": "Editable files (e.g., Word, LaTeX) are required to typeset your article for final publication.",
+      "found": true,
+      "dated_archive_copy": true
+    },
+    {
+      "page": "dam_guide_for_authors_wayback2024",
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http": "200",
+      "sha256": "9f5932e748ad9f9d",
+      "what": "a preprint is not prior publication",
+      "quote": "Sharing your preprints e.g. on a preprint server will not count as prior publication",
+      "found": true,
+      "dated_archive_copy": true
+    },
+    {
+      "page": "dam_guide_for_authors_wayback2024",
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http": "200",
+      "sha256": "9f5932e748ad9f9d",
+      "what": "not under consideration elsewhere",
+      "quote": "that it is not under consideration for publication elsewhere",
+      "found": true,
+      "dated_archive_copy": true
+    },
+    {
+      "page": "dam_guide_for_authors_wayback2024",
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http": "200",
+      "sha256": "9f5932e748ad9f9d",
+      "what": "hybrid journal",
+      "quote": "Supports open access",
+      "found": true,
+      "dated_archive_copy": true
+    },
+    {
+      "page": "dam_guide_for_authors_wayback2024",
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http": "200",
+      "sha256": "9f5932e748ad9f9d",
+      "what": "highlights",
+      "quote": "include 3 to 5 bullet points (maximum 85 characters, including spaces, per bullet point)",
+      "found": true,
+      "dated_archive_copy": true
+    },
+    {
+      "page": "dam_guide_for_authors_wayback2024",
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http": "200",
+      "sha256": "9f5932e748ad9f9d",
+      "what": "AI in writing, 2024 wording (stricter than the live policy)",
+      "quote": "authors should only use these technologies to improve readability and language",
+      "found": true,
+      "dated_archive_copy": true
+    },
+    {
+      "page": "dam_guide_for_authors_wayback2024",
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http": "200",
+      "sha256": "9f5932e748ad9f9d",
+      "what": "AI declaration: placement",
+      "quote": "by adding a statement at the end of their manuscript in the core manuscript file, before the References list",
+      "found": true,
+      "dated_archive_copy": true
+    },
+    {
+      "page": "elsevier_generative_ai_policy",
+      "url": "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals",
+      "http": "200",
+      "sha256": "51c74b78d8a5a33e",
+      "what": "the policy's date",
+      "quote": "Policy updated June 2026.",
+      "found": true,
+      "dated_archive_copy": false
+    },
+    {
+      "page": "elsevier_generative_ai_policy",
+      "url": "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals",
+      "http": "200",
+      "sha256": "51c74b78d8a5a33e",
+      "what": "drafting is allowed, substitution is not",
+      "quote": "AI tools may support drafting or improving clarity, but they must not replace your intellectual contribution.",
+      "found": true,
+      "dated_archive_copy": false
+    },
+    {
+      "page": "elsevier_generative_ai_policy",
+      "url": "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals",
+      "http": "200",
+      "sha256": "51c74b78d8a5a33e",
+      "what": "AI in the research process goes in Methods",
+      "quote": "Where AI tools are used as part of the research process rather than manuscript preparation, this use should be described in detail in the Methods section.",
+      "found": true,
+      "dated_archive_copy": false
+    },
+    {
+      "page": "elsevier_generative_ai_policy",
+      "url": "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals",
+      "http": "200",
+      "sha256": "51c74b78d8a5a33e",
+      "what": "declaration required",
+      "quote": "Authors should disclose the use of AI tools for manuscript preparation in a separate AI declaration statement included in their manuscript upon submission.",
+      "found": true,
+      "dated_archive_copy": false
+    },
+    {
+      "page": "elsevier_generative_ai_policy",
+      "url": "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals",
+      "http": "200",
+      "sha256": "51c74b78d8a5a33e",
+      "what": "section title",
+      "quote": "Declaration of generative AI and AI-assisted technologies in the manuscript preparation process",
+      "found": true,
+      "dated_archive_copy": false
+    },
+    {
+      "page": "elsevier_generative_ai_policy",
+      "url": "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals",
+      "http": "200",
+      "sha256": "51c74b78d8a5a33e",
+      "what": "keep records of the use",
+      "quote": "This may include retaining logs provided by the tool, saving prompts and generated outputs",
+      "found": true,
+      "dated_archive_copy": false
+    },
+    {
+      "page": "elsevier_pricing_policy",
+      "url": "https://www.elsevier.com/about/policies-and-standards/pricing",
+      "http": "200",
+      "sha256": "cda837cea0e28451",
+      "what": "the subscription route is free in a hybrid journal",
+      "quote": "Authors publishing in hybrid journals can publish under the subscription model at no cost",
+      "found": true,
+      "dated_archive_copy": false
+    },
+    {
+      "page": "elsevier_pricing_policy",
+      "url": "https://www.elsevier.com/about/policies-and-standards/pricing",
+      "http": "200",
+      "sha256": "cda837cea0e28451",
+      "what": "the APC range, for reference",
+      "quote": "fees range between approximately $200 and $11,400 US Dollars, excluding tax",
+      "found": true,
+      "dated_archive_copy": false
+    }
+  ],
+  "missing": 0,
+  "unverified": [
+    {
+      "item": "the live Guide for Authors",
+      "why": "sciencedirect.com answers 403 to this host (dump kept); the 2024-01-08 archive copy is used, dated"
+    },
+    {
+      "item": "the APC of Discrete Applied Mathematics itself",
+      "why": "shown only on sciencedirect.com and in Elsevier's APC list, neither reachable; only the Elsevier-wide range is quoted"
+    },
+    {
+      "item": "a limit on the number of submissions, or a rule on resubmission after rejection",
+      "why": "the 2024 guide says nothing on either (searched for resubmi, appeal, rejected); the live page could not be read"
+    }
+  ],
+  "reading": {
+    "article_type": "Contribution (more than 10 pages); a 12-18 page paper is a Contribution, not a Note or a Communication",
+    "format": "elsarticle and BibTeX recommended; a single PDF suffices at first submission, editable sources at revision",
+    "preprints": "the two Zenodo preprints do not count as prior publication",
+    "fees": "hybrid journal: the subscription route costs nothing; the journal's own APC is UNVERIFIED",
+    "ai": "the live policy (June 2026) allows AI support in drafting but not as a substitute for the authors' contribution, asks for a declaration section, and puts AI used in the research itself into Methods; the 2024 guide's 'only readability and language' is older and stricter, and the paper follows the live policy while saying plainly what the tools did",
+    "resubmission": "UNVERIFIED"
+  },
+  "all_found": true
+}

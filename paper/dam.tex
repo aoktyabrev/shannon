@@ -1,0 +1,45 @@
+\documentclass[preprint,12pt]{elsarticle}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+
+\newcommand{\PH}{P^{\mathrm H}}
+\newcommand{\PV}{P^{\mathrm V}}
+\newcommand{\Zs}{\mathbb{Z}_7^5}
+\newcommand{\boxt}{\boxtimes}
+
+\journal{Discrete Applied Mathematics}
+
+\begin{document}
+\begin{frontmatter}
+\title{Private pairs as a characteristic of a code, and why their number is not a lever
+for the gadget bounds on the Shannon capacity of $C_7$}
+\author{Artem Oktiabrev}
+\ead{aoktyabrev@gmail.com}
+\address{Independent researcher, Ukraine. ORCID 0009-0003-3626-2002}
+
+\begin{abstract}
+\input{dam-abstract}
+\end{abstract}
+
+\begin{keyword}
+Shannon capacity \sep strong product \sep independent set \sep odd cycle \sep private pair \sep gadget
+\MSC[2020] 05C69 \sep 94A24 \sep 05C76
+\end{keyword}
+\end{frontmatter}
+
+\input{dam-content}
+
+\bibliographystyle{elsarticle-num}
+\bibliography{refs}
+\end{document}

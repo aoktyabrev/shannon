@@ -3,34 +3,52 @@
   "target": "Information Processing Letters (Elsevier), ISSN 0020-0190",
   "why": "Polak-Schrijver, the paper whose code the theorem is about, appeared there (IPL 143 (2019) 37-40), and a short note is the journal's own format.",
   "pages": {
+    "dam_guide_for_authors_blocked": {
+      "url": "https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http_status": 403,
+      "sha256": "7d1dc10dc82939bdfaab44ca5a8859e3cfc1e23616c9bc24119969ff5e8ebe8b",
+      "dumped": "2026-09-26"
+    },
+    "dam_guide_for_authors_wayback2024": {
+      "url": "http://web.archive.org/web/20240108181403/https://www.sciencedirect.com/journal/discrete-applied-mathematics/publish/guide-for-authors",
+      "http_status": 200,
+      "sha256": "9f5932e748ad9f9d67a508714a5889130ffa127b22100dc2d1abff6193dc19f8",
+      "dumped": "2026-09-26"
+    },
+    "dam_journal_page": {
+      "url": "https://shop.elsevier.com/journals/discrete-applied-mathematics/0166-218X",
+      "http_status": 200,
+      "sha256": "4c8cebbc42ab91277b9658558b2e7a2300e71657c462a09c75bc29a844e1074d",
+      "dumped": "2026-09-26"
+    },
     "elsevier_generative_ai_policy": {
       "url": "https://www.elsevier.com/about/policies-and-standards/generative-ai-policies-for-journals",
       "http_status": 200,
-      "sha256": "59f0d46eb1185a4d8b5c97fd43546f8273642d3cf80b0160efc812a11cd7cd3f",
+      "sha256": "51c74b78d8a5a33ece8faefbde69008f77841bb1ad34f511d65b4081d58d5490",
       "dumped": "2026-09-26"
     },
     "elsevier_pricing_policy": {
       "url": "https://www.elsevier.com/about/policies-and-standards/pricing",
       "http_status": 200,
-      "sha256": "28ff77d2c1f8744642d38b7dcc4c1f8cd888300332d3f99b63deba8e12bedca8",
+      "sha256": "cda837cea0e2845108f0d3daabccdceb343b8c4b58bd7bd5cbeeb19dbd30bb90",
       "dumped": "2026-09-26"
     },
     "ipl_guide_for_authors_blocked": {
       "url": "https://www.sciencedirect.com/journal/information-processing-letters/publish/guide-for-authors",
       "http_status": 403,
-      "sha256": "47fc072ab1696719f4a26a48942ca3d9136749ff0a6e657b8683987f5ba5c1df",
+      "sha256": "76a0de5f7fd5453140abca0ff2a5e4b156b1779133ac913236fbf982c31a47ff",
       "dumped": "2026-09-26"
     },
     "ipl_guide_for_authors_wayback2024": {
       "url": "http://web.archive.org/web/20240424192433/https://www.sciencedirect.com/journal/information-processing-letters/publish/guide-for-authors",
       "http_status": 200,
-      "sha256": "dbf21f22ee2222a74f51257195f1a24b20506bf3c4408af2cb3739ab1f510684",
+      "sha256": "d7ef09aab02a99d9ac77599d362f0920f2719e151750e33095a671ccee8f11e6",
       "dumped": "2026-09-26"
     },
     "ipl_journal_page": {
       "url": "https://shop.elsevier.com/journals/information-processing-letters/0020-0190",
       "http_status": 200,
-      "sha256": "6011f634f3ca4a147ced525c590f68013cdeaf6a7ee432430415a3c57f2801a3",
+      "sha256": "aab68547081ebf498ac94209c5e32c97e764f77670487dd772244943176a529b",
       "dumped": "2026-09-26"
     }
   },
